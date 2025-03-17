@@ -1,0 +1,342 @@
+:global(.ant-card-extra) {
+  padding: 12px 0;
+}
+
+.spanButton {
+  cursor: pointer;
+  margin-right: 24px;
+  color: rgba(0, 0, 0, .65);
+}
+
+.spanButtonActive {
+  cursor: pointer;
+  margin-right: 24px;
+  color: #1890ff;
+}
+
+.spanButton:hover {
+  color: #1890ff;
+}
+
+.spanText {
+  cursor: pointer;
+  color: #1890ff;
+  padding: 0 4px;
+}
+
+.loginActive {
+  height: 329px;
+  overflow: auto;
+}
+
+.container {
+  padding: 24px;
+}
+
+.dashboardHeader {
+  margin-bottom: 24px;
+}
+
+.dashboardHeader h1 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.dashboardHeader p {
+  color: #7f8c8d;
+  font-size: 15px;
+}
+
+.statisticsRow {
+  margin-bottom: 20px;
+}
+
+.statisticCard {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  transition: all 0.3s;
+  border: 1px solid #e6eaf0;
+  height: 100%;
+}
+
+.statisticCard:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #34495e;
+}
+
+.cardIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardValue {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.cardDescription {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.chartRow {
+  margin-bottom: 20px;
+}
+
+.chartCard {
+  height: 340px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  border: 1px solid #e6eaf0;
+}
+
+.chartCard:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.chartContainer {
+  height: 260px;
+}
+
+.trendChartContainer {
+  height: 300px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.expiryCard {
+  height: 340px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  border: 1px solid #e6eaf0;
+}
+
+.expiryCard:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.costCard {
+  height: 380px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  border: 1px solid #e6eaf0;
+}
+
+.costCard:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.costTrendCard {
+  height: 380px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  border: 1px solid #e6eaf0;
+}
+
+.costTrendCard:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.expiryList {
+  list-style: none;
+  padding: 0;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.expiryItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.expiryItem:last-child {
+  border-bottom: none;
+}
+
+.expiryInfo {
+  display: flex;
+  align-items: center;
+}
+
+.expiryIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: white;
+  margin-right: 12px;
+}
+
+.expiryName {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.expiryDate {
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.costList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.costItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.costItem:last-child {
+  border-bottom: none;
+}
+
+.costInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.costName {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.costDesc {
+  color: #7f8c8d;
+  font-size: 13px;
+}
+
+.costValue {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.budgetProgress {
+  margin-top: 20px;
+}
+
+.budgetHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.budgetTitle {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.budgetValue {
+  color: #7f8c8d;
+}
+
+.progressBar {
+  height: 8px;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.yearSelector {
+  margin-left: 15px;
+  padding: 2px 8px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+
+.yearSelector:hover {
+  border-color: #1890ff;
+}
+
+.yearSelector:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* 便捷导航样式 */
+:global(.ant-card.home-nav) {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  border: 1px solid #e6eaf0;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+:global(.ant-card.home-nav:hover) {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+:global(.home-nav .ant-card) {
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+:global(.home-nav .ant-card:hover) {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
