@@ -40,6 +40,7 @@ class ExecHistory(models.Model, ModelMixin):
     digest = models.CharField(max_length=32, db_index=True)
     interpreter = models.CharField(max_length=20)
     command = models.TextField()
+    command_type = models.CharField(max_length=20, default='shell')  # shell或ansible
     params = models.TextField(default='{}')
     host_ids = models.TextField()
     updated_at = models.CharField(max_length=20, default=human_datetime)
@@ -52,6 +53,13 @@ class ExecHistory(models.Model, ModelMixin):
             tmp['interpreter'] = self.template.interpreter
             tmp['parameters'] = json.loads(self.template.parameters)
             tmp['command'] = self.template.body
+        return tmp
+
+    def to_dict(self, *args, **kwargs):
+        tmp = super().to_dict(*args, **kwargs)
+        tmp['host_ids'] = json.loads(self.host_ids)
+        if self.template:
+            tmp['template_name'] = self.template.name
         return tmp
 
     class Meta:

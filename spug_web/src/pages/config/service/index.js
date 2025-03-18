@@ -5,10 +5,8 @@
  */
 import React from 'react';
 import { observer } from 'mobx-react';
-import { Input } from 'antd';
-import { SearchForm, AuthDiv, Breadcrumb } from 'components';
-import ComTable from './Table';
-import ComForm from './Form';
+import { Empty } from 'antd';
+import { AuthDiv, Breadcrumb } from 'components';
 import store from './store';
 
 export default observer(function () {
@@ -18,13 +16,10 @@ export default observer(function () {
         <Breadcrumb.Item>首页</Breadcrumb.Item>
         <Breadcrumb.Item>服务配置</Breadcrumb.Item>
       </Breadcrumb>
-      <SearchForm>
-        <SearchForm.Item span={8} title="服务名称">
-          <Input allowClear value={store.f_name} onChange={e => store.f_name = e.target.value} placeholder="请输入"/>
-        </SearchForm.Item>
-      </SearchForm>
-      <ComTable/>
-      {store.formVisible && <ComForm/>}
+      <div style={{ textAlign: 'center', padding: '100px 0' }}>
+        <Empty description="服务配置功能正在开发中，敬请期待..." />
+      </div>
+      {store.formVisible && <div style={{ display: 'none' }}></div>}
     </AuthDiv>
   );
 })

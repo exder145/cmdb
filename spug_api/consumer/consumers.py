@@ -137,18 +137,32 @@ class PubSubConsumer(BaseConsumer):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.token = self.scope['url_route']['kwargs']['token']
+        print(f"初始化PubSubConsumer，token: {self.token}")
         self.rds = get_redis_connection()
         self.p = self.rds.pubsub(ignore_subscribe_messages=True)
         self.p.subscribe(self.token)
+        print(f"已订阅Redis频道: {self.token}")
 
     def disconnect(self, code):
+        print(f"WebSocket断开连接，token: {self.token}, 代码: {code}")
         self.p.close()
         self.rds.close()
 
     def receive(self, **kwargs):
+        print(f"收到WebSocket请求，token: {self.token}")
         response = self.p.get_message(timeout=10)
+        counter = 0
         while response:
-            data = str_decode(response['data'])
-            self.send(text_data=data)
+            print(f"从Redis获取消息: {response}")
+            try:
+                data = str_decode(response['data'])
+                print(f"发送WebSocket消息到客户端: {data[:100]}...")
+                self.send(text_data=data)
+            except Exception as e:
+                print(f"发送消息时出错: {str(e)}")
             response = self.p.get_message(timeout=10)
+            counter += 1
+            if counter > 100:  # 避免无限循环
+                break
         self.send(text_data='pong')
+        print(f"已发送pong响应, token: {self.token}")

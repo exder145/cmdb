@@ -58,10 +58,7 @@ export default [
     icon: <CodeOutlined/>, title: '批量执行', auth: 'exec.task.do', path: '/exec/task', component: ExecTask
   },
   {
-    icon: <DeploymentUnitOutlined/>, title: '服务配置', auth: 'config.src.view', path: '/config/service', component: ConfigService,
-    child: [
-      {path: '/config/setting/:type/:id', component: ConfigSetting},
-    ]
+    icon: <DeploymentUnitOutlined/>, title: '服务配置', auth: 'config.src.view', path: '/config/service', component: ConfigService
   },
   {
     icon: <SettingOutlined/>, title: '系统管理', auth: "system.account.view|system.role.view|system.setting.view", child: [

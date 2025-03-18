@@ -5,9 +5,11 @@ from django.conf.urls import url
 
 from apps.exec.views import *
 from apps.exec.transfer import TransferView
+from apps.exec.ansible import AnsibleView
 
 urlpatterns = [
     url(r'template/$', TemplateView.as_view()),
     url(r'do/$', TaskView.as_view()),
     url(r'transfer/$', TransferView.as_view()),
+    url(r'ansible/$', AnsibleView.as_view()),
 ]

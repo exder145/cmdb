@@ -57,15 +57,19 @@ class Store {
     if (this.showConsole) {
       this.showConsole = false;
       this.outputs = {}
+      this.token = null;
     } else {
-      for (let id of this.host_ids) {
-        const host = hostStore.idMap[id];
-        this.outputs[host.id] = {
-          title: `${host.name}(${host.hostname}:${host.port})`,
-          data: '\x1b[36m### WebSocket connecting ...\x1b[0m',
-          status: -2
-        }
+      // 清空之前的输出
+      this.outputs = {};
+      
+      // 设置输出初始状态，使用单一输出容器
+      this.outputs['all'] = {
+        title: 'Ansible Playbook 执行结果',
+        data: '\x1b[36m### 正在准备执行Ansible Playbook...\x1b[0m',
+        status: -2
       }
+      
+      // 记录token以供WebSocket使用
       this.token = token;
       this.showConsole = true
     }
