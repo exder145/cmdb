@@ -126,8 +126,12 @@ export default observer(function () {
         ...rows.map(row => row.join(','))
       ].join('\n');
       
-      // 创建Blob对象
-      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      // 添加UTF-8 BOM标记
+      const BOM = '\uFEFF';
+      const csvContentWithBOM = BOM + csvContent;
+      
+      // 创建Blob对象，指定正确的MIME类型和编码
+      const blob = new Blob([csvContentWithBOM], { type: 'text/csv;charset=utf-8;' });
       const url = URL.createObjectURL(blob);
       
       // 创建下载链接
