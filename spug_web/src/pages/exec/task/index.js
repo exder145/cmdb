@@ -32,7 +32,7 @@ function TaskIndex() {
 
   useEffect(() => {
     if (!loading) {
-      http.get('/api/exec/do/')
+      http.get('/exec/do/')
         .then(res => setHistories(res))
     }
   }, [loading])
@@ -74,7 +74,7 @@ function TaskIndex() {
       playbook: playbook,
       extra_vars: extraVars
     }
-    http.post('/api/exec/ansible/', formData)
+    http.post('/exec/ansible/', formData)
       .then(token => {
         store.host_ids = []; // 对于Ansible执行，我们不使用host_ids
         store.switchConsole(token);

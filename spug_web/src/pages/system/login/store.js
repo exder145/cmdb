@@ -24,8 +24,10 @@ class Store {
 
   fetchRecords = () => {
     this.isFetching = true;
-    http.get('/api/account/login/history/')
-      .then(res => this.records = res)
+    http.get('/account/login/history/')
+      .then(res => {
+        this.records = res;
+      })
       .finally(() => this.isFetching = false)
   };
 }

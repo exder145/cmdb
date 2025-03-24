@@ -8,6 +8,9 @@ import history from './history'
 import { X_TOKEN } from './functools';
 import { message } from 'antd';
 
+// 配置API基础URL
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || '';
+
 // response处理
 function handleResponse(response) {
   let result;
@@ -39,10 +42,30 @@ function handleResponse(response) {
 
 // 请求拦截器
 http.interceptors.request.use(request => {
-  request.isInternal = request.url.startsWith('/api/');
-  if (request.isInternal) {
-    request.headers['X-Token'] = X_TOKEN
+  // 检查是否是内部请求（不是以http开头的URL）
+  const isInternalRequest = !request.url.startsWith('http');
+  
+  // 标记为内部请求
+  request.isInternal = isInternalRequest;
+  
+  // 处理API请求路径
+  if (isInternalRequest) {
+    // 如果URL以/api/开头，移除/api/前缀
+    if (request.url.startsWith('/api/')) {
+      request.url = request.url.replace('/api/', '/');
+    }
+    
+    // 如果配置了API基础URL，添加基础URL
+    if (API_BASE_URL) {
+      request.url = API_BASE_URL + request.url;
+    }
+    
+    // 添加通用头信息
+    request.headers['X-Token'] = X_TOKEN;
+    request.headers['X-Real-IP'] = '127.0.0.1';
+    request.headers['X-Forwarded-For'] = '127.0.0.1';
   }
+  
   request.timeout = request.timeout || 30000;
   return request;
 });

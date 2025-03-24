@@ -71,7 +71,7 @@ export default observer(function () {
       setBudgetData(data);
     });
     
-    // 获取资源数据并排序，取前5个
+    // 获取资源数据（从json文件获取）并排序，取前5个
     store.fetchCostData().then(data => {
       const sorted = [...data].sort((a, b) => parseFloat(b.cost) - parseFloat(a.cost));
       setTopResources(sorted.slice(0, 5));

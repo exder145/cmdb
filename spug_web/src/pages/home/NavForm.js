@@ -23,18 +23,17 @@ function NavForm(props) {
   }, [props.record])
 
   function handleSubmit() {
-    const formData = form.getFieldsValue();
-    const links = record.links.filter(x => x.name && x.url);
-    if (links.length === 0) return message.error('请设置至少一条导航链接');
-    if (fileList.length === 0) return message.error('请上传导航logo');
-    formData.id = record.id;
-    formData.links = links;
-    formData.logo = fileList[0].thumbUrl;
-    setLoading(true);
-    http.post('/api/home/navigation/', formData)
-      .then(() => {
-        props.onOk();
-      }, () => setLoading(false))
+    form.validateFields()
+      .then(formData => {
+        if (formData.id === undefined) {
+          formData.sort = 9999
+        }
+        http.post('/home/navigation/', formData)
+          .then(() => {
+            message.success('保存成功');
+            props.onSubmit()
+          })
+      })
   }
 
   function add() {

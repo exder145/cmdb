@@ -4,7 +4,7 @@
  * Released under the AGPL-3.0 License.
  */
 import React, { useState, useEffect } from 'react';
-import { Avatar, Card, Col, Row, Modal } from 'antd';
+import { Avatar, Card, Col, Row, Modal, message } from 'antd';
 import { LeftSquareOutlined, RightSquareOutlined, EditOutlined, PlusOutlined, CloseOutlined } from '@ant-design/icons';
 import { AuthButton } from 'components';
 import NavForm from './NavForm';
@@ -15,33 +15,39 @@ function NavIndex(props) {
   const [isEdit, setIsEdit] = useState(false);
   const [records, setRecords] = useState([]);
   const [record, setRecord] = useState();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetchRecords()
+    fetchData()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  function fetchRecords() {
-    http.get('/api/home/navigation/')
-      .then(res => setRecords(res))
+  function fetchData() {
+    http.get('/home/navigation/')
+      .then(data => setRecords(data))
   }
 
   function handleSubmit() {
-    fetchRecords();
+    fetchData();
     setRecord(null)
   }
 
   function handleSort(info, sort) {
-    http.patch('/api/home/navigation/', {id: info.id, sort})
-      .then(() => fetchRecords())
+    setLoading(true);
+    http.patch('/home/navigation/', {id: info.id, sort})
+      .then(fetchData)
+      .finally(() => setLoading(false))
   }
 
   function handleDelete(item) {
     Modal.confirm({
-      title: '操作确认',
-      content: `确定要删除【${item.title}】？`,
-      onOk: () => http.delete('/api/home/navigation/', {params: {id: item.id}})
-        .then(fetchRecords)
+      title: '删除确认',
+      content: `确定要删除【${item.name}】?`,
+      onOk: () => http.delete('/home/navigation/', {params: {id: item.id}})
+        .then(() => {
+          message.success('删除成功');
+          fetchData()
+        })
     })
   }
 

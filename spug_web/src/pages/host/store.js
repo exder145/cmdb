@@ -137,12 +137,18 @@ class Store {
   }
 
   _getAssetDataSource(assetType) {
-    return http.get(`/api/${assetType}/`)
+    console.log('获取非服务器资产类型数据源:', assetType, this.group);
+    const _t = new Date().getTime();
+    return http.get(`/host/${assetType}/?_t=${_t}`)
       .then(data => {
         if (this.f_word) {
           return data.filter(x => includes(x.name, this.f_word));
         }
         return data;
+      })
+      .catch(error => {
+        console.error(`获取${assetType}数据失败:`, error);
+        return [];
       });
   }
 
@@ -211,7 +217,7 @@ class Store {
 
   fetchRecords = () => {
     this.isFetching = true;
-    return http.get('/api/host/')
+    return http.get('/host/')
       .then(res => {
         const tmp = {};
         this.rawRecords = res;
@@ -222,13 +228,13 @@ class Store {
   };
 
   fetchExtend = (id) => {
-    http.put('/api/host/', {id})
+    http.put('/host/', {id})
       .then(() => this.fetchRecords())
   }
 
   fetchGroups = () => {
     this.grpFetching = true;
-    return http.get('/api/host/group/')
+    return http.get('/host/group/')
       .then(res => {
         this.groups = res.groups;
         this.rawTreeData = res.treeData
@@ -240,7 +246,7 @@ class Store {
     if (this.rawRecords.length > 0) return Promise.resolve()
     this.isFetching = true;
     this.grpFetching = true;
-    return http.all([http.get('/api/host/'), http.get('/api/host/group/')])
+    return http.all([http.get('/host/'), http.get('/host/group/')])
       .then(http.spread((res1, res2) => {
         this.rawRecords = res1;
         this.rawRecords.map(item => this.idMap[item.id] = item);
@@ -248,19 +254,17 @@ class Store {
         this.rawTreeData = res2.treeData;
         if (this.treeData && this.treeData.length > 0) {
           this.group = this.treeData[0] || {};
-        } else {
-          this.group = {};
         }
       }))
       .finally(() => {
         this.isFetching = false;
-        this.grpFetching = false
+        this.grpFetching = false;
       })
-  }
+  };
 
   updateGroup = (group, host_ids) => {
     const form = {host_ids, s_group_id: group.key, t_group_id: this.group.key, is_copy: this.addByCopy};
-    return http.patch('/api/host/', form)
+    return http.patch('/host/', form)
       .then(() => {
         message.success('操作成功');
         this.fetchRecords()
@@ -311,7 +315,7 @@ class Store {
   // 保存资产数据
   saveAsset = (assetType, values) => {
     console.log('保存资产数据:', assetType, values);
-    return http.post(`/api/host/${assetType}/`, values)
+    return http.post(`/host/${assetType}/`, values)
       .then(res => {
         message.success('保存成功');
         this.formVisible = false;
@@ -329,7 +333,7 @@ class Store {
   // 删除资产数据
   deleteAsset = (assetType, id) => {
     console.log('删除资产数据:', assetType, id);
-    return http.delete(`/api/host/${assetType}/?id=${id}`)
+    return http.delete(`/host/${assetType}/?id=${id}`)
       .then(res => {
         message.success('删除成功');
         
@@ -354,7 +358,7 @@ class Store {
     const timestamp = new Date().getTime();
     
     // 使用API获取数据 - 修正API路径
-    return http.get(`/api/host/${assetType}/`, { params: { _t: timestamp } })
+    return http.get(`/host/${assetType}/`, { params: { _t: timestamp } })
       .then(data => {
         console.log(`从API获取${assetType}数据:`, data);
         

@@ -46,7 +46,7 @@ export default function () {
     const formData = form.getFieldsValue();
     if (codeVisible && !formData.captcha) return message.error('请输入验证码');
     formData['type'] = loginType;
-    http.post('/api/account/login/', formData)
+    http.post('/account/login/', formData)
       .then(data => {
         if (data['required_mfa']) {
           setCodeVisible(true);
@@ -60,6 +60,17 @@ export default function () {
               <a target="_blank" rel="noopener noreferrer"
                  href="https://spug.cc/docs/install-error/#%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96%E7%9C%9F%E5%AE%9E-ip">官方文档</a>。
             </div>,
+            onOk: () => {
+              updatePermissions(data['permissions']);
+              localStorage.setItem('token', data['access_token']);
+              localStorage.setItem('nickname', data['nickname']);
+              localStorage.setItem('is_supper', data['is_supper']);
+              localStorage.setItem('permissions', JSON.stringify(data['permissions']));
+              localStorage.setItem('host_perms', JSON.stringify(data['host_perms']));
+              localStorage.setItem('deploy_perms', JSON.stringify(data['deploy_perms'] || {}));
+              localStorage.setItem('login_type', loginType);
+              history.push('/dashboard');
+            }
           })
         } else {
           updatePermissions(data['permissions']);
@@ -80,7 +91,7 @@ export default function () {
     setCodeLoading(true);
     const formData = form.getFieldsValue(['username', 'password']);
     formData['type'] = loginType;
-    http.post('/api/account/login/', formData)
+    http.post('/account/login/', formData)
       .then(() => setCounter(30))
       .finally(() => setCodeLoading(false))
   }

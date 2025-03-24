@@ -32,15 +32,15 @@ class Store {
 
   fetchUserSettings = () => {
     if (this.isReady) return
-    http.get('/api/setting/user/')
+    http.get('/setting/user/')
       .then(res => {
         this.isReady = true
         this._handleSettings(res)
       })
-  };
+  }
 
   updateUserSettings = (key, value) => {
-    return http.post('/api/setting/user/', {key, value})
+    return http.post('/setting/user/', {key, value})
       .then(res => {
         this.isReady = true
         this._handleSettings(res)
