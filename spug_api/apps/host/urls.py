@@ -21,4 +21,6 @@ urlpatterns = [
     path('import/region/', get_regions),
     path('parse/', post_parse),
     path('valid/', batch_valid),
+    path('cost/', ResourceCostView.as_view()),
+    path('cost/stats/', ResourceCostStatsView.as_view()),
 ]

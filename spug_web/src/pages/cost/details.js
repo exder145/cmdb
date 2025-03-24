@@ -5,15 +5,17 @@
  */
 import React, { useState, useEffect, useRef } from 'react';
 import { observer } from 'mobx-react';
-import { Card, Tabs, Table, Input, Select, Button, Tag, Space, message } from 'antd';
+import { Card, Tabs, Table, Input, Select, Button, Tag, Space, message, DatePicker } from 'antd';
 import { SearchOutlined, DownloadOutlined, SyncOutlined } from '@ant-design/icons';
 import { Breadcrumb } from 'components';
 import styles from './index.module.less';
 import store from './store';
 import moment from 'moment';
+import 'moment/locale/zh-cn';
 
 const { TabPane } = Tabs;
 const { Option } = Select;
+const { RangePicker } = DatePicker;
 
 export default observer(function () {
   // 添加分页状态管理
@@ -23,10 +25,16 @@ export default observer(function () {
   const isMounted = useRef(true);
   // 导出功能的loading状态
   const [exporting, setExporting] = useState(false);
+  // 日期选择器的显示状态
+  const [showDatePicker, setShowDatePicker] = useState(false);
+  // 日期范围
+  const [dateRange, setDateRange] = useState([]);
 
   useEffect(() => {
     // 加载初始数据
     store.fetchCostData();
+    // 加载统计数据
+    store.fetchCostStats();
     
     // 清理函数
     return () => {
@@ -38,7 +46,26 @@ export default observer(function () {
 
   const handleTabChange = (key) => {
     store.setAssetType(key);
-    store.fetchCostData(key);
+    // 在切换标签页时重置其他筛选条件
+    if (key !== store.currentAssetType) {
+      store.setTimeRange('current');
+      store.setBillingType('all');
+      store.setSortOrder('desc');
+      store.setSearchKey('');
+    }
+    
+    // 添加更详细的日志记录
+    console.log('切换标签页:', key, '当前时间范围:', store.timeRange, '计费方式:', store.billingType);
+    
+    // 明确传递key参数，确保API请求使用正确的资源类型
+    store.fetchCostData(key).then(data => {
+      console.log(`标签${key}获取到的数据:`, {
+        总数: data.length,
+        第一条: data[0],
+        最后一条: data[data.length - 1]
+      });
+    });
+    
     // 切换标签页时重置分页
     if (isMounted.current) {
       setCurrentPage(1);
@@ -46,11 +73,17 @@ export default observer(function () {
   };
 
   const handleTimeRangeChange = (value) => {
-    store.setTimeRange(value);
-    store.fetchCostData();
-    // 筛选条件变化时重置分页
-    if (isMounted.current) {
-      setCurrentPage(1);
+    if (value === 'custom') {
+      setShowDatePicker(true);
+      // 不立即更新时间范围，等待日期选择后更新
+    } else {
+      setShowDatePicker(false);
+      store.setTimeRange(value);
+      store.fetchCostData();
+      // 筛选条件变化时重置分页
+      if (isMounted.current) {
+        setCurrentPage(1);
+      }
     }
   };
 
@@ -64,16 +97,15 @@ export default observer(function () {
   };
 
   const handleSortOrderChange = (value) => {
-    store.setSortOrder(value);
-    store.fetchCostData();
+    if (isMounted.current) {
+      store.sortOrder = value;
+      store.fetchCostData();
+    }
   };
 
   const handleSearch = (e) => {
-    store.setSearchKey(e.target.value);
-    store.fetchCostData();
-    // 搜索时重置分页
     if (isMounted.current) {
-      setCurrentPage(1);
+      store.setSearchKey(e.target.value);
     }
   };
 
@@ -86,75 +118,82 @@ export default observer(function () {
     if (isMounted.current) {
       setCurrentPage(pagination.current);
       setPageSize(pagination.pageSize);
+      // 调用store中的方法来获取新页的数据
+      store.fetchCostData(store.currentAssetType, {
+        page: pagination.current,
+        pageSize: pagination.pageSize
+      });
     }
   };
   
-  // 导出数据为CSV
+  // 处理导出
   const handleExport = () => {
     if (store.records.length === 0) {
-      message.warning('没有数据可导出');
+      message.warning('没有数据可以导出');
       return;
     }
-    
+
     setExporting(true);
-    
-    try {
-      // 准备CSV数据
-      const headers = [
-        '月份',
-        '资源ID',
-        '资源名称',
-        '资源类型',
-        '计费方式',
-        '费用金额(元)',
-        '环比变化(%)'
-      ];
-      
-      const rows = store.records.map(item => [
-        item.month,
-        item.id,
-        item.name,
-        item.type,
-        item.billingTypeName,
-        item.cost,
-        item.change
-      ]);
-      
-      // 合并成CSV内容
-      const csvContent = [
-        headers.join(','),
-        ...rows.map(row => row.join(','))
-      ].join('\n');
-      
-      // 添加UTF-8 BOM标记
-      const BOM = '\uFEFF';
-      const csvContentWithBOM = BOM + csvContent;
-      
-      // 创建Blob对象，指定正确的MIME类型和编码
-      const blob = new Blob([csvContentWithBOM], { type: 'text/csv;charset=utf-8;' });
-      const url = URL.createObjectURL(blob);
-      
-      // 创建下载链接
-      const link = document.createElement('a');
-      link.href = url;
-      link.setAttribute('download', `费用明细_${moment().format('YYYY-MM-DD_HHmmss')}.csv`);
-      
-      // 添加到文档中并触发点击
-      document.body.appendChild(link);
-      link.click();
-      
-      // 清理
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
-      message.success('导出成功');
-    } catch (error) {
-      console.error('导出数据时出错:', error);
-      message.error('导出失败');
-    } finally {
+
+    // 获取所有数据用于导出
+    store.fetchCostData(store.currentAssetType, {
+      page: 1,
+      pageSize: 999999  // 使用一个足够大的数字来获取所有数据
+    }).then(allData => {
+      try {
+        // 准备CSV数据
+        const headers = ['月份', '资源ID', '资源名称', '资源类型', '计费方式', '费用金额(元)', '环比变化'];
+        const rows = allData.map(item => [
+          item.month,
+          item.id,
+          item.name,
+          item.type,
+          item.billingTypeName,
+          item.cost,
+          `${item.change}%`
+        ]);
+
+        // 创建CSV内容
+        const csvContent = [
+          headers.join(','),
+          ...rows.map(row => row.join(','))
+        ].join('\n');
+
+        // 创建并下载文件
+        const blob = new Blob(['\ufeff' + csvContent], { type: 'text/csv;charset=utf-8;' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = `资源费用明细_${moment().format('YYYY-MM-DD')}.csv`;
+        link.click();
+        message.success('导出成功');
+      } catch (error) {
+        console.error('导出失败:', error);
+        message.error('导出失败');
+      } finally {
+        setExporting(false);
+      }
+    }).catch(error => {
+      console.error('获取导出数据失败:', error);
+      message.error('获取导出数据失败');
       setExporting(false);
-    }
+    });
   };
   
+  // 处理日期范围变化
+  const handleDateRangeChange = (dates) => {
+    if (dates && dates.length === 2) {
+      setDateRange(dates);
+      const startDate = dates[0].format('YYYY-MM-DD');
+      const endDate = dates[1].format('YYYY-MM-DD');
+      store.setCustomDateRange(startDate, endDate);
+      store.fetchCostData();
+      // 筛选条件变化时重置分页
+      if (isMounted.current) {
+        setCurrentPage(1);
+      }
+    }
+  };
+
   const columns = [
     { 
       title: '月份', 
@@ -261,10 +300,17 @@ export default observer(function () {
             >
               <Option value="current">本月</Option>
               <Option value="last">上月</Option>
-              <Option value="quarter">本季度</Option>
               <Option value="all">全部数据</Option>
               <Option value="custom">自定义</Option>
             </Select>
+            {showDatePicker && (
+              <RangePicker 
+                style={{ marginLeft: 8 }}
+                value={dateRange}
+                onChange={handleDateRangeChange}
+                format="YYYY-MM-DD"
+              />
+            )}
           </div>
           
           <div className={styles.filterItem}>
@@ -326,16 +372,16 @@ export default observer(function () {
         <Card className={styles.tableCard}>
           <Table 
             columns={columns} 
-            dataSource={getPaginatedData()} 
+            dataSource={store.records} 
             rowKey={record => `${record.id}-${record.month}-${record.billingType}`}
             pagination={{ 
               current: currentPage,
               pageSize: pageSize,
+              total: store.total,
               showSizeChanger: true, 
               showQuickJumper: true, 
               showTotal: total => `共 ${total} 条记录`,
-              pageSizeOptions: ['10', '20', '50', '100'],
-              total: getUniqueDataCount()
+              pageSizeOptions: ['10', '20', '50', '100']
             }}
             onChange={handleTableChange}
             loading={store.loading}

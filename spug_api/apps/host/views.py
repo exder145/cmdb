@@ -2,13 +2,13 @@
 # Copyright: (c) <spug.dev@gmail.com>
 # Released under the AGPL-3.0 License.
 from django.views.generic import View
-from django.db.models import F
+from django.db.models import F, Q
 from django.http.response import HttpResponseBadRequest
 from libs import json_response, JsonParser, Argument, AttrDict, auth
 from apps.setting.utils import AppSetting
 from apps.account.utils import get_host_perms
-from apps.host.models import Host, Group, Disk, Storage, CDN, IP
-from apps.host.utils import batch_sync_host, _sync_host_extend
+from apps.host.models import Host, Group, Disk, Storage, CDN, IP, ResourceCost
+from apps.host.utils import batch_sync_host, _sync_host_extend, check_os_type
 from apps.exec.models import ExecTemplate
 from apps.app.models import Deploy
 from apps.schedule.models import Task
@@ -19,6 +19,12 @@ from openpyxl import load_workbook
 from threading import Thread
 import socket
 import uuid
+from libs import human_datetime
+from libs.spug import Notification
+from functools import partial
+import ipaddress
+import json
+from django.db import models
 
 
 class HostView(View):
@@ -390,3 +396,187 @@ class IPView(View):
         if error is None:
             IP.objects.filter(pk=form.id).delete()
         return json_response(error=error)
+
+
+# 资源费用API视图
+class ResourceCostView(View):
+    def get(self, request):
+        resource_type = request.GET.get('resource_type', '')
+        month = request.GET.get('month', '')
+        product_type = request.GET.get('product_type', '')
+        limit = int(request.GET.get('limit', 10))
+        offset = int(request.GET.get('offset', 0))
+        sort_by = request.GET.get('sort_by', '-month')
+        search = request.GET.get('search', '')
+        start_date = request.GET.get('start_date', '')
+        end_date = request.GET.get('end_date', '')
+        
+        # 构建查询条件
+        filters = {}
+        if resource_type:
+            filters['resource_type'] = resource_type
+        if month:
+            filters['month'] = month
+        if product_type:
+            filters['product_type'] = product_type
+            
+        # 添加自定义日期范围
+        if start_date and end_date and not month:
+            start_month = start_date[:7]  # 提取YYYY-MM部分
+            end_month = end_date[:7]      # 提取YYYY-MM部分
+            # 如果起始月份和结束月份相同，就直接用month过滤
+            if start_month == end_month:
+                filters['month'] = start_month
+            else:
+                # 获取日期范围内的所有月份
+                import datetime
+                
+                start_year, start_month_num = map(int, start_month.split('-'))
+                end_year, end_month_num = map(int, end_month.split('-'))
+                
+                months = []
+                # 循环生成所有月份
+                for year in range(start_year, end_year + 1):
+                    for month_num in range(1, 13):
+                        # 跳过范围外的月份
+                        if year == start_year and month_num < start_month_num:
+                            continue
+                        if year == end_year and month_num > end_month_num:
+                            continue
+                        # 添加月份
+                        months.append(f"{year}-{month_num:02d}")
+                
+                # 使用__in查询包含所有月份
+                filters['month__in'] = months
+            
+        # 获取数据并去重
+        queryset = ResourceCost.objects.filter(**filters)
+        
+        # 添加搜索条件
+        if search:
+            queryset = queryset.filter(
+                models.Q(instance_id__icontains=search) | 
+                models.Q(instance_name__icontains=search)
+            )
+            
+        queryset = queryset.values('instance_id', 'month') \
+            .annotate(
+                max_id=models.Max('id'),
+                latest_finance_price=models.Max('finance_price')
+            )
+        
+        # 获取完整记录
+        ids = [item['max_id'] for item in queryset]
+        queryset = ResourceCost.objects.filter(id__in=ids)
+        
+        # 添加排序
+        if 'finance_price' in sort_by:
+            # SQLite不支持CAST AS DECIMAL，使用CAST AS REAL
+            sort_by = f"-finance_price" if sort_by.startswith('-') else "finance_price"
+            queryset = queryset.extra(
+                select={'finance_price_float': 'CAST(REPLACE(REPLACE(finance_price, "¥", ""), ",", "") AS REAL)'}) \
+                .order_by(sort_by.replace('finance_price', 'finance_price_float'))
+        else:
+            queryset = queryset.order_by(sort_by)
+            
+        # 获取总数
+        total = queryset.count()
+        
+        # 如果limit非常大（比如999999），则返回所有数据
+        if limit > 1000:
+            results = queryset.all()
+        else:
+            # 否则进行正常分页
+            results = queryset[offset:offset + limit]
+        
+        # 获取上个月数据用于计算环比
+        all_months = ResourceCost.objects.values_list('month', flat=True).distinct().order_by('month')
+        all_months = list(all_months)
+        month_map = {m: idx for idx, m in enumerate(all_months)}
+        
+        # 计算每个资源每个月的环比变化
+        change_map = {}
+        for item in results:
+            # 获取上个月
+            current_idx = month_map.get(item.month)
+            if current_idx is not None and current_idx > 0:
+                prev_month = all_months[current_idx - 1]
+                # 查找同一资源上个月的数据
+                prev_record = ResourceCost.objects.filter(
+                    instance_id=item.instance_id,
+                    resource_type=item.resource_type,
+                    month=prev_month
+                ).first()
+                
+                if prev_record:
+                    # 计算环比变化
+                    current_price = float(str(item.finance_price).replace('¥', '').replace(',', ''))
+                    prev_price = float(str(prev_record.finance_price).replace('¥', '').replace(',', ''))
+                    if prev_price > 0:
+                        change = round(((current_price - prev_price) / prev_price) * 100, 2)
+                    else:
+                        change = 100 if current_price > 0 else 0
+                    change_map[(item.instance_id, item.month)] = change
+        
+        # 转换为字典格式
+        data = []
+        for item in results:
+            # 获取环比变化
+            change = change_map.get((item.instance_id, item.month), 0)
+            
+            data.append({
+                'id': item.id,
+                'month': item.month,
+                'instance_id': item.instance_id,
+                'instance_name': item.instance_name or item.instance_id,
+                'resource_type': item.resource_type,
+                'product_type': item.product_type,
+                'finance_price': str(item.finance_price).replace('¥', '').replace(',', ''),
+                'change': change,
+                'created_at': item.created_at
+            })
+        
+        # 返回结果
+        return json_response({
+            'total': total,
+            'data': data
+        })
+
+# 资源费用统计API视图
+class ResourceCostStatsView(View):
+    def get(self, request):
+        month = request.GET.get('month', '')
+        
+        # 按资源类型统计费用总额
+        stats_by_type = []
+        for resource_type in ['ECS实例', '云盘', '弹性IP']:
+            filters = {'resource_type': resource_type}
+            if month:
+                filters['month'] = month
+                
+            queryset = ResourceCost.objects.filter(**filters)
+            total = queryset.count()
+            if total > 0:
+                sum_price = sum(float(item.finance_price) for item in queryset)
+                stats_by_type.append({
+                    'type': resource_type,
+                    'count': total,
+                    'total_cost': round(sum_price, 2)
+                })
+        
+        # 按月份统计费用总额
+        months = ResourceCost.objects.values_list('month', flat=True).distinct()
+        stats_by_month = []
+        for month in months:
+            queryset = ResourceCost.objects.filter(month=month)
+            sum_price = sum(float(item.finance_price) for item in queryset)
+            stats_by_month.append({
+                'month': month,
+                'total_cost': round(sum_price, 2)
+            })
+        
+        # 返回结果
+        return json_response({
+            'stats_by_type': stats_by_type,
+            'stats_by_month': stats_by_month
+        })

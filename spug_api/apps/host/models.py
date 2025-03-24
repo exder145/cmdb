@@ -189,3 +189,24 @@ class IP(models.Model, ModelMixin):
     class Meta:
         db_table = 'ips'
         ordering = ('-id',)
+
+
+# 资源费用模型
+class ResourceCost(models.Model, ModelMixin):
+    month = models.CharField(max_length=7)  # 格式：YYYY-MM
+    instance_id = models.CharField(max_length=64)
+    instance_name = models.CharField(max_length=100, null=True)
+    resource_type = models.CharField(max_length=20)  # ECS实例, 云盘, 弹性IP
+    product_type = models.CharField(max_length=20)  # prepay, postpay
+    finance_price = models.DecimalField(max_digits=10, decimal_places=2)
+    created_at = models.CharField(max_length=20, default=human_datetime)
+    
+    def to_view(self):
+        return self.to_dict()
+    
+    def __repr__(self):
+        return f'<ResourceCost {self.instance_id} {self.month}>'
+    
+    class Meta:
+        db_table = 'resource_costs'
+        ordering = ('-month', '-finance_price')
