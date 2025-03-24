@@ -30,6 +30,13 @@
   font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
 }
 
+/* 开发日志样式 */
+.card {
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
 .statistic {
   background: #fafafa;
   border-radius: 4px;

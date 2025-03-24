@@ -208,6 +208,118 @@ class Store {
       });
   }
   
+  // 获取最新一年的高费用资源（Top 5）
+  fetchTopResources = () => {
+    // 获取最近一年的时间范围
+    const endDate = moment();
+    const startDate = moment().subtract(1, 'year');
+    
+    const params = {
+      limit: 200, // 获取足够多的数据，以便在前端筛选出Top资源和计算环比
+      start_date: startDate.format('YYYY-MM-DD'),
+      end_date: endDate.format('YYYY-MM-DD'),
+      sort_by: '-finance_price' // 按费用降序排序
+    };
+    
+    return http.get('/api/host/cost/', { params })
+      .then(response => {
+        if (!response || !response.data) {
+          throw new Error('API返回数据格式错误');
+        }
+        
+        const { data } = response;
+        
+        // 按实例ID分组，并按月份整理数据
+        const resourceMap = {};
+        data.forEach(item => {
+          const key = item.instance_id;
+          if (!resourceMap[key]) {
+            resourceMap[key] = {
+              id: item.instance_id,
+              name: item.instance_name || item.instance_id,
+              type: item.resource_type,
+              billingType: item.product_type,
+              billingTypeName: item.product_type === 'prepay' ? '包年包月' : '按量付费',
+              cost: 0,
+              monthlyData: {} // 存储每月数据，用于计算环比
+            };
+          }
+          
+          // 累加总费用
+          resourceMap[key].cost += parseFloat(item.finance_price);
+          
+          // 记录月度数据
+          if (item.month) {
+            if (!resourceMap[key].monthlyData[item.month]) {
+              resourceMap[key].monthlyData[item.month] = 0;
+            }
+            resourceMap[key].monthlyData[item.month] += parseFloat(item.finance_price);
+          }
+        });
+        
+        // 计算环比变化
+        const currentMonth = moment().format('YYYY-MM');
+        const lastMonth = moment().subtract(1, 'month').format('YYYY-MM');
+        
+        Object.values(resourceMap).forEach(resource => {
+          const currentMonthCost = resource.monthlyData[currentMonth] || 0;
+          const lastMonthCost = resource.monthlyData[lastMonth] || 0;
+          
+          if (lastMonthCost > 0) {
+            resource.change = Number(((currentMonthCost - lastMonthCost) / lastMonthCost * 100).toFixed(2));
+          } else {
+            resource.change = currentMonthCost > 0 ? 100 : 0;
+          }
+        });
+        
+        // 转换为数组并排序
+        const resourceList = Object.values(resourceMap);
+        const sortedList = resourceList.sort((a, b) => b.cost - a.cost);
+        
+        // 格式化费用并返回Top 5
+        return sortedList.slice(0, 5).map(item => ({
+          id: item.id,
+          name: item.name,
+          type: item.type,
+          billingType: item.billingType,
+          billingTypeName: item.billingTypeName,
+          cost: item.cost.toFixed(2),
+          change: item.change
+        }));
+      })
+      .catch(error => {
+        console.error('获取高费用资源数据失败:', error);
+        return [];
+      });
+  }
+  
+  // todo 费用概览 获取预算数据  
+
+  fetchBudgetData = () => {
+    // 使用模拟数据，因为后端没有预算API
+    // 返回预算数据的Promise
+    return Promise.resolve([
+      { 
+        category: 'ECS实例',
+        budget: 200000,
+        spent: 196901.54,
+        percentage: 98.45
+      },
+      { 
+        category: '云盘',
+        budget: 70000,
+        spent: 65633.18,
+        percentage: 93.76
+      },
+      { 
+        category: '弹性IP',
+        budget: 30000,
+        spent: 28123.29,
+        percentage: 93.74
+      }
+    ]);
+  }
+  
   // 显示详细信息
   showDetail = (record) => {
     this.record = record;

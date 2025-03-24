@@ -142,10 +142,9 @@ export default observer(function () {
     }).then(allData => {
       try {
         // 准备CSV数据
-        const headers = ['月份', '资源ID', '资源名称', '资源类型', '计费方式', '费用金额(元)', '环比变化'];
+        const headers = ['月份', '资源名称', '资源类型', '计费方式', '费用金额(元)', '环比变化'];
         const rows = allData.map(item => [
           item.month,
-          item.id,
           item.name,
           item.type,
           item.billingTypeName,
@@ -201,7 +200,6 @@ export default observer(function () {
       key: 'month',
       sorter: (a, b) => a.month.localeCompare(b.month)
     },
-    { title: '资源ID', dataIndex: 'id', key: 'id' },
     { title: '资源名称', dataIndex: 'name', key: 'name' },
     { title: '资源类型', dataIndex: 'type', key: 'type' },
     { 
@@ -251,7 +249,7 @@ export default observer(function () {
     // 首先去重处理
     const uniqueKeys = new Set();
     const uniqueData = store.records.filter(record => {
-      const key = `${record.id}-${record.month}-${record.billingType}`;
+      const key = `${record.name}-${record.month}-${record.billingType}`;
       if (uniqueKeys.has(key)) {
         return false;
       }
@@ -268,7 +266,7 @@ export default observer(function () {
   const getUniqueDataCount = () => {
     const uniqueKeys = new Set();
     store.records.forEach(record => {
-      const key = `${record.id}-${record.month}-${record.billingType}`;
+      const key = `${record.name}-${record.month}-${record.billingType}`;
       uniqueKeys.add(key);
     });
     return uniqueKeys.size;
@@ -373,7 +371,7 @@ export default observer(function () {
           <Table 
             columns={columns} 
             dataSource={store.records} 
-            rowKey={record => `${record.id}-${record.month}-${record.billingType}`}
+            rowKey={record => `${record.name}-${record.month}-${record.billingType}`}
             pagination={{ 
               current: currentPage,
               pageSize: pageSize,

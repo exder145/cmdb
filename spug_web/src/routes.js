@@ -65,6 +65,7 @@ export default [
       {title: '登录日志', auth: 'system.login.view', path: '/system/login', component: SystemLogin},
       {title: '账户管理', auth: 'system.account.view', path: '/system/account', component: SystemAccount},
       {title: '角色管理', auth: 'system.role.view', path: '/system/role', component: SystemRole},
+      {title: '开发日志', auth: 'system.setting.view', path: '/system/setting?key=devlog', component: SystemSetting},
       {title: '系统设置', auth: 'system.setting.view', path: '/system/setting', component: SystemSetting},
     ]
   },

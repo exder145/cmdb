@@ -12,6 +12,7 @@ import OpenService from './OpenService';
 import KeySetting from './KeySetting';
 import SecuritySetting from './SecuritySetting';
 import PushSetting from './PushSetting';
+import DevLog from './DevLog';
 import About from './About';
 import styles from './index.module.css';
 import store from './store';
@@ -20,8 +21,11 @@ import store from './store';
 class Index extends React.Component {
   constructor(props) {
     super(props);
+    // 获取URL参数key的值
+    const params = new URLSearchParams(window.location.search);
+    const key = params.get('key');
     this.state = {
-      selectedKeys: ['security']
+      selectedKeys: [key || 'security']
     }
   }
 
@@ -51,6 +55,7 @@ class Index extends React.Component {
               <Menu.Item key="push">推送服务设置</Menu.Item>
               <Menu.Item key="alarm">报警服务设置</Menu.Item>
               <Menu.Item key="service">开放服务设置</Menu.Item>
+              <Menu.Item key="devlog">开发日志</Menu.Item>
               <Menu.Item key="about">关于</Menu.Item>
             </Menu>
           </div>
@@ -61,6 +66,7 @@ class Index extends React.Component {
             {selectedKeys[0] === 'push' && <PushSetting/>}
             {selectedKeys[0] === 'service' && <OpenService/>}
             {selectedKeys[0] === 'key' && <KeySetting/>}
+            {selectedKeys[0] === 'devlog' && <DevLog/>}
             {selectedKeys[0] === 'about' && <About/>}
           </div>
         </div>

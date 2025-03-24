@@ -5,7 +5,7 @@
  */
 import React, { useState, useEffect } from 'react';
 import { observer } from 'mobx-react';
-import { Card, Row, Col, Statistic, Progress, Table, Alert, Divider, Select, Tooltip } from 'antd';
+import { Card, Row, Col, Statistic, Progress, Table, Alert, Divider, Select, Tooltip, Tag } from 'antd';
 import { ArrowUpOutlined, ArrowDownOutlined, InfoCircleOutlined } from '@ant-design/icons';
 import { Breadcrumb } from 'components';
 import styles from './index.module.less';
@@ -71,10 +71,9 @@ export default observer(function () {
       setBudgetData(data);
     });
     
-    // 获取资源数据（从json文件获取）并排序，取前5个
-    store.fetchCostData().then(data => {
-      const sorted = [...data].sort((a, b) => parseFloat(b.cost) - parseFloat(a.cost));
-      setTopResources(sorted.slice(0, 5));
+    // 获取最近一年的Top 5高费用资源
+    store.fetchTopResources().then(data => {
+      setTopResources(data);
     });
   }, []);
   
@@ -226,9 +225,17 @@ export default observer(function () {
   };
   
   const columns = [
-    { title: '资源ID', dataIndex: 'id', key: 'id' },
     { title: '资源名称', dataIndex: 'name', key: 'name' },
-    { title: '类型', dataIndex: 'type', key: 'type' },
+    { title: '资源类型', dataIndex: 'type', key: 'type' },
+    { 
+      title: '计费方式', 
+      dataIndex: 'billingTypeName', 
+      key: 'billingTypeName',
+      render: text => {
+        const color = text === '包年包月' ? 'blue' : 'green';
+        return <Tag color={color}>{text}</Tag>;
+      }
+    },
     { 
       title: '费用金额(元)', 
       dataIndex: 'cost', 
@@ -241,11 +248,11 @@ export default observer(function () {
       key: 'change',
       render: value => {
         if (value > 0) {
-          return <span style={{ color: '#f5222d' }}>+{value}% <ArrowUpOutlined /></span>;
+          return <span style={{ color: '#f5222d' }}>+{value}%</span>;
         } else if (value < 0) {
-          return <span style={{ color: '#52c41a' }}>{value}% <ArrowDownOutlined /></span>;
+          return <span style={{ color: '#52c41a' }}>{value}%</span>;
         } else {
-          return <span style={{ color: '#faad14' }}>{value}% —</span>;
+          return <span style={{ color: '#faad14' }}>{value}%</span>;
         }
       }
     },
@@ -367,7 +374,7 @@ export default observer(function () {
           <Table 
             columns={columns} 
             dataSource={topResources} 
-            rowKey="id" 
+            rowKey="name" 
             pagination={false} 
             loading={store.loading}
           />
