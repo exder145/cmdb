@@ -7,10 +7,8 @@ if [ -e /root/.bashrc ]; then
 fi
 
 if [ ! -d /data/spug/spug_api ]; then
-    git clone -b $SPUG_DOCKER_VERSION https://gitee.com/openspug/spug.git /data/spug
-    curl -o web.tar.gz https://cdn.spug.cc/spug/web_${SPUG_DOCKER_VERSION}.tar.gz
-    tar xf web.tar.gz -C /data/spug/spug_web/
-    rm -f web.tar.gz
+    git clone https://github.com/exder145/cmdb.git
+    
     SECRET_KEY=$(< /dev/urandom tr -dc '!@#%^.a-zA-Z0-9' | head -c50)
     cat > /data/spug/spug_api/spug/overrides.py << EOF
 import os

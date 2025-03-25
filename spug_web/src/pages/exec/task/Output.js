@@ -59,7 +59,7 @@ const OutView = observer(({ onBack }) => {
       term.writeln('\r\n\x1b[36m### 使用轮询方式获取Ansible执行结果... ###\x1b[0m\r\n');
       
       // 设置连接状态
-      setConnected(true);
+        setConnected(true);
       
       // 缓存上一次输出长度
       let lastOutputLength = 0;
@@ -117,7 +117,7 @@ const OutView = observer(({ onBack }) => {
             if (retryCount >= 5) {
               term.writeln(`\r\n\x1b[31m### 无法获取执行结果，请检查后端服务 ###\x1b[0m\r\n`);
               clearInterval(pollInterval);
-              setConnected(false);
+        setConnected(false);
             }
           });
       }, 1000);

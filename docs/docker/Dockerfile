@@ -1,7 +1,10 @@
-FROM centos:7.9.2009
+FROM almalinux:8
 
 ENV TZ=Asia/Shanghai
-RUN yum install -y epel-release https://packages.endpointdev.com/rhel/7/os/x86_64/endpoint-repo.x86_64.rpm && yum install -y --setopt=tsflags=nodocs nginx redis mariadb-devel python36 python36-devel openldap-devel supervisor git gcc wget unzip net-tools sshpass rsync sshfs && yum -y clean all --enablerepo='*'
+RUN dnf install -y epel-release && \
+    dnf install -y nginx redis mariadb-devel python36 python36-devel openldap-devel \
+    supervisor git gcc wget unzip net-tools sshpass rsync sshfs && \
+    dnf clean all
 
 RUN pip3 install --no-cache-dir --upgrade pip -i https://mirrors.aliyun.com/pypi/simple/
 RUN pip3 install --no-cache-dir -i https://mirrors.aliyun.com/pypi/simple/ \
@@ -19,7 +22,8 @@ RUN pip3 install --no-cache-dir -i https://mirrors.aliyun.com/pypi/simple/ \
     GitPython==3.0.8 \
     python-ldap==3.4.0 \
     openpyxl==3.0.3 \
-    user_agents==2.2.0
+    user_agents==2.2.0 \
+    ansible==6.7.0
 
 RUN localedef -c -i en_US -f UTF-8 en_US.UTF-8
 ENV LANG=en_US.UTF-8
