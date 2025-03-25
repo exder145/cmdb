@@ -6,8 +6,8 @@
 const proxy = require('http-proxy-middleware');
 
 module.exports = function (app) {
-  // 使用环境变量中的API基础URL，如果未设置则使用默认值
-  const target = process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1:8000';
+  // 直接使用虚拟机IP作为目标
+  const target = 'http://192.168.75.140:8000';
   
   // 定义所有需要代理的API路径
   const paths = [
