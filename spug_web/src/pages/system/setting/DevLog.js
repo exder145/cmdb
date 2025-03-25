@@ -16,7 +16,24 @@ class DevLog extends React.Component {
     this.state = {
       loading: false,
       logs: [
-
+        {
+          id: 0,
+          date: '2024-03-26',
+          title: 'Ansible执行功能测试完成',
+          content: '完成了Ansible执行功能的全面测试和优化。主要改进包括：1) 新增一键测试按钮，支持快速填充预设的测试主机信息和playbook内容；2) 优化了执行结果的显示格式，添加了颜色标识和分隔符，提高了日志可读性；3) 改进了页面刷新机制，避免了会话失效问题。测试验证显示所有功能正常运行，执行结果清晰可读。',
+          status: 'success',
+          author: '实习生',
+          version: 'v1.3.1'
+        },
+        {
+          id: 1,
+          date: '2024-03-25',
+          title: '前后端分离部署实现',
+          content: '完成了前后端分离部署功能，实现后端服务部署在CentOS 7虚拟机上，前端在Windows环境下独立运行。解决了SQLite数据库权限问题，配置了跨域请求支持，优化了前端API请求配置。提高了系统维护和扩展的灵活性，为后续功能迭代奠定了基础。',
+          status: 'success',
+          author: '实习生',
+          version: 'v1.3.0'
+        },
         {
           id: 2,
           date: '2024-03-21',

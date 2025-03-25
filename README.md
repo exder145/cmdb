@@ -52,3 +52,85 @@
 ![image-20250311144431238](https://exder-1333988393.cos.ap-beijing.myqcloud.com/image-20250311144431238.png)
 
 ![image-20250311144443795](https://exder-1333988393.cos.ap-beijing.myqcloud.com/image-20250311144443795.png)
+
+下次要启动前后端分离的环境，请按照以下步骤操作：
+
+### 后端启动步骤（在虚拟机 CentOS 上）：
+
+1. 先进入虚拟机并激活虚拟环境：
+
+```bash
+
+# 登录虚拟机后，激活虚拟环境
+
+source ~/spug_venv/bin/activate
+
+```
+
+2. 确保 Redis 服务在运行：
+
+```bash
+
+# 检查Redis状态
+
+sudo systemctl status redis
+
+# 如果没有运行，启动Redis
+
+sudo systemctl start redis
+
+```
+
+3. 启动后端服务：
+
+```bash
+
+# 使用sqlite_wrapper脚本启动Django
+
+cd ~/
+
+python ~/sqlite_wrapper.py runserver 0.0.0.0:8000 --settings=spug.production
+
+```
+
+### 前端启动步骤（在 Windows 上）：
+
+1. 打开命令提示符或 PowerShell：
+
+```cmd
+
+# 进入前端项目目录
+
+cd F:\实习相关\cmdb开发\spug\spug_web
+
+# 启动开发服务器
+
+npm start
+
+```
+
+### 重要提示：
+
+1. 确保虚拟机 IP 没有变化，如果变化了需要更新以下文件：
+
+   - `spug_web/.env`
+
+   - `spug_web/.env.production`
+
+   - `spug_web/src/setupProxy.js`
+
+2. 如果虚拟机 IP 发生变化，可以使用以下命令查看当前 IP：
+
+```bash
+
+# 在虚拟机中执行
+
+ip addr show
+
+```
+
+3. 数据库文件在虚拟机本地目录 `~/spug_data/db.sqlite3`，确保它存在且有正确权限
+
+4. 前端登录后，能够正常访问和操作后端 API，说明前后端分离部署成功
+
+前后端分离部署的优势是可以独立开发和维护前端和后端，并且能够更灵活地进行扩展和优化。

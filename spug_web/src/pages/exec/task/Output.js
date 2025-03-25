@@ -9,6 +9,7 @@ import { Button, Tag, message, PageHeader } from 'antd';
 import { ReloadOutlined } from '@ant-design/icons';
 import { Terminal } from 'xterm';
 import { FitAddon } from 'xterm-addon-fit';
+import { http } from 'libs';
 import store from './store';
 import styles from './index.module.less';
 
@@ -54,52 +55,79 @@ const OutView = observer(({ onBack }) => {
 
     // 创建WebSocket连接
     try {
-      const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-      const wsUrl = `${protocol}//${window.location.host}/ws/subscribe/${store.token}/`;
-      const ws = new WebSocket(wsUrl);
-      wsRef.current = ws;
-
-      ws.onopen = () => {
-        setConnected(true);
-        term.writeln('\r\n\x1b[32m### WebSocket连接已建立，等待执行结果...\x1b[0m\r\n');
-        ws.send('ok');
-      };
-
-      ws.onmessage = (e) => {
-        if (e.data === 'pong') {
-          ws.send('ping');
-          return;
-        }
-        
-        try {
-          const data = JSON.parse(e.data);
-          if (data.key === 'all') {
-            // 处理数据
-            if (data.data) {
-              term.write(data.data);
+      // 使用轮询方式获取结果
+      term.writeln('\r\n\x1b[36m### 使用轮询方式获取Ansible执行结果... ###\x1b[0m\r\n');
+      
+      // 设置连接状态
+      setConnected(true);
+      
+      // 缓存上一次输出长度
+      let lastOutputLength = 0;
+      let retryCount = 0;
+      
+      // 使用简单轮询获取结果
+      const pollInterval = setInterval(() => {
+        // 直接使用完整URL，避免路由问题
+        fetch(`http://192.168.75.140:8000/exec/ansible/result/${store.token}/`, {
+          method: 'GET',
+          mode: 'cors',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },
+        })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP error ${response.status}`);
+            }
+            return response.json();
+          })
+          .then(data => {
+            retryCount = 0; // 重置重试计数
+            
+            if (data.output && data.output.length > lastOutputLength) {
+              // 只显示新增的输出
+              let newOutput = data.output.substring(lastOutputLength);
+              
+              // 美化输出，增强可读性
+              newOutput = newOutput
+                .replace(/PLAY \[(.*?)\]/g, '\r\n\x1b[32m====== PLAY [$1] ======\x1b[0m\r\n')
+                .replace(/TASK \[(.*?)\]/g, '\r\n\x1b[36m------ TASK [$1] ------\x1b[0m\r\n')
+                .replace(/PLAY RECAP/g, '\r\n\x1b[33m====== PLAY RECAP ======\x1b[0m\r\n');
+                
+              term.write(newOutput);
+              lastOutputLength = data.output.length;
             }
             
             // 处理状态更新
             if (data.status !== undefined && store.outputs['all']) {
               store.outputs['all'].status = data.status;
+              
+              // 如果执行完成，停止轮询
+              if (data.status !== -2) {
+                clearInterval(pollInterval);
+              }
             }
-          }
-        } catch (error) {
-          term.writeln(`\r\n\x1b[31m### 数据解析错误 ###\x1b[0m\r\n`);
-        }
-      };
-
-      ws.onerror = () => {
-        term.writeln('\r\n\x1b[31m### WebSocket连接错误 ###\x1b[0m\r\n');
-        setConnected(false);
-      };
-
-      ws.onclose = () => {
-        term.writeln('\r\n\x1b[33m### WebSocket连接已关闭 ###\x1b[0m\r\n');
-        setConnected(false);
+          })
+          .catch(error => {
+            retryCount++;
+            console.error(`轮询获取结果失败(${retryCount}/5): ${error.message}`);
+            
+            // 如果连续失败5次，显示错误并停止轮询
+            if (retryCount >= 5) {
+              term.writeln(`\r\n\x1b[31m### 无法获取执行结果，请检查后端服务 ###\x1b[0m\r\n`);
+              clearInterval(pollInterval);
+              setConnected(false);
+            }
+          });
+      }, 1000);
+      
+      // 清理定时器
+      return () => {
+        clearInterval(pollInterval);
       };
     } catch (error) {
-      term.writeln(`\r\n\x1b[31m### 创建WebSocket连接失败: ${error.message} ###\x1b[0m\r\n`);
+      term.writeln(`\r\n\x1b[31m### 创建轮询连接失败: ${error.message} ###\x1b[0m\r\n`);
     }
 
     // 监听窗口大小变化
@@ -153,8 +181,82 @@ const OutView = observer(({ onBack }) => {
         }
         onBack={onBack}
         extra={[
-          <Button key="refresh" icon={<ReloadOutlined />} onClick={() => window.location.reload()}>
-            刷新页面
+          <Button key="refresh" icon={<ReloadOutlined />} onClick={() => {
+            // 使用React状态刷新而不是重载页面
+            setConnected(false);
+            if (termInstanceRef.current) {
+              termInstanceRef.current.clear();
+            }
+            
+            // 延迟100ms后重建连接
+            setTimeout(() => {
+              if (termInstanceRef.current) {
+                termInstanceRef.current.write('\r\n\x1b[36m### 正在重新连接... ###\x1b[0m\r\n');
+              }
+              
+              // 重置状态
+              let lastOutputLength = 0;
+              let retryCount = 0;
+              setConnected(true);
+              
+              // 重新获取执行结果
+              const pollInterval = setInterval(() => {
+                fetch(`http://192.168.75.140:8000/exec/ansible/result/${store.token}/`, {
+                  method: 'GET',
+                  mode: 'cors',
+                  headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                  },
+                })
+                  .then(response => {
+                    if (!response.ok) {
+                      throw new Error(`HTTP error ${response.status}`);
+                    }
+                    return response.json();
+                  })
+                  .then(data => {
+                    retryCount = 0;
+                    
+                    if (data.output && data.output.length > lastOutputLength) {
+                      // 只显示新增的输出
+                      let newOutput = data.output.substring(lastOutputLength);
+                      
+                      // 美化输出，增强可读性
+                      newOutput = newOutput
+                        .replace(/PLAY \[(.*?)\]/g, '\r\n\x1b[32m====== PLAY [$1] ======\x1b[0m\r\n')
+                        .replace(/TASK \[(.*?)\]/g, '\r\n\x1b[36m------ TASK [$1] ------\x1b[0m\r\n')
+                        .replace(/PLAY RECAP/g, '\r\n\x1b[33m====== PLAY RECAP ======\x1b[0m\r\n');
+                        
+                      termInstanceRef.current.write(newOutput);
+                      lastOutputLength = data.output.length;
+                    }
+                    
+                    // 处理状态更新
+                    if (data.status !== undefined && store.outputs['all']) {
+                      store.outputs['all'].status = data.status;
+                      
+                      // 如果执行完成，停止轮询
+                      if (data.status !== -2) {
+                        clearInterval(pollInterval);
+                      }
+                    }
+                  })
+                  .catch(error => {
+                    retryCount++;
+                    console.error(`轮询获取结果失败(${retryCount}/5): ${error.message}`);
+                    
+                    // 如果连续失败5次，显示错误并停止轮询
+                    if (retryCount >= 5) {
+                      termInstanceRef.current.writeln(`\r\n\x1b[31m### 无法获取执行结果，请检查后端服务 ###\x1b[0m\r\n`);
+                      clearInterval(pollInterval);
+                      setConnected(false);
+                    }
+                  });
+              }, 1000);
+            }, 100);
+          }}>
+            刷新内容
           </Button>
         ]}
       />

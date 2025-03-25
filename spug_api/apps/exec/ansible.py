@@ -2,6 +2,7 @@
 # Copyright: (c) <spug.dev@gmail.com>
 # Released under the AGPL-3.0 License.
 from django.views.generic import View
+from django.http import JsonResponse
 from django_redis import get_redis_connection
 from django.conf import settings
 from libs import json_response, JsonParser, Argument, human_datetime, auth
@@ -59,6 +60,11 @@ class AnsibleView(View):
                 params=json.dumps(form.params) if hasattr(form, 'params') else '{}'
             )
             
+            # 使用临时缓存
+            rds.hset(f'ansible:result:{token}', 'status', -2)  # -2表示执行中
+            rds.hset(f'ansible:result:{token}', 'output', '')
+            rds.expire(f'ansible:result:{token}', 3600)  # 1小时过期
+            
             # 触发异步执行
             task_data = {
                 'token': token,
@@ -73,6 +79,32 @@ class AnsibleView(View):
         return json_response(error=error)
 
 
+class AnsibleResultView(View):
+    # 不使用任何装饰器，确保无需认证即可访问
+    def get(self, request, token):
+        """轮询获取Ansible执行结果"""
+        print(f"收到结果请求：token={token}")
+        rds = get_redis_connection()
+        output = rds.hget(f'ansible:result:{token}', 'output')
+        status = rds.hget(f'ansible:result:{token}', 'status')
+        
+        if output is None:
+            print(f"Token {token} 不存在或已过期")
+            response = JsonResponse({'error': 'Token不存在或已过期'}, status=404)
+        else:
+            print(f"返回Token {token} 的结果，状态码：{status}")
+            response = JsonResponse({
+                'output': output.decode() if output else '',
+                'status': int(status) if status else -2  # -2表示执行中
+            })
+        
+        # 添加CORS头
+        response["Access-Control-Allow-Origin"] = "*"
+        response["Access-Control-Allow-Methods"] = "GET, OPTIONS"
+        response["Access-Control-Allow-Headers"] = "*"
+        return response
+
+
 def _dispatch_ansible(task_data):
     """
     异步执行Ansible Playbook
@@ -84,10 +116,10 @@ def _dispatch_ansible(task_data):
     hosts = task_data['hosts']
     extra_vars = task_data['extra_vars']
     
-    # 发送初始连接测试消息
-    test_message = json.dumps({'key': 'all', 'data': '\r\n\x1b[36m### Ansible服务已连接，正在准备环境... ###\x1b[0m\r\n'})
-    print(f"发送初始连接消息到token {token}: {test_message}")
-    rds.publish(token, test_message)
+    # 初始连接信息
+    initial_msg = '\r\n\x1b[36m### Ansible服务已连接，正在准备环境... ###\x1b[0m\r\n'
+    print(f"发送初始连接消息到token {token}")
+    rds.hset(f'ansible:result:{token}', 'output', initial_msg)
     
     try:
         # 发送连接信息
@@ -96,7 +128,8 @@ def _dispatch_ansible(task_data):
             connection_info += f"\r\n\x1b[36m# 主机{i}: {host['ip']}:{host['port']} 用户: {host['username']} {'(使用密码认证)' if host.get('password') else '(使用密钥认证)'}\x1b[0m\r\n"
         
         print(f"发送主机连接信息到token {token}")
-        rds.publish(token, json.dumps({'key': 'all', 'data': connection_info}))
+        current_output = rds.hget(f'ansible:result:{token}', 'output').decode()
+        rds.hset(f'ansible:result:{token}', 'output', current_output + connection_info)
         
         # 创建临时目录用于存放inventory和playbook文件
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -132,10 +165,9 @@ def _dispatch_ansible(task_data):
             
             # 发送inventory文件信息
             inventory_content = open(inventory_path, 'r').read()
-            rds.publish(token, json.dumps({
-                'key': 'all', 
-                'data': f"\r\n\x1b[36m### Ansible Inventory文件 ###\x1b[0m\r\n{inventory_content}\r\n"
-            }))
+            current_output = rds.hget(f'ansible:result:{token}', 'output').decode()
+            inventory_info = f"\r\n\x1b[36m### Ansible Inventory文件 ###\x1b[0m\r\n{inventory_content}\r\n"
+            rds.hset(f'ansible:result:{token}', 'output', current_output + inventory_info)
             
             # 创建playbook文件
             playbook_path = os.path.join(temp_dir, 'playbook.yml')
@@ -154,14 +186,15 @@ def _dispatch_ansible(task_data):
             
             # 发送命令信息
             cmd_str = ' '.join(command)
-            rds.publish(token, json.dumps({
-                'key': 'all', 
-                'data': f"\r\n\x1b[36m### 执行命令: {cmd_str} ###\x1b[0m\r\n"
-            }))
+            current_output = rds.hget(f'ansible:result:{token}', 'output').decode()
+            cmd_info = f"\r\n\x1b[36m### 执行命令: {cmd_str} ###\x1b[0m\r\n"
+            rds.hset(f'ansible:result:{token}', 'output', current_output + cmd_info)
             
             # 执行Ansible命令并捕获输出
             print(f"开始执行Ansible命令: {cmd_str}")
-            rds.publish(token, json.dumps({'key': 'all', 'data': '\r\n\x1b[36m### 开始执行Ansible Playbook...\x1b[0m\r\n'}))
+            current_output = rds.hget(f'ansible:result:{token}', 'output').decode()
+            exec_start_msg = '\r\n\x1b[36m### 开始执行Ansible Playbook...\x1b[0m\r\n'
+            rds.hset(f'ansible:result:{token}', 'output', current_output + exec_start_msg)
             
             start_time = time.time()
             process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
@@ -169,7 +202,8 @@ def _dispatch_ansible(task_data):
             # 读取并发送输出
             for line in iter(process.stdout.readline, ''):
                 print(f"Ansible输出: {line.strip()}")
-                rds.publish(token, json.dumps({'key': 'all', 'data': line}))
+                current_output = rds.hget(f'ansible:result:{token}', 'output').decode()
+                rds.hset(f'ansible:result:{token}', 'output', current_output + line)
             
             exit_code = process.wait()
             elapsed_time = human_seconds_time(time.time() - start_time)
@@ -181,14 +215,16 @@ def _dispatch_ansible(task_data):
                 result_message = f'\r\n\x1b[31m### Ansible Playbook执行失败，退出代码：{exit_code}，总耗时：{elapsed_time} ###\x1b[0m\r\n'
             
             print(f"Ansible执行完成，退出代码: {exit_code}, 发送结果消息")
-            rds.publish(token, json.dumps({'key': 'all', 'data': result_message}))
+            current_output = rds.hget(f'ansible:result:{token}', 'output').decode()
+            rds.hset(f'ansible:result:{token}', 'output', current_output + result_message)
             
-            # 发送状态码
-            rds.publish(token, json.dumps({'key': 'all', 'status': exit_code}))
+            # 设置状态码
+            rds.hset(f'ansible:result:{token}', 'status', exit_code)
     
     except Exception as e:
         # 捕获并发送异常信息
         error_message = f'\r\n\x1b[31m### 执行异常：{str(e)} ###\x1b[0m\r\n'
         print(f"执行异常: {str(e)}")
-        rds.publish(token, json.dumps({'key': 'all', 'data': error_message}))
-        rds.publish(token, json.dumps({'key': 'all', 'status': -1})) 
+        current_output = rds.hget(f'ansible:result:{token}', 'output').decode()
+        rds.hset(f'ansible:result:{token}', 'output', current_output + error_message)
+        rds.hset(f'ansible:result:{token}', 'status', -1)  # -1表示执行失败 

@@ -144,6 +144,7 @@ AUTHENTICATION_EXCLUDES = (
     '/account/login/',
     '/setting/basic/',
     re.compile('/apis/.*'),
+    re.compile('/exec/ansible/result/.*'),
 )
 
 SPUG_VERSION = 'v3.3.3'

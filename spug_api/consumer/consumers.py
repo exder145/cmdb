@@ -11,6 +11,7 @@ from libs.utils import str_decode
 from threading import Thread
 import time
 import json
+from channels.generic.websocket import AsyncWebsocketConsumer
 
 
 class ComConsumer(BaseConsumer):
@@ -133,36 +134,38 @@ class NotifyConsumer(BaseConsumer):
         self.send(text_data=json.dumps(event))
 
 
-class PubSubConsumer(BaseConsumer):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+class PubSubConsumer(AsyncWebsocketConsumer):
+    async def connect(self):
         self.token = self.scope['url_route']['kwargs']['token']
         print(f"初始化PubSubConsumer，token: {self.token}")
+        await self.accept()
+        
+        # Redis订阅在生命周期方法中处理
         self.rds = get_redis_connection()
         self.p = self.rds.pubsub(ignore_subscribe_messages=True)
         self.p.subscribe(self.token)
         print(f"已订阅Redis频道: {self.token}")
 
-    def disconnect(self, code):
-        print(f"WebSocket断开连接，token: {self.token}, 代码: {code}")
-        self.p.close()
-        self.rds.close()
+    async def disconnect(self, close_code):
+        print(f"WebSocket断开连接，token: {self.token}, 代码: {close_code}")
+        if hasattr(self, 'p'):
+            self.p.close()
+        if hasattr(self, 'rds'):
+            self.rds.close()
 
-    def receive(self, **kwargs):
+    async def receive(self, text_data=None, bytes_data=None):
         print(f"收到WebSocket请求，token: {self.token}")
         response = self.p.get_message(timeout=10)
         counter = 0
         while response:
-            print(f"从Redis获取消息: {response}")
             try:
                 data = str_decode(response['data'])
-                print(f"发送WebSocket消息到客户端: {data[:100]}...")
-                self.send(text_data=data)
+                await self.send(text_data=data)
             except Exception as e:
                 print(f"发送消息时出错: {str(e)}")
             response = self.p.get_message(timeout=10)
             counter += 1
             if counter > 100:  # 避免无限循环
                 break
-        self.send(text_data='pong')
+        await self.send(text_data='pong')
         print(f"已发送pong响应, token: {self.token}")

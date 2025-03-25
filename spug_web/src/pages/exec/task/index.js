@@ -250,6 +250,41 @@ function TaskIndex() {
     });
   }
 
+  // 添加一键测试功能
+  function handleQuickTest() {
+    // 设置测试Playbook内容
+    const testPlaybook = `---
+- name: Test Playbook
+  hosts: all
+  gather_facts: no
+  
+  tasks:
+    - name: Echo Test
+      command: echo "Hello from Ansible"
+      register: echo_result
+    
+    - name: Show Result
+      debug:
+        msg: "Command output: {{ echo_result.stdout }}"`;
+    
+    // 设置预定义的测试主机信息
+    const testHost = {
+      id: Date.now(),
+      ip: '192.168.75.140',
+      port: '22',
+      username: 'EXDER',
+      password: 'Enderman122'
+    };
+    
+    // 更新主机列表，只保留测试主机
+    setHostList([testHost]);
+    
+    // 设置测试Playbook内容
+    setPlaybook(testPlaybook);
+    
+    message.success('已加载测试Playbook和主机信息');
+  }
+
   const hostColumns = [
     {
       title: 'IP地址',
@@ -325,6 +360,25 @@ function TaskIndex() {
                 >
                   <Button icon={<UploadOutlined />}>从CSV导入</Button>
                 </Upload>
+                <Button 
+                  type="primary" 
+                  danger
+                  icon={<ThunderboltOutlined />} 
+                  onClick={() => {
+                    // 使用预设的主机信息
+                    const testHost = {
+                      id: Date.now(),
+                      ip: '192.168.75.140',
+                      port: '22',
+                      username: 'EXDER',
+                      password: 'Enderman122'
+                    };
+                    setHostList([testHost]);
+                    message.success('已加载测试主机信息');
+                  }}
+                >
+                  使用测试主机
+                </Button>
               </Space>
               
               <div style={{ 
@@ -357,10 +411,11 @@ function TaskIndex() {
           </Form.Item>
 
           <Form.Item required label={<span style={{color: '#ff4d4f'}}>Ansible Playbook</span>} style={{position: 'relative'}}>
-            <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: 12}}>
+            <div style={{marginBottom: 5}}>
               <a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks.html" target="_blank" rel="noopener noreferrer"
-                className={style.tips}><BulbOutlined/> Ansible Playbook文档</a>
-              <Space size="middle">
+              className={style.tips}><BulbOutlined/> Ansible Playbook文档</a>
+
+              <Space style={{marginTop: 5, marginBottom: 5}}>
                 <Upload
                   name="file"
                   showUploadList={false}
@@ -383,6 +438,13 @@ function TaskIndex() {
                   <Button icon={<UploadOutlined />}>上传Playbook</Button>
                 </Upload>
                 <Button icon={<PlusOutlined/>} onClick={store.switchTemplate}>从模版中选择</Button>
+                <Button 
+                  type="primary" 
+                  icon={<ThunderboltOutlined/>} 
+                  onClick={handleQuickTest}
+                >
+                  一键测试
+                </Button>
               </Space>
             </div>
             <div style={{border: '1px solid #f0f0f0', borderRadius: '4px', marginBottom: '10px'}}>
@@ -422,10 +484,29 @@ function TaskIndex() {
 
         <div className={style.right}>
           <div className={style.title}>
-            执行记录
-            <Tooltip title="多次相同的执行记录将会合并展示，每天自动清理，保留最近30条记录。">
-              <QuestionCircleOutlined style={{color: '#999', marginLeft: 8}}/>
-            </Tooltip>
+            <div><span>Ansible执行</span></div>
+            <div>
+              <Button disabled={loading} type="link" icon={<UploadOutlined/>} style={{marginRight: 10}}
+                      onClick={() => store.switchTemplate()}>
+                上传Playbook
+              </Button>
+              <Button disabled={loading} type="link" icon={<BulbOutlined/>} style={{marginRight: 10}}
+                      onClick={() => store.switchTemplate()}>
+                从模板加载
+              </Button>
+              <Button 
+                type="primary"
+                icon={<ThunderboltOutlined/>}
+                style={{marginRight: 10}}
+                onClick={handleQuickTest}
+              >
+                一键测试
+              </Button>
+              <Tooltip title="执行记录">
+                <Button disabled={loading} type="link" icon={<span className={style.hist}>H</span>}
+                        onClick={() => store.switchHistoryVisible()}/>
+              </Tooltip>
+            </div>
           </div>
           <div className={style.inner}>
             {histories.map((item, index) => (
@@ -500,6 +581,50 @@ function TaskIndex() {
               allowClear
             />
           </Form.Item>
+          
+          <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+            <Button 
+              type="primary" 
+              icon={<ThunderboltOutlined />}
+              onClick={() => {
+                // 先保存当前主机配置
+                if (editingHost.ip && editingHost.port && editingHost.username) {
+                  // 更新主机列表
+                  if (hostList.find(h => h.id === editingHost.id)) {
+                    setHostList(hostList.map(h => h.id === editingHost.id ? editingHost : h));
+                  } else {
+                    setHostList([...hostList, editingHost]);
+                  }
+                  // 关闭当前模态框
+                  setHostModalVisible(false);
+                  // 加载测试Playbook
+                  const testPlaybook = `---
+- name: Test Playbook
+  hosts: all
+  gather_facts: no
+  
+  tasks:
+    - name: Echo Test
+      command: echo "Hello from Ansible"
+      register: echo_result
+    
+    - name: Show Result
+      debug:
+        msg: "Command output: {{ echo_result.stdout }}"`;
+                  setPlaybook(testPlaybook);
+                  // 设置延迟，等待更新后自动执行
+                  setTimeout(() => {
+                    handleSubmit();
+                  }, 500);
+                  message.success('正在使用当前主机信息进行测试...');
+                } else {
+                  message.error('请填写完整的主机信息');
+                }
+              }}
+            >
+              立即测试连接
+            </Button>
+          </div>
           
           <div style={{ background: '#f9f9f9', padding: '8px 12px', borderRadius: '4px', marginTop: '8px' }}>
             <div style={{ fontSize: '12px', color: '#666', marginBottom: '4px' }}>
