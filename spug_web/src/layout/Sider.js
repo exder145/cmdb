@@ -67,7 +67,14 @@ export default function Sider(props) {
           selectedKeys={[selectedKey]}
           openKeys={openKeys}
           onOpenChange={setOpenKeys}
-          onSelect={menu => history.push(menu.key)}/>
+          onSelect={menu => {
+            const route = routes.find(r => r.path === menu.key);
+            if (route && route.isExternal) {
+              window.open(route.path, '_blank');
+            } else {
+              history.push(menu.key);
+            }
+          }}/>
       </div>
     </Layout.Sider>
   )

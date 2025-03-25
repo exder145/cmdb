@@ -13,3 +13,10 @@ user-agents==2.2.0
 docker==6.0.1
 pycryptodome==3.17
 django-cors-headers==3.14.0
+pytz==2023.3
+ipaddress==1.0.23
+redis==5.0.1
+cryptography==38.0.4
+
+# 系统依赖（需要通过系统包管理器安装）
+# sshpass - 用于带密码的ssh连接

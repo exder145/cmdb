@@ -28,16 +28,29 @@ function NavForm(props) {
         if (formData.id === undefined) {
           formData.sort = 9999
         }
+        if (fileList.length > 0) {
+          formData.logo = fileList[0].thumbUrl;
+        }
+        formData.links = record.links.filter(x => x.name && x.url);
+        if (formData.links.length === 0) {
+          message.error('请至少添加一个导航链接');
+          return;
+        }
+        setLoading(true);
         http.post('/home/navigation/', formData)
           .then(() => {
             message.success('保存成功');
             props.onSubmit()
           })
+          .finally(() => setLoading(false))
       })
   }
 
   function add() {
-    record.links.push({});
+    if (!record.links) {
+      record.links = [];
+    }
+    record.links.push({name: '', url: ''});
     setRecord(lds.cloneDeep(record))
   }
 
@@ -47,6 +60,12 @@ function NavForm(props) {
   }
 
   function changeLink(e, index, key) {
+    if (!record.links) {
+      record.links = [];
+    }
+    if (!record.links[index]) {
+      record.links[index] = {};
+    }
     record.links[index][key] = e.target.value;
     setRecord(lds.cloneDeep(record))
   }
@@ -55,8 +74,21 @@ function NavForm(props) {
     if (file.size / 1024 > 100) {
       message.error('图片将直接存储至数据库，请上传小于100KB的图片');
       setTimeout(() => setFileList([]))
+      return false;
     }
-    return false
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      setFileList([{
+        uid: 0,
+        thumbUrl: reader.result
+      }]);
+    };
+    return false;
+  }
+
+  if (!record.links) {
+    record.links = [{name: '', url: ''}];
   }
 
   return (
