@@ -64,7 +64,13 @@ tar -xzf spug_data.tar.gz
 
 ```bash
 cd spug_api
-python manage.py runserver 0.0.0.0:8000
+python manage.py runserver 0.0.0.0:8000 --settings=spug.production
+#注：spug_api\spug\production.py文件覆盖了默认的settings.py中的配置，专为生产环境做了以下优化：
+#关闭调试模式（DEBUG = False）
+#配置数据库路径指向生产环境位置（/home/EXDER/spug_data/db.sqlite3）
+#使用Redis而非内存作为缓存和Channel Layers后端
+#配置日志系统将日志写入固定文件（/var/log/spug/spug.log）
+#自动创建日志目录
 ```
 
 ## 前端部署步骤
@@ -89,16 +95,16 @@ npm start
 npm run build
 ```
 
-### 4. 配置说明
+## 注意事项以及配置修改
 
-- 开发环境配置文件：`.env`
-- 生产环境配置文件：`.env.production`
-- 主要配置项：
-  - REACT_APP_API_BASE_URL：后端 API 地址（默认为http://192.168.75.140:8000）
-  - NODE_OPTIONS：需要设置为--openssl-legacy-provider
-  - FAST_REFRESH：设置为 false 以避免热重载问题
-  - DISABLE_ESLINT_PLUGIN：设置为 true 以禁用 ESLint
-  - SKIP_PREFLIGHT_CHECK：设置为 true 以跳过依赖检查
+1. 确保 Redis 服务正常运行， _systemctl_ status redis
+2. 后端 API 修改为自己主机，需要修改以下文件：
+
+   - spug_web/.env
+   - spug_web/.env.production
+   - spug_web/src/setupProxy.js
+
+3. 修改 spug_api\spug\production.py 文件中的配置
 
 ## 再次启动流程
 
@@ -116,7 +122,7 @@ npm start
 source ~/spug_venv/bin/activate
 
 # 2. 进入项目目录
-cd ~/shared/spug/spug_api
+cd /mnt/hgfs/spug/spug_api
 
 # 3. 启动服务
 python manage.py runserver 0.0.0.0:8000 --settings=spug.production
@@ -124,27 +130,5 @@ python manage.py runserver 0.0.0.0:8000 --settings=spug.production
 
 ## 访问地址
 
-- 开发环境：http://localhost:3001（如果 3000 端口被占用会自动使用 3001）
+- 开发环境：http://localhost:3000（如果 3000 端口被占用会自动使用 3001）
 - 后端 API：http://localhost:8000
-
-## 注意事项
-
-1. 确保 Redis 服务正常运行
-2. 前端开发环境需要设置 NODE_OPTIONS=--openssl-legacy-provider
-3. 生产环境部署时建议使用 nginx 作为反向代理
-4. 首次运行需要执行数据库迁移（如果需要）
-5. 如果后端 API 地址不是默认的 192.168.75.140:8000，需要修改以下文件：
-   - spug_web/.env
-   - spug_web/.env.production
-   - spug_web/src/setupProxy.js
-
-## 常见问题
-
-1. 如果遇到 Node.js 版本兼容性问题，建议使用 Node.js 14.x 版本
-2. 如果遇到 Python 包安装问题，可以尝试使用国内镜像源
-3. 确保所有必要的端口（3001, 8000, 6379）未被占用
-4. 如果前端启动时遇到端口占用问题，React 会自动使用下一个可用端口（3001）
-
-## 技术支持
-
-如有问题，请联系项目维护人员。

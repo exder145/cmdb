@@ -59,14 +59,29 @@ const OutView = observer(({ onBack }) => {
       term.writeln('\r\n\x1b[36m### 使用轮询方式获取Ansible执行结果... ###\x1b[0m\r\n');
       
       // 设置连接状态
-        setConnected(true);
+      setConnected(true);
       
       // 缓存上一次输出长度
       let lastOutputLength = 0;
       let retryCount = 0;
       
+      // 添加计时器以检测长时间未完成的任务
+      let startTime = Date.now();
+      let unchangedTime = Date.now();
+      let timeoutWarningShown = false;
+      
       // 使用简单轮询获取结果
       const pollInterval = setInterval(() => {
+        // 检查任务是否执行时间过长
+        const currentTime = Date.now();
+        const elapsedSeconds = Math.floor((currentTime - startTime) / 1000);
+        
+        // 如果执行超过120秒且60秒内没有新输出，显示警告
+        if (elapsedSeconds > 120 && ((currentTime - unchangedTime) > 60000) && !timeoutWarningShown) {
+          term.writeln('\r\n\x1b[33m### 警告：任务执行时间较长或可能已卡住，您可以尝试刷新或检查主机连接状态 ###\x1b[0m\r\n');
+          timeoutWarningShown = true;
+        }
+        
         // 直接使用完整URL，避免路由问题
         fetch(`http://192.168.75.140:8000/exec/ansible/result/${store.token}/`, {
           method: 'GET',
@@ -86,6 +101,9 @@ const OutView = observer(({ onBack }) => {
             retryCount = 0; // 重置重试计数
             
             if (data.output && data.output.length > lastOutputLength) {
+              // 发现新输出，更新最后变化时间
+              unchangedTime = Date.now();
+              
               // 只显示新增的输出
               let newOutput = data.output.substring(lastOutputLength);
               
@@ -101,11 +119,22 @@ const OutView = observer(({ onBack }) => {
             
             // 处理状态更新
             if (data.status !== undefined && store.outputs['all']) {
-              store.outputs['all'].status = data.status;
+              // 将状态转换为数字确保比较一致
+              const status = parseInt(data.status, 10);
+              console.log(`收到状态码: ${data.status}, 转换后: ${status}, 类型: ${typeof status}`);
+              
+              // 更新状态
+              store.outputs['all'].status = status;
               
               // 如果执行完成，停止轮询
-              if (data.status !== -2) {
+              // -2 表示正在执行中，其他值表示执行完成
+              if (status !== -2) {
+                console.log(`任务执行完成，状态码: ${status}`);
                 clearInterval(pollInterval);
+                
+                // 添加执行完成标记
+                const statusText = status === 0 ? '成功' : '失败';
+                term.writeln(`\r\n\x1b[34m### 任务执行${statusText}，状态码: ${status} ###\x1b[0m\r\n`);
               }
             }
           })
@@ -117,7 +146,7 @@ const OutView = observer(({ onBack }) => {
             if (retryCount >= 5) {
               term.writeln(`\r\n\x1b[31m### 无法获取执行结果，请检查后端服务 ###\x1b[0m\r\n`);
               clearInterval(pollInterval);
-        setConnected(false);
+              setConnected(false);
             }
           });
       }, 1000);
