@@ -95,6 +95,12 @@ npm start
 npm run build
 ```
 
+### 账号密码
+
+admin
+
+spug.cc
+
 ## 注意事项以及配置修改
 
 1. 确保 Redis 服务正常运行， _systemctl_ status redis

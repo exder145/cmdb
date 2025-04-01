@@ -1,0 +1,1423 @@
+[
+  {
+    "month": "2023-01",
+    "instanceid": "i-TR6sSHSY",
+    "instance_name": "jmeter-test",
+    "productType": "postpay",
+    "financePrice": "116.32"
+  },
+  {
+    "month": "2023-01",
+    "instanceid": "i-TR6sSHSY",
+    "instance_name": "jmeter-test",
+    "productType": "postpay",
+    "financePrice": "47.46"
+  },
+  {
+    "month": "2023-01",
+    "instanceid": "i-QgjOtOGu",
+    "instance_name": "proxy_backup",
+    "productType": "prepay",
+    "financePrice": "849.06"
+  },
+  {
+    "month": "2023-01",
+    "instanceid": "i-eaHcW44R",
+    "instance_name": "Sony_Git_Internal",
+    "productType": "prepay",
+    "financePrice": "935.3"
+  },
+  {
+    "month": "2023-01",
+    "instanceid": "i-ayWpZcj8",
+    "instance_name": "oauth",
+    "productType": "prepay",
+    "financePrice": "1188.0"
+  },
+  {
+    "month": "2023-01",
+    "instanceid": "i-Dg6INdge",
+    "instance_name": "musichub-openapi",
+    "productType": "prepay",
+    "financePrice": "1188.0"
+  },
+  {
+    "month": "2023-01",
+    "instanceid": "i-tRCswvRQ",
+    "instance_name": "elk-new",
+    "productType": "prepay",
+    "financePrice": "1512.0"
+  },
+  {
+    "month": "2023-02",
+    "instanceid": "i-MedFcCmA",
+    "instance_name": "spark-test-slave",
+    "productType": "postpay",
+    "financePrice": "2.78"
+  },
+  {
+    "month": "2023-02",
+    "instanceid": "i-TR6sSHSY",
+    "instance_name": "jmeter-test",
+    "productType": "postpay",
+    "financePrice": "147.91"
+  },
+  {
+    "month": "2023-02",
+    "instanceid": "i-2oMKJAGo",
+    "instance_name": "clickhouse-test",
+    "productType": "postpay",
+    "financePrice": "5.71"
+  },
+  {
+    "month": "2023-02",
+    "instanceid": "i-2oMKJAGo",
+    "instance_name": "clickhouse-test",
+    "productType": "postpay",
+    "financePrice": "271.68"
+  },
+  {
+    "month": "2023-02",
+    "instanceid": "i-epewhBr3",
+    "instance_name": "oauth-2",
+    "productType": "prepay",
+    "financePrice": "429.21"
+  },
+  {
+    "month": "2023-02",
+    "instanceid": "i-V4PL29Ai",
+    "instance_name": "liantiao_proxy",
+    "productType": "prepay",
+    "financePrice": "283.5"
+  },
+  {
+    "month": "2023-02",
+    "instanceid": "i-K4NSlC9X",
+    "instance_name": "vender_pool",
+    "productType": "prepay",
+    "financePrice": "132.0"
+  },
+  {
+    "month": "2023-02",
+    "instanceid": "i-hHbaWhVm",
+    "instance_name": "mirror-db",
+    "productType": "prepay",
+    "financePrice": "792.0"
+  },
+  {
+    "month": "2023-02",
+    "instanceid": "i-bvF4lt0R",
+    "instance_name": "website",
+    "productType": "prepay",
+    "financePrice": "858.42"
+  },
+  {
+    "month": "2023-03",
+    "instanceid": "i-MedFcCmA",
+    "instance_name": "spark-test-slave",
+    "productType": "postpay",
+    "financePrice": "432.78"
+  },
+  {
+    "month": "2023-03",
+    "instanceid": "i-MedFcCmA",
+    "instance_name": "spark-test-slave",
+    "productType": "postpay",
+    "financePrice": "7.55"
+  },
+  {
+    "month": "2023-03",
+    "instanceid": "i-TR6sSHSY",
+    "instance_name": "jmeter-test",
+    "productType": "postpay",
+    "financePrice": "163.75"
+  },
+  {
+    "month": "2023-03",
+    "instanceid": "i-2oMKJAGo",
+    "instance_name": "clickhouse-test",
+    "productType": "postpay",
+    "financePrice": "443.01"
+  },
+  {
+    "month": "2023-03",
+    "instanceid": "i-66ni7RVh",
+    "instance_name": "proxy_backend_backup",
+    "productType": "prepay",
+    "financePrice": "522.81"
+  },
+  {
+    "month": "2023-03",
+    "instanceid": "i-8dd1jo5N",
+    "instance_name": "webMusic-holiday",
+    "productType": "prepay",
+    "financePrice": "244.5"
+  },
+  {
+    "month": "2023-03",
+    "instanceid": "i-HeUE4qCN",
+    "instance_name": "dataBase_backup",
+    "productType": "prepay",
+    "financePrice": "249.0"
+  },
+  {
+    "month": "2023-03",
+    "instanceid": "i-o9DGfmdj",
+    "instance_name": "Sony_Git",
+    "productType": "prepay",
+    "financePrice": "126.0"
+  },
+  {
+    "month": "2023-03",
+    "instanceid": "i-poCyIysl",
+    "instance_name": "backend",
+    "productType": "prepay",
+    "financePrice": "94.5"
+  },
+  {
+    "month": "2023-03",
+    "instanceid": "i-ZArbE2KB",
+    "instance_name": "proxy-status",
+    "productType": "prepay",
+    "financePrice": "766.79"
+  },
+  {
+    "month": "2023-03",
+    "instanceid": "i-AYZ2Ud83",
+    "instance_name": "redis-3",
+    "productType": "prepay",
+    "financePrice": "792.0"
+  },
+  {
+    "month": "2023-03",
+    "instanceid": "i-QvUr8Pt9",
+    "instance_name": "redis-1",
+    "productType": "prepay",
+    "financePrice": "792.0"
+  },
+  {
+    "month": "2023-03",
+    "instanceid": "i-M2eiRjqK",
+    "instance_name": "redis-2",
+    "productType": "prepay",
+    "financePrice": "792.0"
+  },
+  {
+    "month": "2023-03",
+    "instanceid": "i-wlU28lJZ",
+    "instance_name": "huawei_api-2",
+    "productType": "prepay",
+    "financePrice": "1584.0"
+  },
+  {
+    "month": "2023-03",
+    "instanceid": "i-gPeVJqkO",
+    "instance_name": "huawei_api-1",
+    "productType": "prepay",
+    "financePrice": "1584.0"
+  },
+  {
+    "month": "2023-03",
+    "instanceid": "i-CdvaZ6VR",
+    "instance_name": "huawei_proxy",
+    "productType": "prepay",
+    "financePrice": "594.0"
+  },
+  {
+    "month": "2023-03",
+    "instanceid": "i-NrxwSO5L",
+    "instance_name": "Log",
+    "productType": "prepay",
+    "financePrice": "792.0"
+  },
+  {
+    "month": "2023-04",
+    "instanceid": "i-MedFcCmA",
+    "instance_name": "spark-test-slave",
+    "productType": "postpay",
+    "financePrice": "397.05"
+  },
+  {
+    "month": "2023-04",
+    "instanceid": "i-TR6sSHSY",
+    "instance_name": "jmeter-test",
+    "productType": "postpay",
+    "financePrice": "158.65"
+  },
+  {
+    "month": "2023-04",
+    "instanceid": "i-2oMKJAGo",
+    "instance_name": "clickhouse-test",
+    "productType": "postpay",
+    "financePrice": "397.03"
+  },
+  {
+    "month": "2023-04",
+    "instanceid": "i-2PClzCFd",
+    "instance_name": "spark-slave",
+    "productType": "postpay",
+    "financePrice": "201.13"
+  },
+  {
+    "month": "2023-04",
+    "instanceid": "i-73FnR3wf",
+    "instance_name": "proxy_dl",
+    "productType": "postpay",
+    "financePrice": "106.93"
+  },
+  {
+    "month": "2023-04",
+    "instanceid": "i-3WhOANJo",
+    "instance_name": "StatisticsRecommendation",
+    "productType": "postpay",
+    "financePrice": "49.04"
+  },
+  {
+    "month": "2023-04",
+    "instanceid": "i-0Gyckjlk",
+    "instance_name": "nagios",
+    "productType": "prepay",
+    "financePrice": "126.0"
+  },
+  {
+    "month": "2023-04",
+    "instanceid": "i-8dd1jo5N",
+    "instance_name": "webMusic-holiday",
+    "productType": "prepay",
+    "financePrice": "1467.0"
+  },
+  {
+    "month": "2023-04",
+    "instanceid": "i-o9DGfmdj",
+    "instance_name": "Sony_Git",
+    "productType": "prepay",
+    "financePrice": "756.0"
+  },
+  {
+    "month": "2023-04",
+    "instanceid": "i-poCyIysl",
+    "instance_name": "backend",
+    "productType": "prepay",
+    "financePrice": "567.0"
+  },
+  {
+    "month": "2023-04",
+    "instanceid": "i-2PClzCFd",
+    "instance_name": "spark-slave",
+    "productType": "prepay",
+    "financePrice": "858.42"
+  },
+  {
+    "month": "2023-04",
+    "instanceid": "i-mUAWs3l0",
+    "instance_name": "spark",
+    "productType": "prepay",
+    "financePrice": "203.18"
+  },
+  {
+    "month": "2023-04",
+    "instanceid": "i-K4NSlC9X",
+    "instance_name": "vender_pool",
+    "productType": "prepay",
+    "financePrice": "679.5"
+  },
+  {
+    "month": "2023-05",
+    "instanceid": "i-MedFcCmA",
+    "instance_name": "spark-test-slave",
+    "productType": "postpay",
+    "financePrice": "110.68"
+  },
+  {
+    "month": "2023-05",
+    "instanceid": "i-TR6sSHSY",
+    "instance_name": "jmeter-test",
+    "productType": "postpay",
+    "financePrice": "163.98"
+  },
+  {
+    "month": "2023-05",
+    "instanceid": "i-2oMKJAGo",
+    "instance_name": "clickhouse-test",
+    "productType": "postpay",
+    "financePrice": "333.66"
+  },
+  {
+    "month": "2023-05",
+    "instanceid": "i-73FnR3wf",
+    "instance_name": "proxy_dl",
+    "productType": "postpay",
+    "financePrice": "55.99"
+  },
+  {
+    "month": "2023-05",
+    "instanceid": "i-HeUE4qCN",
+    "instance_name": "dataBase_backup",
+    "productType": "postpay",
+    "financePrice": "449.39"
+  },
+  {
+    "month": "2023-05",
+    "instanceid": "i-3WhOANJo",
+    "instance_name": "StatisticsRecommendation",
+    "productType": "postpay",
+    "financePrice": "29.27"
+  },
+  {
+    "month": "2023-05",
+    "instanceid": "i-73FnR3wf",
+    "instance_name": "proxy_dl",
+    "productType": "prepay",
+    "financePrice": "141.51"
+  },
+  {
+    "month": "2023-05",
+    "instanceid": "i-i0iV8g1P",
+    "instance_name": "content",
+    "productType": "prepay",
+    "financePrice": "2030.97"
+  },
+  {
+    "month": "2023-06",
+    "instanceid": "i-TR6sSHSY",
+    "instance_name": "jmeter-test",
+    "productType": "postpay",
+    "financePrice": "158.7"
+  },
+  {
+    "month": "2023-06",
+    "instanceid": "i-2oMKJAGo",
+    "instance_name": "clickhouse-test",
+    "productType": "postpay",
+    "financePrice": "429.19"
+  },
+  {
+    "month": "2023-06",
+    "instanceid": "i-3WhOANJo",
+    "instance_name": "StatisticsRecommendation",
+    "productType": "postpay",
+    "financePrice": "158.66"
+  },
+  {
+    "month": "2023-06",
+    "instanceid": "i-SdgQOB1j",
+    "instance_name": "clickhouse",
+    "productType": "prepay",
+    "financePrice": "429.21"
+  },
+  {
+    "month": "2023-06",
+    "instanceid": "i-mUAWs3l0",
+    "instance_name": "spark",
+    "productType": "prepay",
+    "financePrice": "858.42"
+  },
+  {
+    "month": "2023-06",
+    "instanceid": "i-Cz8rPEFy",
+    "instance_name": "download",
+    "productType": "prepay",
+    "financePrice": "567.0"
+  },
+  {
+    "month": "2023-06",
+    "instanceid": "i-V4PL29Ai",
+    "instance_name": "liantiao_proxy",
+    "productType": "prepay",
+    "financePrice": "567.0"
+  },
+  {
+    "month": "2023-06",
+    "instanceid": "i-GhGxU79l",
+    "instance_name": "dev_backend",
+    "productType": "prepay",
+    "financePrice": "1107.0"
+  },
+  {
+    "month": "2023-06",
+    "instanceid": "i-w8oICwv9",
+    "instance_name": "dev_db",
+    "productType": "prepay",
+    "financePrice": "747.0"
+  },
+  {
+    "month": "2023-06",
+    "instanceid": "i-6jrgMzPu",
+    "instance_name": "dev_front",
+    "productType": "prepay",
+    "financePrice": "567.0"
+  },
+  {
+    "month": "2023-06",
+    "instanceid": "i-epewhBr3",
+    "instance_name": "oauth-2",
+    "productType": "prepay",
+    "financePrice": "429.21"
+  },
+  {
+    "month": "2023-06",
+    "instanceid": "i-3CQ2SZRf",
+    "instance_name": "streaming",
+    "productType": "prepay",
+    "financePrice": "634.68"
+  },
+  {
+    "month": "2023-06",
+    "instanceid": "i-aJtnnwGU",
+    "instance_name": "remote-work-xie",
+    "productType": "prepay",
+    "financePrice": "429.21"
+  },
+  {
+    "month": "2023-06",
+    "instanceid": "i-1kgKJQiR",
+    "instance_name": "remote-work-duan",
+    "productType": "prepay",
+    "financePrice": "429.21"
+  },
+  {
+    "month": "2023-06",
+    "instanceid": "i-73FnR3wf",
+    "instance_name": "proxy_dl",
+    "productType": "prepay",
+    "financePrice": "424.53"
+  },
+  {
+    "month": "2023-06",
+    "instanceid": "i-jK3ZpLzI",
+    "instance_name": "offsite",
+    "productType": "prepay",
+    "financePrice": "634.68"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-wGUmGDQs",
+    "instance_name": "jmeter2",
+    "productType": "postpay",
+    "financePrice": "0.0"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-f4p9IEyO",
+    "instance_name": "jmeter3",
+    "productType": "postpay",
+    "financePrice": "0.0"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-TR6sSHSY",
+    "instance_name": "jmeter-test",
+    "productType": "postpay",
+    "financePrice": "163.96"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-2oMKJAGo",
+    "instance_name": "clickhouse-test",
+    "productType": "postpay",
+    "financePrice": "443.51"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-2PClzCFd",
+    "instance_name": "spark-slave",
+    "productType": "postpay",
+    "financePrice": "71.71"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-3WhOANJo",
+    "instance_name": "StatisticsRecommendation",
+    "productType": "postpay",
+    "financePrice": "163.96"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-6ZOE53hO",
+    "instance_name": "huawei_proxy_backup",
+    "productType": "prepay",
+    "financePrice": "522.81"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-QgjOtOGu",
+    "instance_name": "proxy_backup",
+    "productType": "prepay",
+    "financePrice": "849.06"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-eaHcW44R",
+    "instance_name": "Sony_Git_Internal",
+    "productType": "prepay",
+    "financePrice": "935.3"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-T5wUjgM2",
+    "instance_name": "liantiao_proxy",
+    "productType": "prepay",
+    "financePrice": "426.0"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-Dg6INdge",
+    "instance_name": "musichub-openapi",
+    "productType": "prepay",
+    "financePrice": "1188.0"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-ayWpZcj8",
+    "instance_name": "oauth",
+    "productType": "prepay",
+    "financePrice": "1188.0"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-jXfqZ49Z",
+    "instance_name": "musichub_test_DB",
+    "productType": "prepay",
+    "financePrice": "4061.95"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-SK1TpoLm",
+    "instance_name": "musichub_test_api",
+    "productType": "prepay",
+    "financePrice": "2746.94"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-HOh1qLoJ",
+    "instance_name": "remote-work-yang",
+    "productType": "prepay",
+    "financePrice": "858.42"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-tRCswvRQ",
+    "instance_name": "elk-new",
+    "productType": "prepay",
+    "financePrice": "1512.0"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-W2UsKiYX",
+    "instance_name": "proxy-status",
+    "productType": "prepay",
+    "financePrice": "522.81"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-PMm6TePO",
+    "instance_name": "hk",
+    "productType": "prepay",
+    "financePrice": "1395.0"
+  },
+  {
+    "month": "2023-07",
+    "instanceid": "i-u8AzCT8p",
+    "instance_name": "sync_tunnel",
+    "productType": "prepay",
+    "financePrice": "792.0"
+  },
+  {
+    "month": "2023-08",
+    "instanceid": "i-cQ2tSkKx",
+    "instance_name": "redmine-temp",
+    "productType": "postpay",
+    "financePrice": "5.46"
+  },
+  {
+    "month": "2023-08",
+    "instanceid": "i-TR6sSHSY",
+    "instance_name": "jmeter-test",
+    "productType": "postpay",
+    "financePrice": "49.85"
+  },
+  {
+    "month": "2023-08",
+    "instanceid": "i-TR6sSHSY",
+    "instance_name": "jmeter-test",
+    "productType": "postpay",
+    "financePrice": "114.04"
+  },
+  {
+    "month": "2023-08",
+    "instanceid": "i-2oMKJAGo",
+    "instance_name": "clickhouse-test",
+    "productType": "postpay",
+    "financePrice": "135.98"
+  },
+  {
+    "month": "2023-08",
+    "instanceid": "i-2oMKJAGo",
+    "instance_name": "clickhouse-test",
+    "productType": "postpay",
+    "financePrice": "307.61"
+  },
+  {
+    "month": "2023-08",
+    "instanceid": "i-2PClzCFd",
+    "instance_name": "spark-slave",
+    "productType": "postpay",
+    "financePrice": "18.51"
+  },
+  {
+    "month": "2023-08",
+    "instanceid": "i-2PClzCFd",
+    "instance_name": "spark-slave",
+    "productType": "postpay",
+    "financePrice": "87.81"
+  },
+  {
+    "month": "2023-08",
+    "instanceid": "i-3WhOANJo",
+    "instance_name": "StatisticsRecommendation",
+    "productType": "postpay",
+    "financePrice": "42.66"
+  },
+  {
+    "month": "2023-08",
+    "instanceid": "i-3WhOANJo",
+    "instance_name": "StatisticsRecommendation",
+    "productType": "postpay",
+    "financePrice": "108.93"
+  },
+  {
+    "month": "2023-08",
+    "instanceid": "i-yn4qxeoz",
+    "instance_name": "website-2",
+    "productType": "prepay",
+    "financePrice": "743.94"
+  },
+  {
+    "month": "2023-08",
+    "instanceid": "i-3WhOANJo",
+    "instance_name": "StatisticsRecommendation",
+    "productType": "prepay",
+    "financePrice": "559.68"
+  },
+  {
+    "month": "2023-08",
+    "instanceid": "i-3WhOANJo",
+    "instance_name": "StatisticsRecommendation",
+    "productType": "prepay",
+    "financePrice": "105.78"
+  },
+  {
+    "month": "2023-08",
+    "instanceid": "i-7uhRpDFG",
+    "instance_name": "Recovery_Database",
+    "productType": "prepay",
+    "financePrice": "105.78"
+  },
+  {
+    "month": "2023-08",
+    "instanceid": "i-0GtB7Ybg",
+    "instance_name": "green_tunnel",
+    "productType": "prepay",
+    "financePrice": "105.78"
+  },
+  {
+    "month": "2023-08",
+    "instanceid": "i-hHbaWhVm",
+    "instance_name": "mirror-db",
+    "productType": "prepay",
+    "financePrice": "792.0"
+  },
+  {
+    "month": "2023-08",
+    "instanceid": "i-wDERn8bq",
+    "instance_name": "dev_test",
+    "productType": "prepay",
+    "financePrice": "747.0"
+  },
+  {
+    "month": "2023-08",
+    "instanceid": "i-bvF4lt0R",
+    "instance_name": "website",
+    "productType": "prepay",
+    "financePrice": "1373.47"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-TR6sSHSY",
+    "instance_name": "jmeter-test",
+    "productType": "postpay",
+    "financePrice": "49.44"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-TR6sSHSY",
+    "instance_name": "jmeter-test",
+    "productType": "postpay",
+    "financePrice": "109.25"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-2oMKJAGo",
+    "instance_name": "clickhouse-test",
+    "productType": "postpay",
+    "financePrice": "133.85"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-2oMKJAGo",
+    "instance_name": "clickhouse-test",
+    "productType": "postpay",
+    "financePrice": "295.36"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-2PClzCFd",
+    "instance_name": "spark-slave",
+    "productType": "postpay",
+    "financePrice": "189.38"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-2PClzCFd",
+    "instance_name": "spark-slave",
+    "productType": "postpay",
+    "financePrice": "0.03"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-2PClzCFd",
+    "instance_name": "spark-slave",
+    "productType": "postpay",
+    "financePrice": "66.17"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-jK3ZpLzI",
+    "instance_name": "offsite",
+    "productType": "postpay",
+    "financePrice": "98.9"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-jK3ZpLzI",
+    "instance_name": "offsite",
+    "productType": "postpay",
+    "financePrice": "65.92"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-SdgQOB1j",
+    "instance_name": "clickhouse",
+    "productType": "prepay",
+    "financePrice": "286.14"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-hxi0ZPSQ",
+    "instance_name": "webMusic-API",
+    "productType": "prepay",
+    "financePrice": "423.12"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-Cz8rPEFy",
+    "instance_name": "download",
+    "productType": "prepay",
+    "financePrice": "378.0"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-66ni7RVh",
+    "instance_name": "proxy_backend_backup",
+    "productType": "prepay",
+    "financePrice": "174.27"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-NrxwSO5L",
+    "instance_name": "Log",
+    "productType": "prepay",
+    "financePrice": "264.0"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-epewhBr3",
+    "instance_name": "oauth-2",
+    "productType": "prepay",
+    "financePrice": "286.14"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-SoWIjkoe",
+    "instance_name": "webMusic-API-2",
+    "productType": "prepay",
+    "financePrice": "286.14"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-mw0KkkA4",
+    "instance_name": "musichub-openapi-2",
+    "productType": "prepay",
+    "financePrice": "173.64"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-AYZ2Ud83",
+    "instance_name": "redis-3",
+    "productType": "prepay",
+    "financePrice": "264.0"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-QvUr8Pt9",
+    "instance_name": "redis-1",
+    "productType": "prepay",
+    "financePrice": "264.0"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-M2eiRjqK",
+    "instance_name": "redis-2",
+    "productType": "prepay",
+    "financePrice": "264.0"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-wlU28lJZ",
+    "instance_name": "huawei_api-2",
+    "productType": "prepay",
+    "financePrice": "528.0"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-gPeVJqkO",
+    "instance_name": "huawei_api-1",
+    "productType": "prepay",
+    "financePrice": "528.0"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-CdvaZ6VR",
+    "instance_name": "huawei_proxy",
+    "productType": "prepay",
+    "financePrice": "85.5"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-1kgKJQiR",
+    "instance_name": "remote-work-duan",
+    "productType": "prepay",
+    "financePrice": "400.6"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-aJtnnwGU",
+    "instance_name": "remote-work-xie",
+    "productType": "prepay",
+    "financePrice": "400.6"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-73FnR3wf",
+    "instance_name": "proxy_dl",
+    "productType": "prepay",
+    "financePrice": "283.02"
+  },
+  {
+    "month": "2023-09",
+    "instanceid": "i-3CQ2SZRf",
+    "instance_name": "streaming",
+    "productType": "prepay",
+    "financePrice": "1100.1"
+  },
+  {
+    "month": "2023-10",
+    "instanceid": "i-TR6sSHSY",
+    "instance_name": "jmeter-test",
+    "productType": "postpay",
+    "financePrice": "7.35"
+  },
+  {
+    "month": "2023-10",
+    "instanceid": "i-TR6sSHSY",
+    "instance_name": "jmeter-test",
+    "productType": "postpay",
+    "financePrice": "156.61"
+  },
+  {
+    "month": "2023-10",
+    "instanceid": "i-2oMKJAGo",
+    "instance_name": "clickhouse-test",
+    "productType": "postpay",
+    "financePrice": "19.83"
+  },
+  {
+    "month": "2023-10",
+    "instanceid": "i-2oMKJAGo",
+    "instance_name": "clickhouse-test",
+    "productType": "postpay",
+    "financePrice": "423.67"
+  },
+  {
+    "month": "2023-10",
+    "instanceid": "i-rmZ4aHRX",
+    "instance_name": "office-db",
+    "productType": "postpay",
+    "financePrice": "14.66"
+  },
+  {
+    "month": "2023-10",
+    "instanceid": "i-rmZ4aHRX",
+    "instance_name": "office-db",
+    "productType": "postpay",
+    "financePrice": "200.77"
+  },
+  {
+    "month": "2023-10",
+    "instanceid": "i-2PClzCFd",
+    "instance_name": "spark-slave",
+    "productType": "postpay",
+    "financePrice": "135.86"
+  },
+  {
+    "month": "2023-10",
+    "instanceid": "i-mUAWs3l0",
+    "instance_name": "spark",
+    "productType": "postpay",
+    "financePrice": "54.12"
+  },
+  {
+    "month": "2023-10",
+    "instanceid": "i-jK3ZpLzI",
+    "instance_name": "offsite",
+    "productType": "postpay",
+    "financePrice": "14.68"
+  },
+  {
+    "month": "2023-10",
+    "instanceid": "i-jK3ZpLzI",
+    "instance_name": "offsite",
+    "productType": "postpay",
+    "financePrice": "313.16"
+  },
+  {
+    "month": "2023-10",
+    "instanceid": "i-LbEmiRlY",
+    "instance_name": "jumpserver",
+    "productType": "prepay",
+    "financePrice": "480.0"
+  },
+  {
+    "month": "2023-10",
+    "instanceid": "i-0Gyckjlk",
+    "instance_name": "nagios",
+    "productType": "prepay",
+    "financePrice": "105.0"
+  },
+  {
+    "month": "2023-10",
+    "instanceid": "i-8dd1jo5N",
+    "instance_name": "webMusic-holiday",
+    "productType": "prepay",
+    "financePrice": "1222.5"
+  },
+  {
+    "month": "2023-10",
+    "instanceid": "i-o9DGfmdj",
+    "instance_name": "Sony_Git",
+    "productType": "prepay",
+    "financePrice": "630.0"
+  },
+  {
+    "month": "2023-10",
+    "instanceid": "i-poCyIysl",
+    "instance_name": "backend",
+    "productType": "prepay",
+    "financePrice": "472.5"
+  },
+  {
+    "month": "2023-10",
+    "instanceid": "i-K4NSlC9X",
+    "instance_name": "vender_pool",
+    "productType": "prepay",
+    "financePrice": "132.0"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-TR6sSHSY",
+    "instance_name": "jmeter-test",
+    "productType": "postpay",
+    "financePrice": "158.65"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-2oMKJAGo",
+    "instance_name": "clickhouse-test",
+    "productType": "postpay",
+    "financePrice": "429.22"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-rmZ4aHRX",
+    "instance_name": "office-db",
+    "productType": "postpay",
+    "financePrice": "317.49"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-Wkby3X1v",
+    "instance_name": "repotest",
+    "productType": "postpay",
+    "financePrice": "210.6"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-jK3ZpLzI",
+    "instance_name": "offsite",
+    "productType": "postpay",
+    "financePrice": "317.19"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-VakLANR4",
+    "instance_name": "upload-demo",
+    "productType": "postpay",
+    "financePrice": "0.03"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-hxi0ZPSQ",
+    "instance_name": "webMusic-API",
+    "productType": "prepay",
+    "financePrice": "592.37"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-PMm6TePO",
+    "instance_name": "hk",
+    "productType": "prepay",
+    "financePrice": "837.0"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-Cz8rPEFy",
+    "instance_name": "download",
+    "productType": "prepay",
+    "financePrice": "567.0"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-66ni7RVh",
+    "instance_name": "proxy_backend_backup",
+    "productType": "prepay",
+    "financePrice": "243.98"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-DXhoJj70",
+    "instance_name": "search",
+    "productType": "prepay",
+    "financePrice": "1247.07"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-epewhBr3",
+    "instance_name": "oauth-2",
+    "productType": "prepay",
+    "financePrice": "400.6"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-mw0KkkA4",
+    "instance_name": "musichub-openapi-2",
+    "productType": "prepay",
+    "financePrice": "400.6"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-SoWIjkoe",
+    "instance_name": "webMusic-API-2",
+    "productType": "prepay",
+    "financePrice": "400.6"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-AYZ2Ud83",
+    "instance_name": "redis-3",
+    "productType": "prepay",
+    "financePrice": "528.0"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-QvUr8Pt9",
+    "instance_name": "redis-1",
+    "productType": "prepay",
+    "financePrice": "528.0"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-M2eiRjqK",
+    "instance_name": "redis-2",
+    "productType": "prepay",
+    "financePrice": "528.0"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-wlU28lJZ",
+    "instance_name": "huawei_api-2",
+    "productType": "prepay",
+    "financePrice": "1056.0"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-gPeVJqkO",
+    "instance_name": "huawei_api-1",
+    "productType": "prepay",
+    "financePrice": "1056.0"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-CdvaZ6VR",
+    "instance_name": "huawei_proxy",
+    "productType": "prepay",
+    "financePrice": "396.0"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-mklgbVi6",
+    "instance_name": "proxy_backend",
+    "productType": "prepay",
+    "financePrice": "453.06"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-NrxwSO5L",
+    "instance_name": "Log",
+    "productType": "prepay",
+    "financePrice": "528.0"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-73FnR3wf",
+    "instance_name": "proxy_dl",
+    "productType": "prepay",
+    "financePrice": "632.55"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-K4NSlC9X",
+    "instance_name": "vender_pool",
+    "productType": "prepay",
+    "financePrice": "132.0"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-i8QAiww8",
+    "instance_name": "repo",
+    "productType": "prepay",
+    "financePrice": "1487.93"
+  },
+  {
+    "month": "2023-11",
+    "instanceid": "i-6mZ1B2Uv",
+    "instance_name": "remote-work-wang",
+    "productType": "prepay",
+    "financePrice": "400.6"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-TR6sSHSY",
+    "instance_name": "jmeter-test",
+    "productType": "postpay",
+    "financePrice": "163.96"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-2oMKJAGo",
+    "instance_name": "clickhouse-test",
+    "productType": "postpay",
+    "financePrice": "443.53"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-rmZ4aHRX",
+    "instance_name": "office-db",
+    "productType": "postpay",
+    "financePrice": "328.02"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-2PClzCFd",
+    "instance_name": "spark-slave",
+    "productType": "postpay",
+    "financePrice": "66.05"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-7uhRpDFG",
+    "instance_name": "Recovery_Database",
+    "productType": "postpay",
+    "financePrice": "12.91"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-mUAWs3l0",
+    "instance_name": "spark",
+    "productType": "postpay",
+    "financePrice": "68.19"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-jK3ZpLzI",
+    "instance_name": "offsite",
+    "productType": "postpay",
+    "financePrice": "327.81"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-u8AzCT8p",
+    "instance_name": "sync_tunnel",
+    "productType": "prepay",
+    "financePrice": "321.0"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-W2UsKiYX",
+    "instance_name": "proxy-status",
+    "productType": "prepay",
+    "financePrice": "243.98"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-GhGxU79l",
+    "instance_name": "dev_backend",
+    "productType": "prepay",
+    "financePrice": "553.5"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-w8oICwv9",
+    "instance_name": "dev_db",
+    "productType": "prepay",
+    "financePrice": "373.5"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-6jrgMzPu",
+    "instance_name": "dev_front",
+    "productType": "prepay",
+    "financePrice": "283.5"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-V4PL29Ai",
+    "instance_name": "liantiao_proxy",
+    "productType": "prepay",
+    "financePrice": "283.5"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-0GtB7Ybg",
+    "instance_name": "green_tunnel",
+    "productType": "prepay",
+    "financePrice": "317.34"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-d1NZjUDs",
+    "instance_name": "hk-temp",
+    "productType": "prepay",
+    "financePrice": "546.0"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-DqhMBUvt",
+    "instance_name": "download-extend",
+    "productType": "prepay",
+    "financePrice": "211.56"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-ZJPft0u1",
+    "instance_name": "backoffice-backup",
+    "productType": "prepay",
+    "financePrice": "634.68"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-Wyj1VDFV",
+    "instance_name": "upload-linux",
+    "productType": "prepay",
+    "financePrice": "297.0"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-aJtnnwGU",
+    "instance_name": "remote-work-xie",
+    "productType": "prepay",
+    "financePrice": "429.21"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-1kgKJQiR",
+    "instance_name": "remote-work-duan",
+    "productType": "prepay",
+    "financePrice": "429.21"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-8h2IS8cX",
+    "instance_name": "dataBase_202112",
+    "productType": "prepay",
+    "financePrice": "1386.0"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-UUksSWmE",
+    "instance_name": "jmeter1",
+    "productType": "prepay",
+    "financePrice": "297.0"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-K4NSlC9X",
+    "instance_name": "vender_pool",
+    "productType": "prepay",
+    "financePrice": "396.0"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-k90MDqRy",
+    "instance_name": "database_emergency",
+    "productType": "prepay",
+    "financePrice": "810.0"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-NN7fsDEv",
+    "instance_name": "elk_202005_logstash",
+    "productType": "prepay",
+    "financePrice": "576.0"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-3e0xwqub",
+    "instance_name": "stat",
+    "productType": "prepay",
+    "financePrice": "634.68"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-mAPy1gwf",
+    "instance_name": "labelreporter",
+    "productType": "prepay",
+    "financePrice": "296.16"
+  },
+  {
+    "month": "2023-12",
+    "instanceid": "i-SdgQOB1j",
+    "instance_name": "clickhouse",
+    "productType": "prepay",
+    "financePrice": "400.6"
+  }
+]

@@ -56,17 +56,29 @@ const assetColumns = {
       render: (name, record) => <Action.Button onClick={() => store.showDetail(record)}>{name}</Action.Button>
     },
     {
+      title: "磁盘ID",
+      dataIndex: "disk_id"
+    },
+    {
+      title: "服务器ID",
+      dataIndex: "server_id"
+    },
+    {
       title: "容量",
-      dataIndex: "size",
-      render: size => `${size}GB`
+      dataIndex: "size_in_gb",
+      render: size => size ? `${size}GB` : '-'
     },
     {
-      title: "类型",
-      dataIndex: "type"
+      title: "存储类型",
+      dataIndex: "storage_type"
     },
     {
-      title: "挂载点",
-      dataIndex: "mount_point"
+      title: "创建时间",
+      dataIndex: "create_time"
+    },
+    {
+      title: "过期时间",
+      dataIndex: "expire_time"
     },
     {
       title: "状态",
@@ -128,27 +140,85 @@ const assetColumns = {
   ip: [
     {
       title: "IP地址",
-      dataIndex: "address",
-      render: (address, record) => <Action.Button onClick={() => store.showDetail(record)}>{address}</Action.Button>
+      dataIndex: "eip",
+      render: (eip, record) => <Action.Button onClick={() => store.showDetail(record)}>{eip}</Action.Button>
     },
     {
-      title: "类型",
-      dataIndex: "type",
-      render: type => type === 'public' ? '公网IP' : '内网IP'
+      title: "名称",
+      dataIndex: "name"
     },
     {
-      title: "区域",
-      dataIndex: "region"
+      title: "实例",
+      dataIndex: "instance"
     },
     {
-      title: "带宽",
-      dataIndex: "bandwidth",
-      render: bandwidth => bandwidth ? `${bandwidth}Mbps` : '-'
+      title: "付费类型",
+      dataIndex: "paymentTiming"
+    },
+    {
+      title: "计费方式",
+      dataIndex: "billingMethod"
+    },
+    {
+      title: "创建时间",
+      dataIndex: "createTime"
+    },
+    {
+      title: "过期时间",
+      dataIndex: "expireTime"
     },
     {
       title: "状态",
       dataIndex: "status",
-      render: status => <Tag color={status === 'used' ? 'green' : 'orange'}>{status === 'used' ? '已使用' : '未使用'}</Tag>
+      render: status => <Tag color={status === 'Available' ? 'green' : 'orange'}>{status}</Tag>
+    }
+  ],
+  instance: [
+    {
+      title: "实例ID",
+      dataIndex: "instance_id",
+      render: (instance_id, record) => <Action.Button onClick={() => store.showDetail(record)}>{instance_id}</Action.Button>
+    },
+    {
+      title: "名称",
+      dataIndex: "name"
+    },
+    {
+      title: "内网IP",
+      dataIndex: "internal_ip"
+    },
+    {
+      title: "公网IP",
+      dataIndex: "public_ip"
+    },
+    {
+      title: "可用区",
+      dataIndex: "zone_name"
+    },
+    {
+      title: "配置",
+      render: record => `${record.cpu_count || '-'}核 ${record.memory_capacity_in_gb || '-'}GB`
+    },
+    {
+      title: "操作系统",
+      render: record => `${record.os_name || '-'} ${record.os_version || '-'}`
+    },
+    {
+      title: "付费类型",
+      dataIndex: "payment_timing"
+    },
+    {
+      title: "创建时间",
+      dataIndex: "create_time"
+    },
+    {
+      title: "过期时间",
+      dataIndex: "expire_time"
+    },
+    {
+      title: "状态",
+      dataIndex: "status",
+      render: status => <Tag color={status === 'Running' ? 'green' : 'orange'}>{status}</Tag>
     }
   ]
 };
@@ -175,12 +245,12 @@ export const ComTable = observer(function ({ assetType = 'server' }) {
   const [loading, setLoading] = React.useState(false);
   
   // 获取表格数据
-  const getTableData = React.useCallback(() => {
+  const getTableData = React.useCallback((forceRefresh = false) => {
     // 如果已经在加载中，则不重复请求
     if (loading) return;
     
     setLoading(true);
-    console.log(`正在获取${assetType}数据...`);
+    console.log(`正在获取${assetType}数据...`, forceRefresh ? '(强制刷新)' : '');
     
     try {
       if (assetType === 'server') {
@@ -188,11 +258,18 @@ export const ComTable = observer(function ({ assetType = 'server' }) {
         setData(store.dataSource || []);
         setLoading(false);
       } else {
+        // 添加时间戳参数，防止浏览器缓存
+        const timestamp = new Date().getTime();
+        const forceCacheParam = forceRefresh ? '&force=1' : '';
+        
         // 对于非服务器类型，使用API获取数据
-        store.getAssetDataSource(assetType)
+        http.get(`/host/${assetType}/?_t=${timestamp}${forceCacheParam}`)
           .then(result => {
             console.log(`获取${assetType}数据结果:`, result);
             setData(Array.isArray(result) ? result : []);
+            if (forceRefresh) {
+              message.success('已完成强制刷新，显示最新数据');
+            }
           })
           .catch(error => {
             console.error(`获取${assetType}数据出错:`, error);
@@ -311,11 +388,26 @@ export const ComTable = observer(function ({ assetType = 'server' }) {
         type="primary"
         icon={<DownloadOutlined/>}
         onClick={() => store.exportVisible = true}>导出</Button>,
-      <Button
-        key="refresh"
-        type="primary"
-        icon={<SyncOutlined/>}
-        onClick={() => getTableData()}>刷新</Button>,
+      <Dropdown key="refresh" overlay={(
+          <Menu onClick={e => getTableData(e.key === 'force')}>
+            <Menu.Item key="normal">
+              <Space>
+                <SyncOutlined style={{fontSize: 14}}/>
+                <span>普通刷新</span>
+              </Space>
+            </Menu.Item>
+            <Menu.Item key="force">
+              <Space>
+                <SyncOutlined style={{fontSize: 14, color: '#1890ff'}}/>
+                <span>强制刷新</span>
+              </Space>
+            </Menu.Item>
+          </Menu>
+        )}>
+        <Button type="primary" icon={<SyncOutlined/>}>
+          刷新 <DownOutlined/>
+        </Button>
+      </Dropdown>,
       <Radio.Group key="filter" value={store.f_status} onChange={e => store.f_status = e.target.value}>
           <Radio.Button value="">全部</Radio.Button>
           <Radio.Button value={false}>未验证</Radio.Button>
@@ -324,22 +416,98 @@ export const ComTable = observer(function ({ assetType = 'server' }) {
     disk: [
       <Button key="add" type="primary" icon={<PlusOutlined/>} onClick={() => handleImport({key: 'form'})}>新建磁盘</Button>,
       <Button key="export" type="primary" icon={<DownloadOutlined/>} onClick={() => handleExport('disk')}>导出</Button>,
-      <Button key="refresh" type="primary" icon={<SyncOutlined/>} onClick={() => getTableData()}>刷新</Button>
+      <Dropdown key="refresh" overlay={(
+          <Menu onClick={e => getTableData(e.key === 'force')}>
+            <Menu.Item key="normal">
+              <Space>
+                <SyncOutlined style={{fontSize: 14}}/>
+                <span>普通刷新</span>
+              </Space>
+            </Menu.Item>
+            <Menu.Item key="force">
+              <Space>
+                <SyncOutlined style={{fontSize: 14, color: '#1890ff'}}/>
+                <span>强制刷新</span>
+              </Space>
+            </Menu.Item>
+          </Menu>
+        )}>
+        <Button type="primary" icon={<SyncOutlined/>}>
+          刷新 <DownOutlined/>
+        </Button>
+      </Dropdown>
     ],
     storage: [
       <Button key="add" type="primary" icon={<PlusOutlined/>} onClick={() => handleImport({key: 'form'})}>新建存储</Button>,
       <Button key="export" type="primary" icon={<DownloadOutlined/>} onClick={() => handleExport('storage')}>导出</Button>,
-      <Button key="refresh" type="primary" icon={<SyncOutlined/>} onClick={() => getTableData()}>刷新</Button>
+      <Dropdown key="refresh" overlay={(
+          <Menu onClick={e => getTableData(e.key === 'force')}>
+            <Menu.Item key="normal">
+              <Space>
+                <SyncOutlined style={{fontSize: 14}}/>
+                <span>普通刷新</span>
+              </Space>
+            </Menu.Item>
+            <Menu.Item key="force">
+              <Space>
+                <SyncOutlined style={{fontSize: 14, color: '#1890ff'}}/>
+                <span>强制刷新</span>
+              </Space>
+            </Menu.Item>
+          </Menu>
+        )}>
+        <Button type="primary" icon={<SyncOutlined/>}>
+          刷新 <DownOutlined/>
+        </Button>
+      </Dropdown>
     ],
     cdn: [
       <Button key="add" type="primary" icon={<PlusOutlined/>} onClick={() => handleImport({key: 'form'})}>新建CDN</Button>,
       <Button key="export" type="primary" icon={<DownloadOutlined/>} onClick={() => handleExport('cdn')}>导出</Button>,
-      <Button key="refresh" type="primary" icon={<SyncOutlined/>} onClick={() => getTableData()}>刷新</Button>
+      <Dropdown key="refresh" overlay={(
+          <Menu onClick={e => getTableData(e.key === 'force')}>
+            <Menu.Item key="normal">
+              <Space>
+                <SyncOutlined style={{fontSize: 14}}/>
+                <span>普通刷新</span>
+              </Space>
+            </Menu.Item>
+            <Menu.Item key="force">
+              <Space>
+                <SyncOutlined style={{fontSize: 14, color: '#1890ff'}}/>
+                <span>强制刷新</span>
+              </Space>
+            </Menu.Item>
+          </Menu>
+        )}>
+        <Button type="primary" icon={<SyncOutlined/>}>
+          刷新 <DownOutlined/>
+        </Button>
+      </Dropdown>
     ],
     ip: [
       <Button key="add" type="primary" icon={<PlusOutlined/>} onClick={() => handleImport({key: 'form'})}>新建IP</Button>,
       <Button key="export" type="primary" icon={<DownloadOutlined/>} onClick={() => handleExport('ip')}>导出</Button>,
-      <Button key="refresh" type="primary" icon={<SyncOutlined/>} onClick={() => getTableData()}>刷新</Button>
+      <Dropdown key="refresh" overlay={(
+          <Menu onClick={e => getTableData(e.key === 'force')}>
+            <Menu.Item key="normal">
+              <Space>
+                <SyncOutlined style={{fontSize: 14}}/>
+                <span>普通刷新</span>
+              </Space>
+            </Menu.Item>
+            <Menu.Item key="force">
+              <Space>
+                <SyncOutlined style={{fontSize: 14, color: '#1890ff'}}/>
+                <span>强制刷新</span>
+              </Space>
+            </Menu.Item>
+          </Menu>
+        )}>
+        <Button type="primary" icon={<SyncOutlined/>}>
+          刷新 <DownOutlined/>
+        </Button>
+      </Dropdown>
     ]
   };
   

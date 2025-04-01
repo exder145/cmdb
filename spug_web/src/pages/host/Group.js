@@ -34,6 +34,22 @@ const assetGroups = {
     fetchGroups: () => store.fetchGroups(),
     treeData: () => store.treeData
   },
+  instance: {
+    title: '实例分组',
+    fetchGroups: () => Promise.resolve(),
+    treeData: () => [
+      {
+        title: '全部实例',
+        key: 'all_instances',
+        children: [
+          { title: '运行中实例', key: 'running_instances' },
+          { title: '已停止实例', key: 'stopped_instances' },
+          { title: '包年包月实例', key: 'prepaid_instances' },
+          { title: '按量计费实例', key: 'postpaid_instances' }
+        ]
+      }
+    ]
+  },
   disk: {
     title: '磁盘分组',
     fetchGroups: () => Promise.resolve(),

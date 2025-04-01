@@ -105,14 +105,17 @@ class Group(models.Model, ModelMixin):
 
 # 磁盘模型
 class Disk(models.Model, ModelMixin):
+    disk_id = models.CharField(max_length=100, null=True)  # 云磁盘ID
+    server_id = models.CharField(max_length=100, null=True)  # 关联服务器ID
     name = models.CharField(max_length=100)
-    size = models.IntegerField()  # GB
-    type = models.CharField(max_length=50)  # SSD, HDD, NVMe
-    mount_point = models.CharField(max_length=255, null=True)
-    status = models.CharField(max_length=20)  # online, offline
-    desc = models.CharField(max_length=255, null=True)
+    size_in_gb = models.IntegerField(null=True)  # 磁盘大小(GB)
+    status = models.CharField(max_length=20)  # 状态：online, offline
+    storage_type = models.CharField(max_length=50, null=True)  # 云磁盘类型
+    create_time = models.CharField(max_length=50, null=True)  # 创建时间
+    expire_time = models.CharField(max_length=50, null=True)  # 过期时间
+    desc = models.CharField(max_length=255, null=True)  # 描述信息
     created_at = models.CharField(max_length=20, default=human_datetime)
-    created_by = models.ForeignKey(User, models.PROTECT, related_name='+')
+    created_by = models.ForeignKey(User, models.PROTECT, related_name='+', null=True)
     
     def to_view(self):
         return self.to_dict()
@@ -171,20 +174,20 @@ class CDN(models.Model, ModelMixin):
 
 # IP地址模型
 class IP(models.Model, ModelMixin):
-    address = models.CharField(max_length=50)
-    type = models.CharField(max_length=20)  # public, private
-    region = models.CharField(max_length=100, null=True)
-    bandwidth = models.IntegerField(null=True)  # Mbps
-    status = models.CharField(max_length=20)  # used, unused
-    desc = models.CharField(max_length=255, null=True)
-    created_at = models.CharField(max_length=20, default=human_datetime)
-    created_by = models.ForeignKey(User, models.PROTECT, related_name='+')
+    name = models.CharField(max_length=100, null=True)  # 名称
+    eip = models.CharField(max_length=50)  # IP地址
+    status = models.CharField(max_length=20, null=True)  # 状态：used, unused
+    instance = models.CharField(max_length=100, null=True)  # 关联实例ID
+    paymentTiming = models.CharField(max_length=50, null=True)  # 付费类型
+    billingMethod = models.CharField(max_length=50, null=True)  # 计费方式
+    expireTime = models.CharField(max_length=50, null=True)  # 过期时间
+    createTime = models.CharField(max_length=50, null=True)  # 创建时间
     
     def to_view(self):
         return self.to_dict()
     
     def __repr__(self):
-        return '<IP %r>' % self.address
+        return '<IP %r>' % self.eip
     
     class Meta:
         db_table = 'ips'
@@ -210,3 +213,33 @@ class ResourceCost(models.Model, ModelMixin):
     class Meta:
         db_table = 'resource_costs'
         ordering = ('-month', '-finance_price')
+
+
+# 实例模型
+class Instance(models.Model, ModelMixin):
+    instance_id = models.CharField(max_length=100)  # 实例ID
+    name = models.CharField(max_length=100, null=True)  # 实例名称
+    internal_ip = models.CharField(max_length=50, null=True)  # 内网IP
+    public_ip = models.CharField(max_length=50, null=True)  # 公网IP
+    status = models.CharField(max_length=20, null=True)  # 状态
+    zone_name = models.CharField(max_length=100, null=True)  # 可用区
+    create_time = models.CharField(max_length=50, null=True)  # 创建时间
+    expire_time = models.CharField(max_length=50, null=True)  # 过期时间
+    payment_timing = models.CharField(max_length=50, null=True)  # 付费类型
+    cpu_count = models.IntegerField(null=True)  # CPU核心数
+    memory_capacity_in_gb = models.FloatField(null=True)  # 内存大小(GB)
+    image_name = models.CharField(max_length=100, null=True)  # 镜像名称
+    os_name = models.CharField(max_length=50, null=True)  # 操作系统名称
+    os_version = models.CharField(max_length=50, null=True)  # 操作系统版本
+    os_arch = models.CharField(max_length=20, null=True)  # 操作系统架构
+    desc = models.CharField(max_length=255, null=True)  # 描述信息
+    
+    def to_view(self):
+        return self.to_dict()
+    
+    def __repr__(self):
+        return '<Instance %r>' % self.instance_id
+    
+    class Meta:
+        db_table = 'instances'
+        ordering = ('-id',)

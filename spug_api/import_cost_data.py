@@ -5,6 +5,7 @@ import os
 import json
 import django
 import sys
+import glob
 
 # 设置Django环境
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'spug.settings')
@@ -32,63 +33,110 @@ def import_cost_data(clear_existing=True):
         'eipcost_monthly.json': '弹性IP'
     }
     
-    # 导入每个JSON文件的数据
-    for json_file, resource_type in resource_types.items():
-        # 构建文件路径 (JSON文件位于spug_web/src/pages/cost/data/下)
-        file_path = os.path.join('..', 'spug_web', 'src', 'pages', 'cost', 'data', json_file)
+    # 检查test/price目录
+    price_dir = os.path.join('..', 'test', 'price')
+    if not os.path.exists(price_dir):
+        price_dir = os.path.join('test', 'price')
+    
+    if os.path.exists(price_dir):
+        # 遍历年份目录
+        year_dirs = [d for d in os.listdir(price_dir) if os.path.isdir(os.path.join(price_dir, d))]
         
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                data = json.load(f)
+        if year_dirs:
+            print(f"找到年份目录: {', '.join(year_dirs)}")
+            
+            for year in year_dirs:
+                year_dir = os.path.join(price_dir, year)
                 
-            print(f"正在导入{resource_type}费用数据...")
-            count = 0
-            
-            # 创建批量插入数据列表
-            bulk_data = []
-            
-            # 遍历数据并准备插入
-            for item in data:
-                try:
-                    # 创建记录对象但不保存
-                    cost_record = ResourceCost(
-                        month=item.get('month'),
-                        instance_id=item.get('instanceid'),
-                        instance_name=item.get('instance_name', item.get('instanceid')),
-                        resource_type=resource_type,
-                        product_type=item.get('productType'),
-                        finance_price=float(item.get('financePrice', 0)),
-                        created_at=human_datetime()
-                    )
-                    bulk_data.append(cost_record)
-                    count += 1
+                # 导入每个JSON文件的数据
+                for json_file, resource_type in resource_types.items():
+                    file_path = os.path.join(year_dir, json_file)
                     
-                    # 每1000条数据批量插入一次
-                    if len(bulk_data) >= 1000:
-                        ResourceCost.objects.bulk_create(bulk_data)
-                        bulk_data = []
-                        print(f"已批量导入 {count} 条记录")
-                        
-                except Exception as e:
-                    print(f"准备数据时出错: {e}, 数据: {item}")
+                    if os.path.exists(file_path):
+                        print(f"正在导入{year}年{resource_type}费用数据...")
+                        import_file(file_path, resource_type)
+                    else:
+                        print(f"文件不存在: {file_path}")
+        else:
+            print(f"在{price_dir}目录下未找到年份子目录")
+    else:
+        print(f"目录不存在: {price_dir}，尝试使用默认路径")
+        
+        # 使用原有的文件路径（兼容原有代码）
+        for json_file, resource_type in resource_types.items():
+            # 构建文件路径 (JSON文件位于spug_web/src/pages/cost/data/下)
+            file_path = os.path.join('..', 'spug_web', 'src', 'pages', 'cost', 'data', json_file)
             
-            # 插入剩余数据
-            if bulk_data:
-                ResourceCost.objects.bulk_create(bulk_data)
-            
-            print(f"已导入 {count} 条{resource_type}费用数据")
-            
-        except FileNotFoundError:
-            print(f"文件不存在: {file_path}")
-        except json.JSONDecodeError:
-            print(f"JSON格式错误: {file_path}")
-        except Exception as e:
-            print(f"导入数据时出错: {e}")
+            if os.path.exists(file_path):
+                print(f"正在导入{resource_type}费用数据（默认路径）...")
+                import_file(file_path, resource_type)
+            else:
+                print(f"文件不存在: {file_path}")
     
     # 验证导入的数据
     verify_imported_data()
     
     print("费用数据导入完成")
+
+def import_file(file_path, resource_type):
+    """导入单个文件的数据
+    
+    Args:
+        file_path (str): 文件路径
+        resource_type (str): 资源类型
+    """
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            
+        count = 0
+        
+        # 创建批量插入数据列表
+        bulk_data = []
+        
+        # 获取管理员用户
+        from apps.account.models import User
+        admin = User.objects.filter(is_supper=True).first()
+        if not admin:
+            print("未找到管理员用户，将使用NULL")
+        
+        # 遍历数据并准备插入
+        for item in data:
+            try:
+                # 创建记录对象但不保存
+                cost_record = ResourceCost(
+                    month=item.get('month'),
+                    instance_id=item.get('instanceid'),
+                    instance_name=item.get('instance_name', item.get('instanceid')),
+                    resource_type=resource_type,
+                    product_type=item.get('productType'),
+                    finance_price=float(item.get('financePrice', 0)),
+                    created_at=human_datetime()
+                )
+                bulk_data.append(cost_record)
+                count += 1
+                
+                # 每1000条数据批量插入一次
+                if len(bulk_data) >= 1000:
+                    ResourceCost.objects.bulk_create(bulk_data)
+                    bulk_data = []
+                    print(f"已批量导入 {count} 条记录")
+                    
+            except Exception as e:
+                print(f"准备数据时出错: {e}, 数据: {item}")
+        
+        # 插入剩余数据
+        if bulk_data:
+            ResourceCost.objects.bulk_create(bulk_data)
+        
+        print(f"已导入 {count} 条{resource_type}费用数据（{file_path}）")
+        
+    except FileNotFoundError:
+        print(f"文件不存在: {file_path}")
+    except json.JSONDecodeError:
+        print(f"JSON格式错误: {file_path}")
+    except Exception as e:
+        print(f"导入数据时出错: {e}")
 
 def verify_imported_data():
     """验证导入的数据"""

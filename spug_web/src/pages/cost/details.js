@@ -29,12 +29,20 @@ export default observer(function () {
   const [showDatePicker, setShowDatePicker] = useState(false);
   // 日期范围
   const [dateRange, setDateRange] = useState([]);
+  // 记录当前的排序状态
+  const [sortInfo, setSortInfo] = useState({ field: '', order: '' });
 
   useEffect(() => {
     // 加载初始数据
     store.fetchCostData();
     // 加载统计数据
     store.fetchCostStats();
+    
+    // 设置初始排序状态
+    setSortInfo({
+      field: 'cost',
+      order: store.sortOrder === 'desc' ? 'descend' : 'ascend'
+    });
     
     // 清理函数
     return () => {
@@ -99,7 +107,20 @@ export default observer(function () {
   const handleSortOrderChange = (value) => {
     if (isMounted.current) {
       store.sortOrder = value;
-      store.fetchCostData();
+      
+      // 更新排序状态
+      setSortInfo({
+        field: 'cost',
+        order: value === 'desc' ? 'descend' : 'ascend'
+      });
+      
+      // 调用API获取排序后的数据
+      store.fetchCostData(store.currentAssetType, {
+        page: currentPage,
+        pageSize: pageSize,
+        sortField: 'cost', // 指定按费用字段排序
+        sortOrder: value === 'desc' ? 'descend' : 'ascend' // 转换排序方向格式
+      });
     }
   };
 
@@ -118,10 +139,21 @@ export default observer(function () {
     if (isMounted.current) {
       setCurrentPage(pagination.current);
       setPageSize(pagination.pageSize);
-      // 调用store中的方法来获取新页的数据
+      
+      // 更新排序状态
+      if (sorter && sorter.field) {
+        setSortInfo({
+          field: sorter.field,
+          order: sorter.order
+        });
+      }
+      
+      // 调用store中的方法来获取新页的数据，同时传递排序信息
       store.fetchCostData(store.currentAssetType, {
         page: pagination.current,
-        pageSize: pagination.pageSize
+        pageSize: pagination.pageSize,
+        sortField: sorter.field,  // 添加排序字段
+        sortOrder: sorter.order   // 添加排序顺序
       });
     }
   };
@@ -142,7 +174,7 @@ export default observer(function () {
     }).then(allData => {
       try {
         // 准备CSV数据
-        const headers = ['月份', '资源名称', '资源类型', '计费方式', '费用金额(元)', '环比变化'];
+        const headers = ['时间', '资源名称', '资源类型', '计费方式', '费用金额(元)', '环比变化'];
         const rows = allData.map(item => [
           item.month,
           item.name,
@@ -195,10 +227,17 @@ export default observer(function () {
 
   const columns = [
     { 
-      title: '月份', 
+      title: '时间', 
       dataIndex: 'month', 
       key: 'month',
-      sorter: (a, b) => a.month.localeCompare(b.month)
+      sorter: (a, b) => {
+        // 将月份转换为Date对象进行比较
+        const dateA = new Date(a.month + '-01'); // 添加日期以创建有效的日期对象
+        const dateB = new Date(b.month + '-01');
+        return dateA - dateB; // 升序排序，较早的日期在前
+      },
+      sortDirections: ['ascend', 'descend'],
+      sortOrder: sortInfo.field === 'month' ? sortInfo.order : null
     },
     { title: '资源名称', dataIndex: 'name', key: 'name' },
     { title: '资源类型', dataIndex: 'type', key: 'type' },
@@ -216,6 +255,8 @@ export default observer(function () {
       dataIndex: 'cost', 
       key: 'cost',
       sorter: (a, b) => parseFloat(a.cost) - parseFloat(b.cost),
+      sortDirections: ['descend', 'ascend'],
+      sortOrder: sortInfo.field === 'cost' ? sortInfo.order : null,
       render: text => <span style={{ fontWeight: 'bold' }}>¥{text}</span>
     },
     { 
@@ -243,34 +284,6 @@ export default observer(function () {
       ),
     },
   ];
-  
-  // 实现真正的数据分页
-  const getPaginatedData = () => {
-    // 首先去重处理
-    const uniqueKeys = new Set();
-    const uniqueData = store.records.filter(record => {
-      const key = `${record.name}-${record.month}-${record.billingType}`;
-      if (uniqueKeys.has(key)) {
-        return false;
-      }
-      uniqueKeys.add(key);
-      return true;
-    });
-    
-    const startIndex = (currentPage - 1) * pageSize;
-    const endIndex = startIndex + pageSize;
-    return uniqueData.slice(startIndex, endIndex);
-  };
-  
-  // 获取去重后的数据总数
-  const getUniqueDataCount = () => {
-    const uniqueKeys = new Set();
-    store.records.forEach(record => {
-      const key = `${record.name}-${record.month}-${record.billingType}`;
-      uniqueKeys.add(key);
-    });
-    return uniqueKeys.size;
-  };
   
   return (
     <div>

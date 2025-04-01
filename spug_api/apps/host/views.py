@@ -7,7 +7,7 @@ from django.http.response import HttpResponseBadRequest
 from libs import json_response, JsonParser, Argument, AttrDict, auth
 from apps.setting.utils import AppSetting
 from apps.account.utils import get_host_perms
-from apps.host.models import Host, Group, Disk, Storage, CDN, IP, ResourceCost
+from apps.host.models import Host, Group, Disk, Storage, CDN, IP, ResourceCost, Instance
 from apps.host.utils import batch_sync_host, _sync_host_extend, check_os_type
 from apps.exec.models import ExecTemplate
 from apps.app.models import Deploy
@@ -241,9 +241,14 @@ def _do_host_verify(form):
 # 磁盘视图
 class DiskView(View):
     def get(self, request):
+        # 检查是否有强制刷新参数
+        force_refresh = request.GET.get('force', '0') == '1'
+        
+        # 从数据库获取磁盘数据
         disks = Disk.objects.all()
         if not request.user.is_supper:
             disks = disks.filter(created_by=request.user)
+        
         return json_response([x.to_view() for x in disks])
 
     @auth('host.disk.add|host.disk.edit')
@@ -251,10 +256,13 @@ class DiskView(View):
         form, error = JsonParser(
             Argument('id', type=int, required=False),
             Argument('name', help='请输入磁盘名称'),
-            Argument('size', type=int, help='请输入磁盘容量'),
-            Argument('type', help='请选择磁盘类型'),
-            Argument('mount_point', required=False),
+            Argument('disk_id', required=False),
+            Argument('server_id', required=False),
+            Argument('size_in_gb', type=int, required=False),
+            Argument('storage_type', required=False),
             Argument('status', help='请选择状态'),
+            Argument('create_time', required=False),
+            Argument('expire_time', required=False),
             Argument('desc', required=False),
         ).parse(request.body)
         if error is None:
@@ -281,9 +289,14 @@ class DiskView(View):
 # 存储视图
 class StorageView(View):
     def get(self, request):
+        # 检查是否有强制刷新参数
+        force_refresh = request.GET.get('force', '0') == '1'
+        
+        # 从数据库获取存储数据
         storages = Storage.objects.all()
         if not request.user.is_supper:
             storages = storages.filter(created_by=request.user)
+        
         return json_response([x.to_view() for x in storages])
 
     @auth('host.storage.add|host.storage.edit')
@@ -321,9 +334,14 @@ class StorageView(View):
 # CDN视图
 class CDNView(View):
     def get(self, request):
+        # 检查是否有强制刷新参数
+        force_refresh = request.GET.get('force', '0') == '1'
+        
+        # 从数据库获取CDN数据
         cdns = CDN.objects.all()
         if not request.user.is_supper:
             cdns = cdns.filter(created_by=request.user)
+        
         return json_response([x.to_view() for x in cdns])
 
     @auth('host.cdn.add|host.cdn.edit')
@@ -361,21 +379,28 @@ class CDNView(View):
 # IP地址视图
 class IPView(View):
     def get(self, request):
+        # 检查是否有强制刷新参数
+        force_refresh = request.GET.get('force', '0') == '1'
+        
+        # 从数据库获取IP数据
         ips = IP.objects.all()
         if not request.user.is_supper:
-            ips = ips.filter(created_by=request.user)
+            ips = ips.filter(name__contains=request.user.username)
+        
         return json_response([x.to_view() for x in ips])
 
     @auth('host.ip.add|host.ip.edit')
     def post(self, request):
         form, error = JsonParser(
             Argument('id', type=int, required=False),
-            Argument('address', help='请输入IP地址'),
-            Argument('type', help='请选择IP类型'),
-            Argument('region', required=False),
-            Argument('bandwidth', type=int, required=False),
-            Argument('status', help='请选择状态'),
-            Argument('desc', required=False),
+            Argument('name', required=False),
+            Argument('eip', help='请输入IP地址'),
+            Argument('status', required=False),
+            Argument('instance', required=False),
+            Argument('paymentTiming', required=False),
+            Argument('billingMethod', required=False),
+            Argument('expireTime', required=False),
+            Argument('createTime', required=False),
         ).parse(request.body)
         if error is None:
             if form.id:
@@ -384,7 +409,7 @@ class IPView(View):
                     return json_response(error='未找到指定IP')
                 ip.update_by_dict(form)
             else:
-                IP.objects.create(created_by=request.user, **form)
+                IP.objects.create(**form)
             return json_response()
         return json_response(error=error)
 
@@ -395,6 +420,59 @@ class IPView(View):
         ).parse(request.GET)
         if error is None:
             IP.objects.filter(pk=form.id).delete()
+        return json_response(error=error)
+
+
+# 实例视图
+class InstanceView(View):
+    def get(self, request):
+        # 检查是否有强制刷新参数
+        force_refresh = request.GET.get('force', '0') == '1'
+        
+        # 从数据库获取实例数据
+        instances = Instance.objects.all()
+        
+        return json_response([x.to_view() for x in instances])
+
+    @auth('host.instance.add|host.instance.edit')
+    def post(self, request):
+        form, error = JsonParser(
+            Argument('id', type=int, required=False),
+            Argument('instance_id', help='请输入实例ID'),
+            Argument('name', required=False),
+            Argument('internal_ip', required=False),
+            Argument('public_ip', required=False),
+            Argument('status', required=False),
+            Argument('zone_name', required=False),
+            Argument('create_time', required=False),
+            Argument('expire_time', required=False),
+            Argument('payment_timing', required=False),
+            Argument('cpu_count', type=int, required=False),
+            Argument('memory_capacity_in_gb', type=float, required=False),
+            Argument('image_name', required=False),
+            Argument('os_name', required=False),
+            Argument('os_version', required=False),
+            Argument('os_arch', required=False),
+            Argument('desc', required=False),
+        ).parse(request.body)
+        if error is None:
+            if form.id:
+                instance = Instance.objects.filter(pk=form.id).first()
+                if not instance:
+                    return json_response(error='未找到指定实例')
+                instance.update_by_dict(form)
+            else:
+                Instance.objects.create(**form)
+            return json_response()
+        return json_response(error=error)
+
+    @auth('host.instance.del')
+    def delete(self, request):
+        form, error = JsonParser(
+            Argument('id', type=int, help='请指定实例ID'),
+        ).parse(request.GET)
+        if error is None:
+            Instance.objects.filter(pk=form.id).delete()
         return json_response(error=error)
 
 

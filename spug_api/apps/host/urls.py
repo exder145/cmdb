@@ -16,6 +16,7 @@ urlpatterns = [
     path('storage/', StorageView.as_view()),
     path('cdn/', CDNView.as_view()),
     path('ip/', IPView.as_view()),
+    path('instance/', InstanceView.as_view()),
     path('import/', post_import),
     path('import/cloud/', cloud_import),
     path('import/region/', get_regions),

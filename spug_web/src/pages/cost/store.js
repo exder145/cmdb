@@ -7,22 +7,6 @@ import { observable, computed, action } from 'mobx';
 import http from 'libs/http';
 import moment from 'moment';
 
-// 添加错误处理的导入JSON函数
-const safeImport = (path) => {
-  try {
-    // 直接使用require动态导入
-    return require(`./data/${path}`);
-  } catch (error) {
-    console.error(`导入${path}失败:`, error);
-    return []; // 返回空数组防止后续代码报错
-  }
-};
-
-// 导入真实费用数据
-const bccCostData = safeImport('bcccost_monthly.json');
-const cdsCostData = safeImport('cdscost_monthly.json');
-const eipCostData = safeImport('eipcost_monthly.json');
-
 class Store {
   @observable loading = false;
   @observable records = [];
@@ -42,14 +26,6 @@ class Store {
   
   // 取消API请求的控制器
   abortController = null;
-  
-  // 真实数据映射（作为备用）
-  backupData = {
-    ecs: bccCostData || [],
-    disk: cdsCostData || [],
-    ip: eipCostData || [],
-    all: [...(bccCostData || []), ...(cdsCostData || []), ...(eipCostData || [])]
-  };
   
   @computed get timeRangeObj() {
     let startDate, endDate;
@@ -104,6 +80,17 @@ class Store {
       sort_by: this.sortOrder === 'desc' ? '-finance_price' : 'finance_price'
     };
     
+    // 如果用户点击了时间列进行排序，则更改排序字段为month
+    if (pagination.sortField === 'month') {
+      params.sort_by = pagination.sortOrder === 'descend' ? '-month' : 'month';
+    }
+    // 如果用户点击了费用金额列进行排序，则更改排序字段为finance_price
+    else if (pagination.sortField === 'cost') {
+      params.sort_by = pagination.sortOrder === 'descend' ? '-finance_price' : 'finance_price';
+      // 同步更新下拉框选择
+      this.sortOrder = pagination.sortOrder === 'descend' ? 'desc' : 'asc';
+    }
+    
     // 如果有时间范围
     if (this.timeRange !== 'all') {
       const { startDate, endDate } = this.timeRangeObj;
@@ -153,14 +140,31 @@ class Store {
           change: item.change || 0  // 使用API返回的环比变化值
         }));
         
+        // 添加数据去重逻辑，以避免重复显示相同的记录
+        const uniqueMap = new Map();
+        const uniqueData = [];
+        
+        processedData.forEach(record => {
+          // 使用实例ID+月份+资源类型作为唯一键
+          const uniqueKey = `${record.id}-${record.month}-${record.type}`;
+          if (!uniqueMap.has(uniqueKey)) {
+            uniqueMap.set(uniqueKey, true);
+            uniqueData.push(record);
+          } else {
+            console.log(`发现重复数据，已去除: ${record.name}, ${record.month}`);
+          }
+        });
+        
+        console.log(`去重后数据: 总数=${uniqueData.length}, 移除了${processedData.length - uniqueData.length}条重复记录`);
+        
         // 更新状态
-        this.records = processedData;
-        this.total = total;
+        this.records = uniqueData;
+        this.total = total - (processedData.length - uniqueData.length); // 调整总数以反映实际可用记录数
         this.currentPage = pagination.page || this.currentPage;
         this.pageSize = pagination.pageSize || this.pageSize;
         this.loading = false;
         
-        return processedData;
+        return uniqueData;
       })
       .catch(error => {
         // 忽略取消请求的错误
@@ -171,6 +175,8 @@ class Store {
         
         console.error('获取费用数据失败:', error);
         this.loading = false;
+        
+        // 简化为直接返回空数据
         this.records = [];
         this.total = 0;
         return [];
@@ -381,65 +387,6 @@ class Store {
     if (this.abortController) {
       this.abortController.abort();
     }
-  }
-  
-  // 处理真实数据 - 此方法已弃用，请使用processDataWithType方法
-  processRealData = (data) => {
-    console.warn('processRealData方法已弃用，请使用processDataWithType方法');
-    return [];
-  }
-  
-  // 根据指定类型处理数据的方法
-  processDataWithType = (data, resourceType) => {
-    if (!data || !Array.isArray(data)) {
-      console.error('处理的数据不是数组:', data);
-      return [];
-    }
-    
-    return data.map(item => {
-      // 使用真实的费用数据，确保数据存在
-      const cost = item.financePrice ? parseFloat(item.financePrice).toFixed(2) : "0.00";
-      
-      // 计算环比变化
-      const change = this.calculateMonthlyChange(item);
-      
-      // 构建标准化的数据结构，直接使用指定的资源类型
-      return {
-        id: item.instanceid || '',
-        name: item.instance_name || item.instanceid || '',
-        type: resourceType,
-        month: item.month || moment().format('YYYY-MM'),
-        billingType: item.productType || '',
-        billingTypeName: item.productType === 'prepay' ? '包年包月' : '按量付费',
-        cost: cost,
-        change: change
-      };
-    });
-  }
-  
-  // 计算环比变化 (仅用于本地数据)
-  calculateMonthlyChange = (currentItem) => {
-    if (!currentItem || !currentItem.month) return 0;
-    
-    const currentMonth = moment(currentItem.month);
-    const lastMonth = currentMonth.clone().subtract(1, 'month').format('YYYY-MM');
-    
-    // 在相同数据源中查找上月同一实例的费用
-    const dataSource = this.currentAssetType === 'all' ? 'all' : this.currentAssetType;
-    if (!this.backupData[dataSource]) {
-      return 0;
-    }
-    
-    const lastMonthData = this.backupData[dataSource]
-      .find(item => item.instanceid === currentItem.instanceid && item.month === lastMonth);
-    
-    if (!lastMonthData) return 0;
-    
-    const currentCost = parseFloat(currentItem.financePrice || 0);
-    const lastCost = parseFloat(lastMonthData.financePrice || 0);
-    
-    if (lastCost === 0) return 0;
-    return Number(((currentCost - lastCost) / lastCost * 100).toFixed(2));
   }
 }
 

@@ -7,42 +7,6 @@ import { observable, computed, toJS } from 'mobx';
 import { message } from 'antd';
 import { http, includes } from 'libs';
 
-// 添加模拟数据
-const mockData = {
-  disk: [
-    { id: 1, name: '系统盘-01', size: 100, type: 'SSD', mount_point: '/', status: 'online' },
-    { id: 2, name: '数据盘-01', size: 500, type: 'HDD', mount_point: '/data', status: 'online' },
-    { id: 3, name: '备份盘-01', size: 1000, type: 'HDD', mount_point: '/backup', status: 'online' },
-    { id: 4, name: '系统盘-02', size: 200, type: 'SSD', mount_point: '/', status: 'online' },
-    { id: 5, name: '数据盘-02', size: 800, type: 'HDD', mount_point: '/data', status: 'online' },
-    { id: 6, name: '备份盘-02', size: 2000, type: 'HDD', mount_point: '/backup', status: 'online' }
-  ],
-  storage: [
-    { id: 1, name: '对象存储-01', type: 'S3', capacity: 1000, usage: 45, status: 'online' },
-    { id: 2, name: '对象存储-02', type: 'OSS', capacity: 2000, usage: 30, status: 'online' },
-    { id: 3, name: '文件存储-01', type: 'NAS', capacity: 500, usage: 60, status: 'online' },
-    { id: 4, name: '对象存储-03', type: 'S3', capacity: 3000, usage: 25, status: 'online' },
-    { id: 5, name: '块存储-01', type: 'Block', capacity: 1500, usage: 50, status: 'online' },
-    { id: 6, name: '文件存储-02', type: 'NAS', capacity: 800, usage: 40, status: 'online' }
-  ],
-  cdn: [
-    { id: 1, name: 'CDN-01', domain: 'cdn1.example.com', type: '网页加速', bandwidth: 100, status: 'online' },
-    { id: 2, name: 'CDN-02', domain: 'cdn2.example.com', type: '下载加速', bandwidth: 200, status: 'online' },
-    { id: 3, name: 'CDN-03', domain: 'cdn3.example.com', type: '视频加速', bandwidth: 500, status: 'offline' },
-    { id: 4, name: 'CDN-04', domain: 'cdn4.example.com', type: '网页加速', bandwidth: 150, status: 'online' },
-    { id: 5, name: 'CDN-05', domain: 'cdn5.example.com', type: '下载加速', bandwidth: 300, status: 'online' },
-    { id: 6, name: 'CDN-06', domain: 'cdn6.example.com', type: '视频加速', bandwidth: 800, status: 'online' }
-  ],
-  ip: [
-    { id: 1, address: '192.168.1.1', type: 'private', region: '内网', bandwidth: null, status: 'used' },
-    { id: 2, address: '10.0.0.1', type: 'private', region: '内网', bandwidth: null, status: 'used' },
-    { id: 3, address: '203.0.113.1', type: 'public', region: '华北', bandwidth: 100, status: 'used' },
-    { id: 4, address: '192.168.1.2', type: 'private', region: '内网', bandwidth: null, status: 'used' },
-    { id: 5, address: '10.0.0.2', type: 'private', region: '内网', bandwidth: null, status: 'unused' },
-    { id: 6, address: '203.0.113.2', type: 'public', region: '华东', bandwidth: 200, status: 'used' }
-  ]
-};
-
 class Store {
   @observable rawTreeData = [];
   @observable rawRecords = [];
@@ -86,23 +50,6 @@ class Store {
     if (!this.idMap) {
       this.idMap = {};
     }
-  }
-
-  // 获取模拟数据
-  getMockData(assetType) {
-    console.log('获取模拟数据:', assetType);
-    return mockData[assetType] || [];
-  }
-
-  // 更新模拟数据并触发UI更新
-  updateMockData(assetType, newData) {
-    mockData[assetType] = [...newData];
-    // 触发UI更新
-    const tmpType = this.currentAssetType;
-    this.currentAssetType = '';
-    setTimeout(() => {
-      this.currentAssetType = tmpType;
-    }, 0);
   }
 
   @computed get records() {
@@ -377,11 +324,11 @@ class Store {
             // 全部数据，不进行过滤
             return data;
           } else if (assetType === 'disk' && this.group.key === 'system_disks') {
-            return data.filter(item => item.type === 'SSD');
+            return data.filter(item => item.storage_type === 'system');
           } else if (assetType === 'disk' && this.group.key === 'data_disks') {
-            return data.filter(item => item.type === 'HDD' && item.mount_point === '/data');
+            return data.filter(item => item.storage_type === 'data');
           } else if (assetType === 'disk' && this.group.key === 'backup_disks') {
-            return data.filter(item => item.type === 'HDD' && item.mount_point === '/backup');
+            return data.filter(item => item.storage_type === 'backup');
           } else if (assetType === 'storage' && this.group.key === 'object_storage') {
             return data.filter(item => item.type === 'S3' || item.type === 'OSS');
           } else if (assetType === 'storage' && this.group.key === 'file_storage') {
@@ -395,9 +342,17 @@ class Store {
           } else if (assetType === 'cdn' && this.group.key === 'video_cdn') {
             return data.filter(item => item.type === '视频加速');
           } else if (assetType === 'ip' && this.group.key === 'public_ip') {
-            return data.filter(item => item.type === 'public');
+            return data.filter(item => item.status === 'Available');
           } else if (assetType === 'ip' && this.group.key === 'private_ip') {
-            return data.filter(item => item.type === 'private');
+            return data.filter(item => item.status !== 'Available');
+          } else if (assetType === 'instance' && this.group.key === 'running_instances') {
+            return data.filter(item => item.status === 'Running');
+          } else if (assetType === 'instance' && this.group.key === 'stopped_instances') {
+            return data.filter(item => item.status === 'Stopped');
+          } else if (assetType === 'instance' && this.group.key === 'prepaid_instances') {
+            return data.filter(item => item.payment_timing === 'PrePaid');
+          } else if (assetType === 'instance' && this.group.key === 'postpaid_instances') {
+            return data.filter(item => item.payment_timing === 'PostPaid');
           }
         }
         

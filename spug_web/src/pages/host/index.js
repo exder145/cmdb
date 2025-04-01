@@ -24,6 +24,7 @@ const { TabPane } = Tabs;
 // 定义资产类型
 const assetTypes = [
   { key: 'server', tab: '服务器', icon: <CloudServerOutlined /> },
+  { key: 'instance', tab: '实例', icon: <CloudServerOutlined /> },
   { key: 'disk', tab: '磁盘', icon: <HddOutlined /> },
   { key: 'storage', tab: '对象存储', icon: <CloudOutlined /> },
   { key: 'cdn', tab: 'CDN', icon: <GlobalOutlined /> },
