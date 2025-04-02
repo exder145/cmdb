@@ -177,3 +177,15 @@ spug/
 │
 └── docs/                  # 项目文档
 ```
+
+# 注意
+
+##数据库上传后需要进行迁移
+当模型结构发生变化时，Django 需要进行数据库迁移
+迁移命令：
+
+spug_api\apps\account\management\commands\updatedb.py
+
+这个命令会自动执行以下操作：
+为所有已安装的应用创建迁移文件（makemigrations）
+应用所有迁移到数据库（migrate）

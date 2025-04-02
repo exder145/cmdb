@@ -8,30 +8,32 @@ import { observer } from 'mobx-react';
 import { Modal, Button, Checkbox, Table, message, Spin, Space, Divider, Alert, Avatar, Tooltip } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
 import store from './store';
+import { http } from 'libs';
 import lds from 'lodash';
 import icons from './icons';
 import moment from 'moment';
 
 // 定义可导出的字段
 const exportFields = [
+  // 基本信息
   { key: 'name', title: '主机名称', checked: true },
   { key: 'hostname', title: '连接地址', checked: true },
   { key: 'port', title: '连接端口', checked: true },
   { key: 'username', title: '用户名', checked: true },
-  { key: 'desc', title: '描述信息', checked: true },
-  { key: 'os_name', title: '操作系统', checked: true, hasIcon: true },
-  { key: 'os_type', title: '系统类型', checked: false },
-  { key: 'cpu', title: 'CPU', checked: true },
-  { key: 'memory', title: '内存', checked: true },
-  { key: 'disk', title: '磁盘', checked: false },
-  { key: 'private_ip_address', title: '内网IP', checked: false },
-  { key: 'public_ip_address', title: '公网IP', checked: false },
+  
+  // 扩展信息
   { key: 'instance_id', title: '实例ID', checked: false },
-  { key: 'instance_charge_type_alias', title: '实例计费方式', checked: false },
-  { key: 'internet_charge_type_alias', title: '网络计费方式', checked: false },
-  { key: 'created_time', title: '创建时间', checked: false },
-  { key: 'expired_time', title: '到期时间', checked: false },
-  { key: 'is_verified', title: '验证状态', checked: false },
+  { key: 'status', title: '状态', checked: true },
+  { key: 'zone_name', title: '可用区', checked: false, alias: 'region' },
+  { key: 'os_name', title: '操作系统', checked: true },
+  { key: 'os_version', title: '系统版本', checked: false, alias: 'version' },
+  { key: 'os_arch', title: '系统架构', checked: false, alias: 'arch' },
+  { key: 'cpu_count', title: 'CPU', checked: true, alias: 'cpu' },
+  { key: 'memory_capacity_in_gb', title: '内存', checked: true, alias: 'memory' },
+  { key: 'payment_timing', title: '付费方式', checked: false, alias: 'payment_method' },
+  { key: 'create_time', title: '创建时间', checked: false, alias: 'created_time' },
+  { key: 'expire_time', title: '到期时间', checked: false, alias: 'expired_time' },
+  { key: 'image_name', title: '镜像名称', checked: false },
 ];
 
 export default observer(function Export() {
@@ -73,48 +75,31 @@ export default observer(function Export() {
     // 数据行
     data.forEach(item => {
       const row = selectedFields.map(field => {
-        let value = item[field.key];
+        // 处理字段别名
+        let value;
+        if (field.alias && item[field.key] === undefined) {
+          value = item[field.alias];
+        } else {
+          value = item[field.key];
+        }
         
         // 处理特殊字段
-        if (field.key === 'disk') {
-          value = Array.isArray(value) ? value.map(v => `${v}GB`).join('; ') : value;
-        } else if (field.key === 'private_ip_address') {
-          // 处理内网IP
-          if (Array.isArray(value)) {
-            value = value.map(ip => {
-              if (typeof ip === 'object' && ip !== null) {
-                return ip.name || JSON.stringify(ip);
-              }
-              return ip;
-            }).join('; ');
-          } else if (typeof value === 'object' && value !== null) {
-            value = value.name || JSON.stringify(value);
-          }
-        } else if (field.key === 'public_ip_address') {
-          // 处理公网IP
-          if (Array.isArray(value)) {
-            value = value.map(ip => {
-              if (typeof ip === 'object' && ip !== null) {
-                return ip.name || JSON.stringify(ip);
-              }
-              return ip;
-            }).join('; ');
-          } else if (typeof value === 'object' && value !== null) {
-            value = value.name || JSON.stringify(value);
-          }
-        } else if (field.key === 'is_verified') {
-          value = value ? '已验证' : '未验证';
-        } else if (field.key === 'cpu') {
+        if (field.key === 'pkey') {
+          value = value ? '是' : '否';
+        } else if (field.key === 'cpu_count' || field.key === 'cpu') {
           value = value ? `${value}核` : '';
-        } else if (field.key === 'memory') {
+        } else if (field.key === 'memory_capacity_in_gb' || field.key === 'memory') {
           value = value ? `${value}GB` : '';
-        } else if (field.key === 'os_name') {
-          // 操作系统名称，如果为空则使用类型
-          value = value || (item.os_type ? item.os_type.toUpperCase() : '未知');
-        } else if (field.key === 'created_time' || field.key === 'expired_time') {
-          // 处理日期字段 - 使用最简单的方法确保Excel正确显示
+        } else if (field.key === 'payment_timing') {
+          if (value === 'PrePaid' || value === 'Prepaid') {
+            value = '包年包月';
+          } else if (value === 'PostPaid' || value === 'Postpaid') {
+            value = '按量计费';
+          }
+        } else if (field.key === 'create_time' || field.key === 'expire_time' || 
+                   field.key === 'created_time' || field.key === 'expired_time') {
+          // 处理日期字段
           if (value) {
-            // 保留完整的日期时间格式
             const date = new Date(value);
             if (!isNaN(date.getTime())) {
               const year = date.getFullYear();
@@ -165,59 +150,82 @@ export default observer(function Export() {
   const exportCSV = () => {
     setLoading(true);
     
-    try {
-      // 获取选中的主机数据
-      const selectedHosts = store.rawRecords.filter(item => selectedRowKeys.includes(item.id));
-      
-      // 获取选中的字段
-      const selectedFields = fields.filter(field => field.checked);
-      
-      if (selectedFields.length === 0) {
-        message.error('请至少选择一个导出字段');
+    // 从实例API获取更完整的数据
+    const hostIds = selectedRowKeys.join(',');
+    http.get('/host/instance/', {params: {ids: hostIds}})
+      .then(res => {
+        try {
+          // 处理API返回的数据
+          let instances = res;
+          if (!Array.isArray(instances)) {
+            instances = [instances];
+          }
+          
+          // 将实例数据与原始数据合并
+          const mergedData = [];
+          for (const instance of instances) {
+            // 找到对应的原始记录
+            const originalRecord = store.rawRecords.find(item => item.id === instance.id);
+            if (originalRecord) {
+              // 合并数据，实例数据优先
+              mergedData.push({...originalRecord, ...instance});
+            }
+          }
+          
+          // 获取选中的字段
+          const selectedFields = fields.filter(field => field.checked);
+          
+          if (selectedFields.length === 0) {
+            message.error('请至少选择一个导出字段');
+            setLoading(false);
+            return;
+          }
+          
+          // 生成CSV数据
+          const csv = generateCSV(mergedData, selectedFields);
+          
+          // 添加BOM头，解决中文乱码问题
+          const BOM = '\uFEFF';
+          const csvContent = BOM + csv;
+          
+          // 创建Blob对象
+          const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+          
+          // 创建下载链接
+          const link = document.createElement('a');
+          const url = URL.createObjectURL(blob);
+          
+          // 设置下载属性
+          link.setAttribute('href', url);
+          link.setAttribute('download', `主机信息_${new Date().toLocaleDateString()}.csv`);
+          link.style.visibility = 'hidden';
+          
+          // 添加到文档并触发点击
+          document.body.appendChild(link);
+          link.click();
+          
+          // 清理
+          document.body.removeChild(link);
+          URL.revokeObjectURL(url);
+          
+          message.success('导出成功');
+          store.exportVisible = false;
+        } catch (error) {
+          console.error('处理导出数据时出错:', error);
+          message.error('导出失败，请查看控制台获取更多信息');
+        }
+      })
+      .catch(error => {
+        console.error('获取实例数据失败:', error);
+        message.error('获取数据失败，请稍后重试');
+      })
+      .finally(() => {
         setLoading(false);
-        return;
-      }
-      
-      // 生成CSV数据
-      const csv = generateCSV(selectedHosts, selectedFields);
-      
-      // 添加BOM头，解决中文乱码问题
-      const BOM = '\uFEFF';
-      const csvContent = BOM + csv;
-      
-      // 创建Blob对象
-      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-      
-      // 创建下载链接
-      const link = document.createElement('a');
-      const url = URL.createObjectURL(blob);
-      
-      // 设置下载属性
-      link.setAttribute('href', url);
-      link.setAttribute('download', `主机信息_${new Date().toLocaleDateString()}.csv`);
-      link.style.visibility = 'hidden';
-      
-      // 添加到文档并触发点击
-      document.body.appendChild(link);
-      link.click();
-      
-      // 清理
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
-      
-      message.success('导出成功');
-      store.exportVisible = false;
-    } catch (error) {
-      console.error('导出CSV时出错:', error);
-      message.error('导出失败，请查看控制台获取更多信息');
-    } finally {
-      setLoading(false);
-    }
+      });
   };
 
   // 预览数据
   const handlePreview = () => {
-    const selectedHosts = store.rawRecords.filter(item => selectedRowKeys.includes(item.id));
     const selectedFields = fields.filter(field => field.checked);
     
     if (selectedFields.length === 0) {
@@ -225,90 +233,111 @@ export default observer(function Export() {
       return;
     }
     
-    // 生成预览数据
-    const previewData = selectedHosts.map(host => {
-      const item = {};
-      selectedFields.forEach(field => {
-        let value = host[field.key];
-        
-        // 处理特殊字段
-        if (field.key === 'disk') {
-          value = Array.isArray(value) ? value.map(v => `${v}GB`).join('; ') : value;
-        } else if (field.key === 'private_ip_address') {
-          // 处理内网IP
-          if (Array.isArray(value)) {
-            value = value.map(ip => {
-              if (typeof ip === 'object' && ip !== null) {
-                return ip.name || JSON.stringify(ip);
-              }
-              return ip;
-            }).join('; ');
-          } else if (typeof value === 'object' && value !== null) {
-            value = value.name || JSON.stringify(value);
+    setLoading(true);
+    // 从实例API获取更完整的数据
+    const hostIds = selectedRowKeys.join(',');
+    http.get('/host/instance/', {params: {ids: hostIds}})
+      .then(res => {
+        try {
+          // 处理API返回的数据
+          let instances = res;
+          if (!Array.isArray(instances)) {
+            instances = [instances];
           }
-        } else if (field.key === 'public_ip_address') {
-          // 处理公网IP
-          if (Array.isArray(value)) {
-            value = value.map(ip => {
-              if (typeof ip === 'object' && ip !== null) {
-                return ip.name || JSON.stringify(ip);
-              }
-              return ip;
-            }).join('; ');
-          } else if (typeof value === 'object' && value !== null) {
-            value = value.name || JSON.stringify(value);
-          }
-        } else if (field.key === 'is_verified') {
-          value = value ? '已验证' : '未验证';
-        } else if (field.key === 'cpu') {
-          value = value ? `${value}核` : '';
-        } else if (field.key === 'memory') {
-          value = value ? `${value}GB` : '';
-        } else if (field.key === 'os_name') {
-          // 保存原始值，以便在渲染时使用
-          item.os_type = host.os_type || 'unknown';
-          value = value || '';
-        } else if (field.key === 'created_time' || field.key === 'expired_time') {
-          // 处理日期字段 - 保留完整的日期时间信息
-          if (value) {
-            // 保留完整的日期时间格式
-            const date = new Date(value);
-            if (!isNaN(date.getTime())) {
-              const year = date.getFullYear();
-              const month = String(date.getMonth() + 1).padStart(2, '0');
-              const day = String(date.getDate()).padStart(2, '0');
-              const hours = String(date.getHours()).padStart(2, '0');
-              const minutes = String(date.getMinutes()).padStart(2, '0');
-              const seconds = String(date.getSeconds()).padStart(2, '0');
-              
-              // 根据时间是否为00:00:00决定是否显示时分秒
-              if (hours === '00' && minutes === '00' && seconds === '00') {
-                value = `${year}/${month}/${day}`;
-              } else {
-                value = `${year}/${month}/${day} ${hours}:${minutes}:${seconds}`;
-              }
-            } else {
-              value = String(value).replace(/-/g, '/');
+          
+          // 将实例数据与原始数据合并
+          const mergedData = [];
+          for (const instance of instances) {
+            // 找到对应的原始记录
+            const originalRecord = store.rawRecords.find(item => item.id === instance.id);
+            if (originalRecord) {
+              // 合并数据，实例数据优先
+              mergedData.push({...originalRecord, ...instance});
             }
-          } else {
-            value = '';
           }
-        } else if (typeof value === 'object' && value !== null) {
-          // 处理其他可能是对象的字段
-          try {
-            value = JSON.stringify(value);
-          } catch (e) {
-            value = '';
-          }
+          
+          // 生成预览数据
+          const previewData = mergedData.map(host => {
+            const item = {};
+            selectedFields.forEach(field => {
+              // 处理字段别名
+              let value;
+              if (field.alias && host[field.key] === undefined) {
+                value = host[field.alias];
+              } else {
+                value = host[field.key];
+              }
+              
+              // 处理特殊字段
+              if (field.key === 'pkey') {
+                value = value ? '是' : '否';
+              } else if (field.key === 'cpu_count' || field.key === 'cpu') {
+                value = value ? `${value}核` : '';
+              } else if (field.key === 'memory_capacity_in_gb' || field.key === 'memory') {
+                value = value ? `${value}GB` : '';
+              } else if (field.key === 'payment_timing') {
+                if (value === 'PrePaid' || value === 'Prepaid') {
+                  value = '包年包月';
+                } else if (value === 'PostPaid' || value === 'Postpaid') {
+                  value = '按量计费';
+                }
+              } else if (field.key === 'os_name') {
+                // 保存原始值，以便在渲染时使用
+                item.os_type = host.os_type || 'unknown';
+                value = value || '';
+              } else if (field.key === 'create_time' || field.key === 'expire_time' || 
+                         field.key === 'created_time' || field.key === 'expired_time') {
+                // 处理日期字段
+                if (value) {
+                  const date = new Date(value);
+                  if (!isNaN(date.getTime())) {
+                    const year = date.getFullYear();
+                    const month = String(date.getMonth() + 1).padStart(2, '0');
+                    const day = String(date.getDate()).padStart(2, '0');
+                    const hours = String(date.getHours()).padStart(2, '0');
+                    const minutes = String(date.getMinutes()).padStart(2, '0');
+                    const seconds = String(date.getSeconds()).padStart(2, '0');
+                    
+                    // 根据时间是否为00:00:00决定是否显示时分秒
+                    if (hours === '00' && minutes === '00' && seconds === '00') {
+                      value = `${year}/${month}/${day}`;
+                    } else {
+                      value = `${year}/${month}/${day} ${hours}:${minutes}:${seconds}`;
+                    }
+                  } else {
+                    value = String(value).replace(/-/g, '/');
+                  }
+                } else {
+                  value = '';
+                }
+              } else if (typeof value === 'object' && value !== null) {
+                // 处理其他可能是对象的字段
+                try {
+                  value = JSON.stringify(value);
+                } catch (e) {
+                  value = '';
+                }
+              }
+              
+              item[field.key] = value;
+            });
+            return item;
+          });
+          
+          setPreviewData(previewData);
+          setPreviewVisible(true);
+        } catch (error) {
+          console.error('处理预览数据时出错:', error);
+          message.error('预览失败，请查看控制台获取更多信息');
         }
-        
-        item[field.key] = value;
+      })
+      .catch(error => {
+        console.error('获取实例数据失败:', error);
+        message.error('获取数据失败，请稍后重试');
+      })
+      .finally(() => {
+        setLoading(false);
       });
-      return item;
-    });
-    
-    setPreviewData(previewData);
-    setPreviewVisible(true);
   };
 
   // 关闭预览
@@ -333,12 +362,25 @@ export default observer(function Export() {
       if (field.key === 'os_name') {
         column.render = (text, record) => (
           <Space>
-            <Tooltip title={text}>
-              <Avatar shape="square" size={16} src={icons[record.os_type || 'unknown']} />
-            </Tooltip>
+            {record.os_type && <Avatar shape="square" size={16} src={icons[record.os_type || 'unknown']} />}
             <span>{text}</span>
           </Space>
         );
+      } else if (field.key === 'pkey') {
+        column.render = v => v ? '是' : '否';
+      } else if (field.key === 'cpu_count' || field.key === 'cpu') {
+        column.render = value => value ? `${value}核` : '-';
+      } else if (field.key === 'memory_capacity_in_gb' || field.key === 'memory') {
+        column.render = value => value ? `${value}GB` : '-';
+      } else if (field.key === 'payment_timing') {
+        column.render = value => {
+          if (value === 'PrePaid' || value === 'Prepaid') {
+            return '包年包月';
+          } else if (value === 'PostPaid' || value === 'Postpaid') {
+            return '按量计费';
+          }
+          return value || '-';
+        };
       } else {
         column.render = (text) => {
           if (text === null || text === undefined) {
@@ -403,7 +445,7 @@ export default observer(function Export() {
       <Spin spinning={loading}>
         <Alert
           message="导出说明"
-          description="您可以选择要导出的主机和字段，然后点击导出按钮将数据导出为CSV格式。"
+          description="您可以选择要导出的主机和要显示的字段，字段内容与服务器详情页面一致。"
           type="info"
           showIcon
           style={{ marginBottom: 16 }}

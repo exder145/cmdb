@@ -11,7 +11,7 @@ DATABASES = {
     'default': {
         'ATOMIC_REQUESTS': True,
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/home/EXDER/spug_data/db.sqlite3',  # 使用虚拟机本地目录
+        'NAME': '/mnt/hgfs/spug/spug_api/db.sqlite3',  # 修改为与开发环境相同的路径
     }
 }
 

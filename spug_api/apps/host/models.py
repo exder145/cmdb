@@ -105,17 +105,15 @@ class Group(models.Model, ModelMixin):
 
 # 磁盘模型
 class Disk(models.Model, ModelMixin):
-    disk_id = models.CharField(max_length=100, null=True)  # 云磁盘ID
-    server_id = models.CharField(max_length=100, null=True)  # 关联服务器ID
+    disk_id = models.CharField(max_length=100, null=True)
+    server_id = models.CharField(max_length=100, null=True)
     name = models.CharField(max_length=100)
-    size_in_gb = models.IntegerField(null=True)  # 磁盘大小(GB)
-    status = models.CharField(max_length=20)  # 状态：online, offline
-    storage_type = models.CharField(max_length=50, null=True)  # 云磁盘类型
-    create_time = models.CharField(max_length=50, null=True)  # 创建时间
-    expire_time = models.CharField(max_length=50, null=True)  # 过期时间
-    desc = models.CharField(max_length=255, null=True)  # 描述信息
-    created_at = models.CharField(max_length=20, default=human_datetime)
-    created_by = models.ForeignKey(User, models.PROTECT, related_name='+', null=True)
+    size_in_gb = models.IntegerField(null=True)
+    status = models.CharField(max_length=20)
+    storage_type = models.CharField(max_length=50, null=True)
+    create_time = models.CharField(max_length=50, null=True)
+    expire_time = models.CharField(max_length=50, null=True)
+    desc = models.CharField(max_length=255, null=True)
     
     def to_view(self):
         return self.to_dict()

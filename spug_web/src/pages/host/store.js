@@ -6,6 +6,7 @@
 import { observable, computed, toJS } from 'mobx';
 import { message } from 'antd';
 import { http, includes } from 'libs';
+import moment from 'moment';
 
 class Store {
   @observable rawTreeData = [];
@@ -65,10 +66,48 @@ class Store {
   }
 
   @computed get dataSource() {
-    if (this.currentAssetType === 'server') {
-      return this._getServerDataSource();
+    // 对于非服务器资产类型，使用异步API获取数据
+    if (this.currentAssetType !== 'server') {
+      return this._getAssetDataSource(this.currentAssetType);
     }
-    return this._getAssetDataSource(this.currentAssetType);
+    
+    // 以下是服务器资产类型的处理逻辑
+    let records = this.records;
+    
+    // 处理分组过滤
+    if (this.group && this.group.key) {
+      // 处理内置分组过滤逻辑
+      if (this.group.key === 'all_hosts') {
+        // 返回全部主机，不进行过滤
+      } else if (this.group.key === 'running_hosts') {
+        // 过滤状态为Running的主机
+        records = records.filter(x => x.status === 'Running');
+      } else if (this.group.key === 'stopped_hosts') {
+        // 过滤状态不是Running的主机
+        records = records.filter(x => x.status !== 'Running');
+      } else if (this.group.key === 'expired_hosts') {
+        // 过滤已过期的主机（expired_time小于当前日期）
+        const now = moment().format('YYYY-MM-DD');
+        records = records.filter(x => x.expired_time && x.expired_time < now);
+      } else if (this.group.key === 'unexpired_hosts') {
+        // 过滤未过期的主机（expired_time大于等于当前日期或为空）
+        const now = moment().format('YYYY-MM-DD');
+        records = records.filter(x => !x.expired_time || x.expired_time >= now);
+      } else {
+        // 如果是用户自定义分组，使用原有逻辑
+        const host_ids = this.counter[this.group.key];
+        if (host_ids) {
+          records = records.filter(x => host_ids.has(x.id));
+        }
+      }
+    }
+    
+    // 处理状态过滤
+    if (this.f_status) {
+      records = records.filter(x => x.is_verified === (this.f_status === '1'));
+    }
+    
+    return records;
   }
 
   _getServerDataSource() {
@@ -146,7 +185,7 @@ class Store {
     if (oldAssetType !== assetType) {
       // 根据资产类型设置默认分组
       const defaultGroups = {
-        server: { key: 'default', title: '默认分组' },
+        server: { key: 'all_hosts', title: '全部主机' },
         disk: { key: 'all_disk', title: '全部磁盘' },
         storage: { key: 'all_storage', title: '全部存储' },
         cdn: { key: 'all_cdn', title: '全部CDN' },

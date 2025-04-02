@@ -32,7 +32,24 @@ const assetGroups = {
   server: {
     title: '主机分组',
     fetchGroups: () => store.fetchGroups(),
-    treeData: () => store.treeData
+    treeData: () => {
+      // 创建默认分组列表
+      const defaultGroups = [
+        {
+          title: '全部主机',
+          key: 'all_hosts',
+          children: [
+            { title: '正在运行的主机', key: 'running_hosts' },
+            { title: '已停止的主机', key: 'stopped_hosts' },
+            { title: '过期的主机', key: 'expired_hosts' },
+            { title: '未过期的主机', key: 'unexpired_hosts' }
+          ]
+        }
+      ];
+      
+      // 合并默认分组和用户创建的分组
+      return [...defaultGroups, ...store.treeData];
+    }
   },
   instance: {
     title: '实例分组',

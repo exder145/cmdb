@@ -24,4 +24,6 @@ urlpatterns = [
     path('valid/', batch_valid),
     path('cost/', ResourceCostView.as_view()),
     path('cost/stats/', ResourceCostStatsView.as_view()),
+    path('cost/trend/', CostTrendView.as_view()),
+    path('stats/', InstanceStatsView.as_view()),
 ]

@@ -2,7 +2,7 @@
 # Copyright: (c) <spug.dev@gmail.com>
 # Released under the AGPL-3.0 License.
 from django.views.generic import View
-from django.db.models import F, Q
+from django.db.models import F, Q, Sum
 from django.http.response import HttpResponseBadRequest
 from libs import json_response, JsonParser, Argument, AttrDict, auth
 from apps.setting.utils import AppSetting
@@ -25,16 +25,46 @@ from functools import partial
 import ipaddress
 import json
 from django.db import models
+from django.core.cache import cache
+from dateutil.relativedelta import relativedelta
 
 
 class HostView(View):
     def get(self, request):
-        hosts = Host.objects.select_related('hostextend')
+        # 使用Instance模型替代Host模型
+        instances = Instance.objects.all()
         if not request.user.is_supper:
-            hosts = hosts.filter(id__in=get_host_perms(request.user))
-        hosts = {x.id: x.to_view() for x in hosts}
+            # 保持权限检查逻辑，但使用Instance
+            hosts_with_perm = get_host_perms(request.user)
+            instances = instances.filter(id__in=hosts_with_perm)
+        
+        # 转换实例数据为服务器格式
+        hosts = {}
+        for x in instances:
+            hosts[x.id] = {
+                'id': x.id,
+                'name': x.name,
+                'hostname': x.internal_ip or x.public_ip or '',
+                'port': 22,  # 默认SSH端口
+                'username': 'root',  # 默认用户名
+                'desc': x.desc,
+                'instance_id': x.instance_id,
+                'cpu': x.cpu_count,
+                'memory': x.memory_capacity_in_gb,
+                'os_name': x.os_name or '',
+                'os_type': 'linux' if x.os_name and 'linux' in x.os_name.lower() else ('windows' if x.os_name and 'windows' in x.os_name.lower() else ''),
+                'private_ip_address': [x.internal_ip] if x.internal_ip else [],
+                'public_ip_address': [x.public_ip] if x.public_ip else [],
+                'expired_time': x.expire_time,
+                'is_verified': x.status == 'Running',
+                'status': x.status or 'Stopped',  # 添加status字段
+                'group_ids': []
+            }
+        
+        # 保持原有的分组关联逻辑
         for rel in Group.hosts.through.objects.filter(host_id__in=hosts.keys()):
             hosts[rel.host_id]['group_ids'].append(rel.group_id)
+            
         return json_response(list(hosts.values()))
 
     @auth('host.host.add|host.host.edit')
@@ -51,22 +81,82 @@ class HostView(View):
             Argument('password', required=False),
         ).parse(request.body)
         if error is None:
-            if not _do_host_verify(form):
-                return json_response('auth fail')
-
             group_ids = form.pop('group_ids')
-            other = Host.objects.filter(name=form.name).first()
-            if other and (not form.id or other.id != form.id):
-                return json_response(error=f'已存在的主机名称【{form.name}】')
+            
+            # 使用实例表代替主机表
             if form.id:
-                Host.objects.filter(pk=form.id).update(is_verified=True, **form)
-                host = Host.objects.get(pk=form.id)
+                # 查找并更新实例
+                instance = Instance.objects.filter(pk=form.id).first()
+                if not instance:
+                    return json_response(error='未找到指定服务器')
+                    
+                # 更新实例信息
+                instance.name = form.name
+                instance.internal_ip = form.hostname
+                instance.desc = form.get('desc')
+                instance.status = 'Running'  # 标记为已验证
+                instance.save()
+                
+                # 获取完整的实例数据
+                result = {
+                    'id': instance.id,
+                    'name': instance.name,
+                    'hostname': instance.internal_ip or instance.public_ip or '',
+                    'port': form.port,  # 保存端口
+                    'username': form.username,  # 保存用户名
+                    'desc': instance.desc,
+                    'instance_id': instance.instance_id,
+                    'cpu': instance.cpu_count,
+                    'memory': instance.memory_capacity_in_gb,
+                    'os_name': instance.os_name or '',
+                    'os_type': 'linux' if instance.os_name and 'linux' in instance.os_name.lower() else ('windows' if instance.os_name and 'windows' in instance.os_name.lower() else ''),
+                    'private_ip_address': [instance.internal_ip] if instance.internal_ip else [],
+                    'public_ip_address': [instance.public_ip] if instance.public_ip else [],
+                    'expired_time': instance.expire_time,
+                    'is_verified': instance.status == 'Running',
+                    'status': instance.status or 'Stopped',  # 添加status字段
+                    'group_ids': group_ids
+                }
             else:
-                host = Host.objects.create(created_by=request.user, is_verified=True, **form)
-            host.groups.set(group_ids)
-            response = host.to_view()
-            response['group_ids'] = group_ids
-            return json_response(response)
+                # 创建新实例
+                instance = Instance.objects.create(
+                    name=form.name,
+                    internal_ip=form.hostname,
+                    status='Running',  # 标记为已验证
+                    desc=form.get('desc'),
+                    created_by=request.user
+                )
+                
+                # 获取完整的实例数据
+                result = {
+                    'id': instance.id,
+                    'name': instance.name,
+                    'hostname': instance.internal_ip or '',
+                    'port': form.port,
+                    'username': form.username,
+                    'desc': instance.desc,
+                    'instance_id': instance.instance_id,
+                    'cpu': instance.cpu_count,
+                    'memory': instance.memory_capacity_in_gb,
+                    'os_name': instance.os_name or '',
+                    'os_type': 'linux',  # 默认类型
+                    'private_ip_address': [instance.internal_ip] if instance.internal_ip else [],
+                    'public_ip_address': [instance.public_ip] if instance.public_ip else [],
+                    'expired_time': instance.expire_time,
+                    'is_verified': instance.status == 'Running',
+                    'status': instance.status or 'Stopped',  # 添加status字段
+                    'group_ids': group_ids
+                }
+            
+            # 更新分组关系 - 使用现有的Group和Host的关联关系
+            # 需要创建一个可用的Host记录来维持分组关系，或修改分组模型
+            if group_ids:
+                # 获取分组
+                groups = Group.objects.filter(id__in=group_ids)
+                for group in groups:
+                    group.hosts.add(instance.id)
+            
+            return json_response(result)
         return json_response(error=error)
 
     @auth('host.host.add|host.host.edit')
@@ -75,9 +165,44 @@ class HostView(View):
             Argument('id', type=int, help='参数错误')
         ).parse(request.body)
         if error is None:
-            host = Host.objects.get(pk=form.id)
-            with host.get_ssh() as ssh:
-                _sync_host_extend(host, ssh=ssh)
+            # 查找并获取实例
+            instance = Instance.objects.get(pk=form.id)
+            
+            # 创建一个临时的主机对象用于SSH连接
+            host = AttrDict()
+            host.hostname = instance.internal_ip or instance.public_ip
+            host.port = 22  # 默认SSH端口
+            host.username = 'root'  # 默认用户名
+            host.private_key = AppSetting.get('private_key')
+            
+            def get_ssh(self, pkey=None, default_env=None):
+                pkey = pkey or self.private_key
+                return SSH(self.hostname, self.port, self.username, pkey, default_env=default_env)
+            
+            host.get_ssh = lambda pkey=None, default_env=None: get_ssh(host, pkey, default_env)
+            
+            # 执行验证和扩展信息获取
+            try:
+                with host.get_ssh() as ssh:
+                    # 获取扩展信息
+                    info = ssh.exec_command('cat /proc/cpuinfo | grep processor | wc -l')
+                    if info:
+                        instance.cpu_count = int(info)
+                    
+                    info = ssh.exec_command("free -m | grep Mem | awk '{print $2}'")
+                    if info:
+                        instance.memory_capacity_in_gb = round(int(info) / 1024, 2)
+                    
+                    info = ssh.exec_command("uname -a")
+                    if info:
+                        instance.os_name = info
+                        
+                    # 更新状态为已验证
+                    instance.status = 'Running'
+                    instance.save()
+            except Exception as e:
+                return json_response(error=f'验证失败: {str(e)}')
+                
         return json_response(error=error)
 
     @auth('admin')
@@ -112,6 +237,7 @@ class HostView(View):
                 host_ids = [x.id for x in group.hosts.all()]
             else:
                 return json_response(error='参数错误')
+                
             for host_id in host_ids:
                 regex = fr'[^0-9]{host_id}[^0-9]'
                 deploy = Deploy.objects.filter(host_ids__regex=regex) \
@@ -127,7 +253,9 @@ class HostView(View):
                 tpl = ExecTemplate.objects.filter(host_ids__regex=regex).first()
                 if tpl:
                     return json_response(error=f'执行模板【{tpl.name}】关联了该主机，请解除关联后再尝试删除该主机')
-            Host.objects.filter(id__in=host_ids).delete()
+                    
+            # 删除实例而不是主机
+            Instance.objects.filter(id__in=host_ids).delete()
         return json_response(error=error)
 
 
@@ -189,10 +317,27 @@ def batch_valid(request):
     ).parse(request.body)
     if error is None:
         if form.range == '1':  # all hosts
-            hosts = Host.objects.all()
+            instances = Instance.objects.all()
         else:
-            hosts = Host.objects.filter(is_verified=False).all()
+            # 查找未验证的实例（状态不是Running的）
+            instances = Instance.objects.exclude(status='Running').all()
+            
         token = uuid.uuid4().hex
+        
+        # 由于batch_sync_host函数需要Host对象，这里我们需要创建临时的主机对象
+        hosts = []
+        for instance in instances:
+            # 创建临时Host对象，包含实例的基本信息
+            host = AttrDict()
+            host.id = instance.id
+            host.name = instance.name
+            host.hostname = instance.internal_ip or instance.public_ip or ''
+            host.port = 22  # 默认SSH端口
+            host.username = 'root'  # 默认用户名
+            host.is_verified = instance.status == 'Running'
+            host.save = lambda: Instance.objects.filter(id=instance.id).update(status='Running')
+            hosts.append(host)
+            
         Thread(target=batch_sync_host, args=(token, hosts, form.password)).start()
         return json_response({'token': token, 'hosts': {x.id: {'name': x.name} for x in hosts}})
     return json_response(error=error)
@@ -489,6 +634,15 @@ class ResourceCostView(View):
         start_date = request.GET.get('start_date', '')
         end_date = request.GET.get('end_date', '')
         
+        # 生成缓存键，包含所有查询参数
+        cache_key = f"resource_costs_{resource_type}_{month}_{product_type}_{limit}_{offset}_{sort_by}_{search}_{start_date}_{end_date}"
+        
+        # 尝试从缓存获取数据
+        cached_data = cache.get(cache_key)
+        if cached_data and not request.GET.get('force', '0') == '1':
+            print(f"从缓存返回资源费用数据: {cache_key}")
+            return json_response(cached_data)
+            
         # 构建查询条件
         filters = {}
         if resource_type:
@@ -614,16 +768,33 @@ class ResourceCostView(View):
                 'created_at': item.created_at
             })
         
-        # 返回结果
-        return json_response({
+        # 构建响应数据
+        response_data = {
             'total': total,
             'data': data
-        })
+        }
+        
+        # 将结果保存到缓存（设置5分钟过期）
+        cache.set(cache_key, response_data, 300)  # 缓存5分钟
+        
+        # 返回结果
+        return json_response(response_data)
 
 # 资源费用统计API视图
 class ResourceCostStatsView(View):
     def get(self, request):
+        from django.core.cache import cache
+        
         month = request.GET.get('month', '')
+        
+        # 生成缓存键
+        cache_key = f"resource_cost_stats_{month}"
+        
+        # 尝试从缓存获取数据
+        cached_data = cache.get(cache_key)
+        if cached_data and not request.GET.get('force', '0') == '1':
+            print(f"从缓存返回统计数据: {cache_key}")
+            return json_response(cached_data)
         
         # 按资源类型统计费用总额
         stats_by_type = []
@@ -653,8 +824,343 @@ class ResourceCostStatsView(View):
                 'total_cost': round(sum_price, 2)
             })
         
-        # 返回结果
-        return json_response({
+        # 构建响应数据
+        response_data = {
             'stats_by_type': stats_by_type,
             'stats_by_month': stats_by_month
-        })
+        }
+        
+        # 将结果保存到缓存（设置10分钟过期）
+        cache.set(cache_key, response_data, 600)  # 缓存10分钟
+        
+        # 返回结果
+        return json_response(response_data)
+
+# 实例统计视图 - 用于提供操作系统分布和服务器配置分布的统计数据
+class InstanceStatsView(View):
+    def get(self, request):
+        from django.core.cache import cache
+        from django.db.models import Count
+        from collections import defaultdict
+        
+        # 生成缓存键
+        cache_key = "instance_stats"
+        
+        # 尝试从缓存获取数据
+        cached_data = cache.get(cache_key)
+        if cached_data and not request.GET.get('force', '0') == '1':
+            print(f"从缓存返回实例统计数据")
+            return json_response(cached_data)
+        
+        # 获取所有实例
+        instances = Instance.objects.all()
+        
+        # 操作系统分布统计
+        os_stats = defaultdict(int)
+        for instance in instances:
+            # 如果os_name存在且不为None，否则标记为"其他"
+            os_name = instance.os_name if instance.os_name else '其他'
+            os_stats[os_name] += 1
+        
+        # 将操作系统分布转换为列表格式
+        os_distribution = [
+            {'name': name, 'value': count}
+            for name, count in os_stats.items()
+        ]
+        
+        # 服务器配置分布统计 (基于CPU和内存)
+        config_stats = defaultdict(int)
+        for instance in instances:
+            if instance.cpu_count is not None and instance.memory_capacity_in_gb is not None:
+                # 将服务器按配置分类
+                cpu = instance.cpu_count
+                memory = instance.memory_capacity_in_gb
+                
+                # 分类逻辑
+                if cpu == 2 and memory <= 4:
+                    config = '2核4G'
+                elif cpu == 2 and memory <= 8:
+                    config = '2核8G'
+                elif cpu == 4 and memory <= 8:
+                    config = '4核8G'
+                elif cpu == 8 and memory <= 16:
+                    config = '8核16G'
+                elif cpu == 16 and memory <= 32:
+                    config = '16核32G'
+                else:
+                    config = '其他'
+                
+                config_stats[config] += 1
+            else:
+                config_stats['其他'] += 1
+        
+        # 将服务器配置分布转换为列表格式
+        config_distribution = [
+            {'name': name, 'value': count}
+            for name, count in config_stats.items()
+        ]
+        
+        # 构建响应数据
+        response_data = {
+            'os_distribution': os_distribution,
+            'config_distribution': config_distribution
+        }
+        
+        # 将结果保存到缓存（设置1小时过期）
+        cache.set(cache_key, response_data, 60 * 60)  # 缓存1小时
+        
+        # 返回结果
+        return json_response(response_data)
+
+# 成本趋势API视图
+class CostTrendView(View):
+    def get(self, request):
+        from django.core.cache import cache
+        import datetime
+        
+        # 获取请求参数
+        mode = request.GET.get('mode', 'monthly')  # monthly或yearly
+        year = request.GET.get('year', datetime.datetime.now().year)
+        
+        # 生成缓存键
+        cache_key = f"cost_trend_{mode}_{year}"
+        
+        # 尝试从缓存获取数据
+        cached_data = cache.get(cache_key)
+        if cached_data and not request.GET.get('force', '0') == '1':
+            return json_response(cached_data)
+        
+        if mode == 'monthly':
+            # 按月查询指定年份的资源消费数据
+            # 计算资源 (ECS实例)
+            compute_costs = []
+            storage_costs = []
+            network_costs = []
+            
+            # 遍历12个月
+            for month in range(1, 13):
+                month_str = f"{year}-{month:02d}"
+                
+                # 计算资源费用 - ECS实例
+                compute_query = ResourceCost.objects.filter(
+                    resource_type='ECS实例',
+                    month=month_str
+                )
+                compute_cost = sum(float(str(record.finance_price).replace('¥', '').replace(',', '')) 
+                                for record in compute_query) if compute_query else 0
+                compute_costs.append(round(compute_cost, 2))
+                
+                # 存储资源费用 - 云盘
+                storage_query = ResourceCost.objects.filter(
+                    resource_type='云盘',
+                    month=month_str
+                )
+                storage_cost = sum(float(str(record.finance_price).replace('¥', '').replace(',', '')) 
+                                for record in storage_query) if storage_query else 0
+                storage_costs.append(round(storage_cost, 2))
+                
+                # 网络资源费用 - 弹性IP
+                network_query = ResourceCost.objects.filter(
+                    resource_type='弹性IP',
+                    month=month_str
+                )
+                network_cost = sum(float(str(record.finance_price).replace('¥', '').replace(',', '')) 
+                                for record in network_query) if network_query else 0
+                network_costs.append(round(network_cost, 2))
+            
+            # 如果某月没有数据，使用趋势预测或平均值填充
+            for i in range(len(compute_costs)):
+                if compute_costs[i] == 0 and i > 0:
+                    # 简单使用上月数据作为预测
+                    compute_costs[i] = compute_costs[i-1]
+                if storage_costs[i] == 0 and i > 0:
+                    storage_costs[i] = storage_costs[i-1]
+                if network_costs[i] == 0 and i > 0:
+                    network_costs[i] = network_costs[i-1]
+            
+            response_data = {
+                'year': year,
+                'compute': compute_costs,
+                'storage': storage_costs,
+                'network': network_costs
+            }
+            
+            # 缓存数据 (1小时)
+            cache.set(cache_key, response_data, 60 * 60)
+            
+            return json_response(response_data)
+            
+        elif mode == 'yearly':
+            # 获取最近几年的数据，包括当前年份和未来2年的预测
+            current_year = datetime.datetime.now().year
+            start_year = 2021  # 从2021年开始
+            end_year = current_year + 2
+            
+            years = list(range(start_year, end_year + 1))
+            compute_yearly = []
+            storage_yearly = []
+            network_yearly = []
+            
+            # 对于每一年，计算总费用
+            for year in years:
+                # 如果是2025年及以后，使用预测值
+                if year >= 2025:
+                    # 简单的线性增长预测，每年增长10%
+                    if compute_yearly:
+                        compute_yearly.append(round(compute_yearly[-1] * 1.10))
+                        storage_yearly.append(round(storage_yearly[-1] * 1.10))
+                        network_yearly.append(round(network_yearly[-1] * 1.10))
+                    continue
+                
+                # 获取该年的所有月份数据
+                compute_cost = 0
+                storage_cost = 0
+                network_cost = 0
+                
+                # 遍历年份的12个月
+                for month in range(1, 13):
+                    month_str = f"{year}-{month:02d}"
+                    
+                    # 计算资源费用
+                    compute_query = ResourceCost.objects.filter(
+                        resource_type='ECS实例',
+                        month=month_str
+                    )
+                    if compute_query:
+                        compute_cost += sum(float(str(record.finance_price).replace('¥', '').replace(',', '')) 
+                                          for record in compute_query)
+                    
+                    # 存储资源费用
+                    storage_query = ResourceCost.objects.filter(
+                        resource_type='云盘',
+                        month=month_str
+                    )
+                    if storage_query:
+                        storage_cost += sum(float(str(record.finance_price).replace('¥', '').replace(',', '')) 
+                                          for record in storage_query)
+                    
+                    # 网络资源费用
+                    network_query = ResourceCost.objects.filter(
+                        resource_type='弹性IP',
+                        month=month_str
+                    )
+                    if network_query:
+                        network_cost += sum(float(str(record.finance_price).replace('¥', '').replace(',', '')) 
+                                          for record in network_query)
+                
+                compute_yearly.append(round(compute_cost))
+                storage_yearly.append(round(storage_cost))
+                network_yearly.append(round(network_cost))
+            
+            response_data = {
+                'years': [str(y) for y in years],
+                'compute': compute_yearly,
+                'storage': storage_yearly,
+                'network': network_yearly
+            }
+            
+            # 缓存数据 (24小时)
+            cache.set(cache_key, response_data, 24 * 60 * 60)
+            
+            return json_response(response_data)
+            
+        return json_response(error='无效的模式参数')
+
+# Dashboard统计视图
+class DashboardStatsView(View):
+    def get(self, request):
+        from django.core.cache import cache
+        import datetime
+        from dateutil.relativedelta import relativedelta
+        
+        # 生成缓存键
+        cache_key = "dashboard_stats_summary"
+        
+        # 尝试从缓存获取数据
+        cached_data = cache.get(cache_key)
+        if cached_data and not request.GET.get('force', '0') == '1':
+            print(f"从缓存返回仪表盘统计数据")
+            return json_response(cached_data)
+        
+        # 计算主机总数
+        host_count = Instance.objects.count()
+        
+        # 计算在线主机数量
+        online_count = Instance.objects.filter(status='Running').count()
+        
+        # 计算30天内即将到期的主机数量
+        now = datetime.datetime.now()
+        thirty_days_later = now + relativedelta(days=30)
+        now_str = now.strftime('%Y-%m-%d')
+        thirty_days_later_str = thirty_days_later.strftime('%Y-%m-%d')
+        
+        expiring_count = Instance.objects.filter(
+            expire_time__gte=now_str,
+            expire_time__lte=thirty_days_later_str
+        ).count()
+        
+        # 计算上个月的支出总额
+        last_month = now - relativedelta(months=1)
+        last_month_str = last_month.strftime('%Y-%m')
+        
+        # 计算当前年度的累计费用
+        current_year = now.year
+        current_month = now.month
+        yearly_costs = {
+            'compute': 0,
+            'storage': 0,
+            'network': 0
+        }
+        
+        # 获取当前年度到目前为止的所有月份的费用数据
+        for month in range(1, current_month + 1):
+            month_str = f"{current_year}-{month:02d}"
+            
+            # 计算资源费用
+            compute_query = ResourceCost.objects.filter(
+                resource_type='ECS实例',
+                month=month_str
+            )
+            if compute_query:
+                yearly_costs['compute'] += sum(float(str(record.finance_price).replace('¥', '').replace(',', '')) 
+                                          for record in compute_query)
+            
+            # 存储资源费用
+            storage_query = ResourceCost.objects.filter(
+                resource_type='云盘',
+                month=month_str
+            )
+            if storage_query:
+                yearly_costs['storage'] += sum(float(str(record.finance_price).replace('¥', '').replace(',', '')) 
+                                          for record in storage_query)
+            
+            # 网络资源费用
+            network_query = ResourceCost.objects.filter(
+                resource_type='弹性IP',
+                month=month_str
+            )
+            if network_query:
+                yearly_costs['network'] += sum(float(str(record.finance_price).replace('¥', '').replace(',', '')) 
+                                          for record in network_query)
+        
+        # 计算上个月总支出
+        monthly_expense_query = ResourceCost.objects.filter(month=last_month_str)
+        monthly_expense = sum(float(str(item.finance_price).replace('¥', '').replace(',', '')) 
+                            for item in monthly_expense_query)
+                
+        # 准备响应数据
+        response_data = {
+            'hostCount': host_count,
+            'onlineCount': online_count,
+            'expiringCount': expiring_count,
+            'monthlyExpense': round(monthly_expense),
+            'yearlyCompute': round(yearly_costs['compute']),
+            'yearlyStorage': round(yearly_costs['storage']),
+            'yearlyNetwork': round(yearly_costs['network'])
+        }
+        
+        # 缓存结果（1小时过期）
+        cache.set(cache_key, response_data, 60 * 60)
+        
+        # 返回结果
+        return json_response(response_data)

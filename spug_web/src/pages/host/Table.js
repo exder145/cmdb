@@ -36,17 +36,11 @@ const assetColumns = {
       title: "到期信息",
       dataIndex: "expired_time",
       render: v => <ExpireTime value={v}/>,
-      hide: true
-    },
-    {
-      title: "备注信息",
-      dataIndex: "desc",
-      hide: true
     },
     {
       title: "状态",
-      dataIndex: "is_verified",
-      render: v => v ? <Tag color="green">已验证</Tag> : <Tag color="orange">未验证</Tag>
+      dataIndex: "status",
+      render: status => <Tag color={status === 'Running' ? 'green' : 'orange'}>{status || '未知'}</Tag>
     }
   ],
   disk: [
@@ -228,15 +222,21 @@ function ExpireTime(props) {
     if (!props.value) return null
     let value = moment(props.value)
     const days = value.diff(moment(), 'days')
-    if (days > 30) {
-      return <span>剩余 <b style={{color: '#389e0d'}}>{days}</b> 天</span>
-    } else if (days > 7) {
-      return <span>剩余 <b style={{color: '#faad14'}}>{days}</b> 天</span>
-    } else if (days >= 0) {
-      return <span>剩余 <b style={{color: '#d9363e'}}>{days}</b> 天</span>
+    const formattedDate = value.format('YYYY-MM-DD')
+    
+    let daysText
+    if (days >= 0) {
+      daysText = <span>还有 <b style={{color: '#52c41a'}}>{days}</b> 天</span>
     } else {
-      return <span>过期 <b style={{color: '#d9363e'}}>{Math.abs(days)}</b> 天</span>
+      daysText = <span>过期 <b style={{color: '#d9363e'}}>{Math.abs(days)}</b> 天</span>
     }
+    
+    return (
+      <div>
+        <div>{formattedDate}</div>
+        <div>{daysText}</div>
+      </div>
+    )
   }
 
 export const ComTable = observer(function ({ assetType = 'server' }) {
@@ -659,13 +659,24 @@ export const ComTable = observer(function ({ assetType = 'server' }) {
     return {
       title: '操作',
       key: 'action',
-      render: info => (
-        <Action>
-          <Action.Button onClick={() => handleDetail(info, assetType)}>详情</Action.Button>
-          <Action.Button auth="host.host.edit" onClick={() => handleEdit(info, assetType)}>编辑</Action.Button>
-          <Action.Button danger auth="host.host.del" onClick={() => handleDelete(info, assetType)}>删除</Action.Button>
-        </Action>
-      )
+      render: info => {
+        if (assetType === 'server') {
+          return (
+            <Action>
+              <Action.Button onClick={() => handleDetail(info, assetType)}>详情</Action.Button>
+              <Action.Button auth="host.host.edit" onClick={() => handleEdit(info, assetType)}>编辑</Action.Button>
+              <Action.Button danger auth="host.host.del" onClick={() => handleDelete(info, assetType)}>删除</Action.Button>
+            </Action>
+          );
+        } else {
+          return (
+            <Action>
+              <Action.Button auth="host.host.edit" onClick={() => handleEdit(info, assetType)}>编辑</Action.Button>
+              <Action.Button danger auth="host.host.del" onClick={() => handleDelete(info, assetType)}>删除</Action.Button>
+            </Action>
+          );
+        }
+      }
     };
   };
 

@@ -17,7 +17,10 @@ function Dashboard() {
     hostCount: 0,
     onlineCount: 0,
     expiringCount: 0,
-    monthlyExpense: 0
+    monthlyExpense: 0,
+    yearlyCompute: 0,    // 添加年度计算资源费用
+    yearlyStorage: 0,    // 添加年度存储资源费用
+    yearlyNetwork: 0     // 添加年度网络资源费用
   });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -26,24 +29,25 @@ function Dashboard() {
   const trendChartRef = useRef(null);
   const [trendViewMode, setTrendViewMode] = useState('month');
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
-  const [yearOptions, setYearOptions] = useState([2023, 2024, 2025]);
-  const [costData, setCostData] = useState({
-    yearlyCompute: 101400,
-    yearlyStorage: 25440,
-    yearlyNetwork: 22320
+  const [yearOptions, setYearOptions] = useState([2022, 2023, 2024]);
+  const [instanceStats, setInstanceStats] = useState({
+    os_distribution: [],
+    config_distribution: []
   });
 
   useEffect(() => {
-    fetchStatistics();
-    
+    fetchStatistics().catch(err => {
+      console.error('获取统计数据失败:', err);
+    });
+
     // 动态加载Chart.js
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/npm/chart.js';
     script.async = true;
     script.onload = () => {
       setTimeout(() => {
-        renderOSChart();
-        renderConfigChart();
+        // 获取图表数据并渲染图表
+        fetchInstanceStats();
         renderTrendChart();
       }, 300);
     };
@@ -54,27 +58,38 @@ function Dashboard() {
     };
   }, []);
 
+  // 获取实例统计数据的函数
+  const fetchInstanceStats = async () => {
+    try {
+      const res = await http.get('/api/host/stats/');
+      if (res && res.os_distribution && res.config_distribution) {
+        setInstanceStats(res);
+        if (window.Chart) {
+          renderOSChart(res.os_distribution);
+          renderConfigChart(res.config_distribution);
+        }
+      }
+    } catch (err) {
+      console.error('获取实例统计数据失败:', err);
+    }
+  };
+
   // 当趋势视图模式或年份变化时重新渲染趋势图
   useEffect(() => {
-    if (window.Chart && trendChartRef.current) {
-      renderTrendChart();
+    if (window.Chart) {
+      // 由于renderTrendChart现在是异步的，我们需要这样调用它
+      renderTrendChart().catch(err => {
+        console.error('渲染趋势图表失败:', err);
+      });
     }
   }, [trendViewMode, selectedYear]);
 
   const fetchStatistics = async () => {
     try {
       setLoading(true);
-      // 这里可以替换为实际的API调用
-      // const res = await http.get('/api/dashboard/statistics');
-      // setStatistics(res);
-      
-      // 模拟数据
-      setStatistics({
-        hostCount: 70,
-        onlineCount: 65,
-        expiringCount: 5,
-        monthlyExpense: 12680
-      });
+      // 使用实际的API调用
+      const res = await http.get('/api/dashboard/statistics');
+      setStatistics(res);
     } catch (err) {
       console.error('获取统计数据失败:', err);
       setError('获取统计数据失败，请检查网络连接或刷新页面重试');
@@ -83,7 +98,7 @@ function Dashboard() {
     }
   };
 
-  const renderOSChart = () => {
+  const renderOSChart = (osData = null) => {
     try {
       const container = document.getElementById('osChart');
       if (!container || !window.Chart) {
@@ -98,12 +113,35 @@ function Dashboard() {
 
       const ctx = container.getContext('2d');
       
-      osChartRef.current = new window.Chart(ctx, {
-        type: 'doughnut',
-        data: {
+      // 使用API数据或使用默认数据
+      let chartData;
+      
+      if (osData && osData.length > 0) {
+        // 使用API返回的实际数据
+        chartData = {
+          labels: osData.map(item => item.name),
+          datasets: [{
+            data: osData.map(item => item.value),
+            backgroundColor: [
+              '#3498db',  // Ubuntu
+              '#2ecc71',  // CentOS
+              '#9b59b6',  // Windows Server
+              '#34495e',  // Debian
+              '#1abc9c',  // 其他
+              '#e74c3c',  // 额外颜色1
+              '#f39c12',  // 额外颜色2
+              '#d35400'   // 额外颜色3
+            ],
+            borderWidth: 0,
+            borderRadius: 4
+          }]
+        };
+      } else {
+        // 使用默认数据（仅作为备份，实际应从API获取）
+        chartData = {
           labels: ['Ubuntu', 'CentOS', 'Windows Server', 'Debian', '其他'],
           datasets: [{
-            data: [35, 20, 10, 3, 2],
+            data: [0, 0, 0, 0, 0],
             backgroundColor: [
               '#3498db',
               '#2ecc71',
@@ -114,7 +152,12 @@ function Dashboard() {
             borderWidth: 0,
             borderRadius: 4
           }]
-        },
+        };
+      }
+      
+      osChartRef.current = new window.Chart(ctx, {
+        type: 'doughnut',
+        data: chartData,
         options: {
           responsive: true,
           maintainAspectRatio: false,
@@ -138,7 +181,7 @@ function Dashboard() {
     }
   };
 
-  const renderConfigChart = () => {
+  const renderConfigChart = (configData = null) => {
     try {
       const container = document.getElementById('configChart');
       if (!container || !window.Chart) {
@@ -153,13 +196,35 @@ function Dashboard() {
 
       const ctx = container.getContext('2d');
       
-      configChartRef.current = new window.Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['2核4G', '2核8G', '4核8G', '8核16G', '16核32G', '其他'],
+      // 使用API数据或使用默认数据
+      let chartData;
+      
+      if (configData && configData.length > 0) {
+        // 为了保持顺序一致性，我们定义一个标准顺序
+        const standardOrder = ['2核4G', '2核8G', '4核8G', '8核16G', '16核32G', '其他'];
+        
+        // 整理数据，确保它们按照标准顺序排列
+        const orderedData = standardOrder.map(configName => {
+          const found = configData.find(item => item.name === configName);
+          return found ? found.value : 0;
+        });
+        
+        // 查找可能在标准顺序之外的配置
+        const extraConfigs = configData.filter(item => !standardOrder.includes(item.name));
+        
+        // 合并额外配置到"其他"类别
+        if (extraConfigs.length > 0) {
+          const otherIndex = standardOrder.indexOf('其他');
+          if (otherIndex !== -1) {
+            orderedData[otherIndex] += extraConfigs.reduce((sum, item) => sum + item.value, 0);
+          }
+        }
+        
+        chartData = {
+          labels: standardOrder,
           datasets: [{
             label: '服务器数量',
-            data: [15, 25, 18, 8, 3, 1],
+            data: orderedData,
             backgroundColor: [
               '#3498db',
               '#2980b9',
@@ -172,7 +237,32 @@ function Dashboard() {
             borderRadius: 6,
             maxBarThickness: 40
           }]
-        },
+        };
+      } else {
+        // 使用默认数据（仅作为备份，实际应从API获取）
+        chartData = {
+          labels: ['2核4G', '2核8G', '4核8G', '8核16G', '16核32G', '其他'],
+          datasets: [{
+            label: '服务器数量',
+            data: [0, 0, 0, 0, 0, 0],
+            backgroundColor: [
+              '#3498db',
+              '#2980b9',
+              '#1abc9c',
+              '#16a085',
+              '#34495e',
+              '#2c3e50'
+            ],
+            borderWidth: 0,
+            borderRadius: 6,
+            maxBarThickness: 40
+          }]
+        };
+      }
+      
+      configChartRef.current = new window.Chart(ctx, {
+        type: 'bar',
+        data: chartData,
         options: {
           responsive: true,
           maintainAspectRatio: false,
@@ -220,7 +310,7 @@ function Dashboard() {
   };
 
   // 渲染成本趋势图表
-  const renderTrendChart = () => {
+  const renderTrendChart = async () => {
     try {
       const container = document.getElementById('trendChart');
       if (!container || !window.Chart) {
@@ -237,13 +327,88 @@ function Dashboard() {
       
       // 根据视图模式选择不同的数据和配置
       if (trendViewMode === 'month') {
-        // 月度视图数据
-        const monthlyData = {
+        // 尝试从缓存获取数据
+        const cacheKey = `cost_trend_monthly_${selectedYear}`;
+        let monthlyData = null;
+        
+        const cachedData = localStorage.getItem(cacheKey);
+        const cacheTimestamp = localStorage.getItem(`${cacheKey}_timestamp`);
+        const now = Date.now();
+        const cacheExpiry = 60 * 60 * 1000; // 1小时缓存过期
+        
+        if (cachedData && cacheTimestamp && (now - parseInt(cacheTimestamp) < cacheExpiry)) {
+          console.log('使用缓存的月度成本趋势数据');
+          monthlyData = JSON.parse(cachedData);
+        } else {
+          console.log('从API获取月度成本趋势数据');
+          // 设置加载状态
+          setLoading(true);
+          
+          try {
+            // 从API获取真实数据
+            const response = await http.get('/api/host/cost/trend/', {
+              params: {
+                year: selectedYear,
+                mode: 'monthly'
+              }
+            });
+            
+            if (!response || !response.compute || !response.storage || !response.network) {
+              throw new Error('API返回数据格式错误');
+            }
+            
+            // 处理API返回的数据
+            monthlyData = {
+              labels: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+              datasets: [
+                {
+                  label: '计算资源',
+                  data: response.compute,
+                  borderColor: '#3498db',
+                  backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                  borderWidth: 2,
+                  tension: 0.3,
+                  fill: true
+                },
+                {
+                  label: '存储资源',
+                  data: response.storage,
+                  backgroundColor: 'rgba(46, 204, 113, 0.1)',
+                  borderColor: '#2ecc71',
+                  borderWidth: 2,
+                  tension: 0.3,
+                  fill: true
+                },
+                {
+                  label: '网络资源',
+                  data: response.network,
+                  borderColor: '#e67e22',
+                  backgroundColor: 'rgba(230, 126, 34, 0.1)',
+                  borderWidth: 2,
+                  tension: 0.3,
+                  fill: true
+                }
+              ]
+            };
+            
+            // 缓存数据
+            localStorage.setItem(cacheKey, JSON.stringify(monthlyData));
+            localStorage.setItem(`${cacheKey}_timestamp`, now.toString());
+          } catch (error) {
+            console.error('获取成本趋势数据失败:', error);
+            
+            // 如果API请求失败，使用上次缓存的数据（如果有）
+            if (cachedData) {
+              console.log('使用过期的缓存数据');
+              monthlyData = JSON.parse(cachedData);
+            } else {
+              // API失败且无缓存数据时，返回空数据结构
+              monthlyData = {
           labels: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
           datasets: [
             {
               label: '计算资源',
-              data: [8100, 8500, 8700, 8500, 8400, 8300, 8600, 8700, 8500, 8400, 8300, 8400],
+                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
               borderColor: '#3498db',
               backgroundColor: 'rgba(52, 152, 219, 0.1)',
               borderWidth: 2,
@@ -252,7 +417,7 @@ function Dashboard() {
             },
             {
               label: '存储资源',
-              data: [1700, 1900, 2000, 2000, 2100, 2000, 2100, 2200, 2100, 2000, 2100, 2200],
+                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
               borderColor: '#2ecc71',
               backgroundColor: 'rgba(46, 204, 113, 0.1)',
               borderWidth: 2,
@@ -261,7 +426,7 @@ function Dashboard() {
             },
             {
               label: '网络资源',
-              data: [1800, 1900, 2000, 1900, 1800, 1700, 1800, 1900, 1800, 1700, 1800, 1900],
+                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
               borderColor: '#e67e22',
               backgroundColor: 'rgba(230, 126, 34, 0.1)',
               borderWidth: 2,
@@ -270,6 +435,12 @@ function Dashboard() {
             }
           ]
         };
+            }
+          } finally {
+            // 清除加载状态
+            setLoading(false);
+          }
+        }
 
         trendChartRef.current = new window.Chart(ctx, {
           type: 'line',
@@ -340,81 +511,208 @@ function Dashboard() {
           }
         });
       } else {
-        // 年度视图数据（包含预测）
-        const yearlyData = {
-          labels: ['2020', '2021', '2022', '2023', '2024', '2025', '2026'],
-          datasets: [
-            {
-              label: '计算资源',
-              data: [78000, 86000, 94000, 101400, 108000, null, null],
-              borderColor: '#3498db',
-              backgroundColor: 'rgba(52, 152, 219, 0.1)',
-              borderWidth: 2,
-              tension: 0.3,
-              fill: true,
-              segment: {
-                borderDash: ctx => ctx.p0.parsed.x >= 4 ? [6, 6] : undefined,
+        // 年度视图数据处理逻辑
+        // 尝试从缓存获取数据
+        const cacheKey = 'cost_trend_yearly';
+        let yearlyData = null;
+        
+        const cachedData = localStorage.getItem(cacheKey);
+        const cacheTimestamp = localStorage.getItem(`${cacheKey}_timestamp`);
+        const now = Date.now();
+        const cacheExpiry = 24 * 60 * 60 * 1000; // 24小时缓存过期
+        
+        if (cachedData && cacheTimestamp && (now - parseInt(cacheTimestamp) < cacheExpiry)) {
+          console.log('使用缓存的年度成本趋势数据');
+          yearlyData = JSON.parse(cachedData);
+        } else {
+          console.log('从API获取年度成本趋势数据');
+          // 设置加载状态
+          setLoading(true);
+          
+          try {
+            // 从API获取真实数据
+            const response = await http.get('/api/host/cost/trend/', {
+              params: {
+                mode: 'yearly'
               }
-            },
-            {
-              label: '计算资源 (预测)',
-              data: [null, null, null, null, 108000, 115000, 122000],
-              borderColor: '#3498db',
-              borderDash: [6, 6],
-              borderWidth: 2,
-              tension: 0.3,
-              pointStyle: 'circle',
-              pointRadius: 3,
-              fill: false
-            },
-            {
-              label: '存储资源',
-              data: [16000, 19000, 22000, 25440, 28000, null, null],
-              borderColor: '#2ecc71',
-              backgroundColor: 'rgba(46, 204, 113, 0.1)',
-              borderWidth: 2,
-              tension: 0.3,
-              fill: true,
-              segment: {
-                borderDash: ctx => ctx.p0.parsed.x >= 4 ? [6, 6] : undefined,
-              }
-            },
-            {
-              label: '存储资源 (预测)',
-              data: [null, null, null, null, 28000, 31000, 34000],
-              borderColor: '#2ecc71',
-              borderDash: [6, 6],
-              borderWidth: 2,
-              tension: 0.3,
-              pointStyle: 'circle',
-              pointRadius: 3,
-              fill: false
-            },
-            {
-              label: '网络资源',
-              data: [15000, 17500, 20000, 22320, 24000, null, null],
-              borderColor: '#e67e22',
-              backgroundColor: 'rgba(230, 126, 34, 0.1)',
-              borderWidth: 2,
-              tension: 0.3,
-              fill: true,
-              segment: {
-                borderDash: ctx => ctx.p0.parsed.x >= 4 ? [6, 6] : undefined,
-              }
-            },
-            {
-              label: '网络资源 (预测)',
-              data: [null, null, null, null, 24000, 26000, 28000],
-              borderColor: '#e67e22',
-              borderDash: [6, 6],
-              borderWidth: 2,
-              tension: 0.3,
-              pointStyle: 'circle',
-              pointRadius: 3,
-              fill: false
+            });
+            
+            if (!response || !response.years || !response.compute || !response.storage || !response.network) {
+              throw new Error('API返回数据格式错误');
             }
-          ]
-        };
+
+            // 获取当前年份索引，用于区分历史数据和预测数据
+            const currentYear = new Date().getFullYear();
+            const currentYearIndex = response.years.indexOf(currentYear.toString());
+            
+            // 处理API返回的数据
+            yearlyData = {
+              labels: response.years,
+              datasets: [
+                {
+                  label: '计算资源',
+                  data: response.compute.slice(0, currentYearIndex + 1),
+                  borderColor: '#3498db',
+                  backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                  borderWidth: 2,
+                  tension: 0.3,
+                  fill: true,
+                  segment: {
+                    borderDash: ctx => ctx.p0.parsed.x >= currentYearIndex ? [6, 6] : undefined,
+                  }
+                },
+                {
+                  label: '计算资源 (预测)',
+                  data: Array(currentYearIndex + 1).fill(null).concat(response.compute.slice(currentYearIndex)),
+                  borderColor: '#3498db',
+                  borderDash: [6, 6],
+                  borderWidth: 2,
+                  tension: 0.3,
+                  pointStyle: 'circle',
+                  pointRadius: 3,
+                  fill: false
+                },
+                {
+                  label: '存储资源',
+                  data: response.storage.slice(0, currentYearIndex + 1),
+                  borderColor: '#2ecc71',
+                  backgroundColor: 'rgba(46, 204, 113, 0.1)',
+                  borderWidth: 2,
+                  tension: 0.3,
+                  fill: true,
+                  segment: {
+                    borderDash: ctx => ctx.p0.parsed.x >= currentYearIndex ? [6, 6] : undefined,
+                  }
+                },
+                {
+                  label: '存储资源 (预测)',
+                  data: Array(currentYearIndex + 1).fill(null).concat(response.storage.slice(currentYearIndex)),
+                  borderColor: '#2ecc71',
+                  borderDash: [6, 6],
+                  borderWidth: 2,
+                  tension: 0.3,
+                  pointStyle: 'circle',
+                  pointRadius: 3,
+                  fill: false
+                },
+                {
+                  label: '网络资源',
+                  data: response.network.slice(0, currentYearIndex + 1),
+                  borderColor: '#e67e22',
+                  backgroundColor: 'rgba(230, 126, 34, 0.1)',
+                  borderWidth: 2,
+                  tension: 0.3,
+                  fill: true,
+                  segment: {
+                    borderDash: ctx => ctx.p0.parsed.x >= currentYearIndex ? [6, 6] : undefined,
+                  }
+                },
+                {
+                  label: '网络资源 (预测)',
+                  data: Array(currentYearIndex + 1).fill(null).concat(response.network.slice(currentYearIndex)),
+                  borderColor: '#e67e22',
+                  borderDash: [6, 6],
+                  borderWidth: 2,
+                  tension: 0.3,
+                  pointStyle: 'circle',
+                  pointRadius: 3,
+                  fill: false
+                }
+              ]
+            };
+            
+            // 缓存数据
+            localStorage.setItem(cacheKey, JSON.stringify(yearlyData));
+            localStorage.setItem(`${cacheKey}_timestamp`, now.toString());
+          } catch (error) {
+            console.error('获取成本趋势数据失败:', error);
+            
+            // 如果API请求失败，使用上次缓存的数据（如果有）
+            if (cachedData) {
+              console.log('使用过期的缓存数据');
+              yearlyData = JSON.parse(cachedData);
+            } else {
+              // API失败且无缓存数据时，返回空数据结构
+              yearlyData = {
+                labels: ['2021', '2022', '2023', '2024', '2025', '2026'],
+                datasets: [
+                  {
+                    label: '计算资源',
+                    data: [0, 0, 0, 0, null, null],
+                    borderColor: '#3498db',
+                    backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                    borderWidth: 2,
+                    tension: 0.3,
+                    fill: true,
+                    segment: {
+                      borderDash: ctx => ctx.p0.parsed.x >= 3 ? [6, 6] : undefined,
+                    }
+                  },
+                  {
+                    label: '计算资源 (预测)',
+                    data: [null, null, null, 0, 0, 0],
+                    borderColor: '#3498db',
+                    borderDash: [6, 6],
+                    borderWidth: 2,
+                    tension: 0.3,
+                    pointStyle: 'circle',
+                    pointRadius: 3,
+                    fill: false
+                  },
+                  {
+                    label: '存储资源',
+                    data: [0, 0, 0, 0, null, null],
+                    borderColor: '#2ecc71',
+                    backgroundColor: 'rgba(46, 204, 113, 0.1)',
+                    borderWidth: 2,
+                    tension: 0.3,
+                    fill: true,
+                    segment: {
+                      borderDash: ctx => ctx.p0.parsed.x >= 3 ? [6, 6] : undefined,
+                    }
+                  },
+                  {
+                    label: '存储资源 (预测)',
+                    data: [null, null, null, 0, 0, 0],
+                    borderColor: '#2ecc71',
+                    borderDash: [6, 6],
+                    borderWidth: 2,
+                    tension: 0.3,
+                    pointStyle: 'circle',
+                    pointRadius: 3,
+                    fill: false
+                  },
+                  {
+                    label: '网络资源',
+                    data: [0, 0, 0, 0, null, null],
+                    borderColor: '#e67e22',
+                    backgroundColor: 'rgba(230, 126, 34, 0.1)',
+                    borderWidth: 2,
+                    tension: 0.3,
+                    fill: true,
+                    segment: {
+                      borderDash: ctx => ctx.p0.parsed.x >= 3 ? [6, 6] : undefined,
+                    }
+                  },
+                  {
+                    label: '网络资源 (预测)',
+                    data: [null, null, null, 0, 0, 0],
+                    borderColor: '#e67e22',
+                    borderDash: [6, 6],
+                    borderWidth: 2,
+                    tension: 0.3,
+                    pointStyle: 'circle',
+                    pointRadius: 3,
+                    fill: false
+                  }
+                ]
+              };
+            }
+          } finally {
+            // 清除加载状态
+            setLoading(false);
+          }
+        }
 
         trendChartRef.current = new window.Chart(ctx, {
           type: 'line',
@@ -616,34 +914,36 @@ function Dashboard() {
                       <div className={styles.costName}>计算资源</div>
                       <div className={styles.costDesc}>服务器实例年度费用</div>
                     </div>
-                    <div className={styles.costValue}>¥{costData.yearlyCompute.toLocaleString()}</div>
+                    <div className={styles.costValue}>¥{statistics.yearlyCompute.toLocaleString()}</div>
                   </li>
                   <li className={styles.costItem}>
                     <div className={styles.costInfo}>
                       <div className={styles.costName}>存储资源</div>
                       <div className={styles.costDesc}>云硬盘、对象存储年度费用</div>
                     </div>
-                    <div className={styles.costValue}>¥{costData.yearlyStorage.toLocaleString()}</div>
+                    <div className={styles.costValue}>¥{statistics.yearlyStorage.toLocaleString()}</div>
                   </li>
                   <li className={styles.costItem}>
                     <div className={styles.costInfo}>
                       <div className={styles.costName}>网络资源</div>
                       <div className={styles.costDesc}>带宽、流量年度费用</div>
                     </div>
-                    <div className={styles.costValue}>¥{costData.yearlyNetwork.toLocaleString()}</div>
+                    <div className={styles.costValue}>¥{statistics.yearlyNetwork.toLocaleString()}</div>
                   </li>
                 </ul>
 
                 <div className={styles.budgetProgress}>
                   <div className={styles.budgetHeader}>
                     <div className={styles.budgetTitle}>年度预算使用情况</div>
-                    <div className={styles.budgetValue}>¥{(costData.yearlyCompute + costData.yearlyStorage + costData.yearlyNetwork).toLocaleString()} / ¥180,000</div>
+                    <div className={styles.budgetValue}>
+                      ¥{(statistics.yearlyCompute + statistics.yearlyStorage + statistics.yearlyNetwork).toLocaleString()} / ¥600,000
+                    </div>
                   </div>
                   <div className={styles.progressBar}>
                     <div 
                       className={styles.progressFill} 
                       style={{
-                        width: `${Math.min(100, ((costData.yearlyCompute + costData.yearlyStorage + costData.yearlyNetwork) / 180000) * 100)}%`, 
+                        width: `${Math.min(100, ((statistics.yearlyCompute + statistics.yearlyStorage + statistics.yearlyNetwork) / 600000) * 100)}%`, 
                         backgroundColor: '#3498db'
                       }}
                     ></div>

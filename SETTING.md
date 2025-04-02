@@ -110,8 +110,6 @@ spug.cc
    - spug_web/.env.production
    - spug_web/src/setupProxy.js
 
-3. 修改 spug_api\spug\production.py 文件中的配置
-
 ## 再次启动流程
 
 ### 前端启动

@@ -17,6 +17,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path, include
+from apps.host.views import DashboardStatsView
 
 urlpatterns = [
     path('account/', include('apps.account.urls')),
@@ -33,4 +34,5 @@ urlpatterns = [
     path('notify/', include('apps.notify.urls')),
     path('file/', include('apps.file.urls')),
     path('apis/', include('apps.apis.urls')),
+    path('dashboard/statistics', DashboardStatsView.as_view()),
 ]

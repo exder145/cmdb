@@ -7,22 +7,50 @@ import { observable, computed, action } from 'mobx';
 import http from 'libs/http';
 import moment from 'moment';
 
+// 从localStorage加载持久化状态的函数
+const loadFromLocalStorage = (key, defaultValue) => {
+  try {
+    const storedValue = localStorage.getItem(key);
+    if (storedValue) {
+      return JSON.parse(storedValue);
+    }
+  } catch (e) {
+    console.warn(`从localStorage加载${key}失败:`, e);
+  }
+  return defaultValue;
+};
+
+// 保存状态到localStorage的函数
+const saveToLocalStorage = (key, value) => {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch (e) {
+    console.warn(`保存${key}到localStorage失败:`, e);
+  }
+};
+
 class Store {
+  // 初始化状态，从localStorage加载
   @observable loading = false;
-  @observable records = [];
-  @observable total = 0;
-  @observable currentPage = 1;
-  @observable pageSize = 10;
+  @observable records = loadFromLocalStorage('cost_records', []);
+  @observable total = loadFromLocalStorage('cost_total', 0);
+  @observable currentPage = loadFromLocalStorage('cost_currentPage', 1);
+  @observable pageSize = loadFromLocalStorage('cost_pageSize', 10);
   @observable record = {};
   @observable formVisible = false;
   @observable detailVisible = false;
-  @observable currentAssetType = 'all';
-  @observable timeRange = 'current';
-  @observable billingType = 'all';
-  @observable sortOrder = 'desc';
-  @observable searchKey = '';
-  @observable customDateRange = {startDate: '', endDate: ''};
-  @observable costStats = { statsForType: [], statsForMonth: [] };
+  @observable currentAssetType = loadFromLocalStorage('cost_currentAssetType', 'all');
+  @observable timeRange = loadFromLocalStorage('cost_timeRange', 'current');
+  @observable billingType = loadFromLocalStorage('cost_billingType', 'all');
+  @observable sortOrder = loadFromLocalStorage('cost_sortOrder', 'desc');
+  @observable searchKey = loadFromLocalStorage('cost_searchKey', '');
+  @observable customDateRange = loadFromLocalStorage('cost_customDateRange', {startDate: '', endDate: ''});
+  @observable costStats = loadFromLocalStorage('cost_stats', { statsForType: [], statsForMonth: [] });
+  
+  // 缓存上次获取数据的时间戳
+  lastFetchTimestamp = loadFromLocalStorage('cost_lastFetchTimestamp', 0);
+  // 缓存过期时间（毫秒）- 设置为5分钟
+  cacheExpiryTime = 5 * 60 * 1000;
   
   // 取消API请求的控制器
   abortController = null;
@@ -61,6 +89,20 @@ class Store {
   
   // 从API获取费用数据
   fetchCostData = (assetType = this.currentAssetType, pagination = {}) => {
+    // 检查是否可以使用缓存数据
+    const now = Date.now();
+    const cacheStillValid = now - this.lastFetchTimestamp < this.cacheExpiryTime;
+    
+    // 如果有缓存且缓存有效，且查询参数未变化，则使用缓存数据
+    if (cacheStillValid && 
+        this.records.length > 0 && 
+        assetType === this.currentAssetType &&
+        pagination.page === this.currentPage &&
+        pagination.pageSize === this.pageSize) {
+      console.log('使用缓存的费用数据');
+      return Promise.resolve(this.records);
+    }
+    
     this.loading = true;
     
     // 取消先前的请求
@@ -164,6 +206,16 @@ class Store {
         this.pageSize = pagination.pageSize || this.pageSize;
         this.loading = false;
         
+        // 更新缓存时间戳
+        this.lastFetchTimestamp = Date.now();
+        
+        // 保存状态到localStorage
+        saveToLocalStorage('cost_records', uniqueData);
+        saveToLocalStorage('cost_total', this.total);
+        saveToLocalStorage('cost_currentPage', this.currentPage);
+        saveToLocalStorage('cost_pageSize', this.pageSize);
+        saveToLocalStorage('cost_lastFetchTimestamp', this.lastFetchTimestamp);
+        
         return uniqueData;
       })
       .catch(error => {
@@ -195,17 +247,43 @@ class Store {
   
   // 获取费用统计数据
   fetchCostStats = (month = '') => {
+    // 检查是否可以使用缓存数据
+    const now = Date.now();
+    const cacheStillValid = now - this.lastFetchTimestamp < this.cacheExpiryTime;
+    
+    if (cacheStillValid && this.costStats.statsForType.length > 0) {
+      console.log('使用缓存的统计数据');
+      return Promise.resolve(this.costStats);
+    }
+    
     const params = {};
     if (month) {
       params.month = month;
     }
     
-    return http.get('/api/host/cost/stats/', params)
-      .then(({ stats_by_type, stats_by_month }) => {
+    return http.get('/api/host/cost/stats/', {params})
+      .then(({stats_by_type, stats_by_month}) => {
+        // 处理统计数据
+        const statsForType = stats_by_type.map(item => ({
+          type: item.type,
+          count: item.count,
+          cost: item.total_cost
+        }));
+        
+        const statsForMonth = stats_by_month.map(item => ({
+          month: item.month,
+          cost: item.total_cost
+        }));
+        
+        // 更新状态
         this.costStats = {
-          statsForType: stats_by_type,
-          statsForMonth: stats_by_month
+          statsForType,
+          statsForMonth
         };
+        
+        // 保存到localStorage
+        saveToLocalStorage('cost_stats', this.costStats);
+        
         return this.costStats;
       })
       .catch(error => {
@@ -336,30 +414,35 @@ class Store {
   @action
   setAssetType = (type) => {
     this.currentAssetType = type;
+    saveToLocalStorage('cost_currentAssetType', type);
   }
   
   // 设置时间范围
   @action
   setTimeRange = (range) => {
     this.timeRange = range;
+    saveToLocalStorage('cost_timeRange', range);
   }
   
   // 设置计费方式
   @action
   setBillingType = (type) => {
     this.billingType = type;
+    saveToLocalStorage('cost_billingType', type);
   }
   
   // 设置排序方式
   @action
   setSortOrder = (order) => {
     this.sortOrder = order;
+    saveToLocalStorage('cost_sortOrder', order);
   }
   
   // 设置搜索关键词
   @action
   setSearchKey = (key) => {
     this.searchKey = key;
+    saveToLocalStorage('cost_searchKey', key);
     this.fetchCostData();
   }
   
@@ -367,12 +450,14 @@ class Store {
   @action
   setCurrentPage = (page) => {
     this.currentPage = page;
+    saveToLocalStorage('cost_currentPage', page);
   }
   
   // 设置每页显示的记录数
   @action
   setPageSize = (size) => {
     this.pageSize = size;
+    saveToLocalStorage('cost_pageSize', size);
   }
   
   // 设置自定义日期范围
@@ -380,12 +465,16 @@ class Store {
   setCustomDateRange = (startDate, endDate) => {
     this.timeRange = 'custom';
     this.customDateRange = { startDate, endDate };
+    saveToLocalStorage('cost_timeRange', 'custom');
+    saveToLocalStorage('cost_customDateRange', this.customDateRange);
   }
   
   // 清理方法，在组件卸载时调用
   dispose = () => {
+    // 取消API请求
     if (this.abortController) {
       this.abortController.abort();
+      this.abortController = null;
     }
   }
 }

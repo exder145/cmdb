@@ -38,31 +38,31 @@ export const Detail = observer(function () {
   useEffect(() => {
     if (store.detailVisible && store.record) {
       try {
-        const processedRecord = lds.cloneDeep(store.record);
+        // 克隆原始数据
+        const processedRecord = {...store.record};
         
-        if (typeof processedRecord.instance_charge_type_alias === 'object') {
-          processedRecord.instance_charge_type_alias = JSON.stringify(processedRecord.instance_charge_type_alias);
-        }
-        
-        if (typeof processedRecord.internet_charge_type_alias === 'object') {
-          processedRecord.internet_charge_type_alias = JSON.stringify(processedRecord.internet_charge_type_alias);
-        }
-        
-        if (typeof processedRecord.updated_at === 'object') {
-          processedRecord.updated_at = JSON.stringify(processedRecord.updated_at);
-        }
-        
-        ['disk'].forEach(field => {
-          if (processedRecord[field] && Array.isArray(processedRecord[field])) {
-            processedRecord[field] = processedRecord[field].map(item => 
-              typeof item === 'object' ? JSON.stringify(item) : item
-            );
-          }
-        });
-        
+        // 先设置基础数据
         setHost(processedRecord);
+        
+        // 从实例API获取完整数据
+        if (processedRecord.id) {
+          http.get('/host/instance/', {params: {id: processedRecord.id}})
+            .then(res => {
+              // 处理API返回的数据
+              let data = res;
+              if (Array.isArray(res)) {
+                data = res.find(item => item.id === processedRecord.id) || res[0];
+              }
+              
+              // 合并数据并更新
+              setHost({...processedRecord, ...data});
+            })
+            .catch(error => {
+              console.error('获取实例数据失败:', error);
+            });
+        }
       } catch (error) {
-        console.error('克隆主机数据时出错:', error);
+        console.error('处理主机数据时出错:', error);
         setHost({});
       }
     }
@@ -75,36 +75,43 @@ export const Detail = observer(function () {
     }
   }, [inputVisible])
 
-  function handleSubmit() {
-    setLoading(true)
-    if (host.created_time) host.created_time = moment(host.created_time).format('YYYY-MM-DD')
-    if (host.expired_time) host.expired_time = moment(host.expired_time).format('YYYY-MM-DD')
-    http.post('/api/host/extend/', {host_id: host.id, ...host})
-      .then(res => {
-        Object.assign(host, res);
-        setEdit(false);
-        setHost(lds.cloneDeep(host));
-        store.fetchRecords()
-      })
-      .finally(() => setLoading(false))
-  }
-
   function handleFetch() {
     setFetching(true);
-    http.get('/api/host/extend/', {params: {host_id: host.id}})
+    http.get('/host/instance/', {params: {id: host.id}})
       .then(res => {
-        Object.assign(host, res);
-        setHost(lds.cloneDeep(host));
+        // 处理返回的数据
+        let data = res;
+        if (Array.isArray(res)) {
+          data = res.find(item => item.id === host.id) || res[0];
+        }
+        
+        // 更新状态
+        setHost({...host, ...data});
         message.success('同步成功')
       })
       .finally(() => setFetching(false))
   }
 
+  function handleSubmit() {
+    setLoading(true)
+    
+    http.post('/host/instance/', host)
+      .then(res => {
+        // 更新状态
+        setHost({...host, ...res});
+        setEdit(false);
+        store.fetchRecords()
+      })
+      .finally(() => setLoading(false))
+  }
+
   function handleChange(e, key) {
-    host[key] = e && e.target ? e.target.value : e;
-    if (['created_time', 'expired_time'].includes(key) && e) {
+    if (['create_time', 'expire_time'].includes(key) && e) {
       host[key] = e.format('YYYY-MM-DD')
+    } else {
+      host[key] = e && e.target ? e.target.value : e
     }
+    
     setHost({...host})
   }
 
@@ -179,6 +186,23 @@ function ServerDetail({ data, edit, onChange, diskInput, inputVisible, setInputV
   // 从父组件获取这些函数和状态
   const { handleSubmit, handleFetch, setEdit, loading, fetching } = React.useContext(DetailContext);
   
+  // 简单函数用于获取字段值，支持回退选项
+  const getField = (primary, fallback) => data[primary] !== undefined ? data[primary] : data[fallback];
+  
+  // 格式化状态显示
+  const formatStatus = () => {
+    const status = data.status || data.state;
+    return <Tag color={status === 'Running' ? 'green' : 'orange'}>{status || '未知'}</Tag>;
+  };
+  
+  // 格式化付费方式显示
+  const formatPayment = () => {
+    const payment = data.payment_timing || data.payment_method || data.charge_type;
+    if (payment === 'PrePaid' || payment === 'Prepaid') return '包年包月';
+    if (payment === 'PostPaid' || payment === 'Postpaid') return '按量计费';
+    return payment || '其他';
+  };
+  
   return (
     <>
       <Descriptions
@@ -190,8 +214,6 @@ function ServerDetail({ data, edit, onChange, diskInput, inputVisible, setInputV
         <Descriptions.Item label="主机名称">{data.name}</Descriptions.Item>
         <Descriptions.Item label="连接地址">{data.username}@{data.hostname}</Descriptions.Item>
         <Descriptions.Item label="连接端口">{data.port}</Descriptions.Item>
-        <Descriptions.Item label="独立密钥">{data.pkey ? '是' : '否'}</Descriptions.Item>
-        <Descriptions.Item label="描述信息">{data.desc}</Descriptions.Item>
         <Descriptions.Item label="所属分组">
           <List>
             {lds.get(data, 'group_ids', []).map(g_id => (
@@ -217,25 +239,52 @@ function ServerDetail({ data, edit, onChange, diskInput, inputVisible, setInputV
         <Descriptions.Item label="实例ID">
           {edit ? (
             <Input value={data.instance_id} onChange={e => onChange(e, 'instance_id')} placeholder="选填"/>
-          ) : data.instance_id}
+          ) : getField('instance_id', 'id')}
+        </Descriptions.Item>
+        <Descriptions.Item label="状态">
+          {edit ? (
+            <Select
+              style={{width: 150}}
+              value={data.status}
+              placeholder="请选择"
+              onChange={v => onChange(v, 'status')}>
+              <Select.Option value="Running">Running</Select.Option>
+              <Select.Option value="Stopped">Stopped</Select.Option>
+            </Select>
+          ) : formatStatus()}
+        </Descriptions.Item>
+        <Descriptions.Item label="可用区">
+          {edit ? (
+            <Input value={data.zone_name} onChange={e => onChange(e, 'zone_name')} placeholder="可用区"/>
+          ) : getField('zone_name', 'region')}
         </Descriptions.Item>
         <Descriptions.Item label="操作系统">
           {edit ? (
-            <Input value={data.os_name} onChange={e => onChange(e, 'os_name')}
+            <Input value={data.os_name} onChange={e => onChange(e, 'os_name')} 
                    placeholder="例如：Ubuntu Server 16.04.1 LTS"/>
-          ) : data.os_name}
+          ) : getField('os_name', 'os')}
+        </Descriptions.Item>
+        <Descriptions.Item label="系统版本">
+          {edit ? (
+            <Input value={data.os_version} onChange={e => onChange(e, 'os_version')} placeholder="例如：20.04 LTS"/>
+          ) : getField('os_version', 'version')}
+        </Descriptions.Item>
+        <Descriptions.Item label="系统架构">
+          {edit ? (
+            <Input value={data.os_arch} onChange={e => onChange(e, 'os_arch')} placeholder="例如：amd64"/>
+          ) : getField('os_arch', 'arch')}
         </Descriptions.Item>
         <Descriptions.Item label="CPU">
           {edit ? (
-            <Input suffix="核" style={{width: 100}} value={data.cpu} onChange={e => onChange(e, 'cpu')}
+            <Input suffix="核" style={{width: 100}} value={data.cpu_count} onChange={e => onChange(e, 'cpu_count')}
                    placeholder="数字"/>
-          ) : data.cpu ? `${data.cpu}核` : null}
+          ) : (data.cpu_count || data.cpu) ? `${data.cpu_count || data.cpu}核` : null}
         </Descriptions.Item>
         <Descriptions.Item label="内存">
           {edit ? (
-            <Input suffix="GB" style={{width: 100}} value={data.memory} onChange={e => onChange(e, 'memory')}
+            <Input suffix="GB" style={{width: 100}} value={data.memory_capacity_in_gb} onChange={e => onChange(e, 'memory_capacity_in_gb')}
                    placeholder="数字"/>
-          ) : data.memory ? `${data.memory}GB` : null}
+          ) : (data.memory_capacity_in_gb || data.memory) ? `${data.memory_capacity_in_gb || data.memory}GB` : null}
         </Descriptions.Item>
         <Descriptions.Item label="磁盘">
           {lds.get(data, 'disk', []).map((item, index) => (
@@ -256,58 +305,41 @@ function ServerDetail({ data, edit, onChange, diskInput, inputVisible, setInputV
             <Tag className={styles.tagAdd} onClick={() => setInputVisible('disk')}><PlusOutlined/> 新建</Tag>
           ))}
         </Descriptions.Item>
-        <Descriptions.Item label="实例计费方式">
+        <Descriptions.Item label="付费方式">
           {edit ? (
             <Select
               style={{width: 150}}
-              value={data.instance_charge_type}
+              value={data.payment_timing}
               placeholder="请选择"
-              onChange={v => onChange(v, 'instance_charge_type')}>
+              onChange={v => onChange(v, 'payment_timing')}>
               <Select.Option value="PrePaid">包年包月</Select.Option>
               <Select.Option value="PostPaid">按量计费</Select.Option>
               <Select.Option value="Other">其他</Select.Option>
             </Select>
-          ) : typeof data.instance_charge_type_alias === 'object' ? 
-              JSON.stringify(data.instance_charge_type_alias) : 
-              data.instance_charge_type_alias}
-        </Descriptions.Item>
-        <Descriptions.Item label="网络计费方式">
-          {edit ? (
-            <Select
-              style={{width: 150}}
-              value={data.internet_charge_type}
-              placeholder="请选择"
-              onChange={v => onChange(v, 'internet_charge_type')}>
-              <Select.Option value="PayByBandwidth">按带宽计费</Select.Option>
-              <Select.Option value="PayByTraffic">按流量计费</Select.Option>
-              <Select.Option value="Other">其他</Select.Option>
-            </Select>
-          ) : typeof data.internet_charge_type_alias === 'object' ? 
-              JSON.stringify(data.internet_charge_type_alias) : 
-              data.internet_charge_type_alias}
+          ) : formatPayment()}
         </Descriptions.Item>
         <Descriptions.Item label="创建时间">
           {edit ? (
             <DatePicker
-              value={data.created_time ? moment(data.created_time) : undefined}
-              onChange={v => onChange(v, 'created_time')}/>
-          ) : typeof data.created_time === 'object' ? 
-              JSON.stringify(data.created_time) : 
-              data.created_time}
+              value={data.create_time ? moment(data.create_time) : 
+                   data.created_time ? moment(data.created_time) : 
+                   data.created_at ? moment(data.created_at) : undefined}
+              onChange={v => onChange(v, 'create_time')}/>
+          ) : data.create_time || data.created_time || data.created_at}
         </Descriptions.Item>
         <Descriptions.Item label="到期时间">
           {edit ? (
             <DatePicker
-              value={data.expired_time ? moment(data.expired_time) : undefined}
-              onChange={v => onChange(v, 'expired_time')}/>
-          ) : typeof data.expired_time === 'object' ? 
-              JSON.stringify(data.expired_time) : 
-              data.expired_time}
+              value={data.expire_time ? moment(data.expire_time) : 
+                   data.expired_time ? moment(data.expired_time) : 
+                   data.expired_at ? moment(data.expired_at) : undefined}
+              onChange={v => onChange(v, 'expire_time')}/>
+          ) : data.expire_time || data.expired_time || data.expired_at}
         </Descriptions.Item>
-        <Descriptions.Item label="更新时间">
-          {typeof data.updated_at === 'object' ? 
-            JSON.stringify(data.updated_at) : 
-            data.updated_at}
+        <Descriptions.Item label="镜像名称">
+          {edit ? (
+            <Input value={data.image_name} onChange={e => onChange(e, 'image_name')} placeholder="镜像名称"/>
+          ) : data.image_name}
         </Descriptions.Item>
       </Descriptions>
     </>
