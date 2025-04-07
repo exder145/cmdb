@@ -1,4670 +1,779 @@
-[
-  {
-    "month": "2021-01",
-    "instanceid": "v-DKKjLNDY",
-    "productType": "prepay",
-    "financePrice": "15750.0"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "v-3IeNY2W1",
-    "productType": "prepay",
-    "financePrice": "270.0"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "v-chbIEtcQ",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "v-uhKxFTNf",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "v-UcDzR7wU",
-    "productType": "prepay",
-    "financePrice": "270.0"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "v-4q2E2wV4",
-    "productType": "prepay",
-    "financePrice": "13554.0"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "v-qlqyXsSc",
-    "productType": "prepay",
-    "financePrice": "540.0"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "v-CBk3nbO5",
-    "productType": "prepay",
-    "financePrice": "15750.0"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-JJwGLan1",
-    "productType": "postpay",
-    "financePrice": "18.39"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-mHYRA5Pz",
-    "productType": "postpay",
-    "financePrice": "1.53"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-NVNEO3pU",
-    "productType": "postpay",
-    "financePrice": "3.69"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-cTkSr5zG",
-    "productType": "postpay",
-    "financePrice": "9.2"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-XouZRB14",
-    "productType": "postpay",
-    "financePrice": "276.63"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-YrdTOk20",
-    "productType": "postpay",
-    "financePrice": "46.05"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-eVgHBBpc",
-    "productType": "postpay",
-    "financePrice": "3.59"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-5kxc9Gy4",
-    "productType": "postpay",
-    "financePrice": "3.67"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-4q2E2wV4",
-    "productType": "postpay",
-    "financePrice": "488.62"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-J5bZpQSq",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-rdY4TTrx",
-    "productType": "postpay",
-    "financePrice": "29.84"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-CBk3nbO5",
-    "productType": "postpay",
-    "financePrice": "119.97"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-gdHYNgNW",
-    "productType": "postpay",
-    "financePrice": "46.04"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-3rpQzDUp",
-    "productType": "postpay",
-    "financePrice": "35.7"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-zziRMBOM",
-    "productType": "postpay",
-    "financePrice": "54.04"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-ZF0rCJwT",
-    "productType": "postpay",
-    "financePrice": "3.67"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-boaN5Lt6",
-    "productType": "postpay",
-    "financePrice": "0.85"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-3U885X3y",
-    "productType": "postpay",
-    "financePrice": "471.98"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-REojrZm5",
-    "productType": "postpay",
-    "financePrice": "157.48"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-l4YYS4Y4",
-    "productType": "postpay",
-    "financePrice": "92.08"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-g5i3Ufcg",
-    "productType": "postpay",
-    "financePrice": "471.47"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-9TkJcEbJ",
-    "productType": "postpay",
-    "financePrice": "93.9"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-qlqyXsSc",
-    "productType": "postpay",
-    "financePrice": "18.37"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-WXIaGlNL",
-    "productType": "postpay",
-    "financePrice": "45.98"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-Tl7w5y7E",
-    "productType": "postpay",
-    "financePrice": "3.65"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-NxHldxhw",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-aYYOjVfs",
-    "productType": "postpay",
-    "financePrice": "460.37"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-5vjRQ9vr",
-    "productType": "postpay",
-    "financePrice": "190.56"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-1c1vVP7E",
-    "productType": "postpay",
-    "financePrice": "46.04"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-9SmJB8q0",
-    "productType": "postpay",
-    "financePrice": "33.89"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-DKKjLNDY",
-    "productType": "postpay",
-    "financePrice": "0.12"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "sl-9zBWMZpE",
-    "productType": "postpay",
-    "financePrice": "336.21"
-  },
-  {
-    "month": "2021-01",
-    "instanceid": "v-GSc2q3pe",
-    "productType": "postpay",
-    "financePrice": "232.7"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "v-9gWxfPuv",
-    "productType": "prepay",
-    "financePrice": "1350.0"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-JJwGLan1",
-    "productType": "postpay",
-    "financePrice": "16.39"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-mHYRA5Pz",
-    "productType": "postpay",
-    "financePrice": "1.39"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-NVNEO3pU",
-    "productType": "postpay",
-    "financePrice": "3.32"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-cTkSr5zG",
-    "productType": "postpay",
-    "financePrice": "8.19"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-XouZRB14",
-    "productType": "postpay",
-    "financePrice": "249.98"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-YrdTOk20",
-    "productType": "postpay",
-    "financePrice": "41.6"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-eVgHBBpc",
-    "productType": "postpay",
-    "financePrice": "3.25"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-5kxc9Gy4",
-    "productType": "postpay",
-    "financePrice": "3.32"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-4q2E2wV4",
-    "productType": "postpay",
-    "financePrice": "450.66"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-J5bZpQSq",
-    "productType": "postpay",
-    "financePrice": "3.33"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-rdY4TTrx",
-    "productType": "postpay",
-    "financePrice": "28.06"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-CBk3nbO5",
-    "productType": "postpay",
-    "financePrice": "122.1"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-gdHYNgNW",
-    "productType": "postpay",
-    "financePrice": "41.59"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-3rpQzDUp",
-    "productType": "postpay",
-    "financePrice": "39.11"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-zziRMBOM",
-    "productType": "postpay",
-    "financePrice": "49.35"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-ZF0rCJwT",
-    "productType": "postpay",
-    "financePrice": "3.33"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-boaN5Lt6",
-    "productType": "postpay",
-    "financePrice": "0.81"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-3U885X3y",
-    "productType": "postpay",
-    "financePrice": "426.84"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-REojrZm5",
-    "productType": "postpay",
-    "financePrice": "143.35"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-l4YYS4Y4",
-    "productType": "postpay",
-    "financePrice": "83.16"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-g5i3Ufcg",
-    "productType": "postpay",
-    "financePrice": "425.85"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-9TkJcEbJ",
-    "productType": "postpay",
-    "financePrice": "84.82"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-qlqyXsSc",
-    "productType": "postpay",
-    "financePrice": "16.58"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-WXIaGlNL",
-    "productType": "postpay",
-    "financePrice": "41.58"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-Tl7w5y7E",
-    "productType": "postpay",
-    "financePrice": "3.32"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-NxHldxhw",
-    "productType": "postpay",
-    "financePrice": "3.33"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-aYYOjVfs",
-    "productType": "postpay",
-    "financePrice": "412.09"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-5vjRQ9vr",
-    "productType": "postpay",
-    "financePrice": "172.12"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-1c1vVP7E",
-    "productType": "postpay",
-    "financePrice": "41.59"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-9SmJB8q0",
-    "productType": "postpay",
-    "financePrice": "43.28"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-DKKjLNDY",
-    "productType": "postpay",
-    "financePrice": "0.31"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "sl-9zBWMZpE",
-    "productType": "postpay",
-    "financePrice": "326.03"
-  },
-  {
-    "month": "2021-02",
-    "instanceid": "v-GSc2q3pe",
-    "productType": "postpay",
-    "financePrice": "210.16"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-nDFnPOwy",
-    "productType": "prepay",
-    "financePrice": "157.5"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-dGDf3Hov",
-    "productType": "prepay",
-    "financePrice": "204.75"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-aTIneCEp",
-    "productType": "prepay",
-    "financePrice": "262.5"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-gdHYNgNW",
-    "productType": "prepay",
-    "financePrice": "1575.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-mHYRA5Pz",
-    "productType": "prepay",
-    "financePrice": "810.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-1JW4PPLl",
-    "productType": "prepay",
-    "financePrice": "270.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-NxHldxhw",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-1c1vVP7E",
-    "productType": "prepay",
-    "financePrice": "1350.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-lN25cXg8",
-    "productType": "prepay",
-    "financePrice": "270.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-ckOTH4UU",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-Gqb8QXqF",
-    "productType": "prepay",
-    "financePrice": "810.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-UuzBbDRg",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-NlC5qX47",
-    "productType": "prepay",
-    "financePrice": "270.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-oaRsfij2",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-388k19W6",
-    "productType": "prepay",
-    "financePrice": "810.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-rrb7AHWi",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-lIKgRoUD",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-vVy327JZ",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-SceGZks4",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-bhf7cPOk",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-dGDf3Hov",
-    "productType": "prepay",
-    "financePrice": "17.06"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-XtGsNqLr",
-    "productType": "prepay",
-    "financePrice": "40.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-p1OCshRU",
-    "productType": "prepay",
-    "financePrice": "40.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-jWPoimMy",
-    "productType": "prepay",
-    "financePrice": "40.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-SceGZks4",
-    "productType": "prepay",
-    "financePrice": "13.12"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-bhf7cPOk",
-    "productType": "prepay",
-    "financePrice": "13.12"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-nDFnPOwy",
-    "productType": "prepay",
-    "financePrice": "13.12"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-JJwGLan1",
-    "productType": "postpay",
-    "financePrice": "18.42"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-aTIneCEp",
-    "productType": "postpay",
-    "financePrice": "23.94"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-Gqb8QXqF",
-    "productType": "postpay",
-    "financePrice": "8.5"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-mHYRA5Pz",
-    "productType": "postpay",
-    "financePrice": "1.53"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-UuzBbDRg",
-    "productType": "postpay",
-    "financePrice": "1.85"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-NlC5qX47",
-    "productType": "postpay",
-    "financePrice": "1.67"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-NVNEO3pU",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-cTkSr5zG",
-    "productType": "postpay",
-    "financePrice": "9.21"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-XouZRB14",
-    "productType": "postpay",
-    "financePrice": "276.82"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-YrdTOk20",
-    "productType": "postpay",
-    "financePrice": "46.05"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-eVgHBBpc",
-    "productType": "postpay",
-    "financePrice": "3.66"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-oaRsfij2",
-    "productType": "postpay",
-    "financePrice": "1.88"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-5kxc9Gy4",
-    "productType": "postpay",
-    "financePrice": "3.45"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-4q2E2wV4",
-    "productType": "postpay",
-    "financePrice": "503.97"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-J5bZpQSq",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-rdY4TTrx",
-    "productType": "postpay",
-    "financePrice": "31.45"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-CBk3nbO5",
-    "productType": "postpay",
-    "financePrice": "149.32"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-gdHYNgNW",
-    "productType": "postpay",
-    "financePrice": "46.13"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-3rpQzDUp",
-    "productType": "postpay",
-    "financePrice": "43.65"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-zziRMBOM",
-    "productType": "postpay",
-    "financePrice": "57.28"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-ZF0rCJwT",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-boaN5Lt6",
-    "productType": "postpay",
-    "financePrice": "0.91"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-3U885X3y",
-    "productType": "postpay",
-    "financePrice": "472.6"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-REojrZm5",
-    "productType": "postpay",
-    "financePrice": "159.38"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-l4YYS4Y4",
-    "productType": "postpay",
-    "financePrice": "92.06"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-g5i3Ufcg",
-    "productType": "postpay",
-    "financePrice": "471.48"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-9TkJcEbJ",
-    "productType": "postpay",
-    "financePrice": "93.91"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-qlqyXsSc",
-    "productType": "postpay",
-    "financePrice": "18.36"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-388k19W6",
-    "productType": "postpay",
-    "financePrice": "8.66"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-lIKgRoUD",
-    "productType": "postpay",
-    "financePrice": "1.88"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-WXIaGlNL",
-    "productType": "postpay",
-    "financePrice": "46.03"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-Tl7w5y7E",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-1JW4PPLl",
-    "productType": "postpay",
-    "financePrice": "4.75"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-NxHldxhw",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-K7ucWXqw",
-    "productType": "postpay",
-    "financePrice": "28.53"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-aYYOjVfs",
-    "productType": "postpay",
-    "financePrice": "460.36"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-5vjRQ9vr",
-    "productType": "postpay",
-    "financePrice": "190.57"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-1c1vVP7E",
-    "productType": "postpay",
-    "financePrice": "46.91"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-lN25cXg8",
-    "productType": "postpay",
-    "financePrice": "4.74"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-9SmJB8q0",
-    "productType": "postpay",
-    "financePrice": "52.23"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-DKKjLNDY",
-    "productType": "postpay",
-    "financePrice": "208.45"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "sl-9zBWMZpE",
-    "productType": "postpay",
-    "financePrice": "380.23"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-hBGlxfIE",
-    "productType": "postpay",
-    "financePrice": "3.26"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-j7yNcgaN",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-Jbxq5tyR",
-    "productType": "postpay",
-    "financePrice": "15.16"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-EtFICH7k",
-    "productType": "postpay",
-    "financePrice": "0.99"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-4ie8DlbB",
-    "productType": "postpay",
-    "financePrice": "2.9"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-1aWOdcNy",
-    "productType": "postpay",
-    "financePrice": "299.29"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-GSc2q3pe",
-    "productType": "postpay",
-    "financePrice": "232.69"
-  },
-  {
-    "month": "2021-03",
-    "instanceid": "v-LHo3aGCe",
-    "productType": "postpay",
-    "financePrice": "81.53"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "v-JJwGLan1",
-    "productType": "prepay",
-    "financePrice": "630.0"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "v-LOMp6Yep",
-    "productType": "prepay",
-    "financePrice": "54.0"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "v-cTkSr5zG",
-    "productType": "prepay",
-    "financePrice": "315.0"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "v-eVgHBBpc",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "v-XouZRB14",
-    "productType": "prepay",
-    "financePrice": "1575.0"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "v-3U885X3y",
-    "productType": "prepay",
-    "financePrice": "2688.52"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "v-REojrZm5",
-    "productType": "prepay",
-    "financePrice": "866.25"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "v-5vjRQ9vr",
-    "productType": "prepay",
-    "financePrice": "1076.25"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "v-9zBWMZpE",
-    "productType": "prepay",
-    "financePrice": "2625.0"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "v-K7ucWXqw",
-    "productType": "prepay",
-    "financePrice": "1350.0"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-JJwGLan1",
-    "productType": "postpay",
-    "financePrice": "17.83"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-aTIneCEp",
-    "productType": "postpay",
-    "financePrice": "44.57"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-Gqb8QXqF",
-    "productType": "postpay",
-    "financePrice": "16.02"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-mHYRA5Pz",
-    "productType": "postpay",
-    "financePrice": "1.48"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-UuzBbDRg",
-    "productType": "postpay",
-    "financePrice": "3.48"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-NlC5qX47",
-    "productType": "postpay",
-    "financePrice": "3.21"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-NVNEO3pU",
-    "productType": "postpay",
-    "financePrice": "3.56"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-cTkSr5zG",
-    "productType": "postpay",
-    "financePrice": "8.91"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-XouZRB14",
-    "productType": "postpay",
-    "financePrice": "267.92"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-YrdTOk20",
-    "productType": "postpay",
-    "financePrice": "44.56"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-eVgHBBpc",
-    "productType": "postpay",
-    "financePrice": "3.54"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-oaRsfij2",
-    "productType": "postpay",
-    "financePrice": "3.56"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-4q2E2wV4",
-    "productType": "postpay",
-    "financePrice": "490.79"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-J5bZpQSq",
-    "productType": "postpay",
-    "financePrice": "3.22"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-rdY4TTrx",
-    "productType": "postpay",
-    "financePrice": "29.01"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-CBk3nbO5",
-    "productType": "postpay",
-    "financePrice": "162.11"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-gdHYNgNW",
-    "productType": "postpay",
-    "financePrice": "44.63"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-3rpQzDUp",
-    "productType": "postpay",
-    "financePrice": "42.55"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-zziRMBOM",
-    "productType": "postpay",
-    "financePrice": "60.61"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-ZF0rCJwT",
-    "productType": "postpay",
-    "financePrice": "3.56"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-boaN5Lt6",
-    "productType": "postpay",
-    "financePrice": "0.9"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-3U885X3y",
-    "productType": "postpay",
-    "financePrice": "457.36"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-REojrZm5",
-    "productType": "postpay",
-    "financePrice": "156.3"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-l4YYS4Y4",
-    "productType": "postpay",
-    "financePrice": "89.09"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-g5i3Ufcg",
-    "productType": "postpay",
-    "financePrice": "456.28"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-9TkJcEbJ",
-    "productType": "postpay",
-    "financePrice": "3.15"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-qlqyXsSc",
-    "productType": "postpay",
-    "financePrice": "17.76"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-388k19W6",
-    "productType": "postpay",
-    "financePrice": "16.37"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-UcDzR7wU",
-    "productType": "postpay",
-    "financePrice": "0.02"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-lIKgRoUD",
-    "productType": "postpay",
-    "financePrice": "3.56"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-WXIaGlNL",
-    "productType": "postpay",
-    "financePrice": "44.55"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-Tl7w5y7E",
-    "productType": "postpay",
-    "financePrice": "3.57"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-1JW4PPLl",
-    "productType": "postpay",
-    "financePrice": "8.9"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-NxHldxhw",
-    "productType": "postpay",
-    "financePrice": "3.56"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-K7ucWXqw",
-    "productType": "postpay",
-    "financePrice": "48.5"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-aYYOjVfs",
-    "productType": "postpay",
-    "financePrice": "445.51"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-5vjRQ9vr",
-    "productType": "postpay",
-    "financePrice": "184.51"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-1c1vVP7E",
-    "productType": "postpay",
-    "financePrice": "46.16"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-lN25cXg8",
-    "productType": "postpay",
-    "financePrice": "8.91"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-9SmJB8q0",
-    "productType": "postpay",
-    "financePrice": "51.72"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-DKKjLNDY",
-    "productType": "postpay",
-    "financePrice": "408.99"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "sl-9zBWMZpE",
-    "productType": "postpay",
-    "financePrice": "392.43"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "v-rp4AN9Ul",
-    "productType": "postpay",
-    "financePrice": "0.84"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "v-hBGlxfIE",
-    "productType": "postpay",
-    "financePrice": "5.25"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "v-L669DPjS",
-    "productType": "postpay",
-    "financePrice": "1.42"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "v-OUvLTtU0",
-    "productType": "postpay",
-    "financePrice": "0.13"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "v-zBCFK9dB",
-    "productType": "postpay",
-    "financePrice": "10.32"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "v-GSc2q3pe",
-    "productType": "postpay",
-    "financePrice": "225.18"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "v-LHo3aGCe",
-    "productType": "postpay",
-    "financePrice": "131.21"
-  },
-  {
-    "month": "2021-04",
-    "instanceid": "v-mvyfyeEi",
-    "productType": "postpay",
-    "financePrice": "0.13"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "v-YrdTOk20",
-    "productType": "prepay",
-    "financePrice": "393.75"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "v-SvOyhIIx",
-    "productType": "prepay",
-    "financePrice": "31.5"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-JJwGLan1",
-    "productType": "postpay",
-    "financePrice": "18.42"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-aTIneCEp",
-    "productType": "postpay",
-    "financePrice": "46.03"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-Gqb8QXqF",
-    "productType": "postpay",
-    "financePrice": "16.58"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-mHYRA5Pz",
-    "productType": "postpay",
-    "financePrice": "1.55"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-UuzBbDRg",
-    "productType": "postpay",
-    "financePrice": "3.61"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-NlC5qX47",
-    "productType": "postpay",
-    "financePrice": "3.43"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-NVNEO3pU",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-cTkSr5zG",
-    "productType": "postpay",
-    "financePrice": "9.22"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-XouZRB14",
-    "productType": "postpay",
-    "financePrice": "277.02"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-YrdTOk20",
-    "productType": "postpay",
-    "financePrice": "46.62"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-eVgHBBpc",
-    "productType": "postpay",
-    "financePrice": "3.67"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-oaRsfij2",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-4q2E2wV4",
-    "productType": "postpay",
-    "financePrice": "507.58"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-CBk3nbO5",
-    "productType": "postpay",
-    "financePrice": "180.54"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-gdHYNgNW",
-    "productType": "postpay",
-    "financePrice": "52.47"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-3rpQzDUp",
-    "productType": "postpay",
-    "financePrice": "43.97"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-zziRMBOM",
-    "productType": "postpay",
-    "financePrice": "65.18"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-ZF0rCJwT",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-boaN5Lt6",
-    "productType": "postpay",
-    "financePrice": "0.94"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-3U885X3y",
-    "productType": "postpay",
-    "financePrice": "472.63"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-REojrZm5",
-    "productType": "postpay",
-    "financePrice": "173.65"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-l4YYS4Y4",
-    "productType": "postpay",
-    "financePrice": "92.24"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-g5i3Ufcg",
-    "productType": "postpay",
-    "financePrice": "471.48"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-qlqyXsSc",
-    "productType": "postpay",
-    "financePrice": "18.36"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-388k19W6",
-    "productType": "postpay",
-    "financePrice": "17.04"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-UcDzR7wU",
-    "productType": "postpay",
-    "financePrice": "2.03"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-zBCFK9dB",
-    "productType": "postpay",
-    "financePrice": "18.36"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-lIKgRoUD",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-WXIaGlNL",
-    "productType": "postpay",
-    "financePrice": "46.04"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-Tl7w5y7E",
-    "productType": "postpay",
-    "financePrice": "3.67"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-1JW4PPLl",
-    "productType": "postpay",
-    "financePrice": "9.2"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-NxHldxhw",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-K7ucWXqw",
-    "productType": "postpay",
-    "financePrice": "51.51"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-aYYOjVfs",
-    "productType": "postpay",
-    "financePrice": "460.36"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-5vjRQ9vr",
-    "productType": "postpay",
-    "financePrice": "190.73"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-1c1vVP7E",
-    "productType": "postpay",
-    "financePrice": "46.03"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-lN25cXg8",
-    "productType": "postpay",
-    "financePrice": "9.22"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-9SmJB8q0",
-    "productType": "postpay",
-    "financePrice": "53.46"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-DKKjLNDY",
-    "productType": "postpay",
-    "financePrice": "423.31"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "sl-9zBWMZpE",
-    "productType": "postpay",
-    "financePrice": "436.73"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "v-rp4AN9Ul",
-    "productType": "postpay",
-    "financePrice": "5.52"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "v-hBGlxfIE",
-    "productType": "postpay",
-    "financePrice": "5.42"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "v-OriNw7JD",
-    "productType": "postpay",
-    "financePrice": "4.74"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "v-wdLDAWzu",
-    "productType": "postpay",
-    "financePrice": "5.93"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "v-OUvLTtU0",
-    "productType": "postpay",
-    "financePrice": "0.76"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "v-Nt6OzjkR",
-    "productType": "postpay",
-    "financePrice": "8.6"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "v-zBCFK9dB",
-    "productType": "postpay",
-    "financePrice": "542.37"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "v-cQKMiLTA",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "v-tFq1fRXT",
-    "productType": "postpay",
-    "financePrice": "8.5"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "v-tTpZ17vE",
-    "productType": "postpay",
-    "financePrice": "21.25"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "v-TRVuETO3",
-    "productType": "postpay",
-    "financePrice": "53.57"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "v-GSc2q3pe",
-    "productType": "postpay",
-    "financePrice": "232.69"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "v-LHo3aGCe",
-    "productType": "postpay",
-    "financePrice": "135.59"
-  },
-  {
-    "month": "2021-05",
-    "instanceid": "v-DnlpF8WS",
-    "productType": "postpay",
-    "financePrice": "4.3"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-ohus8BfM",
-    "productType": "prepay",
-    "financePrice": "48.0"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-wqNugwIe",
-    "productType": "prepay",
-    "financePrice": "51.0"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-wdLDAWzu",
-    "productType": "prepay",
-    "financePrice": "15750.0"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-OriNw7JD",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-WwnjQNr9",
-    "productType": "prepay",
-    "financePrice": "270.0"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-Ic5xkxwh",
-    "productType": "prepay",
-    "financePrice": "270.0"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-XouZRB14",
-    "productType": "prepay",
-    "financePrice": "9450.0"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-DsznK5yg",
-    "productType": "prepay",
-    "financePrice": "270.0"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-3U885X3y",
-    "productType": "prepay",
-    "financePrice": "16131.15"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-REojrZm5",
-    "productType": "prepay",
-    "financePrice": "5197.5"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-5vjRQ9vr",
-    "productType": "prepay",
-    "financePrice": "6457.5"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-9zBWMZpE",
-    "productType": "prepay",
-    "financePrice": "15750.0"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-XgPCuT6O",
-    "productType": "prepay",
-    "financePrice": "57.0"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-DnlpF8WS",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-rltCHeal",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-aTIneCEp",
-    "productType": "prepay",
-    "financePrice": "1575.0"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-qUiizahV",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-JJwGLan1",
-    "productType": "postpay",
-    "financePrice": "17.83"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-aTIneCEp",
-    "productType": "postpay",
-    "financePrice": "44.58"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-Gqb8QXqF",
-    "productType": "postpay",
-    "financePrice": "16.06"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-mHYRA5Pz",
-    "productType": "postpay",
-    "financePrice": "1.5"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-UuzBbDRg",
-    "productType": "postpay",
-    "financePrice": "3.52"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-NlC5qX47",
-    "productType": "postpay",
-    "financePrice": "3.43"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-NVNEO3pU",
-    "productType": "postpay",
-    "financePrice": "3.57"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-cTkSr5zG",
-    "productType": "postpay",
-    "financePrice": "8.92"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-XouZRB14",
-    "productType": "postpay",
-    "financePrice": "268.22"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-YrdTOk20",
-    "productType": "postpay",
-    "financePrice": "46.48"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-eVgHBBpc",
-    "productType": "postpay",
-    "financePrice": "3.56"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-4zdR4Z1G",
-    "productType": "postpay",
-    "financePrice": "250.35"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-oaRsfij2",
-    "productType": "postpay",
-    "financePrice": "3.56"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-4q2E2wV4",
-    "productType": "postpay",
-    "financePrice": "484.44"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-rdY4TTrx",
-    "productType": "postpay",
-    "financePrice": "33.06"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-CBk3nbO5",
-    "productType": "postpay",
-    "financePrice": "189.74"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-gdHYNgNW",
-    "productType": "postpay",
-    "financePrice": "64.5"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-3rpQzDUp",
-    "productType": "postpay",
-    "financePrice": "42.58"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-zziRMBOM",
-    "productType": "postpay",
-    "financePrice": "64.52"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-ZF0rCJwT",
-    "productType": "postpay",
-    "financePrice": "3.56"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-boaN5Lt6",
-    "productType": "postpay",
-    "financePrice": "0.93"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-3U885X3y",
-    "productType": "postpay",
-    "financePrice": "457.22"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-REojrZm5",
-    "productType": "postpay",
-    "financePrice": "165.04"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-l4YYS4Y4",
-    "productType": "postpay",
-    "financePrice": "89.62"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-g5i3Ufcg",
-    "productType": "postpay",
-    "financePrice": "456.26"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-qlqyXsSc",
-    "productType": "postpay",
-    "financePrice": "17.77"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-388k19W6",
-    "productType": "postpay",
-    "financePrice": "16.58"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-UcDzR7wU",
-    "productType": "postpay",
-    "financePrice": "1.62"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-zBCFK9dB",
-    "productType": "postpay",
-    "financePrice": "50.79"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-lIKgRoUD",
-    "productType": "postpay",
-    "financePrice": "3.56"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-WXIaGlNL",
-    "productType": "postpay",
-    "financePrice": "44.54"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-Tl7w5y7E",
-    "productType": "postpay",
-    "financePrice": "3.56"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-1JW4PPLl",
-    "productType": "postpay",
-    "financePrice": "8.91"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-NxHldxhw",
-    "productType": "postpay",
-    "financePrice": "3.5"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-K7ucWXqw",
-    "productType": "postpay",
-    "financePrice": "51.2"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-aYYOjVfs",
-    "productType": "postpay",
-    "financePrice": "445.51"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-5vjRQ9vr",
-    "productType": "postpay",
-    "financePrice": "184.26"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-1c1vVP7E",
-    "productType": "postpay",
-    "financePrice": "46.02"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-lN25cXg8",
-    "productType": "postpay",
-    "financePrice": "8.92"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-9SmJB8q0",
-    "productType": "postpay",
-    "financePrice": "52.37"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-DKKjLNDY",
-    "productType": "postpay",
-    "financePrice": "409.93"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "sl-9zBWMZpE",
-    "productType": "postpay",
-    "financePrice": "441.57"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-uR2o4300",
-    "productType": "postpay",
-    "financePrice": "11.84"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-vlEuNu6K",
-    "productType": "postpay",
-    "financePrice": "321.92"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-Fxz9j2B2",
-    "productType": "postpay",
-    "financePrice": "322.5"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-Fxz9j2B2",
-    "productType": "postpay",
-    "financePrice": "557.14"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-aTIneCEp",
-    "productType": "postpay",
-    "financePrice": "33.86"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-hBGlxfIE",
-    "productType": "postpay",
-    "financePrice": "5.25"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-e1iY7sEW",
-    "productType": "postpay",
-    "financePrice": "321.46"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-TTXWvAfi",
-    "productType": "postpay",
-    "financePrice": "107.27"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-BmJNiaN2",
-    "productType": "postpay",
-    "financePrice": "537.89"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-ZYYQpaw3",
-    "productType": "postpay",
-    "financePrice": "21.43"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-I4x81fBa",
-    "productType": "postpay",
-    "financePrice": "4.3"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-SfBFUQXV",
-    "productType": "postpay",
-    "financePrice": "59.23"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-eaxGEf8r",
-    "productType": "postpay",
-    "financePrice": "4.29"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-4zdR4Z1G",
-    "productType": "postpay",
-    "financePrice": "1205.71"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-gv2MAaCU",
-    "productType": "postpay",
-    "financePrice": "21.45"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-c7vKgsvW",
-    "productType": "postpay",
-    "financePrice": "107.14"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-zpTR7Q9P",
-    "productType": "postpay",
-    "financePrice": "536.97"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-OriNw7JD",
-    "productType": "postpay",
-    "financePrice": "9.94"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-wdLDAWzu",
-    "productType": "postpay",
-    "financePrice": "777.08"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-wdLDAWzu",
-    "productType": "postpay",
-    "financePrice": "4.66"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-qUiizahV",
-    "productType": "postpay",
-    "financePrice": "0.75"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-zBCFK9dB",
-    "productType": "postpay",
-    "financePrice": "524.88"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-tFq1fRXT",
-    "productType": "postpay",
-    "financePrice": "10.51"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-tTpZ17vE",
-    "productType": "postpay",
-    "financePrice": "26.24"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-TRVuETO3",
-    "productType": "postpay",
-    "financePrice": "131.22"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-hfTlDFOs",
-    "productType": "postpay",
-    "financePrice": "535.76"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-GSc2q3pe",
-    "productType": "postpay",
-    "financePrice": "225.18"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-LHo3aGCe",
-    "productType": "postpay",
-    "financePrice": "131.22"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-87h0EriC",
-    "productType": "postpay",
-    "financePrice": "18.5"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-xWTREtU9",
-    "productType": "postpay",
-    "financePrice": "47.67"
-  },
-  {
-    "month": "2021-06",
-    "instanceid": "v-DnlpF8WS",
-    "productType": "postpay",
-    "financePrice": "3.07"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-YrdTOk20",
-    "productType": "prepay",
-    "financePrice": "1575.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-l4YYS4Y4",
-    "productType": "prepay",
-    "financePrice": "3150.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-SvOyhIIx",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-70dXAd7N",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-SmdMAADT",
-    "productType": "prepay",
-    "financePrice": "1350.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-4zdR4Z1G",
-    "productType": "prepay",
-    "financePrice": "40950.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-3rpQzDUp",
-    "productType": "prepay",
-    "financePrice": "1575.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-kPquRzRx",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-zBCFK9dB",
-    "productType": "prepay",
-    "financePrice": "1050.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-GSc2q3pe",
-    "productType": "prepay",
-    "financePrice": "1350.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-TRVuETO3",
-    "productType": "prepay",
-    "financePrice": "1575.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-87h0EriC",
-    "productType": "prepay",
-    "financePrice": "630.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-82WwauBB",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-XalSWwcu",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-ewvrlodB",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-AlJ946gz",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-j8i5RKqF",
-    "productType": "prepay",
-    "financePrice": "540.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-v8XZIoPG",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-PjqRNi7D",
-    "productType": "prepay",
-    "financePrice": "1260.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-zziRMBOM",
-    "productType": "prepay",
-    "financePrice": "1575.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-B1dhTFjF",
-    "productType": "prepay",
-    "financePrice": "945.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-z9QW2KGx",
-    "productType": "prepay",
-    "financePrice": "1575.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-JJwGLan1",
-    "productType": "postpay",
-    "financePrice": "18.42"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-aTIneCEp",
-    "productType": "postpay",
-    "financePrice": "46.05"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-Gqb8QXqF",
-    "productType": "postpay",
-    "financePrice": "16.62"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-mHYRA5Pz",
-    "productType": "postpay",
-    "financePrice": "1.59"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-UuzBbDRg",
-    "productType": "postpay",
-    "financePrice": "3.61"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-NlC5qX47",
-    "productType": "postpay",
-    "financePrice": "3.67"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-NVNEO3pU",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-cTkSr5zG",
-    "productType": "postpay",
-    "financePrice": "9.2"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-XouZRB14",
-    "productType": "postpay",
-    "financePrice": "276.2"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-YrdTOk20",
-    "productType": "postpay",
-    "financePrice": "48.06"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-eVgHBBpc",
-    "productType": "postpay",
-    "financePrice": "3.67"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-4zdR4Z1G",
-    "productType": "postpay",
-    "financePrice": "778.9"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-oaRsfij2",
-    "productType": "postpay",
-    "financePrice": "3.67"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-4q2E2wV4",
-    "productType": "postpay",
-    "financePrice": "462.19"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-rdY4TTrx",
-    "productType": "postpay",
-    "financePrice": "34.98"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-CBk3nbO5",
-    "productType": "postpay",
-    "financePrice": "211.37"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-gdHYNgNW",
-    "productType": "postpay",
-    "financePrice": "65.11"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-3rpQzDUp",
-    "productType": "postpay",
-    "financePrice": "44.05"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-zziRMBOM",
-    "productType": "postpay",
-    "financePrice": "69.0"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-ZF0rCJwT",
-    "productType": "postpay",
-    "financePrice": "3.67"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-boaN5Lt6",
-    "productType": "postpay",
-    "financePrice": "1.55"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-3U885X3y",
-    "productType": "postpay",
-    "financePrice": "471.47"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-REojrZm5",
-    "productType": "postpay",
-    "financePrice": "151.93"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-l4YYS4Y4",
-    "productType": "postpay",
-    "financePrice": "92.81"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-g5i3Ufcg",
-    "productType": "postpay",
-    "financePrice": "471.5"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-qlqyXsSc",
-    "productType": "postpay",
-    "financePrice": "18.37"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-388k19W6",
-    "productType": "postpay",
-    "financePrice": "17.27"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-zBCFK9dB",
-    "productType": "postpay",
-    "financePrice": "52.49"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-lIKgRoUD",
-    "productType": "postpay",
-    "financePrice": "3.67"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-WXIaGlNL",
-    "productType": "postpay",
-    "financePrice": "46.04"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-Tl7w5y7E",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-1JW4PPLl",
-    "productType": "postpay",
-    "financePrice": "9.2"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-TRVuETO3",
-    "productType": "postpay",
-    "financePrice": "32.37"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-NxHldxhw",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-K7ucWXqw",
-    "productType": "postpay",
-    "financePrice": "46.05"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-aYYOjVfs",
-    "productType": "postpay",
-    "financePrice": "460.35"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-5vjRQ9vr",
-    "productType": "postpay",
-    "financePrice": "188.75"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-1c1vVP7E",
-    "productType": "postpay",
-    "financePrice": "46.05"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-lN25cXg8",
-    "productType": "postpay",
-    "financePrice": "9.21"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-9SmJB8q0",
-    "productType": "postpay",
-    "financePrice": "55.97"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-DKKjLNDY",
-    "productType": "postpay",
-    "financePrice": "423.83"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "sl-9zBWMZpE",
-    "productType": "postpay",
-    "financePrice": "458.69"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-vlEuNu6K",
-    "productType": "postpay",
-    "financePrice": "241.78"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-Fxz9j2B2",
-    "productType": "postpay",
-    "financePrice": "404.57"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-hBGlxfIE",
-    "productType": "postpay",
-    "financePrice": "2.69"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-e1iY7sEW",
-    "productType": "postpay",
-    "financePrice": "387.09"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-TTXWvAfi",
-    "productType": "postpay",
-    "financePrice": "80.59"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-BmJNiaN2",
-    "productType": "postpay",
-    "financePrice": "647.72"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-OGiNaKR4",
-    "productType": "postpay",
-    "financePrice": "0.07"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-ZYYQpaw3",
-    "productType": "postpay",
-    "financePrice": "25.81"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-I4x81fBa",
-    "productType": "postpay",
-    "financePrice": "3.23"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-eaxGEf8r",
-    "productType": "postpay",
-    "financePrice": "5.16"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-4zdR4Z1G",
-    "productType": "postpay",
-    "financePrice": "3007.22"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-gv2MAaCU",
-    "productType": "postpay",
-    "financePrice": "16.12"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-c7vKgsvW",
-    "productType": "postpay",
-    "financePrice": "129.04"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-zpTR7Q9P",
-    "productType": "postpay",
-    "financePrice": "402.96"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-EMUIdSDP",
-    "productType": "postpay",
-    "financePrice": "2.56"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-zBCFK9dB",
-    "productType": "postpay",
-    "financePrice": "269.5"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-tFq1fRXT",
-    "productType": "postpay",
-    "financePrice": "10.84"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-tTpZ17vE",
-    "productType": "postpay",
-    "financePrice": "27.12"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-xm4ZOjWU",
-    "productType": "postpay",
-    "financePrice": "2.33"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-TRVuETO3",
-    "productType": "postpay",
-    "financePrice": "67.37"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-hfTlDFOs",
-    "productType": "postpay",
-    "financePrice": "645.14"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-GSc2q3pe",
-    "productType": "postpay",
-    "financePrice": "115.6"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-LHo3aGCe",
-    "productType": "postpay",
-    "financePrice": "67.47"
-  },
-  {
-    "month": "2021-07",
-    "instanceid": "v-87h0EriC",
-    "productType": "postpay",
-    "financePrice": "26.94"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "v-VlKNsslc",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-JJwGLan1",
-    "productType": "postpay",
-    "financePrice": "18.42"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-aTIneCEp",
-    "productType": "postpay",
-    "financePrice": "46.06"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-Gqb8QXqF",
-    "productType": "postpay",
-    "financePrice": "16.66"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-mHYRA5Pz",
-    "productType": "postpay",
-    "financePrice": "1.61"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-UuzBbDRg",
-    "productType": "postpay",
-    "financePrice": "3.62"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-NlC5qX47",
-    "productType": "postpay",
-    "financePrice": "3.81"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-NVNEO3pU",
-    "productType": "postpay",
-    "financePrice": "3.0"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-cTkSr5zG",
-    "productType": "postpay",
-    "financePrice": "9.22"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-XouZRB14",
-    "productType": "postpay",
-    "financePrice": "276.21"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-YrdTOk20",
-    "productType": "postpay",
-    "financePrice": "48.17"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-eVgHBBpc",
-    "productType": "postpay",
-    "financePrice": "3.67"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-4zdR4Z1G",
-    "productType": "postpay",
-    "financePrice": "778.89"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-oaRsfij2",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-4q2E2wV4",
-    "productType": "postpay",
-    "financePrice": "462.19"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-rdY4TTrx",
-    "productType": "postpay",
-    "financePrice": "34.99"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-CBk3nbO5",
-    "productType": "postpay",
-    "financePrice": "218.9"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-gdHYNgNW",
-    "productType": "postpay",
-    "financePrice": "59.79"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-3rpQzDUp",
-    "productType": "postpay",
-    "financePrice": "44.04"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-zziRMBOM",
-    "productType": "postpay",
-    "financePrice": "69.9"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-ZF0rCJwT",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-boaN5Lt6",
-    "productType": "postpay",
-    "financePrice": "1.72"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-3U885X3y",
-    "productType": "postpay",
-    "financePrice": "471.49"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-REojrZm5",
-    "productType": "postpay",
-    "financePrice": "151.92"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-l4YYS4Y4",
-    "productType": "postpay",
-    "financePrice": "92.83"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-g5i3Ufcg",
-    "productType": "postpay",
-    "financePrice": "470.83"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-qlqyXsSc",
-    "productType": "postpay",
-    "financePrice": "18.37"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-388k19W6",
-    "productType": "postpay",
-    "financePrice": "17.43"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-zBCFK9dB",
-    "productType": "postpay",
-    "financePrice": "52.5"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-lIKgRoUD",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-WXIaGlNL",
-    "productType": "postpay",
-    "financePrice": "46.03"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-Tl7w5y7E",
-    "productType": "postpay",
-    "financePrice": "3.69"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-1JW4PPLl",
-    "productType": "postpay",
-    "financePrice": "9.22"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-TRVuETO3",
-    "productType": "postpay",
-    "financePrice": "46.03"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-NxHldxhw",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-K7ucWXqw",
-    "productType": "postpay",
-    "financePrice": "46.04"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-aYYOjVfs",
-    "productType": "postpay",
-    "financePrice": "460.35"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-5vjRQ9vr",
-    "productType": "postpay",
-    "financePrice": "188.75"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-1c1vVP7E",
-    "productType": "postpay",
-    "financePrice": "46.03"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-lN25cXg8",
-    "productType": "postpay",
-    "financePrice": "9.2"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-9SmJB8q0",
-    "productType": "postpay",
-    "financePrice": "56.01"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-DKKjLNDY",
-    "productType": "postpay",
-    "financePrice": "424.04"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "sl-9zBWMZpE",
-    "productType": "postpay",
-    "financePrice": "458.87"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "v-CUpQLcQg",
-    "productType": "postpay",
-    "financePrice": "2.49"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "v-tFq1fRXT",
-    "productType": "postpay",
-    "financePrice": "10.85"
-  },
-  {
-    "month": "2021-08",
-    "instanceid": "v-tTpZ17vE",
-    "productType": "postpay",
-    "financePrice": "27.11"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-BZYcdECQ",
-    "productType": "prepay",
-    "financePrice": "1350.0"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-1skFe9pM",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-aXsRpXje",
-    "productType": "prepay",
-    "financePrice": "756.0"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-ZF0rCJwT",
-    "productType": "prepay",
-    "financePrice": "63.0"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-zBCFK9dB",
-    "productType": "prepay",
-    "financePrice": "3150.0"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-aYYOjVfs",
-    "productType": "prepay",
-    "financePrice": "7875.0"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-boaN5Lt6",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-WXIaGlNL",
-    "productType": "prepay",
-    "financePrice": "1575.0"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-J5bZpQSq",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-rdY4TTrx",
-    "productType": "prepay",
-    "financePrice": "1350.0"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-JJwGLan1",
-    "productType": "postpay",
-    "financePrice": "17.82"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-aTIneCEp",
-    "productType": "postpay",
-    "financePrice": "44.57"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-Gqb8QXqF",
-    "productType": "postpay",
-    "financePrice": "16.16"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-9TY8rH4V",
-    "productType": "postpay",
-    "financePrice": "0.13"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-mHYRA5Pz",
-    "productType": "postpay",
-    "financePrice": "1.6"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-UuzBbDRg",
-    "productType": "postpay",
-    "financePrice": "3.44"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-NlC5qX47",
-    "productType": "postpay",
-    "financePrice": "3.83"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-TfOOuYTK",
-    "productType": "postpay",
-    "financePrice": "0.13"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-NVNEO3pU",
-    "productType": "postpay",
-    "financePrice": "0.87"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-82WwauBB",
-    "productType": "postpay",
-    "financePrice": "0.08"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-cTkSr5zG",
-    "productType": "postpay",
-    "financePrice": "8.92"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-XouZRB14",
-    "productType": "postpay",
-    "financePrice": "267.32"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-YrdTOk20",
-    "productType": "postpay",
-    "financePrice": "46.73"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-eVgHBBpc",
-    "productType": "postpay",
-    "financePrice": "3.5"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-4zdR4Z1G",
-    "productType": "postpay",
-    "financePrice": "196.82"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-oaRsfij2",
-    "productType": "postpay",
-    "financePrice": "3.56"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-4q2E2wV4",
-    "productType": "postpay",
-    "financePrice": "447.29"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-rdY4TTrx",
-    "productType": "postpay",
-    "financePrice": "33.86"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-ewvrlodB",
-    "productType": "postpay",
-    "financePrice": "0.13"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-CBk3nbO5",
-    "productType": "postpay",
-    "financePrice": "212.75"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-gdHYNgNW",
-    "productType": "postpay",
-    "financePrice": "63.46"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-rltCHeal",
-    "productType": "postpay",
-    "financePrice": "0.13"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-3rpQzDUp",
-    "productType": "postpay",
-    "financePrice": "42.57"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-BZYcdECQ",
-    "productType": "postpay",
-    "financePrice": "1.66"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-zziRMBOM",
-    "productType": "postpay",
-    "financePrice": "68.01"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-ZF0rCJwT",
-    "productType": "postpay",
-    "financePrice": "3.56"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-3IeNY2W1",
-    "productType": "postpay",
-    "financePrice": "0.17"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-boaN5Lt6",
-    "productType": "postpay",
-    "financePrice": "1.7"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-3U885X3y",
-    "productType": "postpay",
-    "financePrice": "456.27"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-qUiizahV",
-    "productType": "postpay",
-    "financePrice": "0.13"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-REojrZm5",
-    "productType": "postpay",
-    "financePrice": "147.05"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-l4YYS4Y4",
-    "productType": "postpay",
-    "financePrice": "93.99"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-g5i3Ufcg",
-    "productType": "postpay",
-    "financePrice": "456.26"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-qlqyXsSc",
-    "productType": "postpay",
-    "financePrice": "17.77"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-388k19W6",
-    "productType": "postpay",
-    "financePrice": "17.02"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-UcDzR7wU",
-    "productType": "postpay",
-    "financePrice": "0.52"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-zBCFK9dB",
-    "productType": "postpay",
-    "financePrice": "50.78"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-lIKgRoUD",
-    "productType": "postpay",
-    "financePrice": "3.55"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-9gWxfPuv",
-    "productType": "postpay",
-    "financePrice": "0.1"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-WXIaGlNL",
-    "productType": "postpay",
-    "financePrice": "44.55"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-v8XZIoPG",
-    "productType": "postpay",
-    "financePrice": "0.13"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-Tl7w5y7E",
-    "productType": "postpay",
-    "financePrice": "3.43"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-1skFe9pM",
-    "productType": "postpay",
-    "financePrice": "0.13"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-1JW4PPLl",
-    "productType": "postpay",
-    "financePrice": "8.92"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-TRVuETO3",
-    "productType": "postpay",
-    "financePrice": "11.63"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-NxHldxhw",
-    "productType": "postpay",
-    "financePrice": "3.56"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-K7ucWXqw",
-    "productType": "postpay",
-    "financePrice": "44.57"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-aYYOjVfs",
-    "productType": "postpay",
-    "financePrice": "445.51"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-5vjRQ9vr",
-    "productType": "postpay",
-    "financePrice": "182.66"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-1c1vVP7E",
-    "productType": "postpay",
-    "financePrice": "44.52"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-lN25cXg8",
-    "productType": "postpay",
-    "financePrice": "8.98"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-9SmJB8q0",
-    "productType": "postpay",
-    "financePrice": "54.3"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-GSc2q3pe",
-    "productType": "postpay",
-    "financePrice": "1.0"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-DKKjLNDY",
-    "productType": "postpay",
-    "financePrice": "411.23"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "sl-9zBWMZpE",
-    "productType": "postpay",
-    "financePrice": "444.24"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-K29aLJKk",
-    "productType": "postpay",
-    "financePrice": "5.5"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-J3DozwSB",
-    "productType": "postpay",
-    "financePrice": "1.75"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-6aQv2kmC",
-    "productType": "postpay",
-    "financePrice": "2.19"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-ZciHBGdr",
-    "productType": "postpay",
-    "financePrice": "7.67"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-riCK1Y4E",
-    "productType": "postpay",
-    "financePrice": "0.41"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-1EDKO2Cs",
-    "productType": "postpay",
-    "financePrice": "0.44"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-TCEUt677",
-    "productType": "postpay",
-    "financePrice": "24.2"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-HhY1WBIn",
-    "productType": "postpay",
-    "financePrice": "2.18"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-o6lrJ7mb",
-    "productType": "postpay",
-    "financePrice": "0.91"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-CUpQLcQg",
-    "productType": "postpay",
-    "financePrice": "5.25"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-TxEOv2IS",
-    "productType": "postpay",
-    "financePrice": "33.72"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-swSoQY9f",
-    "productType": "postpay",
-    "financePrice": "2.17"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-MLVv2c6M",
-    "productType": "postpay",
-    "financePrice": "23.04"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-WRHTq2Ak",
-    "productType": "postpay",
-    "financePrice": "5.2"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-s34syiX1",
-    "productType": "postpay",
-    "financePrice": "0.72"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-xe1hA03C",
-    "productType": "postpay",
-    "financePrice": "18.55"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-k11nVmUB",
-    "productType": "postpay",
-    "financePrice": "1.07"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-oWTqeU94",
-    "productType": "postpay",
-    "financePrice": "6.09"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-ILfEiAyM",
-    "productType": "postpay",
-    "financePrice": "8.87"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-jD7jqqs1",
-    "productType": "postpay",
-    "financePrice": "2.18"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-tFq1fRXT",
-    "productType": "postpay",
-    "financePrice": "10.5"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-ic2HS76b",
-    "productType": "postpay",
-    "financePrice": "6.13"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-tTpZ17vE",
-    "productType": "postpay",
-    "financePrice": "26.24"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-axaBr4I6",
-    "productType": "postpay",
-    "financePrice": "56.19"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-uCaU0hFM",
-    "productType": "postpay",
-    "financePrice": "6.3"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-AYI3uuBD",
-    "productType": "postpay",
-    "financePrice": "18.08"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-mztbGi7C",
-    "productType": "postpay",
-    "financePrice": "0.48"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-01SQXXWo",
-    "productType": "postpay",
-    "financePrice": "9.03"
-  },
-  {
-    "month": "2021-09",
-    "instanceid": "v-RBdxm4ZX",
-    "productType": "postpay",
-    "financePrice": "57.55"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "v-g5i3Ufcg",
-    "productType": "prepay",
-    "financePrice": "13826.7"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "v-Tl7w5y7E",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "v-Pysruioy",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-JJwGLan1",
-    "productType": "postpay",
-    "financePrice": "18.42"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-aTIneCEp",
-    "productType": "postpay",
-    "financePrice": "46.03"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-Gqb8QXqF",
-    "productType": "postpay",
-    "financePrice": "16.72"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-mHYRA5Pz",
-    "productType": "postpay",
-    "financePrice": "1.7"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-UuzBbDRg",
-    "productType": "postpay",
-    "financePrice": "3.58"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-NlC5qX47",
-    "productType": "postpay",
-    "financePrice": "4.1"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-NVNEO3pU",
-    "productType": "postpay",
-    "financePrice": "0.94"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-cTkSr5zG",
-    "productType": "postpay",
-    "financePrice": "9.2"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-XouZRB14",
-    "productType": "postpay",
-    "financePrice": "276.21"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-YrdTOk20",
-    "productType": "postpay",
-    "financePrice": "48.91"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-eVgHBBpc",
-    "productType": "postpay",
-    "financePrice": "3.62"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-oaRsfij2",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-4q2E2wV4",
-    "productType": "postpay",
-    "financePrice": "462.2"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-rdY4TTrx",
-    "productType": "postpay",
-    "financePrice": "34.99"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-CBk3nbO5",
-    "productType": "postpay",
-    "financePrice": "226.75"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-gdHYNgNW",
-    "productType": "postpay",
-    "financePrice": "69.94"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-3rpQzDUp",
-    "productType": "postpay",
-    "financePrice": "44.06"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-zziRMBOM",
-    "productType": "postpay",
-    "financePrice": "70.77"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-ZF0rCJwT",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-boaN5Lt6",
-    "productType": "postpay",
-    "financePrice": "1.84"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-3U885X3y",
-    "productType": "postpay",
-    "financePrice": "471.49"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-REojrZm5",
-    "productType": "postpay",
-    "financePrice": "151.72"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-l4YYS4Y4",
-    "productType": "postpay",
-    "financePrice": "92.85"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-g5i3Ufcg",
-    "productType": "postpay",
-    "financePrice": "471.48"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-qlqyXsSc",
-    "productType": "postpay",
-    "financePrice": "18.36"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-388k19W6",
-    "productType": "postpay",
-    "financePrice": "17.76"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-zBCFK9dB",
-    "productType": "postpay",
-    "financePrice": "53.03"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-lIKgRoUD",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-WXIaGlNL",
-    "productType": "postpay",
-    "financePrice": "46.04"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-Tl7w5y7E",
-    "productType": "postpay",
-    "financePrice": "3.69"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-1JW4PPLl",
-    "productType": "postpay",
-    "financePrice": "9.2"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-NxHldxhw",
-    "productType": "postpay",
-    "financePrice": "3.68"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-K7ucWXqw",
-    "productType": "postpay",
-    "financePrice": "46.04"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-aYYOjVfs",
-    "productType": "postpay",
-    "financePrice": "460.35"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-5vjRQ9vr",
-    "productType": "postpay",
-    "financePrice": "188.73"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-1c1vVP7E",
-    "productType": "postpay",
-    "financePrice": "46.05"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-lN25cXg8",
-    "productType": "postpay",
-    "financePrice": "9.21"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-9SmJB8q0",
-    "productType": "postpay",
-    "financePrice": "61.8"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-DKKjLNDY",
-    "productType": "postpay",
-    "financePrice": "429.97"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "sl-9zBWMZpE",
-    "productType": "postpay",
-    "financePrice": "444.24"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "v-6lv49N7R",
-    "productType": "postpay",
-    "financePrice": "42.88"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "v-2ftHSehS",
-    "productType": "postpay",
-    "financePrice": "58.43"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "v-ZciHBGdr",
-    "productType": "postpay",
-    "financePrice": "13.56"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "v-TCEUt677",
-    "productType": "postpay",
-    "financePrice": "23.1"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "v-CUpQLcQg",
-    "productType": "postpay",
-    "financePrice": "5.42"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "v-OPO3wAnX",
-    "productType": "postpay",
-    "financePrice": "3.62"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "v-TrZQl9oq",
-    "productType": "postpay",
-    "financePrice": "0.28"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "v-tFq1fRXT",
-    "productType": "postpay",
-    "financePrice": "10.85"
-  },
-  {
-    "month": "2021-10",
-    "instanceid": "v-tTpZ17vE",
-    "productType": "postpay",
-    "financePrice": "27.12"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-EfUIkgfw",
-    "productType": "prepay",
-    "financePrice": "14.7"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-aXsRpXje",
-    "productType": "prepay",
-    "financePrice": "63.0"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-mfpwgFVQ",
-    "productType": "prepay",
-    "financePrice": "183.75"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-wswKUu5m",
-    "productType": "prepay",
-    "financePrice": "1350.0"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-rTKoJ8ti",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-CUpQLcQg",
-    "productType": "prepay",
-    "financePrice": "63.0"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-mfpwgFVQ",
-    "productType": "prepay",
-    "financePrice": "2205.0"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-df1JcqfJ",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-01kv2rCC",
-    "productType": "prepay",
-    "financePrice": "405.0"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-03OQu6fA",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-ub5XWESV",
-    "productType": "prepay",
-    "financePrice": "270.0"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-TLbzuSHX",
-    "productType": "prepay",
-    "financePrice": "108.0"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-Ek7ADm1t",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-G1Bt1F78",
-    "productType": "prepay",
-    "financePrice": "108.0"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-mp0c0TvQ",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-WXIaGlNL",
-    "productType": "prepay",
-    "financePrice": "816.37"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-mfpwgFVQ",
-    "productType": "prepay",
-    "financePrice": "47.77"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-JJwGLan1",
-    "productType": "postpay",
-    "financePrice": "17.85"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-U70viCoQ",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-aTIneCEp",
-    "productType": "postpay",
-    "financePrice": "44.53"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-Gqb8QXqF",
-    "productType": "postpay",
-    "financePrice": "16.23"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-mHYRA5Pz",
-    "productType": "postpay",
-    "financePrice": "3.87"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-UuzBbDRg",
-    "productType": "postpay",
-    "financePrice": "3.54"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-NlC5qX47",
-    "productType": "postpay",
-    "financePrice": "4.1"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-NVNEO3pU",
-    "productType": "postpay",
-    "financePrice": "0.92"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-cTkSr5zG",
-    "productType": "postpay",
-    "financePrice": "8.92"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-XouZRB14",
-    "productType": "postpay",
-    "financePrice": "267.31"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-YrdTOk20",
-    "productType": "postpay",
-    "financePrice": "64.26"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-eVgHBBpc",
-    "productType": "postpay",
-    "financePrice": "3.54"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-1TI32JbG",
-    "productType": "postpay",
-    "financePrice": "0.05"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-oaRsfij2",
-    "productType": "postpay",
-    "financePrice": "3.56"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-4q2E2wV4",
-    "productType": "postpay",
-    "financePrice": "447.33"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-rdY4TTrx",
-    "productType": "postpay",
-    "financePrice": "33.87"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-CBk3nbO5",
-    "productType": "postpay",
-    "financePrice": "333.67"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-gdHYNgNW",
-    "productType": "postpay",
-    "financePrice": "68.91"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-3rpQzDUp",
-    "productType": "postpay",
-    "financePrice": "42.65"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-e1YVQ4NQ",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-zziRMBOM",
-    "productType": "postpay",
-    "financePrice": "68.96"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-ZF0rCJwT",
-    "productType": "postpay",
-    "financePrice": "3.54"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-boaN5Lt6",
-    "productType": "postpay",
-    "financePrice": "1.78"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-3U885X3y",
-    "productType": "postpay",
-    "financePrice": "456.26"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-REojrZm5",
-    "productType": "postpay",
-    "financePrice": "147.06"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-l4YYS4Y4",
-    "productType": "postpay",
-    "financePrice": "90.61"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-g5i3Ufcg",
-    "productType": "postpay",
-    "financePrice": "456.27"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-qlqyXsSc",
-    "productType": "postpay",
-    "financePrice": "17.79"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-388k19W6",
-    "productType": "postpay",
-    "financePrice": "17.37"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-zBCFK9dB",
-    "productType": "postpay",
-    "financePrice": "62.18"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-lIKgRoUD",
-    "productType": "postpay",
-    "financePrice": "3.55"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-74TLez2l",
-    "productType": "postpay",
-    "financePrice": "0.51"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-WXIaGlNL",
-    "productType": "postpay",
-    "financePrice": "49.23"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-Tl7w5y7E",
-    "productType": "postpay",
-    "financePrice": "3.54"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-1JW4PPLl",
-    "productType": "postpay",
-    "financePrice": "8.93"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-NxHldxhw",
-    "productType": "postpay",
-    "financePrice": "2.21"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-K7ucWXqw",
-    "productType": "postpay",
-    "financePrice": "44.53"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-aYYOjVfs",
-    "productType": "postpay",
-    "financePrice": "445.53"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-5vjRQ9vr",
-    "productType": "postpay",
-    "financePrice": "182.66"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-1c1vVP7E",
-    "productType": "postpay",
-    "financePrice": "44.49"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-lN25cXg8",
-    "productType": "postpay",
-    "financePrice": "8.94"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-9SmJB8q0",
-    "productType": "postpay",
-    "financePrice": "89.34"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-mfpwgFVQ",
-    "productType": "postpay",
-    "financePrice": "20.1"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-DKKjLNDY",
-    "productType": "postpay",
-    "financePrice": "418.16"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "sl-9zBWMZpE",
-    "productType": "postpay",
-    "financePrice": "444.31"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-6lv49N7R",
-    "productType": "postpay",
-    "financePrice": "14.02"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-U70viCoQ",
-    "productType": "postpay",
-    "financePrice": "15.46"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-AIAyyDRe",
-    "productType": "postpay",
-    "financePrice": "29.97"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-iaDCbfZi",
-    "productType": "postpay",
-    "financePrice": "2.81"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-ZciHBGdr",
-    "productType": "postpay",
-    "financePrice": "13.14"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-1TI32JbG",
-    "productType": "postpay",
-    "financePrice": "2.06"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-CUpQLcQg",
-    "productType": "postpay",
-    "financePrice": "3.22"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-e1YVQ4NQ",
-    "productType": "postpay",
-    "financePrice": "15.19"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-q4C6NSnY",
-    "productType": "postpay",
-    "financePrice": "5.35"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-LJqyTyH1",
-    "productType": "postpay",
-    "financePrice": "12.4"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-uOBieA5B",
-    "productType": "postpay",
-    "financePrice": "0.29"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-93ZE5UgF",
-    "productType": "postpay",
-    "financePrice": "7.03"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-OPO3wAnX",
-    "productType": "postpay",
-    "financePrice": "5.5"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-74TLez2l",
-    "productType": "postpay",
-    "financePrice": "2.02"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-tFq1fRXT",
-    "productType": "postpay",
-    "financePrice": "10.48"
-  },
-  {
-    "month": "2021-11",
-    "instanceid": "v-tTpZ17vE",
-    "productType": "postpay",
-    "financePrice": "26.25"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-4xcmKB4B",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-B1dhTFjF",
-    "productType": "prepay",
-    "financePrice": "472.5"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-UcDzR7wU",
-    "productType": "prepay",
-    "financePrice": "270.0"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-uhKxFTNf",
-    "productType": "prepay",
-    "financePrice": "67.2"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-ohus8BfM",
-    "productType": "prepay",
-    "financePrice": "33.6"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-TfOOuYTK",
-    "productType": "prepay",
-    "financePrice": "126.0"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-GSc2q3pe",
-    "productType": "prepay",
-    "financePrice": "2700.0"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-EfUIkgfw",
-    "productType": "prepay",
-    "financePrice": "176.4"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-aXsRpXje",
-    "productType": "prepay",
-    "financePrice": "756.0"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-mfpwgFVQ",
-    "productType": "prepay",
-    "financePrice": "2205.0"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-JJwGLan1",
-    "productType": "postpay",
-    "financePrice": "17.99"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-aTIneCEp",
-    "productType": "postpay",
-    "financePrice": "46.46"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-Gqb8QXqF",
-    "productType": "postpay",
-    "financePrice": "16.93"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-mHYRA5Pz",
-    "productType": "postpay",
-    "financePrice": "4.52"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-UuzBbDRg",
-    "productType": "postpay",
-    "financePrice": "3.71"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-NlC5qX47",
-    "productType": "postpay",
-    "financePrice": "4.47"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-NVNEO3pU",
-    "productType": "postpay",
-    "financePrice": "0.97"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-cTkSr5zG",
-    "productType": "postpay",
-    "financePrice": "9.0"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-XouZRB14",
-    "productType": "postpay",
-    "financePrice": "278.68"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-YrdTOk20",
-    "productType": "postpay",
-    "financePrice": "81.17"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-eVgHBBpc",
-    "productType": "postpay",
-    "financePrice": "3.58"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-oaRsfij2",
-    "productType": "postpay",
-    "financePrice": "3.72"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-4q2E2wV4",
-    "productType": "postpay",
-    "financePrice": "466.33"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-rdY4TTrx",
-    "productType": "postpay",
-    "financePrice": "35.31"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-CBk3nbO5",
-    "productType": "postpay",
-    "financePrice": "409.98"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-gdHYNgNW",
-    "productType": "postpay",
-    "financePrice": "65.39"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-3rpQzDUp",
-    "productType": "postpay",
-    "financePrice": "44.46"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-zziRMBOM",
-    "productType": "postpay",
-    "financePrice": "72.01"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-ZF0rCJwT",
-    "productType": "postpay",
-    "financePrice": "3.71"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-boaN5Lt6",
-    "productType": "postpay",
-    "financePrice": "1.84"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-3U885X3y",
-    "productType": "postpay",
-    "financePrice": "475.71"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-REojrZm5",
-    "productType": "postpay",
-    "financePrice": "153.28"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-l4YYS4Y4",
-    "productType": "postpay",
-    "financePrice": "95.28"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-g5i3Ufcg",
-    "productType": "postpay",
-    "financePrice": "475.07"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-qlqyXsSc",
-    "productType": "postpay",
-    "financePrice": "18.53"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-388k19W6",
-    "productType": "postpay",
-    "financePrice": "18.29"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-zBCFK9dB",
-    "productType": "postpay",
-    "financePrice": "81.13"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-lIKgRoUD",
-    "productType": "postpay",
-    "financePrice": "3.7"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-WXIaGlNL",
-    "productType": "postpay",
-    "financePrice": "53.82"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-Tl7w5y7E",
-    "productType": "postpay",
-    "financePrice": "3.71"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-1JW4PPLl",
-    "productType": "postpay",
-    "financePrice": "9.29"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-NxHldxhw",
-    "productType": "postpay",
-    "financePrice": "2.33"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-K7ucWXqw",
-    "productType": "postpay",
-    "financePrice": "46.45"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-aYYOjVfs",
-    "productType": "postpay",
-    "financePrice": "464.48"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-5vjRQ9vr",
-    "productType": "postpay",
-    "financePrice": "190.43"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-1c1vVP7E",
-    "productType": "postpay",
-    "financePrice": "46.44"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-lN25cXg8",
-    "productType": "postpay",
-    "financePrice": "9.3"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-9SmJB8q0",
-    "productType": "postpay",
-    "financePrice": "0.66"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-mfpwgFVQ",
-    "productType": "postpay",
-    "financePrice": "22.0"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-DKKjLNDY",
-    "productType": "postpay",
-    "financePrice": "436.18"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "sl-9zBWMZpE",
-    "productType": "postpay",
-    "financePrice": "463.2"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-fie9zGPl",
-    "productType": "postpay",
-    "financePrice": "143.58"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-JQXSjpvH",
-    "productType": "postpay",
-    "financePrice": "350.45"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-iaDCbfZi",
-    "productType": "postpay",
-    "financePrice": "1.18"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-ZciHBGdr",
-    "productType": "postpay",
-    "financePrice": "13.68"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-4xcmKB4B",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-4xcmKB4B",
-    "productType": "postpay",
-    "financePrice": "7.59"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-93ZE5UgF",
-    "productType": "postpay",
-    "financePrice": "2.95"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-tFq1fRXT",
-    "productType": "postpay",
-    "financePrice": "10.95"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-tTpZ17vE",
-    "productType": "postpay",
-    "financePrice": "27.36"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-MXzcYnqn",
-    "productType": "postpay",
-    "financePrice": "1.1"
-  },
-  {
-    "month": "2021-12",
-    "instanceid": "v-4RAaHbyM",
-    "productType": "postpay",
-    "financePrice": "96.46"
-  }
+[{"month": "2021-01", "instanceid": "v-DKKjLNDY", "productType": "prepay", "financePrice": "15750.0"},
+{"month": "2021-01", "instanceid": "v-3IeNY2W1", "productType": "prepay", "financePrice": "270.0"},
+{"month": "2021-01", "instanceid": "v-chbIEtcQ", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-01", "instanceid": "v-uhKxFTNf", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-01", "instanceid": "v-UcDzR7wU", "productType": "prepay", "financePrice": "270.0"},
+{"month": "2021-01", "instanceid": "v-4q2E2wV4", "productType": "prepay", "financePrice": "13554.0"},
+{"month": "2021-01", "instanceid": "v-qlqyXsSc", "productType": "prepay", "financePrice": "540.0"},
+{"month": "2021-01", "instanceid": "v-CBk3nbO5", "productType": "prepay", "financePrice": "15750.0"},
+{"month": "2021-01", "instanceid": "sl-JJwGLan1", "productType": "postpay", "financePrice": "18.39"},
+{"month": "2021-01", "instanceid": "sl-mHYRA5Pz", "productType": "postpay", "financePrice": "1.53"},
+{"month": "2021-01", "instanceid": "sl-NVNEO3pU", "productType": "postpay", "financePrice": "3.69"},
+{"month": "2021-01", "instanceid": "sl-cTkSr5zG", "productType": "postpay", "financePrice": "9.2"},
+{"month": "2021-01", "instanceid": "sl-XouZRB14", "productType": "postpay", "financePrice": "276.63"},
+{"month": "2021-01", "instanceid": "sl-YrdTOk20", "productType": "postpay", "financePrice": "46.05"},
+{"month": "2021-01", "instanceid": "sl-eVgHBBpc", "productType": "postpay", "financePrice": "3.59"},
+{"month": "2021-01", "instanceid": "sl-5kxc9Gy4", "productType": "postpay", "financePrice": "3.67"},
+{"month": "2021-01", "instanceid": "sl-4q2E2wV4", "productType": "postpay", "financePrice": "488.62"},
+{"month": "2021-01", "instanceid": "sl-J5bZpQSq", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-01", "instanceid": "sl-rdY4TTrx", "productType": "postpay", "financePrice": "29.84"},
+{"month": "2021-01", "instanceid": "sl-CBk3nbO5", "productType": "postpay", "financePrice": "119.97"},
+{"month": "2021-01", "instanceid": "sl-gdHYNgNW", "productType": "postpay", "financePrice": "46.04"},
+{"month": "2021-01", "instanceid": "sl-3rpQzDUp", "productType": "postpay", "financePrice": "35.7"},
+{"month": "2021-01", "instanceid": "sl-zziRMBOM", "productType": "postpay", "financePrice": "54.04"},
+{"month": "2021-01", "instanceid": "sl-ZF0rCJwT", "productType": "postpay", "financePrice": "3.67"},
+{"month": "2021-01", "instanceid": "sl-boaN5Lt6", "productType": "postpay", "financePrice": "0.85"},
+{"month": "2021-01", "instanceid": "sl-3U885X3y", "productType": "postpay", "financePrice": "471.98"},
+{"month": "2021-01", "instanceid": "sl-REojrZm5", "productType": "postpay", "financePrice": "157.48"},
+{"month": "2021-01", "instanceid": "sl-l4YYS4Y4", "productType": "postpay", "financePrice": "92.08"},
+{"month": "2021-01", "instanceid": "sl-g5i3Ufcg", "productType": "postpay", "financePrice": "471.47"},
+{"month": "2021-01", "instanceid": "sl-9TkJcEbJ", "productType": "postpay", "financePrice": "93.9"},
+{"month": "2021-01", "instanceid": "sl-qlqyXsSc", "productType": "postpay", "financePrice": "18.37"},
+{"month": "2021-01", "instanceid": "sl-WXIaGlNL", "productType": "postpay", "financePrice": "45.98"},
+{"month": "2021-01", "instanceid": "sl-Tl7w5y7E", "productType": "postpay", "financePrice": "3.65"},
+{"month": "2021-01", "instanceid": "sl-NxHldxhw", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-01", "instanceid": "sl-aYYOjVfs", "productType": "postpay", "financePrice": "460.37"},
+{"month": "2021-01", "instanceid": "sl-5vjRQ9vr", "productType": "postpay", "financePrice": "190.56"},
+{"month": "2021-01", "instanceid": "sl-1c1vVP7E", "productType": "postpay", "financePrice": "46.04"},
+{"month": "2021-01", "instanceid": "sl-9SmJB8q0", "productType": "postpay", "financePrice": "33.89"},
+{"month": "2021-01", "instanceid": "sl-DKKjLNDY", "productType": "postpay", "financePrice": "0.12"},
+{"month": "2021-01", "instanceid": "sl-9zBWMZpE", "productType": "postpay", "financePrice": "336.21"},
+{"month": "2021-01", "instanceid": "v-GSc2q3pe", "productType": "postpay", "financePrice": "232.7"},
+{"month": "2021-02", "instanceid": "v-9gWxfPuv", "productType": "prepay", "financePrice": "1350.0"},
+{"month": "2021-02", "instanceid": "sl-JJwGLan1", "productType": "postpay", "financePrice": "16.39"},
+{"month": "2021-02", "instanceid": "sl-mHYRA5Pz", "productType": "postpay", "financePrice": "1.39"},
+{"month": "2021-02", "instanceid": "sl-NVNEO3pU", "productType": "postpay", "financePrice": "3.32"},
+{"month": "2021-02", "instanceid": "sl-cTkSr5zG", "productType": "postpay", "financePrice": "8.19"},
+{"month": "2021-02", "instanceid": "sl-XouZRB14", "productType": "postpay", "financePrice": "249.98"},
+{"month": "2021-02", "instanceid": "sl-YrdTOk20", "productType": "postpay", "financePrice": "41.6"},
+{"month": "2021-02", "instanceid": "sl-eVgHBBpc", "productType": "postpay", "financePrice": "3.25"},
+{"month": "2021-02", "instanceid": "sl-5kxc9Gy4", "productType": "postpay", "financePrice": "3.32"},
+{"month": "2021-02", "instanceid": "sl-4q2E2wV4", "productType": "postpay", "financePrice": "450.66"},
+{"month": "2021-02", "instanceid": "sl-J5bZpQSq", "productType": "postpay", "financePrice": "3.33"},
+{"month": "2021-02", "instanceid": "sl-rdY4TTrx", "productType": "postpay", "financePrice": "28.06"},
+{"month": "2021-02", "instanceid": "sl-CBk3nbO5", "productType": "postpay", "financePrice": "122.1"},
+{"month": "2021-02", "instanceid": "sl-gdHYNgNW", "productType": "postpay", "financePrice": "41.59"},
+{"month": "2021-02", "instanceid": "sl-3rpQzDUp", "productType": "postpay", "financePrice": "39.11"},
+{"month": "2021-02", "instanceid": "sl-zziRMBOM", "productType": "postpay", "financePrice": "49.35"},
+{"month": "2021-02", "instanceid": "sl-ZF0rCJwT", "productType": "postpay", "financePrice": "3.33"},
+{"month": "2021-02", "instanceid": "sl-boaN5Lt6", "productType": "postpay", "financePrice": "0.81"},
+{"month": "2021-02", "instanceid": "sl-3U885X3y", "productType": "postpay", "financePrice": "426.84"},
+{"month": "2021-02", "instanceid": "sl-REojrZm5", "productType": "postpay", "financePrice": "143.35"},
+{"month": "2021-02", "instanceid": "sl-l4YYS4Y4", "productType": "postpay", "financePrice": "83.16"},
+{"month": "2021-02", "instanceid": "sl-g5i3Ufcg", "productType": "postpay", "financePrice": "425.85"},
+{"month": "2021-02", "instanceid": "sl-9TkJcEbJ", "productType": "postpay", "financePrice": "84.82"},
+{"month": "2021-02", "instanceid": "sl-qlqyXsSc", "productType": "postpay", "financePrice": "16.58"},
+{"month": "2021-02", "instanceid": "sl-WXIaGlNL", "productType": "postpay", "financePrice": "41.58"},
+{"month": "2021-02", "instanceid": "sl-Tl7w5y7E", "productType": "postpay", "financePrice": "3.32"},
+{"month": "2021-02", "instanceid": "sl-NxHldxhw", "productType": "postpay", "financePrice": "3.33"},
+{"month": "2021-02", "instanceid": "sl-aYYOjVfs", "productType": "postpay", "financePrice": "412.09"},
+{"month": "2021-02", "instanceid": "sl-5vjRQ9vr", "productType": "postpay", "financePrice": "172.12"},
+{"month": "2021-02", "instanceid": "sl-1c1vVP7E", "productType": "postpay", "financePrice": "41.59"},
+{"month": "2021-02", "instanceid": "sl-9SmJB8q0", "productType": "postpay", "financePrice": "43.28"},
+{"month": "2021-02", "instanceid": "sl-DKKjLNDY", "productType": "postpay", "financePrice": "0.31"},
+{"month": "2021-02", "instanceid": "sl-9zBWMZpE", "productType": "postpay", "financePrice": "326.03"},
+{"month": "2021-02", "instanceid": "v-GSc2q3pe", "productType": "postpay", "financePrice": "210.16"},
+{"month": "2021-03", "instanceid": "v-nDFnPOwy", "productType": "prepay", "financePrice": "157.5"},
+{"month": "2021-03", "instanceid": "v-dGDf3Hov", "productType": "prepay", "financePrice": "204.75"},
+{"month": "2021-03", "instanceid": "v-aTIneCEp", "productType": "prepay", "financePrice": "262.5"},
+{"month": "2021-03", "instanceid": "v-gdHYNgNW", "productType": "prepay", "financePrice": "1575.0"},
+{"month": "2021-03", "instanceid": "v-mHYRA5Pz", "productType": "prepay", "financePrice": "810.0"},
+{"month": "2021-03", "instanceid": "v-1JW4PPLl", "productType": "prepay", "financePrice": "270.0"},
+{"month": "2021-03", "instanceid": "v-NxHldxhw", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-03", "instanceid": "v-1c1vVP7E", "productType": "prepay", "financePrice": "1350.0"},
+{"month": "2021-03", "instanceid": "v-lN25cXg8", "productType": "prepay", "financePrice": "270.0"},
+{"month": "2021-03", "instanceid": "v-ckOTH4UU", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-03", "instanceid": "v-Gqb8QXqF", "productType": "prepay", "financePrice": "810.0"},
+{"month": "2021-03", "instanceid": "v-UuzBbDRg", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-03", "instanceid": "v-NlC5qX47", "productType": "prepay", "financePrice": "270.0"},
+{"month": "2021-03", "instanceid": "v-oaRsfij2", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-03", "instanceid": "v-388k19W6", "productType": "prepay", "financePrice": "810.0"},
+{"month": "2021-03", "instanceid": "v-rrb7AHWi", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-03", "instanceid": "v-lIKgRoUD", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-03", "instanceid": "v-vVy327JZ", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-03", "instanceid": "v-SceGZks4", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-03", "instanceid": "v-bhf7cPOk", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-03", "instanceid": "v-dGDf3Hov", "productType": "prepay", "financePrice": "17.06"},
+{"month": "2021-03", "instanceid": "v-XtGsNqLr", "productType": "prepay", "financePrice": "40.0"},
+{"month": "2021-03", "instanceid": "v-p1OCshRU", "productType": "prepay", "financePrice": "40.0"},
+{"month": "2021-03", "instanceid": "v-jWPoimMy", "productType": "prepay", "financePrice": "40.0"},
+{"month": "2021-03", "instanceid": "v-SceGZks4", "productType": "prepay", "financePrice": "13.12"},
+{"month": "2021-03", "instanceid": "v-bhf7cPOk", "productType": "prepay", "financePrice": "13.12"},
+{"month": "2021-03", "instanceid": "v-nDFnPOwy", "productType": "prepay", "financePrice": "13.12"},
+{"month": "2021-03", "instanceid": "sl-JJwGLan1", "productType": "postpay", "financePrice": "18.42"},
+{"month": "2021-03", "instanceid": "sl-aTIneCEp", "productType": "postpay", "financePrice": "23.94"},
+{"month": "2021-03", "instanceid": "sl-Gqb8QXqF", "productType": "postpay", "financePrice": "8.5"},
+{"month": "2021-03", "instanceid": "sl-mHYRA5Pz", "productType": "postpay", "financePrice": "1.53"},
+{"month": "2021-03", "instanceid": "sl-UuzBbDRg", "productType": "postpay", "financePrice": "1.85"},
+{"month": "2021-03", "instanceid": "sl-NlC5qX47", "productType": "postpay", "financePrice": "1.67"},
+{"month": "2021-03", "instanceid": "sl-NVNEO3pU", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-03", "instanceid": "sl-cTkSr5zG", "productType": "postpay", "financePrice": "9.21"},
+{"month": "2021-03", "instanceid": "sl-XouZRB14", "productType": "postpay", "financePrice": "276.82"},
+{"month": "2021-03", "instanceid": "sl-YrdTOk20", "productType": "postpay", "financePrice": "46.05"},
+{"month": "2021-03", "instanceid": "sl-eVgHBBpc", "productType": "postpay", "financePrice": "3.66"},
+{"month": "2021-03", "instanceid": "sl-oaRsfij2", "productType": "postpay", "financePrice": "1.88"},
+{"month": "2021-03", "instanceid": "sl-5kxc9Gy4", "productType": "postpay", "financePrice": "3.45"},
+{"month": "2021-03", "instanceid": "sl-4q2E2wV4", "productType": "postpay", "financePrice": "503.97"},
+{"month": "2021-03", "instanceid": "sl-J5bZpQSq", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-03", "instanceid": "sl-rdY4TTrx", "productType": "postpay", "financePrice": "31.45"},
+{"month": "2021-03", "instanceid": "sl-CBk3nbO5", "productType": "postpay", "financePrice": "149.32"},
+{"month": "2021-03", "instanceid": "sl-gdHYNgNW", "productType": "postpay", "financePrice": "46.13"},
+{"month": "2021-03", "instanceid": "sl-3rpQzDUp", "productType": "postpay", "financePrice": "43.65"},
+{"month": "2021-03", "instanceid": "sl-zziRMBOM", "productType": "postpay", "financePrice": "57.28"},
+{"month": "2021-03", "instanceid": "sl-ZF0rCJwT", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-03", "instanceid": "sl-boaN5Lt6", "productType": "postpay", "financePrice": "0.91"},
+{"month": "2021-03", "instanceid": "sl-3U885X3y", "productType": "postpay", "financePrice": "472.6"},
+{"month": "2021-03", "instanceid": "sl-REojrZm5", "productType": "postpay", "financePrice": "159.38"},
+{"month": "2021-03", "instanceid": "sl-l4YYS4Y4", "productType": "postpay", "financePrice": "92.06"},
+{"month": "2021-03", "instanceid": "sl-g5i3Ufcg", "productType": "postpay", "financePrice": "471.48"},
+{"month": "2021-03", "instanceid": "sl-9TkJcEbJ", "productType": "postpay", "financePrice": "93.91"},
+{"month": "2021-03", "instanceid": "sl-qlqyXsSc", "productType": "postpay", "financePrice": "18.36"},
+{"month": "2021-03", "instanceid": "sl-388k19W6", "productType": "postpay", "financePrice": "8.66"},
+{"month": "2021-03", "instanceid": "sl-lIKgRoUD", "productType": "postpay", "financePrice": "1.88"},
+{"month": "2021-03", "instanceid": "sl-WXIaGlNL", "productType": "postpay", "financePrice": "46.03"},
+{"month": "2021-03", "instanceid": "sl-Tl7w5y7E", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-03", "instanceid": "sl-1JW4PPLl", "productType": "postpay", "financePrice": "4.75"},
+{"month": "2021-03", "instanceid": "sl-NxHldxhw", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-03", "instanceid": "sl-K7ucWXqw", "productType": "postpay", "financePrice": "28.53"},
+{"month": "2021-03", "instanceid": "sl-aYYOjVfs", "productType": "postpay", "financePrice": "460.36"},
+{"month": "2021-03", "instanceid": "sl-5vjRQ9vr", "productType": "postpay", "financePrice": "190.57"},
+{"month": "2021-03", "instanceid": "sl-1c1vVP7E", "productType": "postpay", "financePrice": "46.91"},
+{"month": "2021-03", "instanceid": "sl-lN25cXg8", "productType": "postpay", "financePrice": "4.74"},
+{"month": "2021-03", "instanceid": "sl-9SmJB8q0", "productType": "postpay", "financePrice": "52.23"},
+{"month": "2021-03", "instanceid": "sl-DKKjLNDY", "productType": "postpay", "financePrice": "208.45"},
+{"month": "2021-03", "instanceid": "sl-9zBWMZpE", "productType": "postpay", "financePrice": "380.23"},
+{"month": "2021-03", "instanceid": "v-hBGlxfIE", "productType": "postpay", "financePrice": "3.26"},
+{"month": "2021-03", "instanceid": "v-j7yNcgaN", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2021-03", "instanceid": "v-Jbxq5tyR", "productType": "postpay", "financePrice": "15.16"},
+{"month": "2021-03", "instanceid": "v-EtFICH7k", "productType": "postpay", "financePrice": "0.99"},
+{"month": "2021-03", "instanceid": "v-4ie8DlbB", "productType": "postpay", "financePrice": "2.9"},
+{"month": "2021-03", "instanceid": "v-1aWOdcNy", "productType": "postpay", "financePrice": "299.29"},
+{"month": "2021-03", "instanceid": "v-GSc2q3pe", "productType": "postpay", "financePrice": "232.69"},
+{"month": "2021-03", "instanceid": "v-LHo3aGCe", "productType": "postpay", "financePrice": "81.53"},
+{"month": "2021-04", "instanceid": "v-JJwGLan1", "productType": "prepay", "financePrice": "630.0"},
+{"month": "2021-04", "instanceid": "v-LOMp6Yep", "productType": "prepay", "financePrice": "54.0"},
+{"month": "2021-04", "instanceid": "v-cTkSr5zG", "productType": "prepay", "financePrice": "315.0"},
+{"month": "2021-04", "instanceid": "v-eVgHBBpc", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-04", "instanceid": "v-XouZRB14", "productType": "prepay", "financePrice": "1575.0"},
+{"month": "2021-04", "instanceid": "v-3U885X3y", "productType": "prepay", "financePrice": "2688.52"},
+{"month": "2021-04", "instanceid": "v-REojrZm5", "productType": "prepay", "financePrice": "866.25"},
+{"month": "2021-04", "instanceid": "v-5vjRQ9vr", "productType": "prepay", "financePrice": "1076.25"},
+{"month": "2021-04", "instanceid": "v-9zBWMZpE", "productType": "prepay", "financePrice": "2625.0"},
+{"month": "2021-04", "instanceid": "v-K7ucWXqw", "productType": "prepay", "financePrice": "1350.0"},
+{"month": "2021-04", "instanceid": "sl-JJwGLan1", "productType": "postpay", "financePrice": "17.83"},
+{"month": "2021-04", "instanceid": "sl-aTIneCEp", "productType": "postpay", "financePrice": "44.57"},
+{"month": "2021-04", "instanceid": "sl-Gqb8QXqF", "productType": "postpay", "financePrice": "16.02"},
+{"month": "2021-04", "instanceid": "sl-mHYRA5Pz", "productType": "postpay", "financePrice": "1.48"},
+{"month": "2021-04", "instanceid": "sl-UuzBbDRg", "productType": "postpay", "financePrice": "3.48"},
+{"month": "2021-04", "instanceid": "sl-NlC5qX47", "productType": "postpay", "financePrice": "3.21"},
+{"month": "2021-04", "instanceid": "sl-NVNEO3pU", "productType": "postpay", "financePrice": "3.56"},
+{"month": "2021-04", "instanceid": "sl-cTkSr5zG", "productType": "postpay", "financePrice": "8.91"},
+{"month": "2021-04", "instanceid": "sl-XouZRB14", "productType": "postpay", "financePrice": "267.92"},
+{"month": "2021-04", "instanceid": "sl-YrdTOk20", "productType": "postpay", "financePrice": "44.56"},
+{"month": "2021-04", "instanceid": "sl-eVgHBBpc", "productType": "postpay", "financePrice": "3.54"},
+{"month": "2021-04", "instanceid": "sl-oaRsfij2", "productType": "postpay", "financePrice": "3.56"},
+{"month": "2021-04", "instanceid": "sl-4q2E2wV4", "productType": "postpay", "financePrice": "490.79"},
+{"month": "2021-04", "instanceid": "sl-J5bZpQSq", "productType": "postpay", "financePrice": "3.22"},
+{"month": "2021-04", "instanceid": "sl-rdY4TTrx", "productType": "postpay", "financePrice": "29.01"},
+{"month": "2021-04", "instanceid": "sl-CBk3nbO5", "productType": "postpay", "financePrice": "162.11"},
+{"month": "2021-04", "instanceid": "sl-gdHYNgNW", "productType": "postpay", "financePrice": "44.63"},
+{"month": "2021-04", "instanceid": "sl-3rpQzDUp", "productType": "postpay", "financePrice": "42.55"},
+{"month": "2021-04", "instanceid": "sl-zziRMBOM", "productType": "postpay", "financePrice": "60.61"},
+{"month": "2021-04", "instanceid": "sl-ZF0rCJwT", "productType": "postpay", "financePrice": "3.56"},
+{"month": "2021-04", "instanceid": "sl-boaN5Lt6", "productType": "postpay", "financePrice": "0.9"},
+{"month": "2021-04", "instanceid": "sl-3U885X3y", "productType": "postpay", "financePrice": "457.36"},
+{"month": "2021-04", "instanceid": "sl-REojrZm5", "productType": "postpay", "financePrice": "156.3"},
+{"month": "2021-04", "instanceid": "sl-l4YYS4Y4", "productType": "postpay", "financePrice": "89.09"},
+{"month": "2021-04", "instanceid": "sl-g5i3Ufcg", "productType": "postpay", "financePrice": "456.28"},
+{"month": "2021-04", "instanceid": "sl-9TkJcEbJ", "productType": "postpay", "financePrice": "3.15"},
+{"month": "2021-04", "instanceid": "sl-qlqyXsSc", "productType": "postpay", "financePrice": "17.76"},
+{"month": "2021-04", "instanceid": "sl-388k19W6", "productType": "postpay", "financePrice": "16.37"},
+{"month": "2021-04", "instanceid": "sl-UcDzR7wU", "productType": "postpay", "financePrice": "0.02"},
+{"month": "2021-04", "instanceid": "sl-lIKgRoUD", "productType": "postpay", "financePrice": "3.56"},
+{"month": "2021-04", "instanceid": "sl-WXIaGlNL", "productType": "postpay", "financePrice": "44.55"},
+{"month": "2021-04", "instanceid": "sl-Tl7w5y7E", "productType": "postpay", "financePrice": "3.57"},
+{"month": "2021-04", "instanceid": "sl-1JW4PPLl", "productType": "postpay", "financePrice": "8.9"},
+{"month": "2021-04", "instanceid": "sl-NxHldxhw", "productType": "postpay", "financePrice": "3.56"},
+{"month": "2021-04", "instanceid": "sl-K7ucWXqw", "productType": "postpay", "financePrice": "48.5"},
+{"month": "2021-04", "instanceid": "sl-aYYOjVfs", "productType": "postpay", "financePrice": "445.51"},
+{"month": "2021-04", "instanceid": "sl-5vjRQ9vr", "productType": "postpay", "financePrice": "184.51"},
+{"month": "2021-04", "instanceid": "sl-1c1vVP7E", "productType": "postpay", "financePrice": "46.16"},
+{"month": "2021-04", "instanceid": "sl-lN25cXg8", "productType": "postpay", "financePrice": "8.91"},
+{"month": "2021-04", "instanceid": "sl-9SmJB8q0", "productType": "postpay", "financePrice": "51.72"},
+{"month": "2021-04", "instanceid": "sl-DKKjLNDY", "productType": "postpay", "financePrice": "408.99"},
+{"month": "2021-04", "instanceid": "sl-9zBWMZpE", "productType": "postpay", "financePrice": "392.43"},
+{"month": "2021-04", "instanceid": "v-rp4AN9Ul", "productType": "postpay", "financePrice": "0.84"},
+{"month": "2021-04", "instanceid": "v-hBGlxfIE", "productType": "postpay", "financePrice": "5.25"},
+{"month": "2021-04", "instanceid": "v-L669DPjS", "productType": "postpay", "financePrice": "1.42"},
+{"month": "2021-04", "instanceid": "v-OUvLTtU0", "productType": "postpay", "financePrice": "0.13"},
+{"month": "2021-04", "instanceid": "v-zBCFK9dB", "productType": "postpay", "financePrice": "10.32"},
+{"month": "2021-04", "instanceid": "v-GSc2q3pe", "productType": "postpay", "financePrice": "225.18"},
+{"month": "2021-04", "instanceid": "v-LHo3aGCe", "productType": "postpay", "financePrice": "131.21"},
+{"month": "2021-04", "instanceid": "v-mvyfyeEi", "productType": "postpay", "financePrice": "0.13"},
+{"month": "2021-05", "instanceid": "v-YrdTOk20", "productType": "prepay", "financePrice": "393.75"},
+{"month": "2021-05", "instanceid": "v-SvOyhIIx", "productType": "prepay", "financePrice": "31.5"},
+{"month": "2021-05", "instanceid": "sl-JJwGLan1", "productType": "postpay", "financePrice": "18.42"},
+{"month": "2021-05", "instanceid": "sl-aTIneCEp", "productType": "postpay", "financePrice": "46.03"},
+{"month": "2021-05", "instanceid": "sl-Gqb8QXqF", "productType": "postpay", "financePrice": "16.58"},
+{"month": "2021-05", "instanceid": "sl-mHYRA5Pz", "productType": "postpay", "financePrice": "1.55"},
+{"month": "2021-05", "instanceid": "sl-UuzBbDRg", "productType": "postpay", "financePrice": "3.61"},
+{"month": "2021-05", "instanceid": "sl-NlC5qX47", "productType": "postpay", "financePrice": "3.43"},
+{"month": "2021-05", "instanceid": "sl-NVNEO3pU", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-05", "instanceid": "sl-cTkSr5zG", "productType": "postpay", "financePrice": "9.22"},
+{"month": "2021-05", "instanceid": "sl-XouZRB14", "productType": "postpay", "financePrice": "277.02"},
+{"month": "2021-05", "instanceid": "sl-YrdTOk20", "productType": "postpay", "financePrice": "46.62"},
+{"month": "2021-05", "instanceid": "sl-eVgHBBpc", "productType": "postpay", "financePrice": "3.67"},
+{"month": "2021-05", "instanceid": "sl-oaRsfij2", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-05", "instanceid": "sl-4q2E2wV4", "productType": "postpay", "financePrice": "507.58"},
+{"month": "2021-05", "instanceid": "sl-CBk3nbO5", "productType": "postpay", "financePrice": "180.54"},
+{"month": "2021-05", "instanceid": "sl-gdHYNgNW", "productType": "postpay", "financePrice": "52.47"},
+{"month": "2021-05", "instanceid": "sl-3rpQzDUp", "productType": "postpay", "financePrice": "43.97"},
+{"month": "2021-05", "instanceid": "sl-zziRMBOM", "productType": "postpay", "financePrice": "65.18"},
+{"month": "2021-05", "instanceid": "sl-ZF0rCJwT", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-05", "instanceid": "sl-boaN5Lt6", "productType": "postpay", "financePrice": "0.94"},
+{"month": "2021-05", "instanceid": "sl-3U885X3y", "productType": "postpay", "financePrice": "472.63"},
+{"month": "2021-05", "instanceid": "sl-REojrZm5", "productType": "postpay", "financePrice": "173.65"},
+{"month": "2021-05", "instanceid": "sl-l4YYS4Y4", "productType": "postpay", "financePrice": "92.24"},
+{"month": "2021-05", "instanceid": "sl-g5i3Ufcg", "productType": "postpay", "financePrice": "471.48"},
+{"month": "2021-05", "instanceid": "sl-qlqyXsSc", "productType": "postpay", "financePrice": "18.36"},
+{"month": "2021-05", "instanceid": "sl-388k19W6", "productType": "postpay", "financePrice": "17.04"},
+{"month": "2021-05", "instanceid": "sl-UcDzR7wU", "productType": "postpay", "financePrice": "2.03"},
+{"month": "2021-05", "instanceid": "sl-zBCFK9dB", "productType": "postpay", "financePrice": "18.36"},
+{"month": "2021-05", "instanceid": "sl-lIKgRoUD", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-05", "instanceid": "sl-WXIaGlNL", "productType": "postpay", "financePrice": "46.04"},
+{"month": "2021-05", "instanceid": "sl-Tl7w5y7E", "productType": "postpay", "financePrice": "3.67"},
+{"month": "2021-05", "instanceid": "sl-1JW4PPLl", "productType": "postpay", "financePrice": "9.2"},
+{"month": "2021-05", "instanceid": "sl-NxHldxhw", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-05", "instanceid": "sl-K7ucWXqw", "productType": "postpay", "financePrice": "51.51"},
+{"month": "2021-05", "instanceid": "sl-aYYOjVfs", "productType": "postpay", "financePrice": "460.36"},
+{"month": "2021-05", "instanceid": "sl-5vjRQ9vr", "productType": "postpay", "financePrice": "190.73"},
+{"month": "2021-05", "instanceid": "sl-1c1vVP7E", "productType": "postpay", "financePrice": "46.03"},
+{"month": "2021-05", "instanceid": "sl-lN25cXg8", "productType": "postpay", "financePrice": "9.22"},
+{"month": "2021-05", "instanceid": "sl-9SmJB8q0", "productType": "postpay", "financePrice": "53.46"},
+{"month": "2021-05", "instanceid": "sl-DKKjLNDY", "productType": "postpay", "financePrice": "423.31"},
+{"month": "2021-05", "instanceid": "sl-9zBWMZpE", "productType": "postpay", "financePrice": "436.73"},
+{"month": "2021-05", "instanceid": "v-rp4AN9Ul", "productType": "postpay", "financePrice": "5.52"},
+{"month": "2021-05", "instanceid": "v-hBGlxfIE", "productType": "postpay", "financePrice": "5.42"},
+{"month": "2021-05", "instanceid": "v-OriNw7JD", "productType": "postpay", "financePrice": "4.74"},
+{"month": "2021-05", "instanceid": "v-wdLDAWzu", "productType": "postpay", "financePrice": "5.93"},
+{"month": "2021-05", "instanceid": "v-OUvLTtU0", "productType": "postpay", "financePrice": "0.76"},
+{"month": "2021-05", "instanceid": "v-Nt6OzjkR", "productType": "postpay", "financePrice": "8.6"},
+{"month": "2021-05", "instanceid": "v-zBCFK9dB", "productType": "postpay", "financePrice": "542.37"},
+{"month": "2021-05", "instanceid": "v-cQKMiLTA", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2021-05", "instanceid": "v-tFq1fRXT", "productType": "postpay", "financePrice": "8.5"},
+{"month": "2021-05", "instanceid": "v-tTpZ17vE", "productType": "postpay", "financePrice": "21.25"},
+{"month": "2021-05", "instanceid": "v-TRVuETO3", "productType": "postpay", "financePrice": "53.57"},
+{"month": "2021-05", "instanceid": "v-GSc2q3pe", "productType": "postpay", "financePrice": "232.69"},
+{"month": "2021-05", "instanceid": "v-LHo3aGCe", "productType": "postpay", "financePrice": "135.59"},
+{"month": "2021-05", "instanceid": "v-DnlpF8WS", "productType": "postpay", "financePrice": "4.3"},
+{"month": "2021-06", "instanceid": "v-ohus8BfM", "productType": "prepay", "financePrice": "48.0"},
+{"month": "2021-06", "instanceid": "v-wqNugwIe", "productType": "prepay", "financePrice": "51.0"},
+{"month": "2021-06", "instanceid": "v-wdLDAWzu", "productType": "prepay", "financePrice": "15750.0"},
+{"month": "2021-06", "instanceid": "v-OriNw7JD", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-06", "instanceid": "v-WwnjQNr9", "productType": "prepay", "financePrice": "270.0"},
+{"month": "2021-06", "instanceid": "v-Ic5xkxwh", "productType": "prepay", "financePrice": "270.0"},
+{"month": "2021-06", "instanceid": "v-XouZRB14", "productType": "prepay", "financePrice": "9450.0"},
+{"month": "2021-06", "instanceid": "v-DsznK5yg", "productType": "prepay", "financePrice": "270.0"},
+{"month": "2021-06", "instanceid": "v-3U885X3y", "productType": "prepay", "financePrice": "16131.15"},
+{"month": "2021-06", "instanceid": "v-REojrZm5", "productType": "prepay", "financePrice": "5197.5"},
+{"month": "2021-06", "instanceid": "v-5vjRQ9vr", "productType": "prepay", "financePrice": "6457.5"},
+{"month": "2021-06", "instanceid": "v-9zBWMZpE", "productType": "prepay", "financePrice": "15750.0"},
+{"month": "2021-06", "instanceid": "v-XgPCuT6O", "productType": "prepay", "financePrice": "57.0"},
+{"month": "2021-06", "instanceid": "v-DnlpF8WS", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-06", "instanceid": "v-rltCHeal", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-06", "instanceid": "v-aTIneCEp", "productType": "prepay", "financePrice": "1575.0"},
+{"month": "2021-06", "instanceid": "v-qUiizahV", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-06", "instanceid": "sl-JJwGLan1", "productType": "postpay", "financePrice": "17.83"},
+{"month": "2021-06", "instanceid": "sl-aTIneCEp", "productType": "postpay", "financePrice": "44.58"},
+{"month": "2021-06", "instanceid": "sl-Gqb8QXqF", "productType": "postpay", "financePrice": "16.06"},
+{"month": "2021-06", "instanceid": "sl-mHYRA5Pz", "productType": "postpay", "financePrice": "1.5"},
+{"month": "2021-06", "instanceid": "sl-UuzBbDRg", "productType": "postpay", "financePrice": "3.52"},
+{"month": "2021-06", "instanceid": "sl-NlC5qX47", "productType": "postpay", "financePrice": "3.43"},
+{"month": "2021-06", "instanceid": "sl-NVNEO3pU", "productType": "postpay", "financePrice": "3.57"},
+{"month": "2021-06", "instanceid": "sl-cTkSr5zG", "productType": "postpay", "financePrice": "8.92"},
+{"month": "2021-06", "instanceid": "sl-XouZRB14", "productType": "postpay", "financePrice": "268.22"},
+{"month": "2021-06", "instanceid": "sl-YrdTOk20", "productType": "postpay", "financePrice": "46.48"},
+{"month": "2021-06", "instanceid": "sl-eVgHBBpc", "productType": "postpay", "financePrice": "3.56"},
+{"month": "2021-06", "instanceid": "sl-4zdR4Z1G", "productType": "postpay", "financePrice": "250.35"},
+{"month": "2021-06", "instanceid": "sl-oaRsfij2", "productType": "postpay", "financePrice": "3.56"},
+{"month": "2021-06", "instanceid": "sl-4q2E2wV4", "productType": "postpay", "financePrice": "484.44"},
+{"month": "2021-06", "instanceid": "sl-rdY4TTrx", "productType": "postpay", "financePrice": "33.06"},
+{"month": "2021-06", "instanceid": "sl-CBk3nbO5", "productType": "postpay", "financePrice": "189.74"},
+{"month": "2021-06", "instanceid": "sl-gdHYNgNW", "productType": "postpay", "financePrice": "64.5"},
+{"month": "2021-06", "instanceid": "sl-3rpQzDUp", "productType": "postpay", "financePrice": "42.58"},
+{"month": "2021-06", "instanceid": "sl-zziRMBOM", "productType": "postpay", "financePrice": "64.52"},
+{"month": "2021-06", "instanceid": "sl-ZF0rCJwT", "productType": "postpay", "financePrice": "3.56"},
+{"month": "2021-06", "instanceid": "sl-boaN5Lt6", "productType": "postpay", "financePrice": "0.93"},
+{"month": "2021-06", "instanceid": "sl-3U885X3y", "productType": "postpay", "financePrice": "457.22"},
+{"month": "2021-06", "instanceid": "sl-REojrZm5", "productType": "postpay", "financePrice": "165.04"},
+{"month": "2021-06", "instanceid": "sl-l4YYS4Y4", "productType": "postpay", "financePrice": "89.62"},
+{"month": "2021-06", "instanceid": "sl-g5i3Ufcg", "productType": "postpay", "financePrice": "456.26"},
+{"month": "2021-06", "instanceid": "sl-qlqyXsSc", "productType": "postpay", "financePrice": "17.77"},
+{"month": "2021-06", "instanceid": "sl-388k19W6", "productType": "postpay", "financePrice": "16.58"},
+{"month": "2021-06", "instanceid": "sl-UcDzR7wU", "productType": "postpay", "financePrice": "1.62"},
+{"month": "2021-06", "instanceid": "sl-zBCFK9dB", "productType": "postpay", "financePrice": "50.79"},
+{"month": "2021-06", "instanceid": "sl-lIKgRoUD", "productType": "postpay", "financePrice": "3.56"},
+{"month": "2021-06", "instanceid": "sl-WXIaGlNL", "productType": "postpay", "financePrice": "44.54"},
+{"month": "2021-06", "instanceid": "sl-Tl7w5y7E", "productType": "postpay", "financePrice": "3.56"},
+{"month": "2021-06", "instanceid": "sl-1JW4PPLl", "productType": "postpay", "financePrice": "8.91"},
+{"month": "2021-06", "instanceid": "sl-NxHldxhw", "productType": "postpay", "financePrice": "3.5"},
+{"month": "2021-06", "instanceid": "sl-K7ucWXqw", "productType": "postpay", "financePrice": "51.2"},
+{"month": "2021-06", "instanceid": "sl-aYYOjVfs", "productType": "postpay", "financePrice": "445.51"},
+{"month": "2021-06", "instanceid": "sl-5vjRQ9vr", "productType": "postpay", "financePrice": "184.26"},
+{"month": "2021-06", "instanceid": "sl-1c1vVP7E", "productType": "postpay", "financePrice": "46.02"},
+{"month": "2021-06", "instanceid": "sl-lN25cXg8", "productType": "postpay", "financePrice": "8.92"},
+{"month": "2021-06", "instanceid": "sl-9SmJB8q0", "productType": "postpay", "financePrice": "52.37"},
+{"month": "2021-06", "instanceid": "sl-DKKjLNDY", "productType": "postpay", "financePrice": "409.93"},
+{"month": "2021-06", "instanceid": "sl-9zBWMZpE", "productType": "postpay", "financePrice": "441.57"},
+{"month": "2021-06", "instanceid": "v-uR2o4300", "productType": "postpay", "financePrice": "11.84"},
+{"month": "2021-06", "instanceid": "v-vlEuNu6K", "productType": "postpay", "financePrice": "321.92"},
+{"month": "2021-06", "instanceid": "v-Fxz9j2B2", "productType": "postpay", "financePrice": "322.5"},
+{"month": "2021-06", "instanceid": "v-Fxz9j2B2", "productType": "postpay", "financePrice": "557.14"},
+{"month": "2021-06", "instanceid": "v-aTIneCEp", "productType": "postpay", "financePrice": "33.86"},
+{"month": "2021-06", "instanceid": "v-hBGlxfIE", "productType": "postpay", "financePrice": "5.25"},
+{"month": "2021-06", "instanceid": "v-e1iY7sEW", "productType": "postpay", "financePrice": "321.46"},
+{"month": "2021-06", "instanceid": "v-TTXWvAfi", "productType": "postpay", "financePrice": "107.27"},
+{"month": "2021-06", "instanceid": "v-BmJNiaN2", "productType": "postpay", "financePrice": "537.89"},
+{"month": "2021-06", "instanceid": "v-ZYYQpaw3", "productType": "postpay", "financePrice": "21.43"},
+{"month": "2021-06", "instanceid": "v-I4x81fBa", "productType": "postpay", "financePrice": "4.3"},
+{"month": "2021-06", "instanceid": "v-SfBFUQXV", "productType": "postpay", "financePrice": "59.23"},
+{"month": "2021-06", "instanceid": "v-eaxGEf8r", "productType": "postpay", "financePrice": "4.29"},
+{"month": "2021-06", "instanceid": "v-4zdR4Z1G", "productType": "postpay", "financePrice": "1205.71"},
+{"month": "2021-06", "instanceid": "v-gv2MAaCU", "productType": "postpay", "financePrice": "21.45"},
+{"month": "2021-06", "instanceid": "v-c7vKgsvW", "productType": "postpay", "financePrice": "107.14"},
+{"month": "2021-06", "instanceid": "v-zpTR7Q9P", "productType": "postpay", "financePrice": "536.97"},
+{"month": "2021-06", "instanceid": "v-OriNw7JD", "productType": "postpay", "financePrice": "9.94"},
+{"month": "2021-06", "instanceid": "v-wdLDAWzu", "productType": "postpay", "financePrice": "777.08"},
+{"month": "2021-06", "instanceid": "v-wdLDAWzu", "productType": "postpay", "financePrice": "4.66"},
+{"month": "2021-06", "instanceid": "v-qUiizahV", "productType": "postpay", "financePrice": "0.75"},
+{"month": "2021-06", "instanceid": "v-zBCFK9dB", "productType": "postpay", "financePrice": "524.88"},
+{"month": "2021-06", "instanceid": "v-tFq1fRXT", "productType": "postpay", "financePrice": "10.51"},
+{"month": "2021-06", "instanceid": "v-tTpZ17vE", "productType": "postpay", "financePrice": "26.24"},
+{"month": "2021-06", "instanceid": "v-TRVuETO3", "productType": "postpay", "financePrice": "131.22"},
+{"month": "2021-06", "instanceid": "v-hfTlDFOs", "productType": "postpay", "financePrice": "535.76"},
+{"month": "2021-06", "instanceid": "v-GSc2q3pe", "productType": "postpay", "financePrice": "225.18"},
+{"month": "2021-06", "instanceid": "v-LHo3aGCe", "productType": "postpay", "financePrice": "131.22"},
+{"month": "2021-06", "instanceid": "v-87h0EriC", "productType": "postpay", "financePrice": "18.5"},
+{"month": "2021-06", "instanceid": "v-xWTREtU9", "productType": "postpay", "financePrice": "47.67"},
+{"month": "2021-06", "instanceid": "v-DnlpF8WS", "productType": "postpay", "financePrice": "3.07"},
+{"month": "2021-07", "instanceid": "v-YrdTOk20", "productType": "prepay", "financePrice": "1575.0"},
+{"month": "2021-07", "instanceid": "v-l4YYS4Y4", "productType": "prepay", "financePrice": "3150.0"},
+{"month": "2021-07", "instanceid": "v-SvOyhIIx", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-07", "instanceid": "v-70dXAd7N", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-07", "instanceid": "v-SmdMAADT", "productType": "prepay", "financePrice": "1350.0"},
+{"month": "2021-07", "instanceid": "v-4zdR4Z1G", "productType": "prepay", "financePrice": "40950.0"},
+{"month": "2021-07", "instanceid": "v-3rpQzDUp", "productType": "prepay", "financePrice": "1575.0"},
+{"month": "2021-07", "instanceid": "v-kPquRzRx", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-07", "instanceid": "v-zBCFK9dB", "productType": "prepay", "financePrice": "1050.0"},
+{"month": "2021-07", "instanceid": "v-GSc2q3pe", "productType": "prepay", "financePrice": "1350.0"},
+{"month": "2021-07", "instanceid": "v-TRVuETO3", "productType": "prepay", "financePrice": "1575.0"},
+{"month": "2021-07", "instanceid": "v-87h0EriC", "productType": "prepay", "financePrice": "630.0"},
+{"month": "2021-07", "instanceid": "v-82WwauBB", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-07", "instanceid": "v-XalSWwcu", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-07", "instanceid": "v-ewvrlodB", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-07", "instanceid": "v-AlJ946gz", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-07", "instanceid": "v-j8i5RKqF", "productType": "prepay", "financePrice": "540.0"},
+{"month": "2021-07", "instanceid": "v-v8XZIoPG", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-07", "instanceid": "v-PjqRNi7D", "productType": "prepay", "financePrice": "1260.0"},
+{"month": "2021-07", "instanceid": "v-zziRMBOM", "productType": "prepay", "financePrice": "1575.0"},
+{"month": "2021-07", "instanceid": "v-B1dhTFjF", "productType": "prepay", "financePrice": "945.0"},
+{"month": "2021-07", "instanceid": "v-z9QW2KGx", "productType": "prepay", "financePrice": "1575.0"},
+{"month": "2021-07", "instanceid": "sl-JJwGLan1", "productType": "postpay", "financePrice": "18.42"},
+{"month": "2021-07", "instanceid": "sl-aTIneCEp", "productType": "postpay", "financePrice": "46.05"},
+{"month": "2021-07", "instanceid": "sl-Gqb8QXqF", "productType": "postpay", "financePrice": "16.62"},
+{"month": "2021-07", "instanceid": "sl-mHYRA5Pz", "productType": "postpay", "financePrice": "1.59"},
+{"month": "2021-07", "instanceid": "sl-UuzBbDRg", "productType": "postpay", "financePrice": "3.61"},
+{"month": "2021-07", "instanceid": "sl-NlC5qX47", "productType": "postpay", "financePrice": "3.67"},
+{"month": "2021-07", "instanceid": "sl-NVNEO3pU", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-07", "instanceid": "sl-cTkSr5zG", "productType": "postpay", "financePrice": "9.2"},
+{"month": "2021-07", "instanceid": "sl-XouZRB14", "productType": "postpay", "financePrice": "276.2"},
+{"month": "2021-07", "instanceid": "sl-YrdTOk20", "productType": "postpay", "financePrice": "48.06"},
+{"month": "2021-07", "instanceid": "sl-eVgHBBpc", "productType": "postpay", "financePrice": "3.67"},
+{"month": "2021-07", "instanceid": "sl-4zdR4Z1G", "productType": "postpay", "financePrice": "778.9"},
+{"month": "2021-07", "instanceid": "sl-oaRsfij2", "productType": "postpay", "financePrice": "3.67"},
+{"month": "2021-07", "instanceid": "sl-4q2E2wV4", "productType": "postpay", "financePrice": "462.19"},
+{"month": "2021-07", "instanceid": "sl-rdY4TTrx", "productType": "postpay", "financePrice": "34.98"},
+{"month": "2021-07", "instanceid": "sl-CBk3nbO5", "productType": "postpay", "financePrice": "211.37"},
+{"month": "2021-07", "instanceid": "sl-gdHYNgNW", "productType": "postpay", "financePrice": "65.11"},
+{"month": "2021-07", "instanceid": "sl-3rpQzDUp", "productType": "postpay", "financePrice": "44.05"},
+{"month": "2021-07", "instanceid": "sl-zziRMBOM", "productType": "postpay", "financePrice": "69.0"},
+{"month": "2021-07", "instanceid": "sl-ZF0rCJwT", "productType": "postpay", "financePrice": "3.67"},
+{"month": "2021-07", "instanceid": "sl-boaN5Lt6", "productType": "postpay", "financePrice": "1.55"},
+{"month": "2021-07", "instanceid": "sl-3U885X3y", "productType": "postpay", "financePrice": "471.47"},
+{"month": "2021-07", "instanceid": "sl-REojrZm5", "productType": "postpay", "financePrice": "151.93"},
+{"month": "2021-07", "instanceid": "sl-l4YYS4Y4", "productType": "postpay", "financePrice": "92.81"},
+{"month": "2021-07", "instanceid": "sl-g5i3Ufcg", "productType": "postpay", "financePrice": "471.5"},
+{"month": "2021-07", "instanceid": "sl-qlqyXsSc", "productType": "postpay", "financePrice": "18.37"},
+{"month": "2021-07", "instanceid": "sl-388k19W6", "productType": "postpay", "financePrice": "17.27"},
+{"month": "2021-07", "instanceid": "sl-zBCFK9dB", "productType": "postpay", "financePrice": "52.49"},
+{"month": "2021-07", "instanceid": "sl-lIKgRoUD", "productType": "postpay", "financePrice": "3.67"},
+{"month": "2021-07", "instanceid": "sl-WXIaGlNL", "productType": "postpay", "financePrice": "46.04"},
+{"month": "2021-07", "instanceid": "sl-Tl7w5y7E", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-07", "instanceid": "sl-1JW4PPLl", "productType": "postpay", "financePrice": "9.2"},
+{"month": "2021-07", "instanceid": "sl-TRVuETO3", "productType": "postpay", "financePrice": "32.37"},
+{"month": "2021-07", "instanceid": "sl-NxHldxhw", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-07", "instanceid": "sl-K7ucWXqw", "productType": "postpay", "financePrice": "46.05"},
+{"month": "2021-07", "instanceid": "sl-aYYOjVfs", "productType": "postpay", "financePrice": "460.35"},
+{"month": "2021-07", "instanceid": "sl-5vjRQ9vr", "productType": "postpay", "financePrice": "188.75"},
+{"month": "2021-07", "instanceid": "sl-1c1vVP7E", "productType": "postpay", "financePrice": "46.05"},
+{"month": "2021-07", "instanceid": "sl-lN25cXg8", "productType": "postpay", "financePrice": "9.21"},
+{"month": "2021-07", "instanceid": "sl-9SmJB8q0", "productType": "postpay", "financePrice": "55.97"},
+{"month": "2021-07", "instanceid": "sl-DKKjLNDY", "productType": "postpay", "financePrice": "423.83"},
+{"month": "2021-07", "instanceid": "sl-9zBWMZpE", "productType": "postpay", "financePrice": "458.69"},
+{"month": "2021-07", "instanceid": "v-vlEuNu6K", "productType": "postpay", "financePrice": "241.78"},
+{"month": "2021-07", "instanceid": "v-Fxz9j2B2", "productType": "postpay", "financePrice": "404.57"},
+{"month": "2021-07", "instanceid": "v-hBGlxfIE", "productType": "postpay", "financePrice": "2.69"},
+{"month": "2021-07", "instanceid": "v-e1iY7sEW", "productType": "postpay", "financePrice": "387.09"},
+{"month": "2021-07", "instanceid": "v-TTXWvAfi", "productType": "postpay", "financePrice": "80.59"},
+{"month": "2021-07", "instanceid": "v-BmJNiaN2", "productType": "postpay", "financePrice": "647.72"},
+{"month": "2021-07", "instanceid": "v-OGiNaKR4", "productType": "postpay", "financePrice": "0.07"},
+{"month": "2021-07", "instanceid": "v-ZYYQpaw3", "productType": "postpay", "financePrice": "25.81"},
+{"month": "2021-07", "instanceid": "v-I4x81fBa", "productType": "postpay", "financePrice": "3.23"},
+{"month": "2021-07", "instanceid": "v-eaxGEf8r", "productType": "postpay", "financePrice": "5.16"},
+{"month": "2021-07", "instanceid": "v-4zdR4Z1G", "productType": "postpay", "financePrice": "3007.22"},
+{"month": "2021-07", "instanceid": "v-gv2MAaCU", "productType": "postpay", "financePrice": "16.12"},
+{"month": "2021-07", "instanceid": "v-c7vKgsvW", "productType": "postpay", "financePrice": "129.04"},
+{"month": "2021-07", "instanceid": "v-zpTR7Q9P", "productType": "postpay", "financePrice": "402.96"},
+{"month": "2021-07", "instanceid": "v-EMUIdSDP", "productType": "postpay", "financePrice": "2.56"},
+{"month": "2021-07", "instanceid": "v-zBCFK9dB", "productType": "postpay", "financePrice": "269.5"},
+{"month": "2021-07", "instanceid": "v-tFq1fRXT", "productType": "postpay", "financePrice": "10.84"},
+{"month": "2021-07", "instanceid": "v-tTpZ17vE", "productType": "postpay", "financePrice": "27.12"},
+{"month": "2021-07", "instanceid": "v-xm4ZOjWU", "productType": "postpay", "financePrice": "2.33"},
+{"month": "2021-07", "instanceid": "v-TRVuETO3", "productType": "postpay", "financePrice": "67.37"},
+{"month": "2021-07", "instanceid": "v-hfTlDFOs", "productType": "postpay", "financePrice": "645.14"},
+{"month": "2021-07", "instanceid": "v-GSc2q3pe", "productType": "postpay", "financePrice": "115.6"},
+{"month": "2021-07", "instanceid": "v-LHo3aGCe", "productType": "postpay", "financePrice": "67.47"},
+{"month": "2021-07", "instanceid": "v-87h0EriC", "productType": "postpay", "financePrice": "26.94"},
+{"month": "2021-08", "instanceid": "v-VlKNsslc", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-08", "instanceid": "sl-JJwGLan1", "productType": "postpay", "financePrice": "18.42"},
+{"month": "2021-08", "instanceid": "sl-aTIneCEp", "productType": "postpay", "financePrice": "46.06"},
+{"month": "2021-08", "instanceid": "sl-Gqb8QXqF", "productType": "postpay", "financePrice": "16.66"},
+{"month": "2021-08", "instanceid": "sl-mHYRA5Pz", "productType": "postpay", "financePrice": "1.61"},
+{"month": "2021-08", "instanceid": "sl-UuzBbDRg", "productType": "postpay", "financePrice": "3.62"},
+{"month": "2021-08", "instanceid": "sl-NlC5qX47", "productType": "postpay", "financePrice": "3.81"},
+{"month": "2021-08", "instanceid": "sl-NVNEO3pU", "productType": "postpay", "financePrice": "3.0"},
+{"month": "2021-08", "instanceid": "sl-cTkSr5zG", "productType": "postpay", "financePrice": "9.22"},
+{"month": "2021-08", "instanceid": "sl-XouZRB14", "productType": "postpay", "financePrice": "276.21"},
+{"month": "2021-08", "instanceid": "sl-YrdTOk20", "productType": "postpay", "financePrice": "48.17"},
+{"month": "2021-08", "instanceid": "sl-eVgHBBpc", "productType": "postpay", "financePrice": "3.67"},
+{"month": "2021-08", "instanceid": "sl-4zdR4Z1G", "productType": "postpay", "financePrice": "778.89"},
+{"month": "2021-08", "instanceid": "sl-oaRsfij2", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-08", "instanceid": "sl-4q2E2wV4", "productType": "postpay", "financePrice": "462.19"},
+{"month": "2021-08", "instanceid": "sl-rdY4TTrx", "productType": "postpay", "financePrice": "34.99"},
+{"month": "2021-08", "instanceid": "sl-CBk3nbO5", "productType": "postpay", "financePrice": "218.9"},
+{"month": "2021-08", "instanceid": "sl-gdHYNgNW", "productType": "postpay", "financePrice": "59.79"},
+{"month": "2021-08", "instanceid": "sl-3rpQzDUp", "productType": "postpay", "financePrice": "44.04"},
+{"month": "2021-08", "instanceid": "sl-zziRMBOM", "productType": "postpay", "financePrice": "69.9"},
+{"month": "2021-08", "instanceid": "sl-ZF0rCJwT", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-08", "instanceid": "sl-boaN5Lt6", "productType": "postpay", "financePrice": "1.72"},
+{"month": "2021-08", "instanceid": "sl-3U885X3y", "productType": "postpay", "financePrice": "471.49"},
+{"month": "2021-08", "instanceid": "sl-REojrZm5", "productType": "postpay", "financePrice": "151.92"},
+{"month": "2021-08", "instanceid": "sl-l4YYS4Y4", "productType": "postpay", "financePrice": "92.83"},
+{"month": "2021-08", "instanceid": "sl-g5i3Ufcg", "productType": "postpay", "financePrice": "470.83"},
+{"month": "2021-08", "instanceid": "sl-qlqyXsSc", "productType": "postpay", "financePrice": "18.37"},
+{"month": "2021-08", "instanceid": "sl-388k19W6", "productType": "postpay", "financePrice": "17.43"},
+{"month": "2021-08", "instanceid": "sl-zBCFK9dB", "productType": "postpay", "financePrice": "52.5"},
+{"month": "2021-08", "instanceid": "sl-lIKgRoUD", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-08", "instanceid": "sl-WXIaGlNL", "productType": "postpay", "financePrice": "46.03"},
+{"month": "2021-08", "instanceid": "sl-Tl7w5y7E", "productType": "postpay", "financePrice": "3.69"},
+{"month": "2021-08", "instanceid": "sl-1JW4PPLl", "productType": "postpay", "financePrice": "9.22"},
+{"month": "2021-08", "instanceid": "sl-TRVuETO3", "productType": "postpay", "financePrice": "46.03"},
+{"month": "2021-08", "instanceid": "sl-NxHldxhw", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-08", "instanceid": "sl-K7ucWXqw", "productType": "postpay", "financePrice": "46.04"},
+{"month": "2021-08", "instanceid": "sl-aYYOjVfs", "productType": "postpay", "financePrice": "460.35"},
+{"month": "2021-08", "instanceid": "sl-5vjRQ9vr", "productType": "postpay", "financePrice": "188.75"},
+{"month": "2021-08", "instanceid": "sl-1c1vVP7E", "productType": "postpay", "financePrice": "46.03"},
+{"month": "2021-08", "instanceid": "sl-lN25cXg8", "productType": "postpay", "financePrice": "9.2"},
+{"month": "2021-08", "instanceid": "sl-9SmJB8q0", "productType": "postpay", "financePrice": "56.01"},
+{"month": "2021-08", "instanceid": "sl-DKKjLNDY", "productType": "postpay", "financePrice": "424.04"},
+{"month": "2021-08", "instanceid": "sl-9zBWMZpE", "productType": "postpay", "financePrice": "458.87"},
+{"month": "2021-08", "instanceid": "v-CUpQLcQg", "productType": "postpay", "financePrice": "2.49"},
+{"month": "2021-08", "instanceid": "v-tFq1fRXT", "productType": "postpay", "financePrice": "10.85"},
+{"month": "2021-08", "instanceid": "v-tTpZ17vE", "productType": "postpay", "financePrice": "27.11"},
+{"month": "2021-09", "instanceid": "v-BZYcdECQ", "productType": "prepay", "financePrice": "1350.0"},
+{"month": "2021-09", "instanceid": "v-1skFe9pM", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-09", "instanceid": "v-aXsRpXje", "productType": "prepay", "financePrice": "756.0"},
+{"month": "2021-09", "instanceid": "v-ZF0rCJwT", "productType": "prepay", "financePrice": "63.0"},
+{"month": "2021-09", "instanceid": "v-zBCFK9dB", "productType": "prepay", "financePrice": "3150.0"},
+{"month": "2021-09", "instanceid": "v-aYYOjVfs", "productType": "prepay", "financePrice": "7875.0"},
+{"month": "2021-09", "instanceid": "v-boaN5Lt6", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-09", "instanceid": "v-WXIaGlNL", "productType": "prepay", "financePrice": "1575.0"},
+{"month": "2021-09", "instanceid": "v-J5bZpQSq", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-09", "instanceid": "v-rdY4TTrx", "productType": "prepay", "financePrice": "1350.0"},
+{"month": "2021-09", "instanceid": "sl-JJwGLan1", "productType": "postpay", "financePrice": "17.82"},
+{"month": "2021-09", "instanceid": "sl-aTIneCEp", "productType": "postpay", "financePrice": "44.57"},
+{"month": "2021-09", "instanceid": "sl-Gqb8QXqF", "productType": "postpay", "financePrice": "16.16"},
+{"month": "2021-09", "instanceid": "sl-9TY8rH4V", "productType": "postpay", "financePrice": "0.13"},
+{"month": "2021-09", "instanceid": "sl-mHYRA5Pz", "productType": "postpay", "financePrice": "1.6"},
+{"month": "2021-09", "instanceid": "sl-UuzBbDRg", "productType": "postpay", "financePrice": "3.44"},
+{"month": "2021-09", "instanceid": "sl-NlC5qX47", "productType": "postpay", "financePrice": "3.83"},
+{"month": "2021-09", "instanceid": "sl-TfOOuYTK", "productType": "postpay", "financePrice": "0.13"},
+{"month": "2021-09", "instanceid": "sl-NVNEO3pU", "productType": "postpay", "financePrice": "0.87"},
+{"month": "2021-09", "instanceid": "sl-82WwauBB", "productType": "postpay", "financePrice": "0.08"},
+{"month": "2021-09", "instanceid": "sl-cTkSr5zG", "productType": "postpay", "financePrice": "8.92"},
+{"month": "2021-09", "instanceid": "sl-XouZRB14", "productType": "postpay", "financePrice": "267.32"},
+{"month": "2021-09", "instanceid": "sl-YrdTOk20", "productType": "postpay", "financePrice": "46.73"},
+{"month": "2021-09", "instanceid": "sl-eVgHBBpc", "productType": "postpay", "financePrice": "3.5"},
+{"month": "2021-09", "instanceid": "sl-4zdR4Z1G", "productType": "postpay", "financePrice": "196.82"},
+{"month": "2021-09", "instanceid": "sl-oaRsfij2", "productType": "postpay", "financePrice": "3.56"},
+{"month": "2021-09", "instanceid": "sl-4q2E2wV4", "productType": "postpay", "financePrice": "447.29"},
+{"month": "2021-09", "instanceid": "sl-rdY4TTrx", "productType": "postpay", "financePrice": "33.86"},
+{"month": "2021-09", "instanceid": "sl-ewvrlodB", "productType": "postpay", "financePrice": "0.13"},
+{"month": "2021-09", "instanceid": "sl-CBk3nbO5", "productType": "postpay", "financePrice": "212.75"},
+{"month": "2021-09", "instanceid": "sl-gdHYNgNW", "productType": "postpay", "financePrice": "63.46"},
+{"month": "2021-09", "instanceid": "sl-rltCHeal", "productType": "postpay", "financePrice": "0.13"},
+{"month": "2021-09", "instanceid": "sl-3rpQzDUp", "productType": "postpay", "financePrice": "42.57"},
+{"month": "2021-09", "instanceid": "sl-BZYcdECQ", "productType": "postpay", "financePrice": "1.66"},
+{"month": "2021-09", "instanceid": "sl-zziRMBOM", "productType": "postpay", "financePrice": "68.01"},
+{"month": "2021-09", "instanceid": "sl-ZF0rCJwT", "productType": "postpay", "financePrice": "3.56"},
+{"month": "2021-09", "instanceid": "sl-3IeNY2W1", "productType": "postpay", "financePrice": "0.17"},
+{"month": "2021-09", "instanceid": "sl-boaN5Lt6", "productType": "postpay", "financePrice": "1.7"},
+{"month": "2021-09", "instanceid": "sl-3U885X3y", "productType": "postpay", "financePrice": "456.27"},
+{"month": "2021-09", "instanceid": "sl-qUiizahV", "productType": "postpay", "financePrice": "0.13"},
+{"month": "2021-09", "instanceid": "sl-REojrZm5", "productType": "postpay", "financePrice": "147.05"},
+{"month": "2021-09", "instanceid": "sl-l4YYS4Y4", "productType": "postpay", "financePrice": "93.99"},
+{"month": "2021-09", "instanceid": "sl-g5i3Ufcg", "productType": "postpay", "financePrice": "456.26"},
+{"month": "2021-09", "instanceid": "sl-qlqyXsSc", "productType": "postpay", "financePrice": "17.77"},
+{"month": "2021-09", "instanceid": "sl-388k19W6", "productType": "postpay", "financePrice": "17.02"},
+{"month": "2021-09", "instanceid": "sl-UcDzR7wU", "productType": "postpay", "financePrice": "0.52"},
+{"month": "2021-09", "instanceid": "sl-zBCFK9dB", "productType": "postpay", "financePrice": "50.78"},
+{"month": "2021-09", "instanceid": "sl-lIKgRoUD", "productType": "postpay", "financePrice": "3.55"},
+{"month": "2021-09", "instanceid": "sl-9gWxfPuv", "productType": "postpay", "financePrice": "0.1"},
+{"month": "2021-09", "instanceid": "sl-WXIaGlNL", "productType": "postpay", "financePrice": "44.55"},
+{"month": "2021-09", "instanceid": "sl-v8XZIoPG", "productType": "postpay", "financePrice": "0.13"},
+{"month": "2021-09", "instanceid": "sl-Tl7w5y7E", "productType": "postpay", "financePrice": "3.43"},
+{"month": "2021-09", "instanceid": "sl-1skFe9pM", "productType": "postpay", "financePrice": "0.13"},
+{"month": "2021-09", "instanceid": "sl-1JW4PPLl", "productType": "postpay", "financePrice": "8.92"},
+{"month": "2021-09", "instanceid": "sl-TRVuETO3", "productType": "postpay", "financePrice": "11.63"},
+{"month": "2021-09", "instanceid": "sl-NxHldxhw", "productType": "postpay", "financePrice": "3.56"},
+{"month": "2021-09", "instanceid": "sl-K7ucWXqw", "productType": "postpay", "financePrice": "44.57"},
+{"month": "2021-09", "instanceid": "sl-aYYOjVfs", "productType": "postpay", "financePrice": "445.51"},
+{"month": "2021-09", "instanceid": "sl-5vjRQ9vr", "productType": "postpay", "financePrice": "182.66"},
+{"month": "2021-09", "instanceid": "sl-1c1vVP7E", "productType": "postpay", "financePrice": "44.52"},
+{"month": "2021-09", "instanceid": "sl-lN25cXg8", "productType": "postpay", "financePrice": "8.98"},
+{"month": "2021-09", "instanceid": "sl-9SmJB8q0", "productType": "postpay", "financePrice": "54.3"},
+{"month": "2021-09", "instanceid": "sl-GSc2q3pe", "productType": "postpay", "financePrice": "1.0"},
+{"month": "2021-09", "instanceid": "sl-DKKjLNDY", "productType": "postpay", "financePrice": "411.23"},
+{"month": "2021-09", "instanceid": "sl-9zBWMZpE", "productType": "postpay", "financePrice": "444.24"},
+{"month": "2021-09", "instanceid": "v-K29aLJKk", "productType": "postpay", "financePrice": "5.5"},
+{"month": "2021-09", "instanceid": "v-J3DozwSB", "productType": "postpay", "financePrice": "1.75"},
+{"month": "2021-09", "instanceid": "v-6aQv2kmC", "productType": "postpay", "financePrice": "2.19"},
+{"month": "2021-09", "instanceid": "v-ZciHBGdr", "productType": "postpay", "financePrice": "7.67"},
+{"month": "2021-09", "instanceid": "v-riCK1Y4E", "productType": "postpay", "financePrice": "0.41"},
+{"month": "2021-09", "instanceid": "v-1EDKO2Cs", "productType": "postpay", "financePrice": "0.44"},
+{"month": "2021-09", "instanceid": "v-TCEUt677", "productType": "postpay", "financePrice": "24.2"},
+{"month": "2021-09", "instanceid": "v-HhY1WBIn", "productType": "postpay", "financePrice": "2.18"},
+{"month": "2021-09", "instanceid": "v-o6lrJ7mb", "productType": "postpay", "financePrice": "0.91"},
+{"month": "2021-09", "instanceid": "v-CUpQLcQg", "productType": "postpay", "financePrice": "5.25"},
+{"month": "2021-09", "instanceid": "v-TxEOv2IS", "productType": "postpay", "financePrice": "33.72"},
+{"month": "2021-09", "instanceid": "v-swSoQY9f", "productType": "postpay", "financePrice": "2.17"},
+{"month": "2021-09", "instanceid": "v-MLVv2c6M", "productType": "postpay", "financePrice": "23.04"},
+{"month": "2021-09", "instanceid": "v-WRHTq2Ak", "productType": "postpay", "financePrice": "5.2"},
+{"month": "2021-09", "instanceid": "v-s34syiX1", "productType": "postpay", "financePrice": "0.72"},
+{"month": "2021-09", "instanceid": "v-xe1hA03C", "productType": "postpay", "financePrice": "18.55"},
+{"month": "2021-09", "instanceid": "v-k11nVmUB", "productType": "postpay", "financePrice": "1.07"},
+{"month": "2021-09", "instanceid": "v-oWTqeU94", "productType": "postpay", "financePrice": "6.09"},
+{"month": "2021-09", "instanceid": "v-ILfEiAyM", "productType": "postpay", "financePrice": "8.87"},
+{"month": "2021-09", "instanceid": "v-jD7jqqs1", "productType": "postpay", "financePrice": "2.18"},
+{"month": "2021-09", "instanceid": "v-tFq1fRXT", "productType": "postpay", "financePrice": "10.5"},
+{"month": "2021-09", "instanceid": "v-ic2HS76b", "productType": "postpay", "financePrice": "6.13"},
+{"month": "2021-09", "instanceid": "v-tTpZ17vE", "productType": "postpay", "financePrice": "26.24"},
+{"month": "2021-09", "instanceid": "v-axaBr4I6", "productType": "postpay", "financePrice": "56.19"},
+{"month": "2021-09", "instanceid": "v-uCaU0hFM", "productType": "postpay", "financePrice": "6.3"},
+{"month": "2021-09", "instanceid": "v-AYI3uuBD", "productType": "postpay", "financePrice": "18.08"},
+{"month": "2021-09", "instanceid": "v-mztbGi7C", "productType": "postpay", "financePrice": "0.48"},
+{"month": "2021-09", "instanceid": "v-01SQXXWo", "productType": "postpay", "financePrice": "9.03"},
+{"month": "2021-09", "instanceid": "v-RBdxm4ZX", "productType": "postpay", "financePrice": "57.55"},
+{"month": "2021-10", "instanceid": "v-g5i3Ufcg", "productType": "prepay", "financePrice": "13826.7"},
+{"month": "2021-10", "instanceid": "v-Tl7w5y7E", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-10", "instanceid": "v-Pysruioy", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-10", "instanceid": "sl-JJwGLan1", "productType": "postpay", "financePrice": "18.42"},
+{"month": "2021-10", "instanceid": "sl-aTIneCEp", "productType": "postpay", "financePrice": "46.03"},
+{"month": "2021-10", "instanceid": "sl-Gqb8QXqF", "productType": "postpay", "financePrice": "16.72"},
+{"month": "2021-10", "instanceid": "sl-mHYRA5Pz", "productType": "postpay", "financePrice": "1.7"},
+{"month": "2021-10", "instanceid": "sl-UuzBbDRg", "productType": "postpay", "financePrice": "3.58"},
+{"month": "2021-10", "instanceid": "sl-NlC5qX47", "productType": "postpay", "financePrice": "4.1"},
+{"month": "2021-10", "instanceid": "sl-NVNEO3pU", "productType": "postpay", "financePrice": "0.94"},
+{"month": "2021-10", "instanceid": "sl-cTkSr5zG", "productType": "postpay", "financePrice": "9.2"},
+{"month": "2021-10", "instanceid": "sl-XouZRB14", "productType": "postpay", "financePrice": "276.21"},
+{"month": "2021-10", "instanceid": "sl-YrdTOk20", "productType": "postpay", "financePrice": "48.91"},
+{"month": "2021-10", "instanceid": "sl-eVgHBBpc", "productType": "postpay", "financePrice": "3.62"},
+{"month": "2021-10", "instanceid": "sl-oaRsfij2", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-10", "instanceid": "sl-4q2E2wV4", "productType": "postpay", "financePrice": "462.2"},
+{"month": "2021-10", "instanceid": "sl-rdY4TTrx", "productType": "postpay", "financePrice": "34.99"},
+{"month": "2021-10", "instanceid": "sl-CBk3nbO5", "productType": "postpay", "financePrice": "226.75"},
+{"month": "2021-10", "instanceid": "sl-gdHYNgNW", "productType": "postpay", "financePrice": "69.94"},
+{"month": "2021-10", "instanceid": "sl-3rpQzDUp", "productType": "postpay", "financePrice": "44.06"},
+{"month": "2021-10", "instanceid": "sl-zziRMBOM", "productType": "postpay", "financePrice": "70.77"},
+{"month": "2021-10", "instanceid": "sl-ZF0rCJwT", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-10", "instanceid": "sl-boaN5Lt6", "productType": "postpay", "financePrice": "1.84"},
+{"month": "2021-10", "instanceid": "sl-3U885X3y", "productType": "postpay", "financePrice": "471.49"},
+{"month": "2021-10", "instanceid": "sl-REojrZm5", "productType": "postpay", "financePrice": "151.72"},
+{"month": "2021-10", "instanceid": "sl-l4YYS4Y4", "productType": "postpay", "financePrice": "92.85"},
+{"month": "2021-10", "instanceid": "sl-g5i3Ufcg", "productType": "postpay", "financePrice": "471.48"},
+{"month": "2021-10", "instanceid": "sl-qlqyXsSc", "productType": "postpay", "financePrice": "18.36"},
+{"month": "2021-10", "instanceid": "sl-388k19W6", "productType": "postpay", "financePrice": "17.76"},
+{"month": "2021-10", "instanceid": "sl-zBCFK9dB", "productType": "postpay", "financePrice": "53.03"},
+{"month": "2021-10", "instanceid": "sl-lIKgRoUD", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-10", "instanceid": "sl-WXIaGlNL", "productType": "postpay", "financePrice": "46.04"},
+{"month": "2021-10", "instanceid": "sl-Tl7w5y7E", "productType": "postpay", "financePrice": "3.69"},
+{"month": "2021-10", "instanceid": "sl-1JW4PPLl", "productType": "postpay", "financePrice": "9.2"},
+{"month": "2021-10", "instanceid": "sl-NxHldxhw", "productType": "postpay", "financePrice": "3.68"},
+{"month": "2021-10", "instanceid": "sl-K7ucWXqw", "productType": "postpay", "financePrice": "46.04"},
+{"month": "2021-10", "instanceid": "sl-aYYOjVfs", "productType": "postpay", "financePrice": "460.35"},
+{"month": "2021-10", "instanceid": "sl-5vjRQ9vr", "productType": "postpay", "financePrice": "188.73"},
+{"month": "2021-10", "instanceid": "sl-1c1vVP7E", "productType": "postpay", "financePrice": "46.05"},
+{"month": "2021-10", "instanceid": "sl-lN25cXg8", "productType": "postpay", "financePrice": "9.21"},
+{"month": "2021-10", "instanceid": "sl-9SmJB8q0", "productType": "postpay", "financePrice": "61.8"},
+{"month": "2021-10", "instanceid": "sl-DKKjLNDY", "productType": "postpay", "financePrice": "429.97"},
+{"month": "2021-10", "instanceid": "sl-9zBWMZpE", "productType": "postpay", "financePrice": "444.24"},
+{"month": "2021-10", "instanceid": "v-6lv49N7R", "productType": "postpay", "financePrice": "42.88"},
+{"month": "2021-10", "instanceid": "v-2ftHSehS", "productType": "postpay", "financePrice": "58.43"},
+{"month": "2021-10", "instanceid": "v-ZciHBGdr", "productType": "postpay", "financePrice": "13.56"},
+{"month": "2021-10", "instanceid": "v-TCEUt677", "productType": "postpay", "financePrice": "23.1"},
+{"month": "2021-10", "instanceid": "v-CUpQLcQg", "productType": "postpay", "financePrice": "5.42"},
+{"month": "2021-10", "instanceid": "v-OPO3wAnX", "productType": "postpay", "financePrice": "3.62"},
+{"month": "2021-10", "instanceid": "v-TrZQl9oq", "productType": "postpay", "financePrice": "0.28"},
+{"month": "2021-10", "instanceid": "v-tFq1fRXT", "productType": "postpay", "financePrice": "10.85"},
+{"month": "2021-10", "instanceid": "v-tTpZ17vE", "productType": "postpay", "financePrice": "27.12"},
+{"month": "2021-11", "instanceid": "v-EfUIkgfw", "productType": "prepay", "financePrice": "14.7"},
+{"month": "2021-11", "instanceid": "v-aXsRpXje", "productType": "prepay", "financePrice": "63.0"},
+{"month": "2021-11", "instanceid": "v-mfpwgFVQ", "productType": "prepay", "financePrice": "183.75"},
+{"month": "2021-11", "instanceid": "v-wswKUu5m", "productType": "prepay", "financePrice": "1350.0"},
+{"month": "2021-11", "instanceid": "v-rTKoJ8ti", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-11", "instanceid": "v-CUpQLcQg", "productType": "prepay", "financePrice": "63.0"},
+{"month": "2021-11", "instanceid": "v-mfpwgFVQ", "productType": "prepay", "financePrice": "2205.0"},
+{"month": "2021-11", "instanceid": "v-df1JcqfJ", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-11", "instanceid": "v-01kv2rCC", "productType": "prepay", "financePrice": "405.0"},
+{"month": "2021-11", "instanceid": "v-03OQu6fA", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-11", "instanceid": "v-ub5XWESV", "productType": "prepay", "financePrice": "270.0"},
+{"month": "2021-11", "instanceid": "v-TLbzuSHX", "productType": "prepay", "financePrice": "108.0"},
+{"month": "2021-11", "instanceid": "v-Ek7ADm1t", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-11", "instanceid": "v-G1Bt1F78", "productType": "prepay", "financePrice": "108.0"},
+{"month": "2021-11", "instanceid": "v-mp0c0TvQ", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-11", "instanceid": "v-WXIaGlNL", "productType": "prepay", "financePrice": "816.37"},
+{"month": "2021-11", "instanceid": "v-mfpwgFVQ", "productType": "prepay", "financePrice": "47.77"},
+{"month": "2021-11", "instanceid": "sl-JJwGLan1", "productType": "postpay", "financePrice": "17.85"},
+{"month": "2021-11", "instanceid": "sl-U70viCoQ", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2021-11", "instanceid": "sl-aTIneCEp", "productType": "postpay", "financePrice": "44.53"},
+{"month": "2021-11", "instanceid": "sl-Gqb8QXqF", "productType": "postpay", "financePrice": "16.23"},
+{"month": "2021-11", "instanceid": "sl-mHYRA5Pz", "productType": "postpay", "financePrice": "3.87"},
+{"month": "2021-11", "instanceid": "sl-UuzBbDRg", "productType": "postpay", "financePrice": "3.54"},
+{"month": "2021-11", "instanceid": "sl-NlC5qX47", "productType": "postpay", "financePrice": "4.1"},
+{"month": "2021-11", "instanceid": "sl-NVNEO3pU", "productType": "postpay", "financePrice": "0.92"},
+{"month": "2021-11", "instanceid": "sl-cTkSr5zG", "productType": "postpay", "financePrice": "8.92"},
+{"month": "2021-11", "instanceid": "sl-XouZRB14", "productType": "postpay", "financePrice": "267.31"},
+{"month": "2021-11", "instanceid": "sl-YrdTOk20", "productType": "postpay", "financePrice": "64.26"},
+{"month": "2021-11", "instanceid": "sl-eVgHBBpc", "productType": "postpay", "financePrice": "3.54"},
+{"month": "2021-11", "instanceid": "sl-1TI32JbG", "productType": "postpay", "financePrice": "0.05"},
+{"month": "2021-11", "instanceid": "sl-oaRsfij2", "productType": "postpay", "financePrice": "3.56"},
+{"month": "2021-11", "instanceid": "sl-4q2E2wV4", "productType": "postpay", "financePrice": "447.33"},
+{"month": "2021-11", "instanceid": "sl-rdY4TTrx", "productType": "postpay", "financePrice": "33.87"},
+{"month": "2021-11", "instanceid": "sl-CBk3nbO5", "productType": "postpay", "financePrice": "333.67"},
+{"month": "2021-11", "instanceid": "sl-gdHYNgNW", "productType": "postpay", "financePrice": "68.91"},
+{"month": "2021-11", "instanceid": "sl-3rpQzDUp", "productType": "postpay", "financePrice": "42.65"},
+{"month": "2021-11", "instanceid": "sl-e1YVQ4NQ", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2021-11", "instanceid": "sl-zziRMBOM", "productType": "postpay", "financePrice": "68.96"},
+{"month": "2021-11", "instanceid": "sl-ZF0rCJwT", "productType": "postpay", "financePrice": "3.54"},
+{"month": "2021-11", "instanceid": "sl-boaN5Lt6", "productType": "postpay", "financePrice": "1.78"},
+{"month": "2021-11", "instanceid": "sl-3U885X3y", "productType": "postpay", "financePrice": "456.26"},
+{"month": "2021-11", "instanceid": "sl-REojrZm5", "productType": "postpay", "financePrice": "147.06"},
+{"month": "2021-11", "instanceid": "sl-l4YYS4Y4", "productType": "postpay", "financePrice": "90.61"},
+{"month": "2021-11", "instanceid": "sl-g5i3Ufcg", "productType": "postpay", "financePrice": "456.27"},
+{"month": "2021-11", "instanceid": "sl-qlqyXsSc", "productType": "postpay", "financePrice": "17.79"},
+{"month": "2021-11", "instanceid": "sl-388k19W6", "productType": "postpay", "financePrice": "17.37"},
+{"month": "2021-11", "instanceid": "sl-zBCFK9dB", "productType": "postpay", "financePrice": "62.18"},
+{"month": "2021-11", "instanceid": "sl-lIKgRoUD", "productType": "postpay", "financePrice": "3.55"},
+{"month": "2021-11", "instanceid": "sl-74TLez2l", "productType": "postpay", "financePrice": "0.51"},
+{"month": "2021-11", "instanceid": "sl-WXIaGlNL", "productType": "postpay", "financePrice": "49.23"},
+{"month": "2021-11", "instanceid": "sl-Tl7w5y7E", "productType": "postpay", "financePrice": "3.54"},
+{"month": "2021-11", "instanceid": "sl-1JW4PPLl", "productType": "postpay", "financePrice": "8.93"},
+{"month": "2021-11", "instanceid": "sl-NxHldxhw", "productType": "postpay", "financePrice": "2.21"},
+{"month": "2021-11", "instanceid": "sl-K7ucWXqw", "productType": "postpay", "financePrice": "44.53"},
+{"month": "2021-11", "instanceid": "sl-aYYOjVfs", "productType": "postpay", "financePrice": "445.53"},
+{"month": "2021-11", "instanceid": "sl-5vjRQ9vr", "productType": "postpay", "financePrice": "182.66"},
+{"month": "2021-11", "instanceid": "sl-1c1vVP7E", "productType": "postpay", "financePrice": "44.49"},
+{"month": "2021-11", "instanceid": "sl-lN25cXg8", "productType": "postpay", "financePrice": "8.94"},
+{"month": "2021-11", "instanceid": "sl-9SmJB8q0", "productType": "postpay", "financePrice": "89.34"},
+{"month": "2021-11", "instanceid": "sl-mfpwgFVQ", "productType": "postpay", "financePrice": "20.1"},
+{"month": "2021-11", "instanceid": "sl-DKKjLNDY", "productType": "postpay", "financePrice": "418.16"},
+{"month": "2021-11", "instanceid": "sl-9zBWMZpE", "productType": "postpay", "financePrice": "444.31"},
+{"month": "2021-11", "instanceid": "v-6lv49N7R", "productType": "postpay", "financePrice": "14.02"},
+{"month": "2021-11", "instanceid": "v-U70viCoQ", "productType": "postpay", "financePrice": "15.46"},
+{"month": "2021-11", "instanceid": "v-AIAyyDRe", "productType": "postpay", "financePrice": "29.97"},
+{"month": "2021-11", "instanceid": "v-iaDCbfZi", "productType": "postpay", "financePrice": "2.81"},
+{"month": "2021-11", "instanceid": "v-ZciHBGdr", "productType": "postpay", "financePrice": "13.14"},
+{"month": "2021-11", "instanceid": "v-1TI32JbG", "productType": "postpay", "financePrice": "2.06"},
+{"month": "2021-11", "instanceid": "v-CUpQLcQg", "productType": "postpay", "financePrice": "3.22"},
+{"month": "2021-11", "instanceid": "v-e1YVQ4NQ", "productType": "postpay", "financePrice": "15.19"},
+{"month": "2021-11", "instanceid": "v-q4C6NSnY", "productType": "postpay", "financePrice": "5.35"},
+{"month": "2021-11", "instanceid": "v-LJqyTyH1", "productType": "postpay", "financePrice": "12.4"},
+{"month": "2021-11", "instanceid": "v-uOBieA5B", "productType": "postpay", "financePrice": "0.29"},
+{"month": "2021-11", "instanceid": "v-93ZE5UgF", "productType": "postpay", "financePrice": "7.03"},
+{"month": "2021-11", "instanceid": "v-OPO3wAnX", "productType": "postpay", "financePrice": "5.5"},
+{"month": "2021-11", "instanceid": "v-74TLez2l", "productType": "postpay", "financePrice": "2.02"},
+{"month": "2021-11", "instanceid": "v-tFq1fRXT", "productType": "postpay", "financePrice": "10.48"},
+{"month": "2021-11", "instanceid": "v-tTpZ17vE", "productType": "postpay", "financePrice": "26.25"},
+{"month": "2021-12", "instanceid": "v-4xcmKB4B", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-12", "instanceid": "v-B1dhTFjF", "productType": "prepay", "financePrice": "472.5"},
+{"month": "2021-12", "instanceid": "v-UcDzR7wU", "productType": "prepay", "financePrice": "270.0"},
+{"month": "2021-12", "instanceid": "v-uhKxFTNf", "productType": "prepay", "financePrice": "67.2"},
+{"month": "2021-12", "instanceid": "v-ohus8BfM", "productType": "prepay", "financePrice": "33.6"},
+{"month": "2021-12", "instanceid": "v-TfOOuYTK", "productType": "prepay", "financePrice": "126.0"},
+{"month": "2021-12", "instanceid": "v-GSc2q3pe", "productType": "prepay", "financePrice": "2700.0"},
+{"month": "2021-12", "instanceid": "v-EfUIkgfw", "productType": "prepay", "financePrice": "176.4"},
+{"month": "2021-12", "instanceid": "v-aXsRpXje", "productType": "prepay", "financePrice": "756.0"},
+{"month": "2021-12", "instanceid": "v-mfpwgFVQ", "productType": "prepay", "financePrice": "2205.0"},
+{"month": "2021-12", "instanceid": "sl-JJwGLan1", "productType": "postpay", "financePrice": "17.99"},
+{"month": "2021-12", "instanceid": "sl-aTIneCEp", "productType": "postpay", "financePrice": "46.46"},
+{"month": "2021-12", "instanceid": "sl-Gqb8QXqF", "productType": "postpay", "financePrice": "16.93"},
+{"month": "2021-12", "instanceid": "sl-mHYRA5Pz", "productType": "postpay", "financePrice": "4.52"},
+{"month": "2021-12", "instanceid": "sl-UuzBbDRg", "productType": "postpay", "financePrice": "3.71"},
+{"month": "2021-12", "instanceid": "sl-NlC5qX47", "productType": "postpay", "financePrice": "4.47"},
+{"month": "2021-12", "instanceid": "sl-NVNEO3pU", "productType": "postpay", "financePrice": "0.97"},
+{"month": "2021-12", "instanceid": "sl-cTkSr5zG", "productType": "postpay", "financePrice": "9.0"},
+{"month": "2021-12", "instanceid": "sl-XouZRB14", "productType": "postpay", "financePrice": "278.68"},
+{"month": "2021-12", "instanceid": "sl-YrdTOk20", "productType": "postpay", "financePrice": "81.17"},
+{"month": "2021-12", "instanceid": "sl-eVgHBBpc", "productType": "postpay", "financePrice": "3.58"},
+{"month": "2021-12", "instanceid": "sl-oaRsfij2", "productType": "postpay", "financePrice": "3.72"},
+{"month": "2021-12", "instanceid": "sl-4q2E2wV4", "productType": "postpay", "financePrice": "466.33"},
+{"month": "2021-12", "instanceid": "sl-rdY4TTrx", "productType": "postpay", "financePrice": "35.31"},
+{"month": "2021-12", "instanceid": "sl-CBk3nbO5", "productType": "postpay", "financePrice": "409.98"},
+{"month": "2021-12", "instanceid": "sl-gdHYNgNW", "productType": "postpay", "financePrice": "65.39"},
+{"month": "2021-12", "instanceid": "sl-3rpQzDUp", "productType": "postpay", "financePrice": "44.46"},
+{"month": "2021-12", "instanceid": "sl-zziRMBOM", "productType": "postpay", "financePrice": "72.01"},
+{"month": "2021-12", "instanceid": "sl-ZF0rCJwT", "productType": "postpay", "financePrice": "3.71"},
+{"month": "2021-12", "instanceid": "sl-boaN5Lt6", "productType": "postpay", "financePrice": "1.84"},
+{"month": "2021-12", "instanceid": "sl-3U885X3y", "productType": "postpay", "financePrice": "475.71"},
+{"month": "2021-12", "instanceid": "sl-REojrZm5", "productType": "postpay", "financePrice": "153.28"},
+{"month": "2021-12", "instanceid": "sl-l4YYS4Y4", "productType": "postpay", "financePrice": "95.28"},
+{"month": "2021-12", "instanceid": "sl-g5i3Ufcg", "productType": "postpay", "financePrice": "475.07"},
+{"month": "2021-12", "instanceid": "sl-qlqyXsSc", "productType": "postpay", "financePrice": "18.53"},
+{"month": "2021-12", "instanceid": "sl-388k19W6", "productType": "postpay", "financePrice": "18.29"},
+{"month": "2021-12", "instanceid": "sl-zBCFK9dB", "productType": "postpay", "financePrice": "81.13"},
+{"month": "2021-12", "instanceid": "sl-lIKgRoUD", "productType": "postpay", "financePrice": "3.7"},
+{"month": "2021-12", "instanceid": "sl-WXIaGlNL", "productType": "postpay", "financePrice": "53.82"},
+{"month": "2021-12", "instanceid": "sl-Tl7w5y7E", "productType": "postpay", "financePrice": "3.71"},
+{"month": "2021-12", "instanceid": "sl-1JW4PPLl", "productType": "postpay", "financePrice": "9.29"},
+{"month": "2021-12", "instanceid": "sl-NxHldxhw", "productType": "postpay", "financePrice": "2.33"},
+{"month": "2021-12", "instanceid": "sl-K7ucWXqw", "productType": "postpay", "financePrice": "46.45"},
+{"month": "2021-12", "instanceid": "sl-aYYOjVfs", "productType": "postpay", "financePrice": "464.48"},
+{"month": "2021-12", "instanceid": "sl-5vjRQ9vr", "productType": "postpay", "financePrice": "190.43"},
+{"month": "2021-12", "instanceid": "sl-1c1vVP7E", "productType": "postpay", "financePrice": "46.44"},
+{"month": "2021-12", "instanceid": "sl-lN25cXg8", "productType": "postpay", "financePrice": "9.3"},
+{"month": "2021-12", "instanceid": "sl-9SmJB8q0", "productType": "postpay", "financePrice": "0.66"},
+{"month": "2021-12", "instanceid": "sl-mfpwgFVQ", "productType": "postpay", "financePrice": "22.0"},
+{"month": "2021-12", "instanceid": "sl-DKKjLNDY", "productType": "postpay", "financePrice": "436.18"},
+{"month": "2021-12", "instanceid": "sl-9zBWMZpE", "productType": "postpay", "financePrice": "463.2"},
+{"month": "2021-12", "instanceid": "v-fie9zGPl", "productType": "postpay", "financePrice": "143.58"},
+{"month": "2021-12", "instanceid": "v-JQXSjpvH", "productType": "postpay", "financePrice": "350.45"},
+{"month": "2021-12", "instanceid": "v-iaDCbfZi", "productType": "postpay", "financePrice": "1.18"},
+{"month": "2021-12", "instanceid": "v-ZciHBGdr", "productType": "postpay", "financePrice": "13.68"},
+{"month": "2021-12", "instanceid": "v-4xcmKB4B", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2021-12", "instanceid": "v-4xcmKB4B", "productType": "postpay", "financePrice": "7.59"},
+{"month": "2021-12", "instanceid": "v-93ZE5UgF", "productType": "postpay", "financePrice": "2.95"},
+{"month": "2021-12", "instanceid": "v-tFq1fRXT", "productType": "postpay", "financePrice": "10.95"},
+{"month": "2021-12", "instanceid": "v-tTpZ17vE", "productType": "postpay", "financePrice": "27.36"},
+{"month": "2021-12", "instanceid": "v-MXzcYnqn", "productType": "postpay", "financePrice": "1.1"},
+{"month": "2021-12", "instanceid": "v-4RAaHbyM", "productType": "postpay", "financePrice": "96.46"}
 ]

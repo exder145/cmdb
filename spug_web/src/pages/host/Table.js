@@ -376,138 +376,63 @@ export const ComTable = observer(function ({ assetType = 'server' }) {
           )}>
             <Button type="primary" icon={<PlusOutlined/>}>新建 <DownOutlined/></Button>
           </Dropdown>
-        </AuthFragment>,
-        <AuthButton
-        key="sync"
-          auth="host.host.add"
-          type="primary"
-          icon={<SyncOutlined/>}
-          onClick={() => store.showSync()}>验证</AuthButton>,
+      </AuthFragment>,
       <Button
         key="export"
         type="primary"
         icon={<DownloadOutlined/>}
         onClick={() => store.exportVisible = true}>导出</Button>,
-      <Dropdown key="refresh" overlay={(
-          <Menu onClick={e => getTableData(e.key === 'force')}>
-            <Menu.Item key="normal">
-              <Space>
-                <SyncOutlined style={{fontSize: 14}}/>
-                <span>普通刷新</span>
-              </Space>
-            </Menu.Item>
-            <Menu.Item key="force">
-              <Space>
-                <SyncOutlined style={{fontSize: 14, color: '#1890ff'}}/>
-                <span>强制刷新</span>
-              </Space>
-            </Menu.Item>
-          </Menu>
-        )}>
-        <Button type="primary" icon={<SyncOutlined/>}>
-          刷新 <DownOutlined/>
-        </Button>
-      </Dropdown>,
-      <Radio.Group key="filter" value={store.f_status} onChange={e => store.f_status = e.target.value}>
-          <Radio.Button value="">全部</Radio.Button>
-          <Radio.Button value={false}>未验证</Radio.Button>
-        </Radio.Group>
+      <Button 
+        key="refresh" 
+        type="primary" 
+        icon={<SyncOutlined/>}
+        onClick={() => getTableData(false)}>
+        刷新
+      </Button>
     ],
     disk: [
       <Button key="add" type="primary" icon={<PlusOutlined/>} onClick={() => handleImport({key: 'form'})}>新建磁盘</Button>,
       <Button key="export" type="primary" icon={<DownloadOutlined/>} onClick={() => handleExport('disk')}>导出</Button>,
-      <Dropdown key="refresh" overlay={(
-          <Menu onClick={e => getTableData(e.key === 'force')}>
-            <Menu.Item key="normal">
-              <Space>
-                <SyncOutlined style={{fontSize: 14}}/>
-                <span>普通刷新</span>
-              </Space>
-            </Menu.Item>
-            <Menu.Item key="force">
-              <Space>
-                <SyncOutlined style={{fontSize: 14, color: '#1890ff'}}/>
-                <span>强制刷新</span>
-              </Space>
-            </Menu.Item>
-          </Menu>
-        )}>
-        <Button type="primary" icon={<SyncOutlined/>}>
-          刷新 <DownOutlined/>
-        </Button>
-      </Dropdown>
+      <Button 
+        key="refresh" 
+        type="primary" 
+        icon={<SyncOutlined/>}
+        onClick={() => getTableData(false)}>
+        刷新
+      </Button>
     ],
     storage: [
       <Button key="add" type="primary" icon={<PlusOutlined/>} onClick={() => handleImport({key: 'form'})}>新建存储</Button>,
       <Button key="export" type="primary" icon={<DownloadOutlined/>} onClick={() => handleExport('storage')}>导出</Button>,
-      <Dropdown key="refresh" overlay={(
-          <Menu onClick={e => getTableData(e.key === 'force')}>
-            <Menu.Item key="normal">
-              <Space>
-                <SyncOutlined style={{fontSize: 14}}/>
-                <span>普通刷新</span>
-              </Space>
-            </Menu.Item>
-            <Menu.Item key="force">
-              <Space>
-                <SyncOutlined style={{fontSize: 14, color: '#1890ff'}}/>
-                <span>强制刷新</span>
-              </Space>
-            </Menu.Item>
-          </Menu>
-        )}>
-        <Button type="primary" icon={<SyncOutlined/>}>
-          刷新 <DownOutlined/>
-        </Button>
-      </Dropdown>
+      <Button 
+        key="refresh" 
+        type="primary" 
+        icon={<SyncOutlined/>}
+        onClick={() => getTableData(false)}>
+        刷新
+      </Button>
     ],
     cdn: [
       <Button key="add" type="primary" icon={<PlusOutlined/>} onClick={() => handleImport({key: 'form'})}>新建CDN</Button>,
       <Button key="export" type="primary" icon={<DownloadOutlined/>} onClick={() => handleExport('cdn')}>导出</Button>,
-      <Dropdown key="refresh" overlay={(
-          <Menu onClick={e => getTableData(e.key === 'force')}>
-            <Menu.Item key="normal">
-              <Space>
-                <SyncOutlined style={{fontSize: 14}}/>
-                <span>普通刷新</span>
-              </Space>
-            </Menu.Item>
-            <Menu.Item key="force">
-              <Space>
-                <SyncOutlined style={{fontSize: 14, color: '#1890ff'}}/>
-                <span>强制刷新</span>
-              </Space>
-            </Menu.Item>
-          </Menu>
-        )}>
-        <Button type="primary" icon={<SyncOutlined/>}>
-          刷新 <DownOutlined/>
-        </Button>
-      </Dropdown>
+      <Button 
+        key="refresh" 
+        type="primary" 
+        icon={<SyncOutlined/>}
+        onClick={() => getTableData(false)}>
+        刷新
+      </Button>
     ],
     ip: [
       <Button key="add" type="primary" icon={<PlusOutlined/>} onClick={() => handleImport({key: 'form'})}>新建IP</Button>,
       <Button key="export" type="primary" icon={<DownloadOutlined/>} onClick={() => handleExport('ip')}>导出</Button>,
-      <Dropdown key="refresh" overlay={(
-          <Menu onClick={e => getTableData(e.key === 'force')}>
-            <Menu.Item key="normal">
-              <Space>
-                <SyncOutlined style={{fontSize: 14}}/>
-                <span>普通刷新</span>
-              </Space>
-            </Menu.Item>
-            <Menu.Item key="force">
-              <Space>
-                <SyncOutlined style={{fontSize: 14, color: '#1890ff'}}/>
-                <span>强制刷新</span>
-              </Space>
-            </Menu.Item>
-          </Menu>
-        )}>
-        <Button type="primary" icon={<SyncOutlined/>}>
-          刷新 <DownOutlined/>
-        </Button>
-      </Dropdown>
+      <Button 
+        key="refresh" 
+        type="primary" 
+        icon={<SyncOutlined/>}
+        onClick={() => getTableData(false)}>
+        刷新
+      </Button>
     ]
   };
   

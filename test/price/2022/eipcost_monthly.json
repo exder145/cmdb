@@ -1,3158 +1,528 @@
 [
-  {
-    "month": "2022-01",
-    "instanceid": "ip-4c8d0b99",
-    "productType": "postpay",
-    "financePrice": "2611.21"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-cd4814e4",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-f8ab140e",
-    "productType": "postpay",
-    "financePrice": "0.78"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-dc7b3940",
-    "productType": "postpay",
-    "financePrice": "0.15"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-59432768",
-    "productType": "postpay",
-    "financePrice": "341.84"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-2d3bb957",
-    "productType": "postpay",
-    "financePrice": "5.43"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-a6cdc4d9",
-    "productType": "postpay",
-    "financePrice": "0.11"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-8cef35c1",
-    "productType": "postpay",
-    "financePrice": "5.41"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-fb9e1147",
-    "productType": "postpay",
-    "financePrice": "0.01"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-251583e2",
-    "productType": "postpay",
-    "financePrice": "496.47"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-5e2a4b5b",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-76966743",
-    "productType": "postpay",
-    "financePrice": "8.79"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-bab89874",
-    "productType": "postpay",
-    "financePrice": "0.24"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-88841deb",
-    "productType": "postpay",
-    "financePrice": "0.01"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-2168d4c9",
-    "productType": "postpay",
-    "financePrice": "1.12"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-b37e7096",
-    "productType": "postpay",
-    "financePrice": "3.9"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-2153a6be",
-    "productType": "postpay",
-    "financePrice": "4.4"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-f5c9b982",
-    "productType": "postpay",
-    "financePrice": "0.14"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-497f39d5",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-ac06aedf",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-a2302750",
-    "productType": "postpay",
-    "financePrice": "0.1"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-5e0c0184",
-    "productType": "postpay",
-    "financePrice": "21.52"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-7b4b40d7",
-    "productType": "postpay",
-    "financePrice": "57.47"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-7b4b40d7",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-fdbb0a5a",
-    "productType": "postpay",
-    "financePrice": "6.06"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-ed166689",
-    "productType": "postpay",
-    "financePrice": "1.38"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-7dfbc294",
-    "productType": "postpay",
-    "financePrice": "0.13"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-91bb6b41",
-    "productType": "postpay",
-    "financePrice": "0.15"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-d321353e",
-    "productType": "postpay",
-    "financePrice": "1574.37"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-5bfcb456",
-    "productType": "postpay",
-    "financePrice": "2.08"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-776f511f",
-    "productType": "postpay",
-    "financePrice": "0.16"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-11b113f8",
-    "productType": "postpay",
-    "financePrice": "0.13"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-03bf8ca4",
-    "productType": "postpay",
-    "financePrice": "44.13"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-81ef3e48",
-    "productType": "postpay",
-    "financePrice": "280.38"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-eb0b66ae",
-    "productType": "postpay",
-    "financePrice": "0.13"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-393405e6",
-    "productType": "postpay",
-    "financePrice": "1.04"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-959f9dff",
-    "productType": "prepay",
-    "financePrice": "207.0"
-  },
-  {
-    "month": "2022-01",
-    "instanceid": "ip-4512c83c",
-    "productType": "prepay",
-    "financePrice": "207.0"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-4c8d0b99",
-    "productType": "postpay",
-    "financePrice": "1987.86"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-cd4814e4",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-f8ab140e",
-    "productType": "postpay",
-    "financePrice": "1.16"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-dc7b3940",
-    "productType": "postpay",
-    "financePrice": "0.29"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-59432768",
-    "productType": "postpay",
-    "financePrice": "345.38"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-2d3bb957",
-    "productType": "postpay",
-    "financePrice": "6.72"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-a6cdc4d9",
-    "productType": "postpay",
-    "financePrice": "0.18"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-8cef35c1",
-    "productType": "postpay",
-    "financePrice": "3.17"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-fb9e1147",
-    "productType": "postpay",
-    "financePrice": "0.01"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-251583e2",
-    "productType": "postpay",
-    "financePrice": "442.94"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-5e2a4b5b",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-76966743",
-    "productType": "postpay",
-    "financePrice": "6.73"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-bab89874",
-    "productType": "postpay",
-    "financePrice": "0.36"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-88841deb",
-    "productType": "postpay",
-    "financePrice": "0.02"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-2168d4c9",
-    "productType": "postpay",
-    "financePrice": "1.53"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-b37e7096",
-    "productType": "postpay",
-    "financePrice": "5.94"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-2153a6be",
-    "productType": "postpay",
-    "financePrice": "0.41"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-f5c9b982",
-    "productType": "postpay",
-    "financePrice": "0.18"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-497f39d5",
-    "productType": "postpay",
-    "financePrice": "0.09"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-497f39d5",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-ac06aedf",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-a2302750",
-    "productType": "postpay",
-    "financePrice": "0.19"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-5e0c0184",
-    "productType": "postpay",
-    "financePrice": "19.7"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-7b4b40d7",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-fdbb0a5a",
-    "productType": "postpay",
-    "financePrice": "5.62"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-ed166689",
-    "productType": "postpay",
-    "financePrice": "1.42"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-7dfbc294",
-    "productType": "postpay",
-    "financePrice": "0.28"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-91bb6b41",
-    "productType": "postpay",
-    "financePrice": "0.19"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-d321353e",
-    "productType": "postpay",
-    "financePrice": "2023.9"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-5bfcb456",
-    "productType": "postpay",
-    "financePrice": "2.1"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-776f511f",
-    "productType": "postpay",
-    "financePrice": "0.29"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-11b113f8",
-    "productType": "postpay",
-    "financePrice": "0.27"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-03bf8ca4",
-    "productType": "postpay",
-    "financePrice": "12.54"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-81ef3e48",
-    "productType": "postpay",
-    "financePrice": "67.15"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-eb0b66ae",
-    "productType": "postpay",
-    "financePrice": "0.28"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-393405e6",
-    "productType": "postpay",
-    "financePrice": "2.55"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-940a0902",
-    "productType": "prepay",
-    "financePrice": "187.68"
-  },
-  {
-    "month": "2022-02",
-    "instanceid": "ip-ac17debc",
-    "productType": "prepay",
-    "financePrice": "182.0"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-4c8d0b99",
-    "productType": "postpay",
-    "financePrice": "2258.03"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-cd4814e4",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-f8ab140e",
-    "productType": "postpay",
-    "financePrice": "1.55"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-dc7b3940",
-    "productType": "postpay",
-    "financePrice": "0.35"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-59432768",
-    "productType": "postpay",
-    "financePrice": "429.64"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-2d3bb957",
-    "productType": "postpay",
-    "financePrice": "8.7"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-2ec2ec1f",
-    "productType": "postpay",
-    "financePrice": "63.47"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-2ec2ec1f",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-a6cdc4d9",
-    "productType": "postpay",
-    "financePrice": "63.47"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-a6cdc4d9",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-8cef35c1",
-    "productType": "postpay",
-    "financePrice": "10.14"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-fb9e1147",
-    "productType": "postpay",
-    "financePrice": "0.93"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-251583e2",
-    "productType": "postpay",
-    "financePrice": "566.0"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-5e2a4b5b",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-76966743",
-    "productType": "postpay",
-    "financePrice": "10.34"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-bab89874",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-88841deb",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-2168d4c9",
-    "productType": "postpay",
-    "financePrice": "2.11"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-b37e7096",
-    "productType": "postpay",
-    "financePrice": "10.8"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-2153a6be",
-    "productType": "postpay",
-    "financePrice": "4.75"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-f5c9b982",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-ac06aedf",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-a2302750",
-    "productType": "postpay",
-    "financePrice": "0.37"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-5e0c0184",
-    "productType": "postpay",
-    "financePrice": "21.61"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-7b4b40d7",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-fdbb0a5a",
-    "productType": "postpay",
-    "financePrice": "6.09"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-ed166689",
-    "productType": "postpay",
-    "financePrice": "1.87"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-7dfbc294",
-    "productType": "postpay",
-    "financePrice": "0.36"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-91bb6b41",
-    "productType": "postpay",
-    "financePrice": "0.34"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-d321353e",
-    "productType": "postpay",
-    "financePrice": "3670.37"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-5bfcb456",
-    "productType": "postpay",
-    "financePrice": "2.62"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-776f511f",
-    "productType": "postpay",
-    "financePrice": "0.38"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-11b113f8",
-    "productType": "postpay",
-    "financePrice": "63.47"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-11b113f8",
-    "productType": "postpay",
-    "financePrice": "0.08"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-03bf8ca4",
-    "productType": "postpay",
-    "financePrice": "21.71"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-81ef3e48",
-    "productType": "postpay",
-    "financePrice": "164.0"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-eb0b66ae",
-    "productType": "postpay",
-    "financePrice": "0.36"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-393405e6",
-    "productType": "postpay",
-    "financePrice": "2.49"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-393405e6",
-    "productType": "postpay",
-    "financePrice": "1.95"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-7910abea",
-    "productType": "prepay",
-    "financePrice": "82.0"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-e4aff4eb",
-    "productType": "prepay",
-    "financePrice": "2598.75"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-f2142606",
-    "productType": "prepay",
-    "financePrice": "82.0"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-fad2cf6e",
-    "productType": "prepay",
-    "financePrice": "82.0"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-bd2fa47a",
-    "productType": "prepay",
-    "financePrice": "82.0"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-1745c878",
-    "productType": "prepay",
-    "financePrice": "82.0"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-1745c878",
-    "productType": "prepay",
-    "financePrice": "17.25"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-93e50cf2",
-    "productType": "prepay",
-    "financePrice": "34.5"
-  },
-  {
-    "month": "2022-03",
-    "instanceid": "ip-bbc18c7b",
-    "productType": "prepay",
-    "financePrice": "164.0"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-4c8d0b99",
-    "productType": "postpay",
-    "financePrice": "2541.95"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-cd4814e4",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-f8ab140e",
-    "productType": "postpay",
-    "financePrice": "1.48"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-dc7b3940",
-    "productType": "postpay",
-    "financePrice": "0.36"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-59432768",
-    "productType": "postpay",
-    "financePrice": "420.82"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-2d3bb957",
-    "productType": "postpay",
-    "financePrice": "10.52"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-2ec2ec1f",
-    "productType": "postpay",
-    "financePrice": "38.28"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-a6cdc4d9",
-    "productType": "postpay",
-    "financePrice": "107.87"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-8cef35c1",
-    "productType": "postpay",
-    "financePrice": "3.05"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-fb9e1147",
-    "productType": "postpay",
-    "financePrice": "3.54"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-251583e2",
-    "productType": "postpay",
-    "financePrice": "547.17"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-5e2a4b5b",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-76966743",
-    "productType": "postpay",
-    "financePrice": "11.39"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-bab89874",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-88841deb",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-1a8b8c27",
-    "productType": "postpay",
-    "financePrice": "1.01"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-2168d4c9",
-    "productType": "postpay",
-    "financePrice": "1.87"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-b37e7096",
-    "productType": "postpay",
-    "financePrice": "4.75"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-2153a6be",
-    "productType": "postpay",
-    "financePrice": "7.33"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-f5c9b982",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-ac06aedf",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-a2302750",
-    "productType": "postpay",
-    "financePrice": "0.38"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-5e0c0184",
-    "productType": "postpay",
-    "financePrice": "21.78"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-7b4b40d7",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-fdbb0a5a",
-    "productType": "postpay",
-    "financePrice": "5.89"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-ed166689",
-    "productType": "postpay",
-    "financePrice": "1.36"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-7dfbc294",
-    "productType": "postpay",
-    "financePrice": "0.4"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-91bb6b41",
-    "productType": "postpay",
-    "financePrice": "0.35"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-d321353e",
-    "productType": "postpay",
-    "financePrice": "1854.7"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-5bfcb456",
-    "productType": "postpay",
-    "financePrice": "2.57"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-776f511f",
-    "productType": "postpay",
-    "financePrice": "0.37"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-11b113f8",
-    "productType": "postpay",
-    "financePrice": "38.25"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-03bf8ca4",
-    "productType": "postpay",
-    "financePrice": "16.21"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-81ef3e48",
-    "productType": "postpay",
-    "financePrice": "296.42"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-db3ff3d1",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-eb0b66ae",
-    "productType": "postpay",
-    "financePrice": "0.32"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-393405e6",
-    "productType": "postpay",
-    "financePrice": "7.43"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-e21ff04d",
-    "productType": "prepay",
-    "financePrice": "103.5"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-4efecd74",
-    "productType": "prepay",
-    "financePrice": "103.5"
-  },
-  {
-    "month": "2022-04",
-    "instanceid": "ip-8924f655",
-    "productType": "prepay",
-    "financePrice": "225.0"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-4c8d0b99",
-    "productType": "postpay",
-    "financePrice": "2740.41"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-cd4814e4",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-8b5f4ca4",
-    "productType": "postpay",
-    "financePrice": "1.49"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-8b5f4ca4",
-    "productType": "postpay",
-    "financePrice": "0.02"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-f8ab140e",
-    "productType": "postpay",
-    "financePrice": "1.1"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-dc7b3940",
-    "productType": "postpay",
-    "financePrice": "0.29"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-59432768",
-    "productType": "postpay",
-    "financePrice": "410.42"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-2d3bb957",
-    "productType": "postpay",
-    "financePrice": "6.25"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-a6cdc4d9",
-    "productType": "postpay",
-    "financePrice": "111.46"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-8cef35c1",
-    "productType": "postpay",
-    "financePrice": "2.42"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-fb9e1147",
-    "productType": "postpay",
-    "financePrice": "2.34"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-251583e2",
-    "productType": "postpay",
-    "financePrice": "564.16"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-5e2a4b5b",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-76966743",
-    "productType": "postpay",
-    "financePrice": "8.7"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-88841deb",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-1a8b8c27",
-    "productType": "postpay",
-    "financePrice": "0.57"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-2168d4c9",
-    "productType": "postpay",
-    "financePrice": "1.4"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-b37e7096",
-    "productType": "postpay",
-    "financePrice": "6.32"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-2153a6be",
-    "productType": "postpay",
-    "financePrice": "11.13"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-ac06aedf",
-    "productType": "postpay",
-    "financePrice": "0.01"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-a2302750",
-    "productType": "postpay",
-    "financePrice": "0.28"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-5e0c0184",
-    "productType": "postpay",
-    "financePrice": "22.54"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-fdbb0a5a",
-    "productType": "postpay",
-    "financePrice": "5.85"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-ed166689",
-    "productType": "postpay",
-    "financePrice": "0.38"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-7dfbc294",
-    "productType": "postpay",
-    "financePrice": "0.28"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-91bb6b41",
-    "productType": "postpay",
-    "financePrice": "0.27"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-539c3bde",
-    "productType": "postpay",
-    "financePrice": "0.62"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-d321353e",
-    "productType": "postpay",
-    "financePrice": "2328.93"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-5bfcb456",
-    "productType": "postpay",
-    "financePrice": "2.38"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-776f511f",
-    "productType": "postpay",
-    "financePrice": "0.25"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-03bf8ca4",
-    "productType": "postpay",
-    "financePrice": "26.0"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-81ef3e48",
-    "productType": "postpay",
-    "financePrice": "168.5"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-eb0b66ae",
-    "productType": "postpay",
-    "financePrice": "0.26"
-  },
-  {
-    "month": "2022-05",
-    "instanceid": "ip-393405e6",
-    "productType": "postpay",
-    "financePrice": "25.13"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-4c8d0b99",
-    "productType": "postpay",
-    "financePrice": "2464.7"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-cd4814e4",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-8b5f4ca4",
-    "productType": "postpay",
-    "financePrice": "1.4"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-f8ab140e",
-    "productType": "postpay",
-    "financePrice": "1.12"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-dc7b3940",
-    "productType": "postpay",
-    "financePrice": "0.16"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-59432768",
-    "productType": "postpay",
-    "financePrice": "446.43"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-2d3bb957",
-    "productType": "postpay",
-    "financePrice": "11.7"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-a6cdc4d9",
-    "productType": "postpay",
-    "financePrice": "107.88"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-8cef35c1",
-    "productType": "postpay",
-    "financePrice": "15.85"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-fb9e1147",
-    "productType": "postpay",
-    "financePrice": "0.2"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-251583e2",
-    "productType": "postpay",
-    "financePrice": "504.56"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-5e2a4b5b",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-af1a82fd",
-    "productType": "postpay",
-    "financePrice": "0.08"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-76966743",
-    "productType": "postpay",
-    "financePrice": "12.25"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-7fef1b06",
-    "productType": "postpay",
-    "financePrice": "0.07"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-88841deb",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-1a8b8c27",
-    "productType": "postpay",
-    "financePrice": "0.54"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-2168d4c9",
-    "productType": "postpay",
-    "financePrice": "1.39"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-b37e7096",
-    "productType": "postpay",
-    "financePrice": "6.3"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-2153a6be",
-    "productType": "postpay",
-    "financePrice": "8.05"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-ac06aedf",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-a2302750",
-    "productType": "postpay",
-    "financePrice": "0.17"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-5e0c0184",
-    "productType": "postpay",
-    "financePrice": "21.19"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-0c47efc8",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-fdbb0a5a",
-    "productType": "postpay",
-    "financePrice": "5.66"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-ed166689",
-    "productType": "postpay",
-    "financePrice": "0.34"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-7dfbc294",
-    "productType": "postpay",
-    "financePrice": "0.26"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-91bb6b41",
-    "productType": "postpay",
-    "financePrice": "0.17"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-539c3bde",
-    "productType": "postpay",
-    "financePrice": "0.01"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-d321353e",
-    "productType": "postpay",
-    "financePrice": "1909.95"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-5bfcb456",
-    "productType": "postpay",
-    "financePrice": "2.19"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-776f511f",
-    "productType": "postpay",
-    "financePrice": "0.21"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-eac75faf",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-03bf8ca4",
-    "productType": "postpay",
-    "financePrice": "10.93"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-2db4faeb",
-    "productType": "postpay",
-    "financePrice": "0.04"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-81ef3e48",
-    "productType": "postpay",
-    "financePrice": "239.55"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-eb0b66ae",
-    "productType": "postpay",
-    "financePrice": "0.17"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-393405e6",
-    "productType": "postpay",
-    "financePrice": "4.76"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-438ff346",
-    "productType": "prepay",
-    "financePrice": "138.0"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-8ad6cbf2",
-    "productType": "prepay",
-    "financePrice": "138.0"
-  },
-  {
-    "month": "2022-06",
-    "instanceid": "ip-ec9dafe6",
-    "productType": "prepay",
-    "financePrice": "103.5"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-4c8d0b99",
-    "productType": "postpay",
-    "financePrice": "2462.96"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-cd4814e4",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-f8ab140e",
-    "productType": "postpay",
-    "financePrice": "0.95"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-dc7b3940",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-59432768",
-    "productType": "postpay",
-    "financePrice": "509.15"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-2d3bb957",
-    "productType": "postpay",
-    "financePrice": "9.63"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-a6cdc4d9",
-    "productType": "postpay",
-    "financePrice": "111.48"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-8cef35c1",
-    "productType": "postpay",
-    "financePrice": "2.55"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-fb9e1147",
-    "productType": "postpay",
-    "financePrice": "0.25"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-251583e2",
-    "productType": "postpay",
-    "financePrice": "4300.94"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-5e2a4b5b",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-af1a82fd",
-    "productType": "postpay",
-    "financePrice": "0.13"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-76966743",
-    "productType": "postpay",
-    "financePrice": "10.8"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-7fef1b06",
-    "productType": "postpay",
-    "financePrice": "0.15"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-1a449bb5",
-    "productType": "postpay",
-    "financePrice": "2.12"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-88841deb",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-1a8b8c27",
-    "productType": "postpay",
-    "financePrice": "0.52"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-2168d4c9",
-    "productType": "postpay",
-    "financePrice": "1.35"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-b37e7096",
-    "productType": "postpay",
-    "financePrice": "5.97"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-2153a6be",
-    "productType": "postpay",
-    "financePrice": "11.04"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-ac06aedf",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-a2302750",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-5e0c0184",
-    "productType": "postpay",
-    "financePrice": "22.52"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-0c47efc8",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-fdbb0a5a",
-    "productType": "postpay",
-    "financePrice": "5.81"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-ed166689",
-    "productType": "postpay",
-    "financePrice": "4.36"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-7dfbc294",
-    "productType": "postpay",
-    "financePrice": "0.21"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-91bb6b41",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-539c3bde",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-d321353e",
-    "productType": "postpay",
-    "financePrice": "1740.91"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-5bfcb456",
-    "productType": "postpay",
-    "financePrice": "5.14"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-dbaa5ab8",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-776f511f",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-eac75faf",
-    "productType": "postpay",
-    "financePrice": "0.21"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-03bf8ca4",
-    "productType": "postpay",
-    "financePrice": "10.77"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-2db4faeb",
-    "productType": "postpay",
-    "financePrice": "0.06"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-81ef3e48",
-    "productType": "postpay",
-    "financePrice": "245.08"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-eb0b66ae",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-393405e6",
-    "productType": "postpay",
-    "financePrice": "5.45"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-33d734d4",
-    "productType": "prepay",
-    "financePrice": "88.0"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-678cc416",
-    "productType": "prepay",
-    "financePrice": "88.0"
-  },
-  {
-    "month": "2022-07",
-    "instanceid": "ip-e21ff04d",
-    "productType": "prepay",
-    "financePrice": "276.0"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-4c8d0b99",
-    "productType": "postpay",
-    "financePrice": "2329.41"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-cd4814e4",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-f8ab140e",
-    "productType": "postpay",
-    "financePrice": "0.94"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-dc7b3940",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-59432768",
-    "productType": "postpay",
-    "financePrice": "523.13"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-2d3bb957",
-    "productType": "postpay",
-    "financePrice": "9.3"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-a6cdc4d9",
-    "productType": "postpay",
-    "financePrice": "111.47"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-8cef35c1",
-    "productType": "postpay",
-    "financePrice": "2.37"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-fb9e1147",
-    "productType": "postpay",
-    "financePrice": "0.86"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-251583e2",
-    "productType": "postpay",
-    "financePrice": "675.31"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-5e2a4b5b",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-af1a82fd",
-    "productType": "postpay",
-    "financePrice": "0.17"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-76966743",
-    "productType": "postpay",
-    "financePrice": "14.41"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-7fef1b06",
-    "productType": "postpay",
-    "financePrice": "0.27"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-1a449bb5",
-    "productType": "postpay",
-    "financePrice": "6.06"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-88841deb",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-1a8b8c27",
-    "productType": "postpay",
-    "financePrice": "0.66"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-2168d4c9",
-    "productType": "postpay",
-    "financePrice": "1.33"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-b37e7096",
-    "productType": "postpay",
-    "financePrice": "34.23"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-2153a6be",
-    "productType": "postpay",
-    "financePrice": "14.11"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-d06e0a60",
-    "productType": "postpay",
-    "financePrice": "0.15"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-ac06aedf",
-    "productType": "postpay",
-    "financePrice": "0.01"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-a2302750",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-5e0c0184",
-    "productType": "postpay",
-    "financePrice": "24.28"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-0c47efc8",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-fdbb0a5a",
-    "productType": "postpay",
-    "financePrice": "5.8"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-ed166689",
-    "productType": "postpay",
-    "financePrice": "1.12"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-7dfbc294",
-    "productType": "postpay",
-    "financePrice": "0.17"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-91bb6b41",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-539c3bde",
-    "productType": "postpay",
-    "financePrice": "0.07"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-d321353e",
-    "productType": "postpay",
-    "financePrice": "2043.33"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-5bfcb456",
-    "productType": "postpay",
-    "financePrice": "2.89"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-dbaa5ab8",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-776f511f",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-eac75faf",
-    "productType": "postpay",
-    "financePrice": "0.23"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-03bf8ca4",
-    "productType": "postpay",
-    "financePrice": "10.7"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-2db4faeb",
-    "productType": "postpay",
-    "financePrice": "0.06"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-81ef3e48",
-    "productType": "postpay",
-    "financePrice": "280.16"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-eb0b66ae",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-08",
-    "instanceid": "ip-393405e6",
-    "productType": "postpay",
-    "financePrice": "59.49"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-4c8d0b99",
-    "productType": "postpay",
-    "financePrice": "2017.96"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-cd4814e4",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-f8ab140e",
-    "productType": "postpay",
-    "financePrice": "1.25"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-dc7b3940",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-59432768",
-    "productType": "postpay",
-    "financePrice": "522.93"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-2d3bb957",
-    "productType": "postpay",
-    "financePrice": "8.27"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-a6cdc4d9",
-    "productType": "postpay",
-    "financePrice": "107.88"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-8cef35c1",
-    "productType": "postpay",
-    "financePrice": "1.84"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-fb9e1147",
-    "productType": "postpay",
-    "financePrice": "0.41"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-251583e2",
-    "productType": "postpay",
-    "financePrice": "624.59"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-5e2a4b5b",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-af1a82fd",
-    "productType": "postpay",
-    "financePrice": "0.25"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-76966743",
-    "productType": "postpay",
-    "financePrice": "12.46"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-19b3dcb2",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-41b116e7",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-7fef1b06",
-    "productType": "postpay",
-    "financePrice": "0.65"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-1a449bb5",
-    "productType": "postpay",
-    "financePrice": "5.65"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-88841deb",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-1a8b8c27",
-    "productType": "postpay",
-    "financePrice": "2.27"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-2168d4c9",
-    "productType": "postpay",
-    "financePrice": "1.06"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-b37e7096",
-    "productType": "postpay",
-    "financePrice": "4.92"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-2153a6be",
-    "productType": "postpay",
-    "financePrice": "16.14"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-d06e0a60",
-    "productType": "postpay",
-    "financePrice": "0.12"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-ac06aedf",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-a2302750",
-    "productType": "postpay",
-    "financePrice": "0.01"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-5e0c0184",
-    "productType": "postpay",
-    "financePrice": "23.23"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-0c47efc8",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-fdbb0a5a",
-    "productType": "postpay",
-    "financePrice": "5.61"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-4e4da533",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-ed166689",
-    "productType": "postpay",
-    "financePrice": "0.33"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-7dfbc294",
-    "productType": "postpay",
-    "financePrice": "0.16"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-91bb6b41",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-539c3bde",
-    "productType": "postpay",
-    "financePrice": "0.01"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-d321353e",
-    "productType": "postpay",
-    "financePrice": "2032.42"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-5bfcb456",
-    "productType": "postpay",
-    "financePrice": "5.02"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-dbaa5ab8",
-    "productType": "postpay",
-    "financePrice": "0.01"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-776f511f",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-eac75faf",
-    "productType": "postpay",
-    "financePrice": "0.19"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-03bf8ca4",
-    "productType": "postpay",
-    "financePrice": "12.71"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-2db4faeb",
-    "productType": "postpay",
-    "financePrice": "0.08"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-81ef3e48",
-    "productType": "postpay",
-    "financePrice": "7.69"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-eb0b66ae",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-09",
-    "instanceid": "ip-393405e6",
-    "productType": "postpay",
-    "financePrice": "243.36"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-4c8d0b99",
-    "productType": "postpay",
-    "financePrice": "2200.54"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-cd4814e4",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-f8ab140e",
-    "productType": "postpay",
-    "financePrice": "1.41"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-dc7b3940",
-    "productType": "postpay",
-    "financePrice": "0.01"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-59432768",
-    "productType": "postpay",
-    "financePrice": "559.64"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-2d3bb957",
-    "productType": "postpay",
-    "financePrice": "3.89"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-a6cdc4d9",
-    "productType": "postpay",
-    "financePrice": "111.47"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-8cef35c1",
-    "productType": "postpay",
-    "financePrice": "4.0"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-fb9e1147",
-    "productType": "postpay",
-    "financePrice": "0.67"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-251583e2",
-    "productType": "postpay",
-    "financePrice": "511.43"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-5e2a4b5b",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-af1a82fd",
-    "productType": "postpay",
-    "financePrice": "0.11"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-76966743",
-    "productType": "postpay",
-    "financePrice": "10.76"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-19b3dcb2",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-4313b150",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-bfc43744",
-    "productType": "postpay",
-    "financePrice": "0.53"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-41b116e7",
-    "productType": "postpay",
-    "financePrice": "49.61"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-7fef1b06",
-    "productType": "postpay",
-    "financePrice": "0.17"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-1a449bb5",
-    "productType": "postpay",
-    "financePrice": "6.56"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-88841deb",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-1a8b8c27",
-    "productType": "postpay",
-    "financePrice": "0.49"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-2168d4c9",
-    "productType": "postpay",
-    "financePrice": "0.11"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-b37e7096",
-    "productType": "postpay",
-    "financePrice": "5.13"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-2153a6be",
-    "productType": "postpay",
-    "financePrice": "9.6"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-d06e0a60",
-    "productType": "postpay",
-    "financePrice": "0.18"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-ac06aedf",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-a2302750",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-5e0c0184",
-    "productType": "postpay",
-    "financePrice": "22.38"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-0c47efc8",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-fdbb0a5a",
-    "productType": "postpay",
-    "financePrice": "5.81"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-4e4da533",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-128831a8",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-ed166689",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-7dfbc294",
-    "productType": "postpay",
-    "financePrice": "0.31"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-91bb6b41",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-539c3bde",
-    "productType": "postpay",
-    "financePrice": "0.51"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-d321353e",
-    "productType": "postpay",
-    "financePrice": "1537.64"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-5bfcb456",
-    "productType": "postpay",
-    "financePrice": "30.76"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-dbaa5ab8",
-    "productType": "postpay",
-    "financePrice": "0.04"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-776f511f",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-eac75faf",
-    "productType": "postpay",
-    "financePrice": "0.24"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-e1c49514",
-    "productType": "postpay",
-    "financePrice": "4.78"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-03bf8ca4",
-    "productType": "postpay",
-    "financePrice": "10.68"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-2db4faeb",
-    "productType": "postpay",
-    "financePrice": "0.09"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-81ef3e48",
-    "productType": "postpay",
-    "financePrice": "3.49"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-384a1c00",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-eb0b66ae",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-393405e6",
-    "productType": "postpay",
-    "financePrice": "163.66"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-438ff346",
-    "productType": "prepay",
-    "financePrice": "276.0"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-8ad6cbf2",
-    "productType": "prepay",
-    "financePrice": "276.0"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-e21ff04d",
-    "productType": "prepay",
-    "financePrice": "517.5"
-  },
-  {
-    "month": "2022-10",
-    "instanceid": "ip-e4aff4eb",
-    "productType": "prepay",
-    "financePrice": "1856.25"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-4c8d0b99",
-    "productType": "postpay",
-    "financePrice": "2632.18"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-cd4814e4",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-f8ab140e",
-    "productType": "postpay",
-    "financePrice": "1.29"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-dc7b3940",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-59432768",
-    "productType": "postpay",
-    "financePrice": "534.21"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-2d3bb957",
-    "productType": "postpay",
-    "financePrice": "14.97"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-a6cdc4d9",
-    "productType": "postpay",
-    "financePrice": "107.89"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-8cef35c1",
-    "productType": "postpay",
-    "financePrice": "1.96"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-fb9e1147",
-    "productType": "postpay",
-    "financePrice": "0.43"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-251583e2",
-    "productType": "postpay",
-    "financePrice": "753.42"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-5e2a4b5b",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-af1a82fd",
-    "productType": "postpay",
-    "financePrice": "0.13"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-76966743",
-    "productType": "postpay",
-    "financePrice": "12.14"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-19b3dcb2",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-4313b150",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-bfc43744",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-41b116e7",
-    "productType": "postpay",
-    "financePrice": "140.01"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-7fef1b06",
-    "productType": "postpay",
-    "financePrice": "0.19"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-1a449bb5",
-    "productType": "postpay",
-    "financePrice": "5.33"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-88841deb",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-1a8b8c27",
-    "productType": "postpay",
-    "financePrice": "0.68"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-2168d4c9",
-    "productType": "postpay",
-    "financePrice": "0.13"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-b37e7096",
-    "productType": "postpay",
-    "financePrice": "0.62"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-b37e7096",
-    "productType": "postpay",
-    "financePrice": "1.66"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-2153a6be",
-    "productType": "postpay",
-    "financePrice": "19.21"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-d06e0a60",
-    "productType": "postpay",
-    "financePrice": "0.19"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-ac06aedf",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-a2302750",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-5e0c0184",
-    "productType": "postpay",
-    "financePrice": "27.65"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-0c47efc8",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-fdbb0a5a",
-    "productType": "postpay",
-    "financePrice": "5.62"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-4e4da533",
-    "productType": "postpay",
-    "financePrice": "0.01"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-128831a8",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-ed166689",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-9dadb33f",
-    "productType": "postpay",
-    "financePrice": "0.01"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-9dadb33f",
-    "productType": "postpay",
-    "financePrice": "6.25"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-9dadb33f",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-7dfbc294",
-    "productType": "postpay",
-    "financePrice": "0.24"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-91bb6b41",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-539c3bde",
-    "productType": "postpay",
-    "financePrice": "0.19"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-d321353e",
-    "productType": "postpay",
-    "financePrice": "1969.99"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-5bfcb456",
-    "productType": "postpay",
-    "financePrice": "2.64"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-dbaa5ab8",
-    "productType": "postpay",
-    "financePrice": "0.36"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-776f511f",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-eac75faf",
-    "productType": "postpay",
-    "financePrice": "0.32"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-e1c49514",
-    "productType": "postpay",
-    "financePrice": "0.01"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-03bf8ca4",
-    "productType": "postpay",
-    "financePrice": "7.65"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-2db4faeb",
-    "productType": "postpay",
-    "financePrice": "0.04"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-81ef3e48",
-    "productType": "postpay",
-    "financePrice": "1.03"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-384a1c00",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-eb0b66ae",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-393405e6",
-    "productType": "postpay",
-    "financePrice": "5.78"
-  },
-  {
-    "month": "2022-11",
-    "instanceid": "ip-1c9c7421",
-    "productType": "prepay",
-    "financePrice": "124.2"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-4c8d0b99",
-    "productType": "postpay",
-    "financePrice": "1977.48"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-cd4814e4",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-f8ab140e",
-    "productType": "postpay",
-    "financePrice": "1.21"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-dc7b3940",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-59432768",
-    "productType": "postpay",
-    "financePrice": "574.13"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-2d3bb957",
-    "productType": "postpay",
-    "financePrice": "9.93"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-a6cdc4d9",
-    "productType": "postpay",
-    "financePrice": "110.06"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-8cef35c1",
-    "productType": "postpay",
-    "financePrice": "1.57"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-fb9e1147",
-    "productType": "postpay",
-    "financePrice": "0.71"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-251583e2",
-    "productType": "postpay",
-    "financePrice": "589.85"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-5e2a4b5b",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-af1a82fd",
-    "productType": "postpay",
-    "financePrice": "0.2"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-76966743",
-    "productType": "postpay",
-    "financePrice": "12.57"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-19b3dcb2",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-4313b150",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-bfc43744",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-41b116e7",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-7fef1b06",
-    "productType": "postpay",
-    "financePrice": "0.46"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-1a449bb5",
-    "productType": "postpay",
-    "financePrice": "5.21"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-88841deb",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-1a8b8c27",
-    "productType": "postpay",
-    "financePrice": "0.91"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-2168d4c9",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-57495e11",
-    "productType": "postpay",
-    "financePrice": "0.06"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-b37e7096",
-    "productType": "postpay",
-    "financePrice": "0.49"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-2153a6be",
-    "productType": "postpay",
-    "financePrice": "14.39"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-d06e0a60",
-    "productType": "postpay",
-    "financePrice": "0.14"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-ac06aedf",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-a2302750",
-    "productType": "postpay",
-    "financePrice": "0.01"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-5e0c0184",
-    "productType": "postpay",
-    "financePrice": "28.95"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-0c47efc8",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-fdbb0a5a",
-    "productType": "postpay",
-    "financePrice": "5.8"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-4e4da533",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-128831a8",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-1d726f52",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-ed166689",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-9dadb33f",
-    "productType": "postpay",
-    "financePrice": "5.77"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-7dfbc294",
-    "productType": "postpay",
-    "financePrice": "0.25"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-91bb6b41",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-539c3bde",
-    "productType": "postpay",
-    "financePrice": "0.02"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-d321353e",
-    "productType": "postpay",
-    "financePrice": "1752.71"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-5bfcb456",
-    "productType": "postpay",
-    "financePrice": "2.22"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-dbaa5ab8",
-    "productType": "postpay",
-    "financePrice": "0.28"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-776f511f",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-eac75faf",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-eac75faf",
-    "productType": "postpay",
-    "financePrice": "0.15"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-e1c49514",
-    "productType": "postpay",
-    "financePrice": "0.01"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-03bf8ca4",
-    "productType": "postpay",
-    "financePrice": "6.57"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-2db4faeb",
-    "productType": "postpay",
-    "financePrice": "0.03"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-81ef3e48",
-    "productType": "postpay",
-    "financePrice": "1.07"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-384a1c00",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-eb0b66ae",
-    "productType": "postpay",
-    "financePrice": "0.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-393405e6",
-    "productType": "postpay",
-    "financePrice": "12.81"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-ec9dafe6",
-    "productType": "prepay",
-    "financePrice": "207.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-8924f655",
-    "productType": "prepay",
-    "financePrice": "414.0"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-bbc18c7b",
-    "productType": "prepay",
-    "financePrice": "165.6"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-fad2cf6e",
-    "productType": "prepay",
-    "financePrice": "82.8"
-  },
-  {
-    "month": "2022-12",
-    "instanceid": "ip-f2142606",
-    "productType": "prepay",
-    "financePrice": "82.8"
-  }
+{"month": "2022-01", "instanceid": "ip-4c8d0b99", "productType": "postpay", "financePrice": "2611.21"},
+{"month": "2022-01", "instanceid": "ip-cd4814e4", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-01", "instanceid": "ip-f8ab140e", "productType": "postpay", "financePrice": "0.78"},
+{"month": "2022-01", "instanceid": "ip-dc7b3940", "productType": "postpay", "financePrice": "0.15"},
+{"month": "2022-01", "instanceid": "ip-59432768", "productType": "postpay", "financePrice": "341.84"},
+{"month": "2022-01", "instanceid": "ip-2d3bb957", "productType": "postpay", "financePrice": "5.43"},
+{"month": "2022-01", "instanceid": "ip-a6cdc4d9", "productType": "postpay", "financePrice": "0.11"},
+{"month": "2022-01", "instanceid": "ip-8cef35c1", "productType": "postpay", "financePrice": "5.41"},
+{"month": "2022-01", "instanceid": "ip-fb9e1147", "productType": "postpay", "financePrice": "0.01"},
+{"month": "2022-01", "instanceid": "ip-251583e2", "productType": "postpay", "financePrice": "496.47"},
+{"month": "2022-01", "instanceid": "ip-5e2a4b5b", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-01", "instanceid": "ip-76966743", "productType": "postpay", "financePrice": "8.79"},
+{"month": "2022-01", "instanceid": "ip-bab89874", "productType": "postpay", "financePrice": "0.24"},
+{"month": "2022-01", "instanceid": "ip-88841deb", "productType": "postpay", "financePrice": "0.01"},
+{"month": "2022-01", "instanceid": "ip-2168d4c9", "productType": "postpay", "financePrice": "1.12"},
+{"month": "2022-01", "instanceid": "ip-b37e7096", "productType": "postpay", "financePrice": "3.9"},
+{"month": "2022-01", "instanceid": "ip-2153a6be", "productType": "postpay", "financePrice": "4.4"},
+{"month": "2022-01", "instanceid": "ip-f5c9b982", "productType": "postpay", "financePrice": "0.14"},
+{"month": "2022-01", "instanceid": "ip-497f39d5", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-01", "instanceid": "ip-ac06aedf", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-01", "instanceid": "ip-a2302750", "productType": "postpay", "financePrice": "0.1"},
+{"month": "2022-01", "instanceid": "ip-5e0c0184", "productType": "postpay", "financePrice": "21.52"},
+{"month": "2022-01", "instanceid": "ip-7b4b40d7", "productType": "postpay", "financePrice": "57.47"},
+{"month": "2022-01", "instanceid": "ip-7b4b40d7", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-01", "instanceid": "ip-fdbb0a5a", "productType": "postpay", "financePrice": "6.06"},
+{"month": "2022-01", "instanceid": "ip-ed166689", "productType": "postpay", "financePrice": "1.38"},
+{"month": "2022-01", "instanceid": "ip-7dfbc294", "productType": "postpay", "financePrice": "0.13"},
+{"month": "2022-01", "instanceid": "ip-91bb6b41", "productType": "postpay", "financePrice": "0.15"},
+{"month": "2022-01", "instanceid": "ip-d321353e", "productType": "postpay", "financePrice": "1574.37"},
+{"month": "2022-01", "instanceid": "ip-5bfcb456", "productType": "postpay", "financePrice": "2.08"},
+{"month": "2022-01", "instanceid": "ip-776f511f", "productType": "postpay", "financePrice": "0.16"},
+{"month": "2022-01", "instanceid": "ip-11b113f8", "productType": "postpay", "financePrice": "0.13"},
+{"month": "2022-01", "instanceid": "ip-03bf8ca4", "productType": "postpay", "financePrice": "44.13"},
+{"month": "2022-01", "instanceid": "ip-81ef3e48", "productType": "postpay", "financePrice": "280.38"},
+{"month": "2022-01", "instanceid": "ip-eb0b66ae", "productType": "postpay", "financePrice": "0.13"},
+{"month": "2022-01", "instanceid": "ip-393405e6", "productType": "postpay", "financePrice": "1.04"},
+{"month": "2022-01", "instanceid": "ip-959f9dff", "productType": "prepay", "financePrice": "207.0"},
+{"month": "2022-01", "instanceid": "ip-4512c83c", "productType": "prepay", "financePrice": "207.0"},
+{"month": "2022-02", "instanceid": "ip-4c8d0b99", "productType": "postpay", "financePrice": "1987.86"},
+{"month": "2022-02", "instanceid": "ip-cd4814e4", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-02", "instanceid": "ip-f8ab140e", "productType": "postpay", "financePrice": "1.16"},
+{"month": "2022-02", "instanceid": "ip-dc7b3940", "productType": "postpay", "financePrice": "0.29"},
+{"month": "2022-02", "instanceid": "ip-59432768", "productType": "postpay", "financePrice": "345.38"},
+{"month": "2022-02", "instanceid": "ip-2d3bb957", "productType": "postpay", "financePrice": "6.72"},
+{"month": "2022-02", "instanceid": "ip-a6cdc4d9", "productType": "postpay", "financePrice": "0.18"},
+{"month": "2022-02", "instanceid": "ip-8cef35c1", "productType": "postpay", "financePrice": "3.17"},
+{"month": "2022-02", "instanceid": "ip-fb9e1147", "productType": "postpay", "financePrice": "0.01"},
+{"month": "2022-02", "instanceid": "ip-251583e2", "productType": "postpay", "financePrice": "442.94"},
+{"month": "2022-02", "instanceid": "ip-5e2a4b5b", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-02", "instanceid": "ip-76966743", "productType": "postpay", "financePrice": "6.73"},
+{"month": "2022-02", "instanceid": "ip-bab89874", "productType": "postpay", "financePrice": "0.36"},
+{"month": "2022-02", "instanceid": "ip-88841deb", "productType": "postpay", "financePrice": "0.02"},
+{"month": "2022-02", "instanceid": "ip-2168d4c9", "productType": "postpay", "financePrice": "1.53"},
+{"month": "2022-02", "instanceid": "ip-b37e7096", "productType": "postpay", "financePrice": "5.94"},
+{"month": "2022-02", "instanceid": "ip-2153a6be", "productType": "postpay", "financePrice": "0.41"},
+{"month": "2022-02", "instanceid": "ip-f5c9b982", "productType": "postpay", "financePrice": "0.18"},
+{"month": "2022-02", "instanceid": "ip-497f39d5", "productType": "postpay", "financePrice": "0.09"},
+{"month": "2022-02", "instanceid": "ip-497f39d5", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-02", "instanceid": "ip-ac06aedf", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-02", "instanceid": "ip-a2302750", "productType": "postpay", "financePrice": "0.19"},
+{"month": "2022-02", "instanceid": "ip-5e0c0184", "productType": "postpay", "financePrice": "19.7"},
+{"month": "2022-02", "instanceid": "ip-7b4b40d7", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-02", "instanceid": "ip-fdbb0a5a", "productType": "postpay", "financePrice": "5.62"},
+{"month": "2022-02", "instanceid": "ip-ed166689", "productType": "postpay", "financePrice": "1.42"},
+{"month": "2022-02", "instanceid": "ip-7dfbc294", "productType": "postpay", "financePrice": "0.28"},
+{"month": "2022-02", "instanceid": "ip-91bb6b41", "productType": "postpay", "financePrice": "0.19"},
+{"month": "2022-02", "instanceid": "ip-d321353e", "productType": "postpay", "financePrice": "2023.9"},
+{"month": "2022-02", "instanceid": "ip-5bfcb456", "productType": "postpay", "financePrice": "2.1"},
+{"month": "2022-02", "instanceid": "ip-776f511f", "productType": "postpay", "financePrice": "0.29"},
+{"month": "2022-02", "instanceid": "ip-11b113f8", "productType": "postpay", "financePrice": "0.27"},
+{"month": "2022-02", "instanceid": "ip-03bf8ca4", "productType": "postpay", "financePrice": "12.54"},
+{"month": "2022-02", "instanceid": "ip-81ef3e48", "productType": "postpay", "financePrice": "67.15"},
+{"month": "2022-02", "instanceid": "ip-eb0b66ae", "productType": "postpay", "financePrice": "0.28"},
+{"month": "2022-02", "instanceid": "ip-393405e6", "productType": "postpay", "financePrice": "2.55"},
+{"month": "2022-02", "instanceid": "ip-940a0902", "productType": "prepay", "financePrice": "187.68"},
+{"month": "2022-02", "instanceid": "ip-ac17debc", "productType": "prepay", "financePrice": "182.0"},
+{"month": "2022-03", "instanceid": "ip-4c8d0b99", "productType": "postpay", "financePrice": "2258.03"},
+{"month": "2022-03", "instanceid": "ip-cd4814e4", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-03", "instanceid": "ip-f8ab140e", "productType": "postpay", "financePrice": "1.55"},
+{"month": "2022-03", "instanceid": "ip-dc7b3940", "productType": "postpay", "financePrice": "0.35"},
+{"month": "2022-03", "instanceid": "ip-59432768", "productType": "postpay", "financePrice": "429.64"},
+{"month": "2022-03", "instanceid": "ip-2d3bb957", "productType": "postpay", "financePrice": "8.7"},
+{"month": "2022-03", "instanceid": "ip-2ec2ec1f", "productType": "postpay", "financePrice": "63.47"},
+{"month": "2022-03", "instanceid": "ip-2ec2ec1f", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-03", "instanceid": "ip-a6cdc4d9", "productType": "postpay", "financePrice": "63.47"},
+{"month": "2022-03", "instanceid": "ip-a6cdc4d9", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-03", "instanceid": "ip-8cef35c1", "productType": "postpay", "financePrice": "10.14"},
+{"month": "2022-03", "instanceid": "ip-fb9e1147", "productType": "postpay", "financePrice": "0.93"},
+{"month": "2022-03", "instanceid": "ip-251583e2", "productType": "postpay", "financePrice": "566.0"},
+{"month": "2022-03", "instanceid": "ip-5e2a4b5b", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-03", "instanceid": "ip-76966743", "productType": "postpay", "financePrice": "10.34"},
+{"month": "2022-03", "instanceid": "ip-bab89874", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-03", "instanceid": "ip-88841deb", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-03", "instanceid": "ip-2168d4c9", "productType": "postpay", "financePrice": "2.11"},
+{"month": "2022-03", "instanceid": "ip-b37e7096", "productType": "postpay", "financePrice": "10.8"},
+{"month": "2022-03", "instanceid": "ip-2153a6be", "productType": "postpay", "financePrice": "4.75"},
+{"month": "2022-03", "instanceid": "ip-f5c9b982", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-03", "instanceid": "ip-ac06aedf", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-03", "instanceid": "ip-a2302750", "productType": "postpay", "financePrice": "0.37"},
+{"month": "2022-03", "instanceid": "ip-5e0c0184", "productType": "postpay", "financePrice": "21.61"},
+{"month": "2022-03", "instanceid": "ip-7b4b40d7", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-03", "instanceid": "ip-fdbb0a5a", "productType": "postpay", "financePrice": "6.09"},
+{"month": "2022-03", "instanceid": "ip-ed166689", "productType": "postpay", "financePrice": "1.87"},
+{"month": "2022-03", "instanceid": "ip-7dfbc294", "productType": "postpay", "financePrice": "0.36"},
+{"month": "2022-03", "instanceid": "ip-91bb6b41", "productType": "postpay", "financePrice": "0.34"},
+{"month": "2022-03", "instanceid": "ip-d321353e", "productType": "postpay", "financePrice": "3670.37"},
+{"month": "2022-03", "instanceid": "ip-5bfcb456", "productType": "postpay", "financePrice": "2.62"},
+{"month": "2022-03", "instanceid": "ip-776f511f", "productType": "postpay", "financePrice": "0.38"},
+{"month": "2022-03", "instanceid": "ip-11b113f8", "productType": "postpay", "financePrice": "63.47"},
+{"month": "2022-03", "instanceid": "ip-11b113f8", "productType": "postpay", "financePrice": "0.08"},
+{"month": "2022-03", "instanceid": "ip-03bf8ca4", "productType": "postpay", "financePrice": "21.71"},
+{"month": "2022-03", "instanceid": "ip-81ef3e48", "productType": "postpay", "financePrice": "164.0"},
+{"month": "2022-03", "instanceid": "ip-eb0b66ae", "productType": "postpay", "financePrice": "0.36"},
+{"month": "2022-03", "instanceid": "ip-393405e6", "productType": "postpay", "financePrice": "2.49"},
+{"month": "2022-03", "instanceid": "ip-393405e6", "productType": "postpay", "financePrice": "1.95"},
+{"month": "2022-03", "instanceid": "ip-7910abea", "productType": "prepay", "financePrice": "82.0"},
+{"month": "2022-03", "instanceid": "ip-e4aff4eb", "productType": "prepay", "financePrice": "2598.75"},
+{"month": "2022-03", "instanceid": "ip-f2142606", "productType": "prepay", "financePrice": "82.0"},
+{"month": "2022-03", "instanceid": "ip-fad2cf6e", "productType": "prepay", "financePrice": "82.0"},
+{"month": "2022-03", "instanceid": "ip-bd2fa47a", "productType": "prepay", "financePrice": "82.0"},
+{"month": "2022-03", "instanceid": "ip-1745c878", "productType": "prepay", "financePrice": "82.0"},
+{"month": "2022-03", "instanceid": "ip-1745c878", "productType": "prepay", "financePrice": "17.25"},
+{"month": "2022-03", "instanceid": "ip-93e50cf2", "productType": "prepay", "financePrice": "34.5"},
+{"month": "2022-03", "instanceid": "ip-bbc18c7b", "productType": "prepay", "financePrice": "164.0"},
+{"month": "2022-04", "instanceid": "ip-4c8d0b99", "productType": "postpay", "financePrice": "2541.95"},
+{"month": "2022-04", "instanceid": "ip-cd4814e4", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-04", "instanceid": "ip-f8ab140e", "productType": "postpay", "financePrice": "1.48"},
+{"month": "2022-04", "instanceid": "ip-dc7b3940", "productType": "postpay", "financePrice": "0.36"},
+{"month": "2022-04", "instanceid": "ip-59432768", "productType": "postpay", "financePrice": "420.82"},
+{"month": "2022-04", "instanceid": "ip-2d3bb957", "productType": "postpay", "financePrice": "10.52"},
+{"month": "2022-04", "instanceid": "ip-2ec2ec1f", "productType": "postpay", "financePrice": "38.28"},
+{"month": "2022-04", "instanceid": "ip-a6cdc4d9", "productType": "postpay", "financePrice": "107.87"},
+{"month": "2022-04", "instanceid": "ip-8cef35c1", "productType": "postpay", "financePrice": "3.05"},
+{"month": "2022-04", "instanceid": "ip-fb9e1147", "productType": "postpay", "financePrice": "3.54"},
+{"month": "2022-04", "instanceid": "ip-251583e2", "productType": "postpay", "financePrice": "547.17"},
+{"month": "2022-04", "instanceid": "ip-5e2a4b5b", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-04", "instanceid": "ip-76966743", "productType": "postpay", "financePrice": "11.39"},
+{"month": "2022-04", "instanceid": "ip-bab89874", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-04", "instanceid": "ip-88841deb", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-04", "instanceid": "ip-1a8b8c27", "productType": "postpay", "financePrice": "1.01"},
+{"month": "2022-04", "instanceid": "ip-2168d4c9", "productType": "postpay", "financePrice": "1.87"},
+{"month": "2022-04", "instanceid": "ip-b37e7096", "productType": "postpay", "financePrice": "4.75"},
+{"month": "2022-04", "instanceid": "ip-2153a6be", "productType": "postpay", "financePrice": "7.33"},
+{"month": "2022-04", "instanceid": "ip-f5c9b982", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-04", "instanceid": "ip-ac06aedf", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-04", "instanceid": "ip-a2302750", "productType": "postpay", "financePrice": "0.38"},
+{"month": "2022-04", "instanceid": "ip-5e0c0184", "productType": "postpay", "financePrice": "21.78"},
+{"month": "2022-04", "instanceid": "ip-7b4b40d7", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-04", "instanceid": "ip-fdbb0a5a", "productType": "postpay", "financePrice": "5.89"},
+{"month": "2022-04", "instanceid": "ip-ed166689", "productType": "postpay", "financePrice": "1.36"},
+{"month": "2022-04", "instanceid": "ip-7dfbc294", "productType": "postpay", "financePrice": "0.4"},
+{"month": "2022-04", "instanceid": "ip-91bb6b41", "productType": "postpay", "financePrice": "0.35"},
+{"month": "2022-04", "instanceid": "ip-d321353e", "productType": "postpay", "financePrice": "1854.7"},
+{"month": "2022-04", "instanceid": "ip-5bfcb456", "productType": "postpay", "financePrice": "2.57"},
+{"month": "2022-04", "instanceid": "ip-776f511f", "productType": "postpay", "financePrice": "0.37"},
+{"month": "2022-04", "instanceid": "ip-11b113f8", "productType": "postpay", "financePrice": "38.25"},
+{"month": "2022-04", "instanceid": "ip-03bf8ca4", "productType": "postpay", "financePrice": "16.21"},
+{"month": "2022-04", "instanceid": "ip-81ef3e48", "productType": "postpay", "financePrice": "296.42"},
+{"month": "2022-04", "instanceid": "ip-db3ff3d1", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-04", "instanceid": "ip-eb0b66ae", "productType": "postpay", "financePrice": "0.32"},
+{"month": "2022-04", "instanceid": "ip-393405e6", "productType": "postpay", "financePrice": "7.43"},
+{"month": "2022-04", "instanceid": "ip-e21ff04d", "productType": "prepay", "financePrice": "103.5"},
+{"month": "2022-04", "instanceid": "ip-4efecd74", "productType": "prepay", "financePrice": "103.5"},
+{"month": "2022-04", "instanceid": "ip-8924f655", "productType": "prepay", "financePrice": "225.0"},
+{"month": "2022-05", "instanceid": "ip-4c8d0b99", "productType": "postpay", "financePrice": "2740.41"},
+{"month": "2022-05", "instanceid": "ip-cd4814e4", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-05", "instanceid": "ip-8b5f4ca4", "productType": "postpay", "financePrice": "1.49"},
+{"month": "2022-05", "instanceid": "ip-8b5f4ca4", "productType": "postpay", "financePrice": "0.02"},
+{"month": "2022-05", "instanceid": "ip-f8ab140e", "productType": "postpay", "financePrice": "1.1"},
+{"month": "2022-05", "instanceid": "ip-dc7b3940", "productType": "postpay", "financePrice": "0.29"},
+{"month": "2022-05", "instanceid": "ip-59432768", "productType": "postpay", "financePrice": "410.42"},
+{"month": "2022-05", "instanceid": "ip-2d3bb957", "productType": "postpay", "financePrice": "6.25"},
+{"month": "2022-05", "instanceid": "ip-a6cdc4d9", "productType": "postpay", "financePrice": "111.46"},
+{"month": "2022-05", "instanceid": "ip-8cef35c1", "productType": "postpay", "financePrice": "2.42"},
+{"month": "2022-05", "instanceid": "ip-fb9e1147", "productType": "postpay", "financePrice": "2.34"},
+{"month": "2022-05", "instanceid": "ip-251583e2", "productType": "postpay", "financePrice": "564.16"},
+{"month": "2022-05", "instanceid": "ip-5e2a4b5b", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-05", "instanceid": "ip-76966743", "productType": "postpay", "financePrice": "8.7"},
+{"month": "2022-05", "instanceid": "ip-88841deb", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-05", "instanceid": "ip-1a8b8c27", "productType": "postpay", "financePrice": "0.57"},
+{"month": "2022-05", "instanceid": "ip-2168d4c9", "productType": "postpay", "financePrice": "1.4"},
+{"month": "2022-05", "instanceid": "ip-b37e7096", "productType": "postpay", "financePrice": "6.32"},
+{"month": "2022-05", "instanceid": "ip-2153a6be", "productType": "postpay", "financePrice": "11.13"},
+{"month": "2022-05", "instanceid": "ip-ac06aedf", "productType": "postpay", "financePrice": "0.01"},
+{"month": "2022-05", "instanceid": "ip-a2302750", "productType": "postpay", "financePrice": "0.28"},
+{"month": "2022-05", "instanceid": "ip-5e0c0184", "productType": "postpay", "financePrice": "22.54"},
+{"month": "2022-05", "instanceid": "ip-fdbb0a5a", "productType": "postpay", "financePrice": "5.85"},
+{"month": "2022-05", "instanceid": "ip-ed166689", "productType": "postpay", "financePrice": "0.38"},
+{"month": "2022-05", "instanceid": "ip-7dfbc294", "productType": "postpay", "financePrice": "0.28"},
+{"month": "2022-05", "instanceid": "ip-91bb6b41", "productType": "postpay", "financePrice": "0.27"},
+{"month": "2022-05", "instanceid": "ip-539c3bde", "productType": "postpay", "financePrice": "0.62"},
+{"month": "2022-05", "instanceid": "ip-d321353e", "productType": "postpay", "financePrice": "2328.93"},
+{"month": "2022-05", "instanceid": "ip-5bfcb456", "productType": "postpay", "financePrice": "2.38"},
+{"month": "2022-05", "instanceid": "ip-776f511f", "productType": "postpay", "financePrice": "0.25"},
+{"month": "2022-05", "instanceid": "ip-03bf8ca4", "productType": "postpay", "financePrice": "26.0"},
+{"month": "2022-05", "instanceid": "ip-81ef3e48", "productType": "postpay", "financePrice": "168.5"},
+{"month": "2022-05", "instanceid": "ip-eb0b66ae", "productType": "postpay", "financePrice": "0.26"},
+{"month": "2022-05", "instanceid": "ip-393405e6", "productType": "postpay", "financePrice": "25.13"},
+{"month": "2022-06", "instanceid": "ip-4c8d0b99", "productType": "postpay", "financePrice": "2464.7"},
+{"month": "2022-06", "instanceid": "ip-cd4814e4", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-06", "instanceid": "ip-8b5f4ca4", "productType": "postpay", "financePrice": "1.4"},
+{"month": "2022-06", "instanceid": "ip-f8ab140e", "productType": "postpay", "financePrice": "1.12"},
+{"month": "2022-06", "instanceid": "ip-dc7b3940", "productType": "postpay", "financePrice": "0.16"},
+{"month": "2022-06", "instanceid": "ip-59432768", "productType": "postpay", "financePrice": "446.43"},
+{"month": "2022-06", "instanceid": "ip-2d3bb957", "productType": "postpay", "financePrice": "11.7"},
+{"month": "2022-06", "instanceid": "ip-a6cdc4d9", "productType": "postpay", "financePrice": "107.88"},
+{"month": "2022-06", "instanceid": "ip-8cef35c1", "productType": "postpay", "financePrice": "15.85"},
+{"month": "2022-06", "instanceid": "ip-fb9e1147", "productType": "postpay", "financePrice": "0.2"},
+{"month": "2022-06", "instanceid": "ip-251583e2", "productType": "postpay", "financePrice": "504.56"},
+{"month": "2022-06", "instanceid": "ip-5e2a4b5b", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-06", "instanceid": "ip-af1a82fd", "productType": "postpay", "financePrice": "0.08"},
+{"month": "2022-06", "instanceid": "ip-76966743", "productType": "postpay", "financePrice": "12.25"},
+{"month": "2022-06", "instanceid": "ip-7fef1b06", "productType": "postpay", "financePrice": "0.07"},
+{"month": "2022-06", "instanceid": "ip-88841deb", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-06", "instanceid": "ip-1a8b8c27", "productType": "postpay", "financePrice": "0.54"},
+{"month": "2022-06", "instanceid": "ip-2168d4c9", "productType": "postpay", "financePrice": "1.39"},
+{"month": "2022-06", "instanceid": "ip-b37e7096", "productType": "postpay", "financePrice": "6.3"},
+{"month": "2022-06", "instanceid": "ip-2153a6be", "productType": "postpay", "financePrice": "8.05"},
+{"month": "2022-06", "instanceid": "ip-ac06aedf", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-06", "instanceid": "ip-a2302750", "productType": "postpay", "financePrice": "0.17"},
+{"month": "2022-06", "instanceid": "ip-5e0c0184", "productType": "postpay", "financePrice": "21.19"},
+{"month": "2022-06", "instanceid": "ip-0c47efc8", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-06", "instanceid": "ip-fdbb0a5a", "productType": "postpay", "financePrice": "5.66"},
+{"month": "2022-06", "instanceid": "ip-ed166689", "productType": "postpay", "financePrice": "0.34"},
+{"month": "2022-06", "instanceid": "ip-7dfbc294", "productType": "postpay", "financePrice": "0.26"},
+{"month": "2022-06", "instanceid": "ip-91bb6b41", "productType": "postpay", "financePrice": "0.17"},
+{"month": "2022-06", "instanceid": "ip-539c3bde", "productType": "postpay", "financePrice": "0.01"},
+{"month": "2022-06", "instanceid": "ip-d321353e", "productType": "postpay", "financePrice": "1909.95"},
+{"month": "2022-06", "instanceid": "ip-5bfcb456", "productType": "postpay", "financePrice": "2.19"},
+{"month": "2022-06", "instanceid": "ip-776f511f", "productType": "postpay", "financePrice": "0.21"},
+{"month": "2022-06", "instanceid": "ip-eac75faf", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-06", "instanceid": "ip-03bf8ca4", "productType": "postpay", "financePrice": "10.93"},
+{"month": "2022-06", "instanceid": "ip-2db4faeb", "productType": "postpay", "financePrice": "0.04"},
+{"month": "2022-06", "instanceid": "ip-81ef3e48", "productType": "postpay", "financePrice": "239.55"},
+{"month": "2022-06", "instanceid": "ip-eb0b66ae", "productType": "postpay", "financePrice": "0.17"},
+{"month": "2022-06", "instanceid": "ip-393405e6", "productType": "postpay", "financePrice": "4.76"},
+{"month": "2022-06", "instanceid": "ip-438ff346", "productType": "prepay", "financePrice": "138.0"},
+{"month": "2022-06", "instanceid": "ip-8ad6cbf2", "productType": "prepay", "financePrice": "138.0"},
+{"month": "2022-06", "instanceid": "ip-ec9dafe6", "productType": "prepay", "financePrice": "103.5"},
+{"month": "2022-07", "instanceid": "ip-4c8d0b99", "productType": "postpay", "financePrice": "2462.96"},
+{"month": "2022-07", "instanceid": "ip-cd4814e4", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-07", "instanceid": "ip-f8ab140e", "productType": "postpay", "financePrice": "0.95"},
+{"month": "2022-07", "instanceid": "ip-dc7b3940", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-07", "instanceid": "ip-59432768", "productType": "postpay", "financePrice": "509.15"},
+{"month": "2022-07", "instanceid": "ip-2d3bb957", "productType": "postpay", "financePrice": "9.63"},
+{"month": "2022-07", "instanceid": "ip-a6cdc4d9", "productType": "postpay", "financePrice": "111.48"},
+{"month": "2022-07", "instanceid": "ip-8cef35c1", "productType": "postpay", "financePrice": "2.55"},
+{"month": "2022-07", "instanceid": "ip-fb9e1147", "productType": "postpay", "financePrice": "0.25"},
+{"month": "2022-07", "instanceid": "ip-251583e2", "productType": "postpay", "financePrice": "4300.94"},
+{"month": "2022-07", "instanceid": "ip-5e2a4b5b", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-07", "instanceid": "ip-af1a82fd", "productType": "postpay", "financePrice": "0.13"},
+{"month": "2022-07", "instanceid": "ip-76966743", "productType": "postpay", "financePrice": "10.8"},
+{"month": "2022-07", "instanceid": "ip-7fef1b06", "productType": "postpay", "financePrice": "0.15"},
+{"month": "2022-07", "instanceid": "ip-1a449bb5", "productType": "postpay", "financePrice": "2.12"},
+{"month": "2022-07", "instanceid": "ip-88841deb", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-07", "instanceid": "ip-1a8b8c27", "productType": "postpay", "financePrice": "0.52"},
+{"month": "2022-07", "instanceid": "ip-2168d4c9", "productType": "postpay", "financePrice": "1.35"},
+{"month": "2022-07", "instanceid": "ip-b37e7096", "productType": "postpay", "financePrice": "5.97"},
+{"month": "2022-07", "instanceid": "ip-2153a6be", "productType": "postpay", "financePrice": "11.04"},
+{"month": "2022-07", "instanceid": "ip-ac06aedf", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-07", "instanceid": "ip-a2302750", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-07", "instanceid": "ip-5e0c0184", "productType": "postpay", "financePrice": "22.52"},
+{"month": "2022-07", "instanceid": "ip-0c47efc8", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-07", "instanceid": "ip-fdbb0a5a", "productType": "postpay", "financePrice": "5.81"},
+{"month": "2022-07", "instanceid": "ip-ed166689", "productType": "postpay", "financePrice": "4.36"},
+{"month": "2022-07", "instanceid": "ip-7dfbc294", "productType": "postpay", "financePrice": "0.21"},
+{"month": "2022-07", "instanceid": "ip-91bb6b41", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-07", "instanceid": "ip-539c3bde", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-07", "instanceid": "ip-d321353e", "productType": "postpay", "financePrice": "1740.91"},
+{"month": "2022-07", "instanceid": "ip-5bfcb456", "productType": "postpay", "financePrice": "5.14"},
+{"month": "2022-07", "instanceid": "ip-dbaa5ab8", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-07", "instanceid": "ip-776f511f", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-07", "instanceid": "ip-eac75faf", "productType": "postpay", "financePrice": "0.21"},
+{"month": "2022-07", "instanceid": "ip-03bf8ca4", "productType": "postpay", "financePrice": "10.77"},
+{"month": "2022-07", "instanceid": "ip-2db4faeb", "productType": "postpay", "financePrice": "0.06"},
+{"month": "2022-07", "instanceid": "ip-81ef3e48", "productType": "postpay", "financePrice": "245.08"},
+{"month": "2022-07", "instanceid": "ip-eb0b66ae", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-07", "instanceid": "ip-393405e6", "productType": "postpay", "financePrice": "5.45"},
+{"month": "2022-07", "instanceid": "ip-33d734d4", "productType": "prepay", "financePrice": "88.0"},
+{"month": "2022-07", "instanceid": "ip-678cc416", "productType": "prepay", "financePrice": "88.0"},
+{"month": "2022-07", "instanceid": "ip-e21ff04d", "productType": "prepay", "financePrice": "276.0"},
+{"month": "2022-08", "instanceid": "ip-4c8d0b99", "productType": "postpay", "financePrice": "2329.41"},
+{"month": "2022-08", "instanceid": "ip-cd4814e4", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-08", "instanceid": "ip-f8ab140e", "productType": "postpay", "financePrice": "0.94"},
+{"month": "2022-08", "instanceid": "ip-dc7b3940", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-08", "instanceid": "ip-59432768", "productType": "postpay", "financePrice": "523.13"},
+{"month": "2022-08", "instanceid": "ip-2d3bb957", "productType": "postpay", "financePrice": "9.3"},
+{"month": "2022-08", "instanceid": "ip-a6cdc4d9", "productType": "postpay", "financePrice": "111.47"},
+{"month": "2022-08", "instanceid": "ip-8cef35c1", "productType": "postpay", "financePrice": "2.37"},
+{"month": "2022-08", "instanceid": "ip-fb9e1147", "productType": "postpay", "financePrice": "0.86"},
+{"month": "2022-08", "instanceid": "ip-251583e2", "productType": "postpay", "financePrice": "675.31"},
+{"month": "2022-08", "instanceid": "ip-5e2a4b5b", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-08", "instanceid": "ip-af1a82fd", "productType": "postpay", "financePrice": "0.17"},
+{"month": "2022-08", "instanceid": "ip-76966743", "productType": "postpay", "financePrice": "14.41"},
+{"month": "2022-08", "instanceid": "ip-7fef1b06", "productType": "postpay", "financePrice": "0.27"},
+{"month": "2022-08", "instanceid": "ip-1a449bb5", "productType": "postpay", "financePrice": "6.06"},
+{"month": "2022-08", "instanceid": "ip-88841deb", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-08", "instanceid": "ip-1a8b8c27", "productType": "postpay", "financePrice": "0.66"},
+{"month": "2022-08", "instanceid": "ip-2168d4c9", "productType": "postpay", "financePrice": "1.33"},
+{"month": "2022-08", "instanceid": "ip-b37e7096", "productType": "postpay", "financePrice": "34.23"},
+{"month": "2022-08", "instanceid": "ip-2153a6be", "productType": "postpay", "financePrice": "14.11"},
+{"month": "2022-08", "instanceid": "ip-d06e0a60", "productType": "postpay", "financePrice": "0.15"},
+{"month": "2022-08", "instanceid": "ip-ac06aedf", "productType": "postpay", "financePrice": "0.01"},
+{"month": "2022-08", "instanceid": "ip-a2302750", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-08", "instanceid": "ip-5e0c0184", "productType": "postpay", "financePrice": "24.28"},
+{"month": "2022-08", "instanceid": "ip-0c47efc8", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-08", "instanceid": "ip-fdbb0a5a", "productType": "postpay", "financePrice": "5.8"},
+{"month": "2022-08", "instanceid": "ip-ed166689", "productType": "postpay", "financePrice": "1.12"},
+{"month": "2022-08", "instanceid": "ip-7dfbc294", "productType": "postpay", "financePrice": "0.17"},
+{"month": "2022-08", "instanceid": "ip-91bb6b41", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-08", "instanceid": "ip-539c3bde", "productType": "postpay", "financePrice": "0.07"},
+{"month": "2022-08", "instanceid": "ip-d321353e", "productType": "postpay", "financePrice": "2043.33"},
+{"month": "2022-08", "instanceid": "ip-5bfcb456", "productType": "postpay", "financePrice": "2.89"},
+{"month": "2022-08", "instanceid": "ip-dbaa5ab8", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-08", "instanceid": "ip-776f511f", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-08", "instanceid": "ip-eac75faf", "productType": "postpay", "financePrice": "0.23"},
+{"month": "2022-08", "instanceid": "ip-03bf8ca4", "productType": "postpay", "financePrice": "10.7"},
+{"month": "2022-08", "instanceid": "ip-2db4faeb", "productType": "postpay", "financePrice": "0.06"},
+{"month": "2022-08", "instanceid": "ip-81ef3e48", "productType": "postpay", "financePrice": "280.16"},
+{"month": "2022-08", "instanceid": "ip-eb0b66ae", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-08", "instanceid": "ip-393405e6", "productType": "postpay", "financePrice": "59.49"},
+{"month": "2022-09", "instanceid": "ip-4c8d0b99", "productType": "postpay", "financePrice": "2017.96"},
+{"month": "2022-09", "instanceid": "ip-cd4814e4", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-09", "instanceid": "ip-f8ab140e", "productType": "postpay", "financePrice": "1.25"},
+{"month": "2022-09", "instanceid": "ip-dc7b3940", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-09", "instanceid": "ip-59432768", "productType": "postpay", "financePrice": "522.93"},
+{"month": "2022-09", "instanceid": "ip-2d3bb957", "productType": "postpay", "financePrice": "8.27"},
+{"month": "2022-09", "instanceid": "ip-a6cdc4d9", "productType": "postpay", "financePrice": "107.88"},
+{"month": "2022-09", "instanceid": "ip-8cef35c1", "productType": "postpay", "financePrice": "1.84"},
+{"month": "2022-09", "instanceid": "ip-fb9e1147", "productType": "postpay", "financePrice": "0.41"},
+{"month": "2022-09", "instanceid": "ip-251583e2", "productType": "postpay", "financePrice": "624.59"},
+{"month": "2022-09", "instanceid": "ip-5e2a4b5b", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-09", "instanceid": "ip-af1a82fd", "productType": "postpay", "financePrice": "0.25"},
+{"month": "2022-09", "instanceid": "ip-76966743", "productType": "postpay", "financePrice": "12.46"},
+{"month": "2022-09", "instanceid": "ip-19b3dcb2", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-09", "instanceid": "ip-41b116e7", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-09", "instanceid": "ip-7fef1b06", "productType": "postpay", "financePrice": "0.65"},
+{"month": "2022-09", "instanceid": "ip-1a449bb5", "productType": "postpay", "financePrice": "5.65"},
+{"month": "2022-09", "instanceid": "ip-88841deb", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-09", "instanceid": "ip-1a8b8c27", "productType": "postpay", "financePrice": "2.27"},
+{"month": "2022-09", "instanceid": "ip-2168d4c9", "productType": "postpay", "financePrice": "1.06"},
+{"month": "2022-09", "instanceid": "ip-b37e7096", "productType": "postpay", "financePrice": "4.92"},
+{"month": "2022-09", "instanceid": "ip-2153a6be", "productType": "postpay", "financePrice": "16.14"},
+{"month": "2022-09", "instanceid": "ip-d06e0a60", "productType": "postpay", "financePrice": "0.12"},
+{"month": "2022-09", "instanceid": "ip-ac06aedf", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-09", "instanceid": "ip-a2302750", "productType": "postpay", "financePrice": "0.01"},
+{"month": "2022-09", "instanceid": "ip-5e0c0184", "productType": "postpay", "financePrice": "23.23"},
+{"month": "2022-09", "instanceid": "ip-0c47efc8", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-09", "instanceid": "ip-fdbb0a5a", "productType": "postpay", "financePrice": "5.61"},
+{"month": "2022-09", "instanceid": "ip-4e4da533", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-09", "instanceid": "ip-ed166689", "productType": "postpay", "financePrice": "0.33"},
+{"month": "2022-09", "instanceid": "ip-7dfbc294", "productType": "postpay", "financePrice": "0.16"},
+{"month": "2022-09", "instanceid": "ip-91bb6b41", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-09", "instanceid": "ip-539c3bde", "productType": "postpay", "financePrice": "0.01"},
+{"month": "2022-09", "instanceid": "ip-d321353e", "productType": "postpay", "financePrice": "2032.42"},
+{"month": "2022-09", "instanceid": "ip-5bfcb456", "productType": "postpay", "financePrice": "5.02"},
+{"month": "2022-09", "instanceid": "ip-dbaa5ab8", "productType": "postpay", "financePrice": "0.01"},
+{"month": "2022-09", "instanceid": "ip-776f511f", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-09", "instanceid": "ip-eac75faf", "productType": "postpay", "financePrice": "0.19"},
+{"month": "2022-09", "instanceid": "ip-03bf8ca4", "productType": "postpay", "financePrice": "12.71"},
+{"month": "2022-09", "instanceid": "ip-2db4faeb", "productType": "postpay", "financePrice": "0.08"},
+{"month": "2022-09", "instanceid": "ip-81ef3e48", "productType": "postpay", "financePrice": "7.69"},
+{"month": "2022-09", "instanceid": "ip-eb0b66ae", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-09", "instanceid": "ip-393405e6", "productType": "postpay", "financePrice": "243.36"},
+{"month": "2022-10", "instanceid": "ip-4c8d0b99", "productType": "postpay", "financePrice": "2200.54"},
+{"month": "2022-10", "instanceid": "ip-cd4814e4", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-10", "instanceid": "ip-f8ab140e", "productType": "postpay", "financePrice": "1.41"},
+{"month": "2022-10", "instanceid": "ip-dc7b3940", "productType": "postpay", "financePrice": "0.01"},
+{"month": "2022-10", "instanceid": "ip-59432768", "productType": "postpay", "financePrice": "559.64"},
+{"month": "2022-10", "instanceid": "ip-2d3bb957", "productType": "postpay", "financePrice": "3.89"},
+{"month": "2022-10", "instanceid": "ip-a6cdc4d9", "productType": "postpay", "financePrice": "111.47"},
+{"month": "2022-10", "instanceid": "ip-8cef35c1", "productType": "postpay", "financePrice": "4.0"},
+{"month": "2022-10", "instanceid": "ip-fb9e1147", "productType": "postpay", "financePrice": "0.67"},
+{"month": "2022-10", "instanceid": "ip-251583e2", "productType": "postpay", "financePrice": "511.43"},
+{"month": "2022-10", "instanceid": "ip-5e2a4b5b", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-10", "instanceid": "ip-af1a82fd", "productType": "postpay", "financePrice": "0.11"},
+{"month": "2022-10", "instanceid": "ip-76966743", "productType": "postpay", "financePrice": "10.76"},
+{"month": "2022-10", "instanceid": "ip-19b3dcb2", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-10", "instanceid": "ip-4313b150", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-10", "instanceid": "ip-bfc43744", "productType": "postpay", "financePrice": "0.53"},
+{"month": "2022-10", "instanceid": "ip-41b116e7", "productType": "postpay", "financePrice": "49.61"},
+{"month": "2022-10", "instanceid": "ip-7fef1b06", "productType": "postpay", "financePrice": "0.17"},
+{"month": "2022-10", "instanceid": "ip-1a449bb5", "productType": "postpay", "financePrice": "6.56"},
+{"month": "2022-10", "instanceid": "ip-88841deb", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-10", "instanceid": "ip-1a8b8c27", "productType": "postpay", "financePrice": "0.49"},
+{"month": "2022-10", "instanceid": "ip-2168d4c9", "productType": "postpay", "financePrice": "0.11"},
+{"month": "2022-10", "instanceid": "ip-b37e7096", "productType": "postpay", "financePrice": "5.13"},
+{"month": "2022-10", "instanceid": "ip-2153a6be", "productType": "postpay", "financePrice": "9.6"},
+{"month": "2022-10", "instanceid": "ip-d06e0a60", "productType": "postpay", "financePrice": "0.18"},
+{"month": "2022-10", "instanceid": "ip-ac06aedf", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-10", "instanceid": "ip-a2302750", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-10", "instanceid": "ip-5e0c0184", "productType": "postpay", "financePrice": "22.38"},
+{"month": "2022-10", "instanceid": "ip-0c47efc8", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-10", "instanceid": "ip-fdbb0a5a", "productType": "postpay", "financePrice": "5.81"},
+{"month": "2022-10", "instanceid": "ip-4e4da533", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-10", "instanceid": "ip-128831a8", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-10", "instanceid": "ip-ed166689", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-10", "instanceid": "ip-7dfbc294", "productType": "postpay", "financePrice": "0.31"},
+{"month": "2022-10", "instanceid": "ip-91bb6b41", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-10", "instanceid": "ip-539c3bde", "productType": "postpay", "financePrice": "0.51"},
+{"month": "2022-10", "instanceid": "ip-d321353e", "productType": "postpay", "financePrice": "1537.64"},
+{"month": "2022-10", "instanceid": "ip-5bfcb456", "productType": "postpay", "financePrice": "30.76"},
+{"month": "2022-10", "instanceid": "ip-dbaa5ab8", "productType": "postpay", "financePrice": "0.04"},
+{"month": "2022-10", "instanceid": "ip-776f511f", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-10", "instanceid": "ip-eac75faf", "productType": "postpay", "financePrice": "0.24"},
+{"month": "2022-10", "instanceid": "ip-e1c49514", "productType": "postpay", "financePrice": "4.78"},
+{"month": "2022-10", "instanceid": "ip-03bf8ca4", "productType": "postpay", "financePrice": "10.68"},
+{"month": "2022-10", "instanceid": "ip-2db4faeb", "productType": "postpay", "financePrice": "0.09"},
+{"month": "2022-10", "instanceid": "ip-81ef3e48", "productType": "postpay", "financePrice": "3.49"},
+{"month": "2022-10", "instanceid": "ip-384a1c00", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-10", "instanceid": "ip-eb0b66ae", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-10", "instanceid": "ip-393405e6", "productType": "postpay", "financePrice": "163.66"},
+{"month": "2022-10", "instanceid": "ip-438ff346", "productType": "prepay", "financePrice": "276.0"},
+{"month": "2022-10", "instanceid": "ip-8ad6cbf2", "productType": "prepay", "financePrice": "276.0"},
+{"month": "2022-10", "instanceid": "ip-e21ff04d", "productType": "prepay", "financePrice": "517.5"},
+{"month": "2022-10", "instanceid": "ip-e4aff4eb", "productType": "prepay", "financePrice": "1856.25"},
+{"month": "2022-11", "instanceid": "ip-4c8d0b99", "productType": "postpay", "financePrice": "2632.18"},
+{"month": "2022-11", "instanceid": "ip-cd4814e4", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-11", "instanceid": "ip-f8ab140e", "productType": "postpay", "financePrice": "1.29"},
+{"month": "2022-11", "instanceid": "ip-dc7b3940", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-11", "instanceid": "ip-59432768", "productType": "postpay", "financePrice": "534.21"},
+{"month": "2022-11", "instanceid": "ip-2d3bb957", "productType": "postpay", "financePrice": "14.97"},
+{"month": "2022-11", "instanceid": "ip-a6cdc4d9", "productType": "postpay", "financePrice": "107.89"},
+{"month": "2022-11", "instanceid": "ip-8cef35c1", "productType": "postpay", "financePrice": "1.96"},
+{"month": "2022-11", "instanceid": "ip-fb9e1147", "productType": "postpay", "financePrice": "0.43"},
+{"month": "2022-11", "instanceid": "ip-251583e2", "productType": "postpay", "financePrice": "753.42"},
+{"month": "2022-11", "instanceid": "ip-5e2a4b5b", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-11", "instanceid": "ip-af1a82fd", "productType": "postpay", "financePrice": "0.13"},
+{"month": "2022-11", "instanceid": "ip-76966743", "productType": "postpay", "financePrice": "12.14"},
+{"month": "2022-11", "instanceid": "ip-19b3dcb2", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-11", "instanceid": "ip-4313b150", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-11", "instanceid": "ip-bfc43744", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-11", "instanceid": "ip-41b116e7", "productType": "postpay", "financePrice": "140.01"},
+{"month": "2022-11", "instanceid": "ip-7fef1b06", "productType": "postpay", "financePrice": "0.19"},
+{"month": "2022-11", "instanceid": "ip-1a449bb5", "productType": "postpay", "financePrice": "5.33"},
+{"month": "2022-11", "instanceid": "ip-88841deb", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-11", "instanceid": "ip-1a8b8c27", "productType": "postpay", "financePrice": "0.68"},
+{"month": "2022-11", "instanceid": "ip-2168d4c9", "productType": "postpay", "financePrice": "0.13"},
+{"month": "2022-11", "instanceid": "ip-b37e7096", "productType": "postpay", "financePrice": "0.62"},
+{"month": "2022-11", "instanceid": "ip-b37e7096", "productType": "postpay", "financePrice": "1.66"},
+{"month": "2022-11", "instanceid": "ip-2153a6be", "productType": "postpay", "financePrice": "19.21"},
+{"month": "2022-11", "instanceid": "ip-d06e0a60", "productType": "postpay", "financePrice": "0.19"},
+{"month": "2022-11", "instanceid": "ip-ac06aedf", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-11", "instanceid": "ip-a2302750", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-11", "instanceid": "ip-5e0c0184", "productType": "postpay", "financePrice": "27.65"},
+{"month": "2022-11", "instanceid": "ip-0c47efc8", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-11", "instanceid": "ip-fdbb0a5a", "productType": "postpay", "financePrice": "5.62"},
+{"month": "2022-11", "instanceid": "ip-4e4da533", "productType": "postpay", "financePrice": "0.01"},
+{"month": "2022-11", "instanceid": "ip-128831a8", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-11", "instanceid": "ip-ed166689", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-11", "instanceid": "ip-9dadb33f", "productType": "postpay", "financePrice": "0.01"},
+{"month": "2022-11", "instanceid": "ip-9dadb33f", "productType": "postpay", "financePrice": "6.25"},
+{"month": "2022-11", "instanceid": "ip-9dadb33f", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-11", "instanceid": "ip-7dfbc294", "productType": "postpay", "financePrice": "0.24"},
+{"month": "2022-11", "instanceid": "ip-91bb6b41", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-11", "instanceid": "ip-539c3bde", "productType": "postpay", "financePrice": "0.19"},
+{"month": "2022-11", "instanceid": "ip-d321353e", "productType": "postpay", "financePrice": "1969.99"},
+{"month": "2022-11", "instanceid": "ip-5bfcb456", "productType": "postpay", "financePrice": "2.64"},
+{"month": "2022-11", "instanceid": "ip-dbaa5ab8", "productType": "postpay", "financePrice": "0.36"},
+{"month": "2022-11", "instanceid": "ip-776f511f", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-11", "instanceid": "ip-eac75faf", "productType": "postpay", "financePrice": "0.32"},
+{"month": "2022-11", "instanceid": "ip-e1c49514", "productType": "postpay", "financePrice": "0.01"},
+{"month": "2022-11", "instanceid": "ip-03bf8ca4", "productType": "postpay", "financePrice": "7.65"},
+{"month": "2022-11", "instanceid": "ip-2db4faeb", "productType": "postpay", "financePrice": "0.04"},
+{"month": "2022-11", "instanceid": "ip-81ef3e48", "productType": "postpay", "financePrice": "1.03"},
+{"month": "2022-11", "instanceid": "ip-384a1c00", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-11", "instanceid": "ip-eb0b66ae", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-11", "instanceid": "ip-393405e6", "productType": "postpay", "financePrice": "5.78"},
+{"month": "2022-11", "instanceid": "ip-1c9c7421", "productType": "prepay", "financePrice": "124.2"},
+{"month": "2022-12", "instanceid": "ip-4c8d0b99", "productType": "postpay", "financePrice": "1977.48"},
+{"month": "2022-12", "instanceid": "ip-cd4814e4", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-f8ab140e", "productType": "postpay", "financePrice": "1.21"},
+{"month": "2022-12", "instanceid": "ip-dc7b3940", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-59432768", "productType": "postpay", "financePrice": "574.13"},
+{"month": "2022-12", "instanceid": "ip-2d3bb957", "productType": "postpay", "financePrice": "9.93"},
+{"month": "2022-12", "instanceid": "ip-a6cdc4d9", "productType": "postpay", "financePrice": "110.06"},
+{"month": "2022-12", "instanceid": "ip-8cef35c1", "productType": "postpay", "financePrice": "1.57"},
+{"month": "2022-12", "instanceid": "ip-fb9e1147", "productType": "postpay", "financePrice": "0.71"},
+{"month": "2022-12", "instanceid": "ip-251583e2", "productType": "postpay", "financePrice": "589.85"},
+{"month": "2022-12", "instanceid": "ip-5e2a4b5b", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-af1a82fd", "productType": "postpay", "financePrice": "0.2"},
+{"month": "2022-12", "instanceid": "ip-76966743", "productType": "postpay", "financePrice": "12.57"},
+{"month": "2022-12", "instanceid": "ip-19b3dcb2", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-4313b150", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-bfc43744", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-41b116e7", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-7fef1b06", "productType": "postpay", "financePrice": "0.46"},
+{"month": "2022-12", "instanceid": "ip-1a449bb5", "productType": "postpay", "financePrice": "5.21"},
+{"month": "2022-12", "instanceid": "ip-88841deb", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-1a8b8c27", "productType": "postpay", "financePrice": "0.91"},
+{"month": "2022-12", "instanceid": "ip-2168d4c9", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-57495e11", "productType": "postpay", "financePrice": "0.06"},
+{"month": "2022-12", "instanceid": "ip-b37e7096", "productType": "postpay", "financePrice": "0.49"},
+{"month": "2022-12", "instanceid": "ip-2153a6be", "productType": "postpay", "financePrice": "14.39"},
+{"month": "2022-12", "instanceid": "ip-d06e0a60", "productType": "postpay", "financePrice": "0.14"},
+{"month": "2022-12", "instanceid": "ip-ac06aedf", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-a2302750", "productType": "postpay", "financePrice": "0.01"},
+{"month": "2022-12", "instanceid": "ip-5e0c0184", "productType": "postpay", "financePrice": "28.95"},
+{"month": "2022-12", "instanceid": "ip-0c47efc8", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-fdbb0a5a", "productType": "postpay", "financePrice": "5.8"},
+{"month": "2022-12", "instanceid": "ip-4e4da533", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-128831a8", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-1d726f52", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-ed166689", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-9dadb33f", "productType": "postpay", "financePrice": "5.77"},
+{"month": "2022-12", "instanceid": "ip-7dfbc294", "productType": "postpay", "financePrice": "0.25"},
+{"month": "2022-12", "instanceid": "ip-91bb6b41", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-539c3bde", "productType": "postpay", "financePrice": "0.02"},
+{"month": "2022-12", "instanceid": "ip-d321353e", "productType": "postpay", "financePrice": "1752.71"},
+{"month": "2022-12", "instanceid": "ip-5bfcb456", "productType": "postpay", "financePrice": "2.22"},
+{"month": "2022-12", "instanceid": "ip-dbaa5ab8", "productType": "postpay", "financePrice": "0.28"},
+{"month": "2022-12", "instanceid": "ip-776f511f", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-eac75faf", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-eac75faf", "productType": "postpay", "financePrice": "0.15"},
+{"month": "2022-12", "instanceid": "ip-e1c49514", "productType": "postpay", "financePrice": "0.01"},
+{"month": "2022-12", "instanceid": "ip-03bf8ca4", "productType": "postpay", "financePrice": "6.57"},
+{"month": "2022-12", "instanceid": "ip-2db4faeb", "productType": "postpay", "financePrice": "0.03"},
+{"month": "2022-12", "instanceid": "ip-81ef3e48", "productType": "postpay", "financePrice": "1.07"},
+{"month": "2022-12", "instanceid": "ip-384a1c00", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-eb0b66ae", "productType": "postpay", "financePrice": "0.0"},
+{"month": "2022-12", "instanceid": "ip-393405e6", "productType": "postpay", "financePrice": "12.81"},
+{"month": "2022-12", "instanceid": "ip-ec9dafe6", "productType": "prepay", "financePrice": "207.0"},
+{"month": "2022-12", "instanceid": "ip-8924f655", "productType": "prepay", "financePrice": "414.0"},
+{"month": "2022-12", "instanceid": "ip-bbc18c7b", "productType": "prepay", "financePrice": "165.6"},
+{"month": "2022-12", "instanceid": "ip-fad2cf6e", "productType": "prepay", "financePrice": "82.8"},
+{"month": "2022-12", "instanceid": "ip-f2142606", "productType": "prepay", "financePrice": "82.8"}
 ]
